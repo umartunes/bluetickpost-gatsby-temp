@@ -26,7 +26,8 @@
     "react-modal-video": "^1.2.5",
     "react-owl-carousel3": "^2.2.5",
     "react-wow": "^1.0.0",
-    "recoil": "0.0.10"
+    "recoil": "0.0.10",
+    "tawkto-react": "^2.0.3"
   },
   "devDependencies": {
     "prettier": "2.0.5"
