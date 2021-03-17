@@ -40,37 +40,32 @@ const CoursesDetailsSidebar = () => {
                     <li className="price">
                         <div className="d-flex justify-content-between align-items-center">
                             <span><i className="flaticon-price-tag"></i> Price</span>
-                            $49
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-teacher"></i> Instructor</span>
-                            Sarah Taylor
+                            $84/month
+                            
                         </div>
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
                             <span><i className="flaticon-stopwatch"></i> Duration</span>
-                            7 weeks
+                            12 - 16 Weeks
                         </div>
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-distance-education"></i> Lessons</span>
-                            25
+                            <span><i className="flaticon-distance-education"></i> Courses</span>
+                            10
                         </div>
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-web"></i> Enrolled</span>
-                            255 students
+                            <span><i className="flaticon-web"></i> Support</span>
+                            12 - 18 Weeks
                         </div>
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-open-padlock"></i> Access</span>
-                            Lifetime
+                            <span><i className="flaticon-open-padlock"></i> Reports</span>
+                            Quarterly
                         </div>
                     </li>
                 </ul>

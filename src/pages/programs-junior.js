@@ -13,7 +13,7 @@ const Details = () => {
         <Layout>
             <NavbarThree />
             <PageBanner
-                pageTitle="Course Details" 
+                pageTitle="Junior (Grade 3+)" 
                 homePageText="Home" 
                 homePageUrl="/" 
                 activePageText="Course Details" 
