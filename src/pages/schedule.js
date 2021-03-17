@@ -13,10 +13,10 @@ const FAQ = () => {
         <Layout>
             <NavbarThree />
             <PageBanner
-                pageTitle="Schedule A Meeting"
+                pageTitle="Book a Demo"
                 homePageText="Home"
                 homePageUrl="/"
-                activePageText="Schedule A Meeting"
+                activePageText="Book a Demo"
             />
             <div className="">
                 <div className="container">
