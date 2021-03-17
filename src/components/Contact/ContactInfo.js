@@ -1,9 +1,17 @@
 import React from 'react'
-
+import starIcon from '../../assets/images/star-icon.png'
 const ContactInfo = () => {
     return (
         <div className="contact-info-area pt-100 pb-70">
             <div className="container">
+                {/* <div className="section-title">
+                    <span className="sub-title">
+                        <img src={starIcon} alt="contact" />
+                        Get in Touch
+                    </span>
+                    <h2>Ready to Get Started?</h2>
+                    <p>Your email address will not be published. Required fields are marked *</p>
+                </div> */}
                 <div className="row">
                     <div className="col-lg-4 col-md-6">
                         <div className="contact-info-box">
@@ -14,7 +22,7 @@ const ContactInfo = () => {
                                 <i className='bx bx-map'></i>
                             </div>
                             <h3>Our Address</h3>
-                            <p>175 5th Ave, New York, NY 10010, United States</p>
+                            <p>1075 Ceremonial Dr #7, Mississauga, ON L5R 2Z4, Canada</p>
                         </div>
                     </div>
 
@@ -27,8 +35,8 @@ const ContactInfo = () => {
                                 <i className='bx bx-phone-call'></i>
                             </div>
                             <h3>Contact</h3>
-                            <p>Mobile: <a href="tel:+44457895789">(+44) - 45789 - 5789</a></p>
-                            <p>E-mail: <a href="mailto:hello@rewy.com">hello@rewy.com</a></p>
+                            <p>Mobile: <a href="tel:+16479317707">647 931 7707</a></p>
+                            <p>E-mail: <a href="mailto:admin@stem.one">admin@stem.one</a></p>
                         </div>
                     </div>
 
@@ -41,8 +49,9 @@ const ContactInfo = () => {
                                 <i className='bx bx-time-five'></i>
                             </div>
                             <h3>Hours of Operation</h3>
-                            <p>Monday - Friday: 09:00 - 20:00</p>
-                            <p>Sunday & Saturday: 10:30 - 22:00</p>
+                            <p>Monday - Friday: 5PM - 8PM</p>
+                            <p>Saturday: 11AM - 4PM</p>
+                            <p>Sunday: Closed</p>
                         </div>
                     </div>
                 </div>
