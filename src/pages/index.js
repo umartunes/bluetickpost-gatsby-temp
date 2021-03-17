@@ -7,13 +7,14 @@ import MainBanner from '../components/index/MainBanner';
 import Solutions from '../components/index/Solutions';
 // import AboutUs from '../components/index/AboutUs';
 import Services from '../components/index/Services';
-import HowItWork from '../components/index/HowItWork';
-import RecentProjects from '../components/index/RecentProjects';
+import CallToAction from '../components/index/CallToAction';
+// import HowItWork from '../components/index/HowItWork';
+// import RecentProjects from '../components/index/RecentProjects';
 import TeamMember from '../components/index/TeamMember';
-import Testimonials from '../components/index/Testimonials';
-import Partner from '../components/index/Partner';
-import OurBlog from '../components/index/OurBlog';
-import ProjectStartArea from '../components/index/ProjectStartArea';
+// import Testimonials from '../components/index/Testimonials';
+// import Partner from '../components/index/Partner';
+// import OurBlog from '../components/index/OurBlog';
+// import ProjectStartArea from '../components/index/ProjectStartArea';
 
 
 const Home = () => {
@@ -24,13 +25,15 @@ const Home = () => {
             <Solutions />
             {/* <AboutUs /> */}
             <Services />
-            <HowItWork />
-            <RecentProjects />
+            <CallToAction />
+            {/* <HowItWork /> */}
+            {/* <RecentProjects /> */}
             <TeamMember />
-            <Testimonials /> 
-            <Partner /> 
-            <OurBlog />
-            <ProjectStartArea /> 
+            <CallToAction />
+            {/* <Testimonials />  */}
+            {/* <Partner />  */}
+            {/* <OurBlog /> */}
+            {/* <ProjectStartArea />  */}
             <Footer />
         </Layout>
     );

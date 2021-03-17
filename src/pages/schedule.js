@@ -21,8 +21,8 @@ const FAQ = () => {
             <div className="">
                 <div className="container">
                     <div className="calendly">
-                        <InlineWidget url="https://calendly.com/acmesales" styles={{
-                            height: '1000px'
+                        <InlineWidget url="https://calendly.com/stem1/coding-demo" styles={{
+                            height: '900px'
                         }} />
                     </div>
                 </div>
