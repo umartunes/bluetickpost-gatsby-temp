@@ -1,9 +1,9 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import ModalVideo from 'react-modal-video'
 import course1 from '../../assets/images/courses/course1.jpg'
 // functional component
-const CoursesDetailsSidebar = () => {
+const CoursesDetailsSidebar = ({ program }) => {
     const [isOpen, setIsOpen] = React.useState(true);
     const openModal = () => {
         setIsOpen(!isOpen);
@@ -12,20 +12,20 @@ const CoursesDetailsSidebar = () => {
     return (
         <React.Fragment>
             {/* If you want to change the video need to update videoID */}
-            <ModalVideo 
-                channel='youtube' 
-                isOpen={!isOpen} 
-                videoId='bk7McNUjWgw' 
-                onClose={() => setIsOpen(!isOpen)} 
-            /> 
+            <ModalVideo
+                channel='youtube'
+                isOpen={!isOpen}
+                videoId='bk7McNUjWgw'
+                onClose={() => setIsOpen(!isOpen)}
+            />
 
             <div className="courses-details-info">
                 <div className="image">
                     <img src={course1} alt="course1" />
-                    
-                    <Link 
-                        to="#" 
-                        onClick={e => {e.preventDefault(); openModal()}} 
+
+                    <Link
+                        to="#"
+                        onClick={e => { e.preventDefault(); openModal() }}
                         className="link-btn popup-youtube"
                     >
                     </Link>
@@ -40,48 +40,47 @@ const CoursesDetailsSidebar = () => {
                     <li className="price">
                         <div className="d-flex justify-content-between align-items-center">
                             <span><i className="flaticon-price-tag"></i> Price</span>
-                            $84/month
-                            
+                            {program.price}
+
                         </div>
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
                             <span><i className="flaticon-stopwatch"></i> Duration</span>
-                            12 - 16 Weeks
+                            {program.duration}
                         </div>
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
                             <span><i className="flaticon-distance-education"></i> Courses</span>
-                            10
+                            {program.courses}
                         </div>
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
                             <span><i className="flaticon-web"></i> Support</span>
-                            12 - 18 Weeks
+                            {program.support}
                         </div>
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
                             <span><i className="flaticon-open-padlock"></i> Reports</span>
-                            Quarterly
+                            {program.reports}
                         </div>
                     </li>
                 </ul>
 
                 <div className="btn-box">
-                    <Link to="#" className="default-btn">
-                        <i className="flaticon-shopping-basket"></i> 
-                        Add to Cart <span></span>
+                    <Link to="/schedule" className="default-btn">
+                        <i className="flaticon-right"></i> Get Started <span></span>
                     </Link>
-                    <Link to="#" className="default-btn">
-                        <i className="flaticon-price-tag"></i> 
+                    {/* <Link to="#" className="default-btn">
+                        <i className="flaticon-price-tag"></i>
                         Buy Now <span></span>
-                    </Link>
+                    </Link> */}
                 </div>
 
-                <div className="courses-share">
+                {/* <div className="courses-share">
                     <div className="share-info">
                         <span>Share This Course <i className="flaticon-share"></i></span>
 
@@ -108,7 +107,7 @@ const CoursesDetailsSidebar = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> */}
             </div>
         </React.Fragment>
     )
