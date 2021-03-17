@@ -8,15 +8,15 @@ import scientist4 from '../../assets/images/scientist/scientist4.png'
 
 const TeamMembers = () => {
     return (
-        <section className="scientist-area bg-color pb-70">
+        <section className="scientist-area bg-color ptb-70">
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
                         <img src={starIcon} alt="about" /> 
                         Team Members
                     </span>
-                    <h2>Our Data Scientist</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <h2>Meet Our Team</h2>
+                    {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p> */}
                 </div>
 
                 <div className="row">
@@ -26,8 +26,8 @@ const TeamMembers = () => {
                                 <img src={scientist1} alt="about" />
                             </div>
                             <div className="content">
-                                <h3>Merv Adrian</h3>
-                                <span>Data Management</span>
+                                <h3>Sudiksha D.</h3>
+                                <span>Hello! I am Sudiksha Devanathan currently studying biomedical engineering at Ryerson University. At STEM1, I teach different courses related to coding, Game Design, and Python. Besides, I’m also involved in some of the administrative work and organize events with STEM1. Camping is one of my favorite hobbies. </span>
 
                                 <ul className="social">
                                     <li>
@@ -61,8 +61,8 @@ const TeamMembers = () => {
                                 <img src={scientist2} alt="about" />
                             </div>
                             <div className="content">
-                                <h3>Kirk Borne</h3>
-                                <span>Data Scientist</span>
+                                <h3>Khushmeet Kaur</h3>
+                                <span>Hello! I am Khushmeet Kaur, a Computer Sciences student, and a technology enthusiast. I love to teach and at STEM1 I teach kids about MakeCode, HTML, and 3D Design. Besides teaching, I love to build, wire, and program robots. Under my supervision, your child will not only learn coding but will also love it. </span>
                                 
                                 <ul className="social">
                                     <li>
@@ -96,8 +96,8 @@ const TeamMembers = () => {
                                 <img src={scientist3} alt="about" />
                             </div>
                             <div className="content">
-                                <h3>Carla Gentry</h3>
-                                <span>Analytical Solutions</span>
+                                <h3>Nivey Renga</h3>
+                                <span>Hy there! I am Nivey Renga, a Grade 12 student at Rick Hansen Secondary School. At STEM1 I am responsible for designing the curriculum for GameDesign and Python courses. In addition to that, I am also involved in planning annual Junior Hackathon events. Movies and television shows are where I spend my free time. Except for horror movies, I love all genres. </span>
                                 
                                 <ul className="social">
                                     <li>
@@ -131,8 +131,8 @@ const TeamMembers = () => {
                                 <img src={scientist4} alt="about" />
                             </div>
                             <div className="content">
-                                <h3>Marie Curie</h3>
-                                <span>Data Scientist</span>
+                                <h3>Jasmine Gu</h3>
+                                <span>Hello, my name is Jasmine Gu. I am a student in the IB program at St Francis Xavier. My love for coding started when I studied some courses at the school level. Other than those courses, I mostly study coding by myself. At STEM1 I am the instructor for Python and Game Design courses. I love reading books in my leisure time. </span>
                                 
                                 <ul className="social">
                                     <li>

@@ -14,15 +14,15 @@ const OurHistory = () => {
                         <img src={starIcon} alt="banner" /> 
                         Our History
                     </span>
-                    <h2>History Begins in 2010</h2>
+                    <h2>GIVING BACK TO THE COMMUNITY </h2>
                 </div>
 
                 <ol className="timeline history-timeline">
                     <li className="timeline-block">
                         <div className="timeline-date">
-                            <span>2010</span>
-                            February 20
-                            <sup>th</sup>
+                            <span>2021</span>
+                            April 21
+                            <sup>st</sup>
                         </div>
 
                         <div className="timeline-icon">
@@ -33,8 +33,9 @@ const OurHistory = () => {
                             <div className="row align-items-center">
                                 <div className="col-lg-7 col-md-12">
                                     <div className="content">
-                                        <h3>Founded</h3>
-                                        <p>Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.</p>
+                                        <h3>Jr.hacks 2021</h3>
+                                        <p>Every year we host Jr.Hacks, the only STEM hackathon for kids in the Greater Toronto Area. This is our 3rd year hosting Jr.Hacks and we’re going virtual. We’ll be hosting it on April 10, 2021 and fundraising $5,000 for Peel Learning Foundation, a non-profit that supports Peel students with basic necessities they need to excel at school. </p>
+                                        <p>To register, click <a href="https://jrhacks.com/students" target="_blank" rel="noopener noreferrer">here</a>. </p>
                                     </div>
                                 </div>
 
@@ -49,9 +50,8 @@ const OurHistory = () => {
 
                     <li className="timeline-block">
                         <div className="timeline-date">
-                            <span>2013</span>
-                            January 14
-                            <sup>th</sup>
+                            <span>2020</span>
+                            December 
                         </div>
 
                         <div className="timeline-icon">
@@ -62,8 +62,8 @@ const OurHistory = () => {
                             <div className="row align-items-center">
                                 <div className="col-lg-7 col-md-12">
                                     <div className="content">
-                                        <h3>Global Success</h3>
-                                        <p>Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.</p>
+                                        <h3>Twas The Bite Before Christmas Breakfast</h3>
+                                        <p>In December 2020, we hosted Twas The Bite Before Christmas Breakfast along with Streetsville.org. We raised over $32,000 for Eden Food for Change, a local food bank, which has been doing excellent work helping those in need throughout the pandemic. </p>
                                     </div>
                                 </div>
 
@@ -76,63 +76,6 @@ const OurHistory = () => {
                         </div>
                     </li>
 
-                    <li className="timeline-block">
-                        <div className="timeline-date">
-                            <span>2016</span>
-                            March 25
-                            <sup>th</sup>
-                        </div>
-
-                        <div className="timeline-icon">
-                            <span className="dot-badge"></span>
-                        </div>
-
-                        <div className="timeline-content">
-                            <div className="row align-items-center">
-                                <div className="col-lg-7 col-md-12">
-                                    <div className="content">
-                                        <h3>Founded Data Center</h3>
-                                        <p>Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-5 col-md-12">
-                                    <div className="image">
-                                        <img src={history3} alt="banner" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li className="timeline-block">
-                        <div className="timeline-date">
-                            <span>2020</span>
-                            December 10
-                            <sup>th</sup>
-                        </div>
-
-                        <div className="timeline-icon">
-                            <span className="dot-badge"></span>
-                        </div>
-
-                        <div className="timeline-content">
-                            <div className="row align-items-center">
-                                <div className="col-lg-7 col-md-12">
-                                    <div className="content">
-                                        <h3>International Award</h3>
-                                        <p>Real innovations and a positive customer experience are the heart of successful communication. Lorem ipsum dolor sit amet, sectetur adipiscing elit, tempor incididunt ut labore et dolore magna.</p>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-5 col-md-12">
-                                    <div className="image">
-                                        <img src={history4} alt="banner" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
                 </ol>
             </div>
         </section>

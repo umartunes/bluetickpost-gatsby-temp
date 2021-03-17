@@ -5,11 +5,11 @@ import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import AboutUsContent from '../components/AboutUs/AboutUsContent'
 import OurHistory from '../components/AboutUs/OurHistory'
-import WhyChooseUs from '../components/AboutUs/WhyChooseUs'
-import HowItWork from '../components/AboutUs/HowItWork'
+// import WhyChooseUs from '../components/AboutUs/WhyChooseUs'
+// import HowItWork from '../components/AboutUs/HowItWork'
 import TeamMembers from '../components/AboutUs/TeamMembers'
-import Testimonials from '../components/AboutUs/Testimonials'
-import Partner from '../components/AboutUs/Partner'
+// import Testimonials from '../components/AboutUs/Testimonials'
+// import Partner from '../components/AboutUs/Partner'
  
 const AboutUs = () => {
     return (
@@ -23,11 +23,11 @@ const AboutUs = () => {
             />
             <AboutUsContent />
             <OurHistory />
-            <WhyChooseUs />
-            <HowItWork />
+            {/* <WhyChooseUs />
+            <HowItWork /> */}
             <TeamMembers />
-            <Testimonials />
-            <Partner />
+            {/* <Testimonials /> */}
+            {/* <Partner /> */}
             <Footer />
         </Layout>
     );
