@@ -1,3 +1,5 @@
+const path = require('path')
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -7,7 +9,6 @@
  * 
  * This is configuration file
  */
-
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -17,6 +18,30 @@ module.exports = {
       options: {
         lang: 'zxx'
       }
-    }
+    },
+
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: { default: path.resolve('./src/components/BlogContent/BlogLayout.js') },
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/posts`,
+      },
+    },
+
   ],
 }
