@@ -15,7 +15,7 @@ const BlogLayout = (props) => {
             <SEO
                 seoTitle={props.pageContext?.frontmatter?.title + " - STEM one"}
                 seoDescription={props.pageContext?.frontmatter?.description}
-                seoCanonical={'/blogs' + props.pageContext?.frontmatter?.path}
+                seoCanonical={'/blog' + props.pageContext?.frontmatter?.path}
                 seoImage={props.pageContext?.frontmatter?.seoImage}
             />
 
