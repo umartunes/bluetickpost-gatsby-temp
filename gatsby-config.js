@@ -1,5 +1,3 @@
-const path = require('path')
-
 /**
  * Configure your Gatsby site with this file.
  *
@@ -9,8 +7,13 @@ const path = require('path')
  * 
  * This is configuration file
  */
+const path = require('path')
+
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    siteTitle: "STEM one"
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -31,15 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts/`,
-      },
-    },
-
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: `${__dirname}/src/posts`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
 

@@ -1,6 +1,6 @@
 ---
-id: firstBlog
-path: /firstBlog
+id: secondBlog
+path: /secondBlog
 date: 2021-03-18
 
 title: My First Blog using Mark Down
@@ -9,7 +9,7 @@ category: General
 
 author: Umar
 authorImage: /users/umar.png
-featuredImage: /images/blog.jpg
+featuredImage: /images/blog2.jpg
 
 tags: ["my", "first", "blog"]
 seoImage: https://res.cloudinary.com/dev-empty/image/upload/v1593069801/explore-learning.jpg

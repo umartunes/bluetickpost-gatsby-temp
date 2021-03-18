@@ -1,12 +1,15 @@
 ---
 id: styleGuide
+path: /styleGuide
 date: 2019-01-29
 
 title: Style Guide
 description: A little description about this page
 category: Styling
-path: /styleGuide
-featuredImage: /blog.jpg
+
+author: Umar
+authorImage: /users/dummy.jpg
+featuredImage: /images/blog.jpg
 
 tags: ["style", "guide", "document"]
 seoImage: https://res.cloudinary.com/dev-empty/image/upload/v1593069801/explore-learning.jpg
