@@ -19,9 +19,17 @@ import Services from '../components/lms/Services'
 // import CaseStudy from '../components/lms/CaseStudy'
 // import BlogPost from '../components/lms/BlogPost'
 
+import SEO from '../components/App/SEO'
+
 const Home = () => {
     return (
-        <Layout>
+        <Layout >
+
+            <SEO
+                seoTitle="LMS Page - STEM one"
+                seoDescription="This is the description of SEO PAge"
+            />
+
             <NavbarTwo />
             <StartProject />
             <AboutUs />
