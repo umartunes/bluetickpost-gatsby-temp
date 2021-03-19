@@ -4,12 +4,12 @@ import { Link } from 'gatsby'
 // Blog Items coming from index file, using graphql query
 const BlogCard = (props) => {
 
-    console.log(props)
+    // console.log(props)
     return (
         <div className="blog-area ptb-100">
             <div className="container">
                 <div className="row">
-                    {props.data?.allMdx?.edges?.map((blogItem, i) => {
+                    {props.data.allMdx.edges.map((blogItem, i) => {
 
                         // console.log(blogItem)
 

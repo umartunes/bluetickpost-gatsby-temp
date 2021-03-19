@@ -8,20 +8,20 @@ import BlogLayoutContent from './BlogLayoutContent'
 import SEO from '../App/SEO'
 
 const BlogLayout = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <Layout>
 
             <SEO
-                seoTitle={props.pageContext?.frontmatter?.title + " - STEM one"}
-                seoDescription={props.pageContext?.frontmatter?.description}
-                seoCanonical={'/blog' + props.pageContext?.frontmatter?.path}
-                seoImage={props.pageContext?.frontmatter?.seoImage}
+                seoTitle={props.pageContext.frontmatter.title + " - STEM one"}
+                seoDescription={props.pageContext.frontmatter.description}
+                seoCanonical={'/blog' + props.pageContext.frontmatter.path}
+                seoImage={props.pageContext.frontmatter.seoImage}
             />
 
             <NavbarThree />
             <PageBanner
-                pageTitle={props.pageContext?.frontmatter?.title}
+                pageTitle={props.pageContext.frontmatter.title}
                 homePageText="Home"
                 homePageUrl="/"
                 activePageText="Blog"
