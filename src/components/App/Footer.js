@@ -22,24 +22,24 @@ const Footer = () => {
 
                             <ul className="social-link">
                                 <li>
-                                    <Link to="https://facebook.com/stem1ca" className="d-block" target="_blank" rel="noreferrer">
+                                    <a href="https://facebook.com/stem1ca" className="d-block" target="_blank" rel="noreferrer">
                                         <i className='bx bxl-facebook'></i>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <Link to="https://twitter.com/stem1ca" className="d-block" target="_blank" rel="noreferrer">
+                                    <a href="https://twitter.com/stem1ca" className="d-block" target="_blank" rel="noreferrer">
                                         <i className='bx bxl-twitter'></i>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <Link to="https://instagram.com/stem1ca" className="d-block" target="_blank" rel="noreferrer">
+                                    <a href="https://instagram.com/stem1ca" className="d-block" target="_blank" rel="noreferrer">
                                         <i className='bx bxl-instagram'></i>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <Link to="https://linkedin.com/company/stem1ca" className="d-block" target="_blank" rel="noreferrer">
+                                    <a href="https://linkedin.com/company/stem1ca" className="d-block" target="_blank" rel="noreferrer">
                                         <i className='bx bxl-linkedin'></i>
-                                    </Link>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

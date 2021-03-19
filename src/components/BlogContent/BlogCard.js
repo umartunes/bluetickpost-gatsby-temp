@@ -13,7 +13,7 @@ const BlogCard = (props) => {
 
                         // console.log(blogItem)
 
-                        return <div key={blogItem.id} className="col-lg-4 col-md-6">
+                        return <div key={blogItem.node.id} className="col-lg-4 col-md-6">
                             <div className="single-blog-post bg-fffbf5">
                                 <div className="post-image">
                                     <Link to={`/blog${blogItem.node.frontmatter.path}`}>

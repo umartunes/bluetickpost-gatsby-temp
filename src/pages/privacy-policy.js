@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
                                         </li>
                                        
                                         <li className="active">
-                                            <Link>
+                                            <Link to="#">
                                                 Privacy Policy
                                             </Link>
                                         </li>

@@ -35,10 +35,8 @@ const Solutions = () => {
                             <div className="icon">
                                 <i className="flaticon-laptop"></i>
                             </div>
-                            <h3>
-                                <h3>Group Learning</h3>
-
-                            </h3>
+                            
+                            <h3>Group Learning</h3>
                             <p>Group Learning enhances a child’s communication skills and time management. We teach kids in a group of 6 to ensure that they get proper attention while improving their coordination skills.</p>
 
                             {/* <Link to="/service-details-two" className="view-details-btn">

@@ -14,8 +14,8 @@ const Layout = ({ children, ...otherProps }) => {
     // Inject Tawk.to if not already injected
     useEffect(() => {
         if (!window.injectedTawkTo) {
+            // console.log("tawk")
             window.injectedTawkTo = true
-            console.log("tawk")
             tawkTo(tawkToPropertyId, tawkToKey)
         }
     }, [])
