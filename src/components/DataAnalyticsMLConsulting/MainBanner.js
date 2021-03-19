@@ -27,7 +27,7 @@ const MainBanner = () => {
                     </ReactWOW>
 
                     <ReactWOW delay='.1s' animation='fadeInUp'>
-                        <img src={MainImage} alt="image" />
+                        <img src={MainImage} alt="image_alt" />
                     </ReactWOW>
                 </div>
             </div>

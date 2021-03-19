@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby'
 
 import StarIcon from '../../assets/images/star-icon.png'
 import ServiceIcon1 from '../../assets/images/services/service-icon1.png'
@@ -15,7 +14,7 @@ const Services = () => {
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
-                        <img src={StarIcon} alt="image" />
+                        <img src={StarIcon} alt="image_alt" />
                         Our Services
                     </span>
                     <h2>Six Features of STEM1</h2>

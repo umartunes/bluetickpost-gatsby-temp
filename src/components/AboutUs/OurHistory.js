@@ -2,8 +2,6 @@ import React from 'react'
 import starIcon from '../../assets/images/star-icon.png'
 import history1 from '../../assets/images/history/history1.jpg'
 import history2 from '../../assets/images/history/history2.jpg'
-import history3 from '../../assets/images/history/history3.jpg'
-import history4 from '../../assets/images/history/history4.jpg'
 
 const OurHistory = () => {
     return (

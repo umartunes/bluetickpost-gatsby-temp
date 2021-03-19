@@ -1,5 +1,5 @@
 import React from 'react'
-import starIcon from '../../assets/images/star-icon.png'
+// import starIcon from '../../assets/images/star-icon.png'
 const ContactInfo = () => {
     return (
         <div className="contact-info-area pt-100 pb-70">

@@ -44,22 +44,15 @@ class CourseDetailsContent extends Component {
                     <div className="row">
                         <div className="col-lg-8 col-md-12">
                             <div className="courses-details-desc">
-                                <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                    <li
-                                        className="current"
-                                        onClick={(e) => this.openTabSection(e, 'tab1')}
-                                    >
-                                        Overview
+                                <ul className="nav nav-tabs" id="myTab">
+                                    <li className="current" >
+                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab1') }}>Overview</a >
                                     </li>
-                                    <li
-                                        onClick={(e) => this.openTabSection(e, 'tab2')}
-                                    >
-                                        Curriculum
+                                    <li>
+                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab2') }}>Curriculum</a >
                                     </li>
-                                    <li
-                                        onClick={(e) => this.openTabSection(e, 'tab4')}
-                                    >
-                                        Reviews
+                                    <li>
+                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab4') }}>Reviews</a >
                                     </li>
                                 </ul>
 
@@ -86,7 +79,8 @@ class CourseDetailsContent extends Component {
                                                 {curriculum.map((cur, i) => {
                                                     return <li key={i}>
                                                         <a
-                                                            to="#"
+                                                            href="/"
+                                                            onClick={(e) => e.preventDefault()}
                                                             className="d-flex justify-content-between align-items-center"
                                                         >
                                                             <span className="courses-name">
@@ -103,7 +97,7 @@ class CourseDetailsContent extends Component {
                                                 })}
 
                                             </ul>
-                                      
+
                                         </div>
                                     </div>
 

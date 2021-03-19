@@ -1,12 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import img4 from '../../assets/images/blog/blog-img4.jpg'
-import img5 from '../../assets/images/blog/blog-img5.jpg'
-import img6 from '../../assets/images/blog/blog-img6.jpg'
-
-import user1 from '../../assets/images/user1.jpg'
-import user2 from '../../assets/images/user2.jpg'
-import user3 from '../../assets/images/user3.jpg'
+import { Link } from 'gatsby'
 
 // Blog Items coming from index file, using graphql query
 const BlogCard = (props) => {
@@ -32,7 +25,7 @@ const BlogCard = (props) => {
                                     <ul className="post-meta d-flex justify-content-between align-items-center">
                                         <li>
                                             <div className="post-author d-flex align-items-center">
-                                                <img src={blogItem.node.frontmatter.authorImage} className="rounded-circle" alt="image" />
+                                                <img src={blogItem.node.frontmatter.authorImage} className="rounded-circle" alt="image_alt" />
                                                 <span>{blogItem.node.frontmatter.author}</span>
                                             </div>
                                         </li>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import BlogSidebar from './BlogSidebar'
-import img6 from '../../assets/images/blog/blog-img6.jpg'
+// import BlogSidebar from './BlogSidebar'
+// import img6 from '../../assets/images/blog/blog-img6.jpg'
 
 const BlogLayoutContent = (props) => {
     console.log(props)
@@ -14,7 +14,7 @@ const BlogLayoutContent = (props) => {
 
                             {props.pageContext?.frontmatter?.featuredImage
                                 ? <div className="article-image mb-5">
-                                    <img src={props.pageContext?.frontmatter?.featuredImage} alt={props.pageContext?.frontmatter?.title} />
+                                    <img src={props.pageContext?.frontmatter?.featuredImage} alt="Featured" />
                                 </div>
                                 : ""}
 

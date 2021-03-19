@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import StarIcon from '../../assets/images/star-icon.png'
 

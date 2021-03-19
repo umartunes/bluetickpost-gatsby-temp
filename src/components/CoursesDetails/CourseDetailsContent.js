@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import CoursesDetailsSidebar from './CoursesDetailsSidebar'
 import details from '../../assets/images/courses/courses-details.jpg'
 import speaker1 from '../../assets/images/speaker/speaker1.jpg'
@@ -40,28 +40,21 @@ class CourseDetailsContent extends Component {
                     <div className="row">
                         <div className="col-lg-8 col-md-12">
                             <div className="courses-details-desc">
-                                <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                    <li
-                                        className="current"
-                                        onClick={(e) => this.openTabSection(e, 'tab1')}
-                                    >
-                                        Overview
+                                <ul className="nav nav-tabs" id="myTab">
+
+                                    <li className="current">
+                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab1') }}>Overview</a >
                                     </li>
-                                    <li
-                                        onClick={(e) => this.openTabSection(e, 'tab2')}
-                                    >
-                                        Curriculum
+                                    <li>
+                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab2') }}>Curriculum</a >
                                     </li>
-                                    <li
-                                        onClick={(e) => this.openTabSection(e, 'tab3')}
-                                    >
-                                        Instructor
+                                    <li>
+                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab3') }}>Instructor</a >
                                     </li>
-                                    <li
-                                        onClick={(e) => this.openTabSection(e, 'tab4')}
-                                    >
-                                        Reviews
+                                    <li>
+                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab4') }}>Reviews</a >
                                     </li>
+
                                 </ul>
 
                                 <div className="tab-content">
@@ -82,7 +75,7 @@ class CourseDetailsContent extends Component {
                                             <h3>Python Introduction</h3>
                                             <ul>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -98,7 +91,7 @@ class CourseDetailsContent extends Component {
                                             <h3>Stepping into the World of Python</h3>
                                             <ul>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -110,7 +103,7 @@ class CourseDetailsContent extends Component {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -122,7 +115,7 @@ class CourseDetailsContent extends Component {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -134,7 +127,7 @@ class CourseDetailsContent extends Component {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -147,7 +140,7 @@ class CourseDetailsContent extends Component {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -162,7 +155,7 @@ class CourseDetailsContent extends Component {
                                             <h3>Python MySQL</h3>
                                             <ul>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -174,7 +167,7 @@ class CourseDetailsContent extends Component {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -187,7 +180,7 @@ class CourseDetailsContent extends Component {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link 
+                                                    <Link
                                                         to="#"
                                                         className="d-flex justify-content-between align-items-center"
                                                     >
@@ -211,7 +204,7 @@ class CourseDetailsContent extends Component {
                                                             <img src={speaker1} alt="course" />
                                                         </div>
                                                     </div>
-                        
+
                                                     <div className="col-lg-8 col-md-8">
                                                         <div className="advisor-content">
                                                             <h3>Sarah Taylor</h3>
@@ -321,7 +314,7 @@ class CourseDetailsContent extends Component {
                                             <h3>3 Reviews</h3>
                                             <div className="user-review">
                                                 <img src={user1} alt="course" />
-                                                
+
                                                 <div className="review-rating">
                                                     <div className="review-stars">
                                                         <i className='bx bxs-star checked'></i>
@@ -330,17 +323,17 @@ class CourseDetailsContent extends Component {
                                                         <i className='bx bxs-star checked'></i>
                                                         <i className='bx bxs-star checked'></i>
                                                     </div>
-            
+
                                                     <span className="d-inline-block">James Anderson</span>
                                                 </div>
-            
+
                                                 <span className="d-block sub-comment">Excellent</span>
                                                 <p>Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.</p>
                                             </div>
-            
+
                                             <div className="user-review">
                                                 <img src={user2} alt="course" />
-                                                
+
                                                 <div className="review-rating">
                                                     <div className="review-stars">
                                                         <i className='bx bxs-star checked'></i>
@@ -349,17 +342,17 @@ class CourseDetailsContent extends Component {
                                                         <i className='bx bxs-star'></i>
                                                         <i className='bx bxs-star'></i>
                                                     </div>
-            
+
                                                     <span className="d-inline-block">Sarah Taylor</span>
                                                 </div>
-            
+
                                                 <span className="d-block sub-comment">Video Quality!</span>
                                                 <p>Was really easy to implement and they quickly answer my additional questions!</p>
                                             </div>
-            
+
                                             <div className="user-review">
                                                 <img src={user3} alt="course" />
-                                                
+
                                                 <div className="review-rating">
                                                     <div className="review-stars">
                                                         <i className='bx bxs-star checked'></i>
@@ -368,17 +361,17 @@ class CourseDetailsContent extends Component {
                                                         <i className='bx bxs-star checked'></i>
                                                         <i className='bx bxs-star checked'></i>
                                                     </div>
-            
+
                                                     <span className="d-inline-block">David Warner</span>
                                                 </div>
-            
+
                                                 <span className="d-block sub-comment">Perfect Coding!</span>
                                                 <p>Stunning design, very dedicated crew who welcome new ideas suggested by customers, nice support.</p>
                                             </div>
 
                                             <div className="user-review">
                                                 <img src={user4} alt="course" />
-                                                
+
                                                 <div className="review-rating">
                                                     <div className="review-stars">
                                                         <i className='bx bxs-star checked'></i>
@@ -387,10 +380,10 @@ class CourseDetailsContent extends Component {
                                                         <i className='bx bxs-star checked'></i>
                                                         <i className='bx bxs-star'></i>
                                                     </div>
-            
+
                                                     <span className="d-inline-block">King Kong</span>
                                                 </div>
-            
+
                                                 <span className="d-block sub-comment">Perfect Video!</span>
                                                 <p>Stunning design, very dedicated crew who welcome new ideas suggested by customers, nice support.</p>
                                             </div>
