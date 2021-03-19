@@ -9,7 +9,7 @@ const BlogLayoutContent = (props) => {
         <section className="blog-details-area ptb-100">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-8 col-md-12">
+                    <div className="col-lg-12 col-md-12">
                         <div className="blog-details-desc">
 
                             {props.pageContext?.frontmatter?.featuredImage
@@ -80,9 +80,9 @@ const BlogLayoutContent = (props) => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-md-12">
-                        <BlogSidebar />
-                    </div>
+                        {/* <div className="col-lg-4 col-md-12">
+                            <BlogSidebar />
+                        </div> */}
                 </div>
             </div>
         </section>
