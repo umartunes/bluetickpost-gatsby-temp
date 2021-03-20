@@ -12,31 +12,31 @@ const HowItWork = () => {
                         <div className="how-its-work-content">
                             <span className="sub-title">
                                 <img src={StarIcon} alt="image_alt" /> 
-                                How It's Work
+                                Our Program
                             </span>
-                            <h2>The Data Science Process</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <h2>STEM1 Learning Path</h2>
+                            <p>Learning should be exciting and goal oreiented, students are given enough reasons to succeed.</p>
                             <div className="inner-box">
                                 <div className="single-item">
                                     <div className="count-box">
                                         1
                                     </div>
-                                    <h3>Data for All Your People</h3>
-                                    <p>Dolor sit amet consectetur elit eiusmod tempor incidi dunt labore dolore magna aliqua enim.</p>
+                                    <h3>Junior (Grade 3+)</h3>
+                                    <p>10 Courses to master and progress to Level 7 in Senior Program.</p>
                                 </div>
                                 <div className="single-item">
                                     <div className="count-box">
                                         2
                                     </div>
-                                    <h3>A New Breed of AI</h3>
-                                    <p>Dolor sit amet consectetur elit eiusmod tempor incidi dunt labore dolore magna aliqua enim.</p>
+                                    <h3>Senior (Grade 6+)</h3>
+                                    <p>Master 10 levels or progress through experience.</p>
                                 </div>
                                 <div className="single-item">
                                     <div className="count-box">
                                         3
                                     </div>
-                                    <h3>Analytics Business</h3>
-                                    <p>Dolor sit amet consectetur elit eiusmod tempor incidi dunt labore dolore magna aliqua enim.</p>
+                                    <h3>Leadership</h3>
+                                    <p>Complete 10 Projects & Lead 10 classes.</p>
                                 </div>
                             </div>
                         </div>

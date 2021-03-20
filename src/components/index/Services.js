@@ -15,9 +15,9 @@ const Services = () => {
                 <div className="section-title">
                     <span className="sub-title">
                         <img src={StarIcon} alt="image_alt" />
-                        Our Services
+                        Our Strength
                     </span>
-                    <h2>Six Features of STEM1</h2>
+                    <h2>STEM1 principles</h2>
                     {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p> */}
                 </div>
 
@@ -27,8 +27,8 @@ const Services = () => {
                             <div className="icon">
                                 <img src={ServiceIcon1} alt="Service Icon" />
                             </div>
-                            <h3>Future-ready</h3>
-                            <p>The importance of coding is undeniable. From medicine to architecture, it is involved in every field of life. Help your child to ace all of them by providing them learning opportunities through STEM1.</p>
+                            <h3>Excitement</h3>
+                            <p> We wont promise that your child will be Job Ready or creating a Million dollar App. We want them to be excited and approach coding as a fun activity. </p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -42,7 +42,7 @@ const Services = () => {
                                 <img src={ServiceIcon2} alt="Service Icon" />
                             </div>
                             <h3>Computational thinking</h3>
-                            <p>The basic features of coding such as computational thinking helps students to tackle issues using patterns, automation, and logic.</p>
+                            <p>Learn the fundementals: Algorithm, Abstraction, Decompose, Patterns, Program .</p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -56,7 +56,7 @@ const Services = () => {
                                 <img src={ServiceIcon3} alt="Service Icon" />
                             </div>
                             <h3>Clear Progression</h3>
-                            <p>Students must be taught what they can understand. Therefore, at STEM1, we offer three different courses i-e Junior, Senior, and Leader. It ensures that students learn in a stepwise manner and do not get overwhelmed due to complexity.</p>
+                            <p>Students are encouraged through our gamified learning process and parents are provided quarterly progress reports.  </p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -69,8 +69,8 @@ const Services = () => {
                             <div className="icon">
                                 <img src={ServiceIcon4} alt="Service Icon" />
                             </div>
-                            <h3>Hands-on Learning</h3>
-                            <p>Keeping a child motivated for studies can be a difficult job to do. But we are here to help you with that. Our courses are designed to keep learners motivated through hands-on learning. We follow a 1:3 ratio i.e, we have one instructor for 3 students. </p>
+                            <h3>Hands-on</h3>
+                            <p>All our courses are designed to complete concept specific tasks to help students in retaining what they have learned. </p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -84,7 +84,7 @@ const Services = () => {
                                 <img src={ServiceIcon5} alt="Service Icon" />
                             </div>
                             <h3>Leadership</h3>
-                            <p>We enhance our student’s leadership skills by providing them mentorship opportunities. Our STEM1 graduates are given a chance to become an instructor for STEM1. It helps them in retaining what they have learned. Moreover, it also incorporates leadership skills in them. </p>
+                            <p>We encourage open discussion and new ideas for students to work with each other and mentor when possible. </p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -97,8 +97,8 @@ const Services = () => {
                             <div className="icon">
                                 <img src={ServiceIcon6} alt="Service Icon" />
                             </div>
-                            <h3>Foreseeing</h3>
-                            <p>The importance of coding is undeniable. From medicine to architecture, it is involved in every field of life. Help your child to ace all of them by providing them learning opportunities through STEM1.</p>
+                            <h3>Creative</h3>
+                            <p>Our courses are designed to provide enough freedom for students to come up with varied solutions to the problems.</p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>

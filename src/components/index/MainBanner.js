@@ -51,8 +51,8 @@ const MainBanner = () => {
                             <div className="container">
                                 <div className="banner-item-content">
                                     <span className="sub-title">Welcome</span>
-                                    <h1>Modern Machine Learning Solutions!</h1>
-                                    <p>We add values to our clients business by utilizing our expertise and experience on AI based Machine Learning Soltions. Our learning drives us to success!</p>
+                                    <h1>#FutureReady!</h1>
+                                    <p>We help you get ready for the future to success!</p>
 
                                     <div className="btn-box">
                                         <Link to="/about-us" className="default-btn">
@@ -80,7 +80,7 @@ const MainBanner = () => {
                             <div className="container">
                                 <div className="banner-item-content">
                                     <span className="sub-title">Welcome</span>
-                                    <h1>AI Based Modern Business Solutions</h1>
+                                    <h1>#LearnLocal</h1>
                                     <p>We think AI can bring the best results for clients business needs. Our SMART decesion making AI algorithm can identify the business needs and offers solutions.</p>
                                     
                                     <div className="btn-box">
