@@ -121,7 +121,7 @@ const Footer = () => {
                                 <li>
                                     <i className='bx bx-map'></i>
                                     {/* 175 5th Ave, New York, NY 10010, <br /> United States */}
-                                    1075 Ceremonial Dr #7, Mississauga, ON L5R 2Z4, Canada
+                                    1075 Ceremonial Dr #7, Mississauga
                                 </li>
                                 <li>
                                     <i className='bx bx-phone-call'></i>
