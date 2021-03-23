@@ -16,36 +16,36 @@ const OurServices = () => {
                             <div className="our-mission-content">
                                 <div className="content">
                                     <span className="sub-title">
-                                        <img src={starIcon} alt="icon" /> Services
+                                        <img src={starIcon} alt="icon" /> Jr. Program highlights
                                     </span>
                                     
-                                    <h2>Design & Development</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                                    <h2>Concepts Learnt</h2>
+                                    <p>Students start from block based coding and quickly graduate to script based through building games and creating presentations</p>
 
                                     <ul className="our-mission-list mb-0">
                                         <li>
                                             <i className="flaticon-tick"></i>
-                                            Responsive Design
+                                            Algorithms
                                         </li>
                                         <li>
                                             <i className="flaticon-tick"></i>
-                                            React Development
+                                            Game development
                                         </li>
                                         <li>
                                             <i className="flaticon-tick"></i>
-                                            Apps Development
+                                            3D Design
                                         </li>
                                         <li>
                                             <i className="flaticon-tick"></i>
-                                            Laravel Development
+                                            Computational Thinking
                                         </li>
                                         <li>
                                             <i className="flaticon-tick"></i>
-                                            UX/UI Design
+                                            Conditional statements
                                         </li>
                                         <li>
                                             <i className="flaticon-tick"></i>
-                                            E-commerce Design
+                                           Deploy & Publish Code
                                         </li>
                                         <li>
                                             <i className="flaticon-tick"></i>
@@ -53,7 +53,7 @@ const OurServices = () => {
                                         </li>
                                         <li>
                                             <i className="flaticon-tick"></i>
-                                            Print Ready Design
+                                             Debugging & Testing
                                         </li>
                                     </ul>
                                 </div>

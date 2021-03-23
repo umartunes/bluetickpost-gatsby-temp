@@ -28,7 +28,7 @@ const Services = () => {
                                 <img src={ServiceIcon1} alt="Service Icon" />
                             </div>
                             <h3>Excitement</h3>
-                            <p> We wont promise that your child will be Job Ready or creating a Million dollar App. We want them to be excited and approach coding as a fun activity. </p>
+                            <p> Our promise to make students excited about coding and not fear Programming!</p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -42,7 +42,7 @@ const Services = () => {
                                 <img src={ServiceIcon2} alt="Service Icon" />
                             </div>
                             <h3>Computational thinking</h3>
-                            <p>Learn the fundementals: Algorithm, Abstraction, Decompose, Patterns, Program .</p>
+                            <p>We focus on fundementals: Algorithm, Abstraction, Decompose, Patterns, Program,.. </p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -55,8 +55,8 @@ const Services = () => {
                             <div className="icon">
                                 <img src={ServiceIcon3} alt="Service Icon" />
                             </div>
-                            <h3>Clear Progression</h3>
-                            <p>Students are encouraged through our gamified learning process and parents are provided quarterly progress reports.  </p>
+                            <h3>Progress</h3>
+                            <p>Gamified learning for students and quarterly progress reports for parents </p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -69,8 +69,8 @@ const Services = () => {
                             <div className="icon">
                                 <img src={ServiceIcon4} alt="Service Icon" />
                             </div>
-                            <h3>Hands-on</h3>
-                            <p>All our courses are designed to complete concept specific tasks to help students in retaining what they have learned. </p>
+                            <h3>Hands-on Approach</h3>
+                            <p>Students complete concept specific tasks that help retain what they have learned </p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -84,7 +84,7 @@ const Services = () => {
                                 <img src={ServiceIcon5} alt="Service Icon" />
                             </div>
                             <h3>Leadership</h3>
-                            <p>We encourage open discussion and new ideas for students to work with each other and mentor when possible. </p>
+                            <p>We encourage open discussion and new ideas for students to work with each other and <b>Mentor</b>  </p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>
@@ -98,7 +98,7 @@ const Services = () => {
                                 <img src={ServiceIcon6} alt="Service Icon" />
                             </div>
                             <h3>Creative</h3>
-                            <p>Our courses are designed to provide enough freedom for students to come up with varied solutions to the problems.</p>
+                            <p>Our courses are designed to provide freedom for students to be creative and solve problems</p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>

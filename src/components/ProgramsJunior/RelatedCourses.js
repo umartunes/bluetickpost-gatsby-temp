@@ -13,7 +13,7 @@ const RelatedCourses = () => {
         <div className="courses-area bg-fafafb pt-100 pb-70">
             <div className="container">
                 <div className="section-title">
-                    <h2>More Courses You Might Like</h2>
+                    <h2>Student showcase</h2>
                 </div>
 
                 <div className="row">
@@ -26,25 +26,25 @@ const RelatedCourses = () => {
                                 <Link to="#" className="fav">
                                     <i className="flaticon-heart"></i>
                                 </Link>
-                                <div className="price shadow free">Free</div>
+                                {/* <div className="price shadow free">Free</div> */}
                             </div>
                             <div className="courses-content">
                                 <div className="course-author d-flex align-items-center">
                                     <img src={user1} className="rounded-circle" alt="course" />
-                                    <span>Alex Morgan</span>
+                                    <span>Lushen Bertnad</span>
                                 </div>
                                 <h3>
                                     <Link to="/course-details">
-                                        Introduction to Quantitative Methods
+                                        My First Webpage
                                     </Link>
                                 </h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                                <p>It was a great moment when Lushen realize that she can create her own website and make her own on Internet!.</p>
                                 <ul className="courses-box-footer d-flex justify-content-between align-items-center">
                                     <li>
-                                        <i className='flaticon-agendas'></i> 8 Weeks Long
+                                        <i className='flaticon-agendas'></i> Grade 3
                                     </li>
                                     <li>
-                                        <i className='flaticon-team'></i> Available Now
+                                        <i className='flaticon-team'></i> June 10, 2017
                                     </li>
                                 </ul>
                             </div>
@@ -60,7 +60,7 @@ const RelatedCourses = () => {
                                 <Link to="#" className="fav">
                                     <i className="flaticon-heart"></i>
                                 </Link>
-                                <div className="price shadow">$49</div>
+                                {/* <div className="price shadow">$49</div> */}
                             </div>
                             <div className="courses-content">
                                 <div className="course-author d-flex align-items-center">
@@ -94,7 +94,7 @@ const RelatedCourses = () => {
                                 <Link to="#" className="fav">
                                     <i className="flaticon-heart"></i>
                                 </Link>
-                                <div className="price shadow">$69</div>
+                                {/* <div className="price shadow">$69</div> */}
                             </div>
                             <div className="courses-content">
                                 <div className="course-author d-flex align-items-center">

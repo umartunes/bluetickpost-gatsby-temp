@@ -2,6 +2,7 @@ import React from 'react';
 
 import StarIcon from '../../assets/images/star-icon.png'
 import HowItsWork from '../../assets/images/how-its-work.png'
+import { Link } from 'gatsby'
 
 const HowItWork = () => {
     return (
@@ -19,23 +20,40 @@ const HowItWork = () => {
                             <div className="inner-box">
                                 <div className="single-item">
                                     <div className="count-box">
-                                        1
+                                        jr.
                                     </div>
-                                    <h3>Junior (Grade 3+)</h3>
+                                    <h3>
+                                    <Link to="/programs-junior">
+                                    Junior (Grade 3+)
+                                    </Link>
+
+                                    </h3>
                                     <p>10 Courses to master and progress to Level 7 in Senior Program.</p>
                                 </div>
                                 <div className="single-item">
                                     <div className="count-box">
-                                        2
+                                        sr.
                                     </div>
-                                    <h3>Senior (Grade 6+)</h3>
+                                    <h3>
+                                        
+                                    <Link to="/programs-senior">
+                                    Senior (Grade 6+)
+                                    </Link>
+
+                                   </h3>
+                                
                                     <p>Master 10 levels or progress through experience.</p>
                                 </div>
                                 <div className="single-item">
                                     <div className="count-box">
-                                        3
+                                        lr.
                                     </div>
-                                    <h3>Leadership</h3>
+                                    <h3>
+                                    <Link to="/programs-leadership">
+                                        Leaders
+                                    </Link>
+
+                                    </h3>
                                     <p>Complete 10 Projects & Lead 10 classes.</p>
                                 </div>
                             </div>

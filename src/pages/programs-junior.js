@@ -6,13 +6,13 @@ import Footer from "../components/App/Footer"
 import PageBanner from '../components/ProgramsJunior/PageBanner'
 import OurServices from '../components/ProgramsJunior/OurServices'
 import CourseDetailsContent from '../components/ProgramsJunior/CourseDetailsContent'
-import RelatedCourses from '../components/ProgramsJunior/RelatedCourses'
+// import RelatedCourses from '../components/ProgramsJunior/RelatedCourses'
 
 const program = {
     title: "Junior (Grade 3+)",
-    description: `With the 4th industrial revolution, children are now exposed to technology more than ever. From asking Alexa to play their favorite poem and automatically customizing their coffee drinks, they all grow up. Therefore, it is the responsibility of the parents to familiarize them with the technological advancements.`,
-    certification: `We gamify the learning through badges to recognize the growth of our students. They will be awarded a certificate of completion after they finish every course. Students will have to submit a presentation or project, required to graduate the program.`,
-    courseFor: `Our Junior program is designed for 3 to 5 graders to teach them the basics of coding. This program offers 10 courses and weekly classes are conducted for each course. At the end of each course, we conduct exams to assess the level of learning.`,
+    description: `Children are now growing up with technology as axxxxxxxxxx. From asking Alexa to play their favorite song to finding answers to almost anything in Google, they all grow up. Therefore, it is the responsibility of parents to familiarize them with technological advancements.`,
+    certification: `We gamify the learning through badges to recognize the growth of our students. Students will be awarded a certificate of completion after they finish every course. Students will have to submit a presentation or project, required to graduate the program.`,
+    courseFor: `Our Junior program is designed for Grade 3+ students to teach them basics of coding. This program offers 10 levels with weekly 1 hour class. At the end of each course, we conduct exams to assess the level of learning.`,
 
     price: "$84/month",
     duration: "12 - 16 Weeks",
@@ -73,10 +73,10 @@ const Details = () => {
                 pageTitle={program.title}
                 homePageText="Home"
                 homePageUrl="/"
-                activePageText="Course Details"
+                activePageText="Junior program details"
             />
             <CourseDetailsContent program={program} curriculum={curriculum} />
-            <RelatedCourses />
+            {/* <RelatedCourses /> */}
             <OurServices />
             <Footer />
         </Layout>

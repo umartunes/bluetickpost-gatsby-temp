@@ -120,8 +120,7 @@ const Footer = () => {
                             <ul className="footer-contact-info">
                                 <li>
                                     <i className='bx bx-map'></i>
-                                    {/* 175 5th Ave, New York, NY 10010, <br /> United States */}
-                                    1075 Ceremonial Dr #7, Mississauga
+                                    1075 Ceremonial Dr., Mississauga
                                 </li>
                                 <li>
                                     <i className='bx bx-phone-call'></i>
