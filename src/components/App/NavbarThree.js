@@ -1,12 +1,13 @@
 import React from 'react';
- 
+import { useRecoilState } from 'recoil'
+import { collapsedState } from '../../utils/recoil-atoms'
 import { Link } from 'gatsby'
 import logo from "../../assets/images/logo.png"
 
 import Menu from "./Menu"
 
 const NavbarThree = () => {
-    const [collapsed, setCollapsed] = useRecoilState(collapsedState);
+     const [collapsed, setCollapsed] = useRecoilState(collapsedState);
 
     const toggleNavbar = () => {
         setCollapsed(!collapsed);
@@ -40,6 +41,7 @@ const NavbarThree = () => {
                                 className="navbar-brand"
                             >
                                 <img src={logo} alt="logo" />
+                                
                             </Link>
 
                             <button

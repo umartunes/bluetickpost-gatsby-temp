@@ -34,13 +34,7 @@ const NavbarTwo = () => {
                     
                     <div className="container">
                         <nav className="navbar navbar-expand-lg navbar-light">
-                            <Link
-                                to="/"
-                                onClick={() => setCollapsed(true)}
-                                className="navbar-brand"
-                            >
-                                <img src={logo} alt="logo" />
-                            </Link>
+                           
 
                             <button
                                 onClick={toggleNavbar}
@@ -57,9 +51,18 @@ const NavbarTwo = () => {
                             </button>
 
                             <div className={classOne} id="navbarSupportedContent">
-                                 
-                            <Menu />
+
+                            <Link
+                                to="/"
+                                onClick={() => setCollapsed(true)}
+                                className="navbar-brand"
+                            >
+                                <img src={logo} alt="logo" />
+                                </Link>
                                 
+                               <Menu />
+                          
+
                                 <div className="others-option d-flex align-items-center">
                                     <div className="option-item">
                                         <Link
