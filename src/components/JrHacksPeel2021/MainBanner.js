@@ -1,6 +1,6 @@
 import React from 'react';
 import ModalVideo from 'react-modal-video';
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel3'))
 
@@ -34,17 +34,17 @@ const MainBanner = () => {
     return (
         <React.Fragment>
             {/* If you want to change the video need to update videoID */}
-            <ModalVideo 
-                channel='youtube' 
-                isOpen={!isOpen} 
-                videoId='bk7McNUjWgw' 
-                onClose={() => setIsOpen(!isOpen)} 
+            <ModalVideo
+                channel='youtube'
+                isOpen={!isOpen}
+                videoId='bk7McNUjWgw'
+                onClose={() => setIsOpen(!isOpen)}
             />
 
-            {display ? <OwlCarousel 
+            {display ? <OwlCarousel
                 className="home-slides owl-carousel owl-theme"
                 {...options}
-            > 
+            >
                 <div className="main-banner-item item-bg1">
                     <div className="d-table">
                         <div className="d-table-cell">
@@ -56,13 +56,13 @@ const MainBanner = () => {
 
                                     <div className="btn-box">
                                         <Link to="/about-us" className="default-btn">
-                                            <i className="flaticon-right"></i> 
+                                            <i className="flaticon-right"></i>
                                             About Us <span></span>
                                         </Link>
 
-                                        <Link 
-                                            to="#play-video" 
-                                            onClick={e => {e.preventDefault(); openModal()}} 
+                                        <Link
+                                            to="#play-video"
+                                            onClick={e => { e.preventDefault(); openModal() }}
                                             className="video-btn popup-youtube"
                                         >
                                             <i className="flaticon-google-play"></i> Watch Video
@@ -82,16 +82,16 @@ const MainBanner = () => {
                                     <span className="sub-title">Welcome</span>
                                     <h1>#LearnLocal</h1>
                                     <p>We think AI can bring the best results for clients business needs. Our SMART decesion making AI algorithm can identify the business needs and offers solutions.</p>
-                                    
+
                                     <div className="btn-box">
                                         <Link to="/about-us" className="default-btn">
-                                            <i className="flaticon-right"></i> 
+                                            <i className="flaticon-right"></i>
                                             About Us <span></span>
                                         </Link>
 
-                                        <Link 
-                                            to="#play-video" 
-                                            onClick={e => {e.preventDefault(); openModal()}} 
+                                        <Link
+                                            to="#play-video"
+                                            onClick={e => { e.preventDefault(); openModal() }}
                                             className="video-btn popup-youtube"
                                         >
                                             <i className="flaticon-google-play"></i> Watch Video
