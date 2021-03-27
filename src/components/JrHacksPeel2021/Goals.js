@@ -2,16 +2,16 @@ import React from 'react'
 
 import StarIcon from '../../assets/images/star-icon.png'
 
-const Solutions = () => {
+const Goals = () => {
     return (
         <section className="solutions-area pt-100 pb-70">
             <div className="container">
                 <div className="section-title">
                     <span className="sub-title">
                         <img src={StarIcon} alt="StarIcon" />
-                        Our core values
+                        Our Goals
                     </span>
-                    <h2>STEM1 Difference! </h2>
+                    <h2>Jr.Hacks Benefits </h2>
                     {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p> */}
                 </div>
 
@@ -21,8 +21,8 @@ const Solutions = () => {
                             <div className="icon">
                                 <i className="flaticon-rocket"></i>
                             </div>
-                            <h3>Local</h3>
-                            <p>Convinience of Virtual class but with instructors are local, which means they can offer a better learning experience for the students. </p>
+                            <h3>Students</h3>
+                            <p>Provide great fun STEM day for students with workshops & competitions. </p>
 
                             {/* <Link to="/service-details-two" className="view-details-btn">
                                 View Details
@@ -36,8 +36,8 @@ const Solutions = () => {
                                 <i className="flaticon-laptop"></i>
                             </div>
                             
-                            <h3>Interactive</h3>
-                            <p>Group Learning provides a better learning experience and Leadership opportunities for students. We believe there is always something to learn from each other.</p>
+                            <h3>Parents</h3>
+                            <p>Information sessions to provide opportunities and resources available for their children </p>
 
                             {/* <Link to="/service-details-two" className="view-details-btn">
                                 View Details
@@ -50,8 +50,8 @@ const Solutions = () => {
                             <div className="icon">
                                 <i className="flaticon-money"></i>
                             </div>
-                            <h3>#FutureReady</h3>
-                            <p> Our students are our future Instructors!. We provide plenty of opportunities for students to lead and present their ideas and projects. </p>
+                            <h3>Community</h3>
+                            <p>We raise funds for a local charity that is focussed on removing barriers to education for students.  </p>
 
                             {/* <Link to="/service-details-two" className="view-details-btn">
                                 View Details
@@ -64,7 +64,7 @@ const Solutions = () => {
                     <div className="col">
                         <blockquote>
                             <h2>Did you know?</h2>
-                            <p>There are over 700 coding languages!. In 10 years, there will have way more, it is important to learn how to be comfortable with logic and problem solving than trying to master few programming languages!</p>
+                            <p>Hackathons are the events used by companies and college students to find innovative solutions to problems. Many awesome products are built at hackathon. You child is just starting a little early!!</p>
                         </blockquote>
                     </div>
                 </div>
@@ -74,4 +74,4 @@ const Solutions = () => {
     )
 }
 
-export default Solutions;
+export default Goals;

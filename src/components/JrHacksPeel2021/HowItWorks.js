@@ -4,7 +4,7 @@ import StarIcon from '../../assets/images/star-icon.png'
 import HowItsWork from '../../assets/images/how-its-work.png'
 import { Link } from 'gatsby'
 
-const HowItWork = () => {
+const HowItWorks = () => {
     return (
         <section className="how-its-work-area ptb-100">
             <div className="container">
@@ -13,10 +13,10 @@ const HowItWork = () => {
                         <div className="how-its-work-content">
                             <span className="sub-title">
                                 <img src={StarIcon} alt="image_alt" /> 
-                                Our Program
+                                Jr.Hacks
                             </span>
-                            <h2>STEM1 Learning Path</h2>
-                            <p>Learning should be exciting and goal oreiented, students are given enough reasons to succeed.</p>
+                            <h2>Process</h2>
+                            <p>Students are placed into teams by Grade level. Top 3 Teams by Grade wins Medals</p>
                             <div className="inner-box">
                                 <div className="single-item">
                                     <div className="count-box">
@@ -24,11 +24,11 @@ const HowItWork = () => {
                                     </div>
                                     <h3>
                                     <Link to="/programs-junior">
-                                    Junior (Grade 3+)
+                                    Register
                                     </Link>
 
                                     </h3>
-                                    <p>10 Courses to master and progress to Level 7 in Senior Program.</p>
+                                    <p>Register for the Annual event in your Region</p>
                                 </div>
                                 <div className="single-item">
                                     <div className="count-box">
@@ -37,12 +37,12 @@ const HowItWork = () => {
                                     <h3>
                                         
                                     <Link to="/programs-senior">
-                                    Senior (Grade 6+)
+                                    SWAG Pickup
                                     </Link>
 
                                    </h3>
                                 
-                                    <p>Master 10 levels or progress through experience.</p>
+                                    <p>Pickup your swag bag for event from one of our local partners.</p>
                                 </div>
                                 <div className="single-item">
                                     <div className="count-box">
@@ -50,11 +50,11 @@ const HowItWork = () => {
                                     </div>
                                     <h3>
                                     <Link to="/programs-leadership">
-                                        Leaders
+                                        Compete & Win
                                     </Link>
 
                                     </h3>
-                                    <p>Complete 10 Projects & Lead 10 classes. Instructors in Training!</p>
+                                    <p>Attend workshops & complete challenges </p>
                                 </div>
                             </div>
                         </div>
@@ -71,4 +71,4 @@ const HowItWork = () => {
     )
 }
 
-export default HowItWork;
+export default HowItWorks;

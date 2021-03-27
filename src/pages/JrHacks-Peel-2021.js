@@ -4,11 +4,12 @@ import Footer from "../components/App/Footer"
 import Layout from "../components/App/Layout"
 
 import MainBanner from '../components/JrHacksPeel2021/MainBanner';
-import Solutions from '../components/JrHacksPeel2021/Solutions';
+import Goals from '../components/JrHacksPeel2021/Goals';
 // import AboutUs from '../components/index/AboutUs';
-import Services from '../components/JrHacksPeel2021/Services';
+// import Services from '../components/JrHacksPeel2021/Services';
 import CallToAction from '../components/JrHacksPeel2021/CallToAction';
-import HowItWork from '../components/JrHacksPeel2021/HowItWork';
+import HowItWorks from '../components/JrHacksPeel2021/HowItWorks';
+import EventDay from '../components/JrHacksPeel2021/EventDay';
 // import RecentProjects from '../components/index/RecentProjects';
 // import TeamMember from '../components/index/TeamMember';
 // import Testimonials from '../components/index/Testimonials';
@@ -22,11 +23,11 @@ const JrHacksPeel2021 = () => {
         <Layout>
             <NavbarTwo />
             <MainBanner />
-            <Solutions />
-            <HowItWork />
+            <Goals />
+            <HowItWorks />
             {/* <AboutUs /> */}
             <CallToAction />
-            <Services />
+            <EventDay />
             {/* <RecentProjects /> */}
             {/* <TeamMember />
             <CallToAction /> */}

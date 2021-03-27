@@ -15,7 +15,7 @@ const Services = () => {
                 <div className="section-title">
                     <span className="sub-title">
                         <img src={StarIcon} alt="image_alt" />
-                        Our Strength
+                        Our Strengths
                     </span>
                     <h2>STEM1 Focus</h2>
                     {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p> */}
