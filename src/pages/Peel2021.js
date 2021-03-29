@@ -6,7 +6,7 @@ import EventDetailsContent from "../components/Peel2021/EventDetailsContent";
 import Sponsors from "../components/Peel2021/Sponsors";
 import NavbarTwo from "../components/App/NavbarTwo";
 import HowItWork from "../components/Peel2021/HowItWork";
-import Partner from "../components/Hackathons/Peel2021/Partner";
+// import Partner from "../components/Hackathons/Peel2021/Partner";
 
 const EventDetails = () => {
   return (
@@ -14,7 +14,7 @@ const EventDetails = () => {
       <NavbarTwo />
 
       <EventDetailsContent />
-      <Partner />
+      {/* <Partner /> */}
       <HowItWork />
       <Sponsors />
       <Footer />
