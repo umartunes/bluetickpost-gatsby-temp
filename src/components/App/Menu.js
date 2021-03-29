@@ -9,9 +9,7 @@ export default function Menu() {
 
     return (
 
-
         <ul className="navbar-nav">
-
 
             <li className="nav-item">
                 <Link
