@@ -5,7 +5,7 @@ import PageBanner from '../../components/Common/PageBanner'
 import Footer from "../../components/App/Footer"
 import EventsCard from '../../components/Hackathon/HackathonIndex/EventsCard'
 
-const Events = () => {
+const Hackathon = () => {
     return (
         <Layout>
             <NavbarThree />
@@ -21,4 +21,4 @@ const Events = () => {
     );
 }
 
-export default Events
+export default Hackathon
