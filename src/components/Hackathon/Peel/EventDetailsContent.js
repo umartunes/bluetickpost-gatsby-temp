@@ -4,7 +4,7 @@ import EventSidebar from './EventSidebar'
 import details from '../../../assets/images/events/events-details.jpg'
 
 const EventDetailsContent = ({peel}) => {
-    console.log( peel )
+
     return (
         <section className="events-details-area pb-100">
             <div className="events-details-image">
