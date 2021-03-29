@@ -5,7 +5,7 @@ import { collapsedState } from '../../utils/recoil-atoms'
 
 export default function Menu() {
     const [collapsed, setCollapsed] = useRecoilState(collapsedState);
-    console.log(collapsed)
+    // console.log(collapsed)
 
     return (
 
