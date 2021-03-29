@@ -31,10 +31,17 @@ const NavbarTwo = () => {
         <React.Fragment>
             <div id="navbar" className="navbar-area navbar-style-two">
                 <div className="tarn-nav">
-                    
+
                     <div className="container">
                         <nav className="navbar navbar-expand-lg navbar-light">
-                           
+
+                            <Link
+                                to="/"
+                                onClick={() => setCollapsed(true)}
+                                className="navbar-brand"
+                            >
+                                <img src={logo} alt="logo" />
+                            </Link>
 
                             <button
                                 onClick={toggleNavbar}
@@ -52,16 +59,7 @@ const NavbarTwo = () => {
 
                             <div className={classOne} id="navbarSupportedContent">
 
-                            <Link
-                                to="/"
-                                onClick={() => setCollapsed(true)}
-                                className="navbar-brand"
-                            >
-                                <img src={logo} alt="logo" />
-                                </Link>
-                                
-                               <Menu />
-                          
+                                <Menu />
 
                                 <div className="others-option d-flex align-items-center">
                                     <div className="option-item">
@@ -78,7 +76,7 @@ const NavbarTwo = () => {
                             </div>
                         </nav>
                     </div>
-               
+
                 </div>
             </div>
         </React.Fragment>

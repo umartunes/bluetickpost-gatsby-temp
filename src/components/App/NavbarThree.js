@@ -7,7 +7,7 @@ import logo from "../../assets/images/logo.png"
 import Menu from "./Menu"
 
 const NavbarThree = () => {
-     const [collapsed, setCollapsed] = useRecoilState(collapsedState);
+    const [collapsed, setCollapsed] = useRecoilState(collapsedState);
 
     const toggleNavbar = () => {
         setCollapsed(!collapsed);
@@ -41,7 +41,7 @@ const NavbarThree = () => {
                                 className="navbar-brand"
                             >
                                 <img src={logo} alt="logo" />
-                                
+
                             </Link>
 
                             <button
@@ -59,8 +59,8 @@ const NavbarThree = () => {
                             </button>
 
                             <div className={classOne} id="navbarSupportedContent">
-                                
-                            <Menu />
+
+                                <Menu />
 
                                 <div className="others-option d-flex align-items-center">
                                     <div className="option-item">
