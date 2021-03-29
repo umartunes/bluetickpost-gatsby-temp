@@ -7,12 +7,12 @@ import EventDetailsContent from '../../components/Hackathon/Peel/EventDetailsCon
 import EventSpeakers from '../../components/Hackathon/Peel/EventSpeakers'
 
 const peel = {
-    title: "Jr.Hacks 2021",
-    year: "2021",
-    calendarDate: "Sat, 10 April, 2021",
+    title: "Jr.Hacks 2020",
+    year: "2020",
+    calendarDate: "Sat, 10 February, 2020",
     time: "10.00 AM",
     location: "Virtual event",
-    countDownTime: "April 10, 2021 10:00:00 UTC-3",
+    countDownTime: "February 10, 2020 10:00:00 UTC-3",
 
 
     cost: "$20",
