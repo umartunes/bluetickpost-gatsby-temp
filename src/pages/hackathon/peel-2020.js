@@ -5,6 +5,7 @@ import PageBanner from '../../components/Common/PageBanner'
 import Footer from "../../components/App/Footer"
 import EventDetailsContent from '../../components/Hackathon/Peel/EventDetailsContent'
 import EventSpeakers from '../../components/Hackathon/Peel/EventSpeakers'
+import Sponsors from "../../components/Hackathon/Peel/Sponsors";
 
 const peel = {
     title: "Jr.Hacks 2020",
@@ -48,6 +49,7 @@ const PeelYear = () => {
                 activePageText={peel.title}
             />
             <EventDetailsContent peel={peel} />
+            <Sponsors />
             <EventSpeakers peel={peel} />
             <Footer />
         </Layout>
