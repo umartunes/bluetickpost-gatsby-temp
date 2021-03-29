@@ -1,8 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-
-import speaker3 from "../../../assets/images/speaker/speaker3.jpg";
-
 import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel3'))
 

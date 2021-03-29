@@ -5,10 +5,7 @@ import { collapsedState } from '../../utils/recoil-atoms'
 
 export default function Menu() {
     const [collapsed, setCollapsed] = useRecoilState(collapsedState);
-
-    const toggleNavbar = () => {
-        setCollapsed(!collapsed);
-    }
+    console.log(collapsed)
 
     return (
 

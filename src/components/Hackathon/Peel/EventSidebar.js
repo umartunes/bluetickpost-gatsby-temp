@@ -1,8 +1,5 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import payment1 from '../../../assets/images/payment/payment1.png'
-import payment2 from '../../../assets/images/payment/payment2.png'
-import payment3 from '../../../assets/images/payment/payment3.png'
 
 const EventSidebar = ({peel}) => {
     return (
