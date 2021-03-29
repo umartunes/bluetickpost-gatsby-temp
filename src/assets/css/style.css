@@ -1729,7 +1729,7 @@ Main Banner Area CSS
 }
 
 .main-banner-item {
-  height: 800px;
+  height: 600px;
   position: relative;
   z-index: 1;
   background-position: center center;
