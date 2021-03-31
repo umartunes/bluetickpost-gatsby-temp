@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from "../../components/App/Layout"
 import NavbarTwo from "../../components/App/NavbarTwo"
-import PageBanner from '../../components/Common/PageBanner'
+// import PageBanner from '../../components/Common/PageBanner'
 import Footer from "../../components/App/Footer"
 import EventDetailsContent from '../../components/Hackathon/Events/EventDetailsContent'
-import Sponsors from "../../components/Hackathon/Events/Sponsors";
+import PeelSponsors from "../../components/Hackathon/Events/Sponsors";
 import HowItWork from '../../components/Hackathon/Events/HowItWork'
 
 const peel = {
@@ -38,13 +38,52 @@ const peel = {
     ]
 }
 
+const sponsors = [
+	{
+		name: "Chandu Andhe",
+		image: "/images/sponsors/image1.jpg",
+		headline: "Peel Region",
+		facebook: "https://facebook.com",
+		twitter: "https://twitter.com",
+		instagram: "https://instagram.com",
+		linkedIn: "https://linkedin.com"
+	},
+	{
+		name: "Sponsor 2",
+		image: "/images/sponsors/image2.jpg",
+		headline: "Hmmmmm....",
+		facebook: "https://facebook.com",
+		twitter: "https://twitter.com",
+		instagram: "https://instagram.com",
+		linkedIn: "https://linkedin.com"
+	},
+	{
+		name: "Sponsor 3",
+		image: "/images/sponsors/image1.jpg",
+		headline: "Hmmmmm....",
+		facebook: "https://facebook.com",
+		twitter: "https://twitter.com",
+		instagram: "https://instagram.com",
+		linkedIn: "https://linkedin.com"
+	},
+	{
+		name: "Sponsor 4",
+		image: "/images/sponsors/image2.jpg",
+		headline: "Hmmmmm....",
+		facebook: "https://facebook.com",
+		twitter: "https://twitter.com",
+		instagram: "https://instagram.com",
+		linkedIn: "https://linkedin.com"
+	},
+]
+
 const PeelYear = () => {
     return (
         <Layout>
             <NavbarTwo />
             <EventDetailsContent peel={peel} />
             <HowItWork />
-            <Sponsors peel={peel} />
+            <PeelSponsors sponsors={sponsors} />
             <Footer />
         </Layout>
     );

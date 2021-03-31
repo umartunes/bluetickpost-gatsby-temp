@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from "../../components/App/Layout"
-import NavbarThree from "../../components/App/NavbarThree"
-import PageBanner from '../../components/Common/PageBanner'
+import NavbarTwo from "../../components/App/NavbarTwo"
+// import PageBanner from '../../components/Common/PageBanner'
 import Footer from "../../components/App/Footer"
 import EventDetailsContent from '../../components/Hackathon/Events/EventDetailsContent'
-import EventSpeakers from '../../components/Hackathon/Events/EventSpeakers'
-import Sponsors from "../../components/Hackathon/Events/Sponsors";
+import PeelSponsors from "../../components/Hackathon/Events/Sponsors";
+import HowItWork from '../../components/Hackathon/Events/HowItWork'
 
 const peel = {
     title: "Jr.Hacks 2020",
@@ -38,19 +38,52 @@ const peel = {
     ]
 }
 
+const sponsors = [
+	{
+		name: "Chandu Andhe",
+		image: "/images/sponsors/image1.jpg",
+		headline: "Peel Region",
+		facebook: "https://facebook.com",
+		twitter: "https://twitter.com",
+		instagram: "https://instagram.com",
+		linkedIn: "https://linkedin.com"
+	},
+	{
+		name: "Jr. Hacks 2020 Sponsor",
+		image: "/images/sponsors/image2.jpg",
+		headline: "Hmmmmm....",
+		facebook: "https://facebook.com",
+		twitter: "https://twitter.com",
+		instagram: "https://instagram.com",
+		linkedIn: "https://linkedin.com"
+	},
+	{
+		name: "Sponsor 3",
+		image: "/images/sponsors/image1.jpg",
+		headline: "Hmmmmm....",
+		facebook: "https://facebook.com",
+		twitter: "https://twitter.com",
+		instagram: "https://instagram.com",
+		linkedIn: "https://linkedin.com"
+	},
+	{
+		name: "Sponsor 4",
+		image: "/images/sponsors/image2.jpg",
+		headline: "Hmmmmm....",
+		facebook: "https://facebook.com",
+		twitter: "https://twitter.com",
+		instagram: "https://instagram.com",
+		linkedIn: "https://linkedin.com"
+	},
+]
+
 const PeelYear = () => {
     return (
         <Layout>
-            <NavbarThree />
-            <PageBanner
-                pageTitle={peel.title}
-                homePageText="Hackathon"
-                homePageUrl="/hackathon"
-                activePageText={peel.title}
-            />
+            <NavbarTwo />
             <EventDetailsContent peel={peel} />
-            <Sponsors />
-            <EventSpeakers peel={peel} />
+            <HowItWork />
+            <PeelSponsors sponsors={sponsors} />
             <Footer />
         </Layout>
     );

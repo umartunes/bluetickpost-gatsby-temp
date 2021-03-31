@@ -3,46 +3,7 @@ import { Link } from "gatsby";
 import Loadable from '@loadable/component'
 const OwlCarousel = Loadable(() => import('react-owl-carousel3'))
 
-const spnsrs = [
-	{
-		name: "Chandu Andhe",
-		image: "/images/sponsors/image1.jpg",
-		headline: "Peel Region",
-		facebook: "https://facebook.com",
-		twitter: "https://twitter.com",
-		instagram: "https://instagram.com",
-		linkedIn: "https://linkedin.com"
-	},
-	{
-		name: "Sponsor 2",
-		image: "/images/sponsors/image2.jpg",
-		headline: "Hmmmmm....",
-		facebook: "https://facebook.com",
-		twitter: "https://twitter.com",
-		instagram: "https://instagram.com",
-		linkedIn: "https://linkedin.com"
-	},
-	{
-		name: "Sponsor 3",
-		image: "/images/sponsors/image1.jpg",
-		headline: "Hmmmmm....",
-		facebook: "https://facebook.com",
-		twitter: "https://twitter.com",
-		instagram: "https://instagram.com",
-		linkedIn: "https://linkedin.com"
-	},
-	{
-		name: "Sponsor 4",
-		image: "/images/sponsors/image2.jpg",
-		headline: "Hmmmmm....",
-		facebook: "https://facebook.com",
-		twitter: "https://twitter.com",
-		instagram: "https://instagram.com",
-		linkedIn: "https://linkedin.com"
-	},
-]
-
-const Sponsors = () => {
+const PeelSponsors = ({sponsors}) => {
 
 	// Owl Carousel
 	const [display, setDisplay] = React.useState(false);
@@ -62,9 +23,9 @@ const Sponsors = () => {
 
 						{display && <OwlCarousel
 							className="owl-theme"
-							loop margin={20} nav={false} dots={false} autoplay={true} autoplayTimeout={3000}
+							loop margin={20} nav={false} dots={true} autoplay={true} autoplayTimeout={3000}
 						>
-							{spnsrs.map((sponsor, i) => {
+							{sponsors.map((sponsor, i) => {
 
 								return <div key={i} class="item">
 									<div className="single-scientist-item-box">
@@ -112,4 +73,4 @@ const Sponsors = () => {
 	);
 };
 
-export default Sponsors;
+export default PeelSponsors;
