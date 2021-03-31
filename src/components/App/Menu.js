@@ -96,7 +96,7 @@ export default function Menu() {
                 <ul className="dropdown-menu">
                     <li className="nav-item">
                         <Link
-                            to="/Peel2021"
+                            to="/hackathon/peel-2021"
                             activeClassName="active"
                             onClick={() => setCollapsed(true)}
                             className="nav-link"

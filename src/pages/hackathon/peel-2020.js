@@ -3,9 +3,9 @@ import Layout from "../../components/App/Layout"
 import NavbarThree from "../../components/App/NavbarThree"
 import PageBanner from '../../components/Common/PageBanner'
 import Footer from "../../components/App/Footer"
-import EventDetailsContent from '../../components/Hackathon/Peel/EventDetailsContent'
-import EventSpeakers from '../../components/Hackathon/Peel/EventSpeakers'
-import Sponsors from "../../components/Hackathon/Peel/Sponsors";
+import EventDetailsContent from '../../components/Hackathon/Events/EventDetailsContent'
+import EventSpeakers from '../../components/Hackathon/Events/EventSpeakers'
+import Sponsors from "../../components/Hackathon/Events/Sponsors";
 
 const peel = {
     title: "Jr.Hacks 2020",

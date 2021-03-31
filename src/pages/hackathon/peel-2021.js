@@ -1,10 +1,11 @@
 import React from 'react'
 import Layout from "../../components/App/Layout"
-import NavbarThree from "../../components/App/NavbarThree"
+import NavbarTwo from "../../components/App/NavbarTwo"
 import PageBanner from '../../components/Common/PageBanner'
 import Footer from "../../components/App/Footer"
-import EventDetailsContent from '../../components/Hackathon/Peel/EventDetailsContent'
-import Sponsors from "../../components/Hackathon/Peel/Sponsors";
+import EventDetailsContent from '../../components/Hackathon/Events/EventDetailsContent'
+import Sponsors from "../../components/Hackathon/Events/Sponsors";
+import HowItWork from '../../components/Hackathon/Events/HowItWork'
 
 const peel = {
     title: "Jr.Hacks 2021",
@@ -40,14 +41,9 @@ const peel = {
 const PeelYear = () => {
     return (
         <Layout>
-            <NavbarThree />
-            <PageBanner
-                pageTitle={peel.title}
-                homePageText="Hackathon"
-                homePageUrl="/hackathon"
-                activePageText={peel.title}
-            />
+            <NavbarTwo />
             <EventDetailsContent peel={peel} />
+            <HowItWork />
             <Sponsors peel={peel} />
             <Footer />
         </Layout>

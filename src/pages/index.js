@@ -21,7 +21,9 @@ const Home = () => {
     return (
         <Layout>
             <NavbarTwo />
+            
             <MainBanner />
+
             <Solutions />
             <HowItWork />
             {/* <AboutUs /> */}

@@ -2,6 +2,9 @@ import React from 'react';
 import ModalVideo from 'react-modal-video';
 import {Link} from 'gatsby'
 import Loadable from '@loadable/component'
+import Lottie from 'lottie-react-web'
+import techtransfer from '../../../static/lottie/TechTransfer.json'
+
 const OwlCarousel = Loadable(() => import('react-owl-carousel3'))
 
 const options = {
@@ -50,6 +53,11 @@ const MainBanner = () => {
                         <div className="d-table-cell">
                             <div className="container">
                                 <div className="banner-item-content">
+
+                                    <Lottie options={{
+                                        animationData: techtransfer
+                                    }} />
+
                                     <span className="sub-title">Welcome</span>
                                     <h1>#FutureReady!</h1>
                                     <p>We help you get ready for the future to success!</p>
