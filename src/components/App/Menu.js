@@ -4,147 +4,147 @@ import { useRecoilState } from "recoil";
 import { collapsedState } from "../../utils/recoil-atoms";
 
 export default function Menu() {
-  const [collapsed, setCollapsed] = useRecoilState(collapsedState);
-  // console.log(collapsed)
+	const [collapsed, setCollapsed] = useRecoilState(collapsedState);
+	// console.log(collapsed)
 
-  return (
-    <ul className="navbar-nav">
-      <li className="nav-item">
-        <Link
-          to="/"
-          activeClassName="active"
-          onClick={(e) =>
-            window.location.pathname === "/"
-              ? e.preventDefault()
-              : setCollapsed(true)
-          }
-          // onClick={(e) => e.preventDefault()}
-          className="nav-link"
-        >
-          Home <i className="bx bx-chevron-down"></i>
-        </Link>
+	return (
+		<ul className="navbar-nav">
+			<li className="nav-item">
+				<Link
+					to="/"
+					activeClassName="active"
+					onClick={(e) =>
+						window.location.pathname === "/"
+							? e.preventDefault()
+							: setCollapsed(true)
+					}
+					// onClick={(e) => e.preventDefault()}
+					className="nav-link"
+				>
+					Home <i className="bx bx-chevron-down"></i>
+				</Link>
 
-        <ul className="dropdown-menu">
-          <li className="nav-item">
-            <Link
-              to="/lms"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              LMS
-            </Link>
-          </li>
-        </ul>
-      </li>
+				<ul className="dropdown-menu">
+					<li className="nav-item">
+						<Link
+							to="/lms"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							LMS
+            			</Link>
+					</li>
+				</ul>
+			</li>
 
-      <li className="nav-item">
-        <Link
-          to="#"
-          activeClassName="active"
-          // onClick={e => window.location.pathname === "/programs" ? e.preventDefault() : setCollapsed(true) }
-          onClick={(e) => e.preventDefault()}
-          className="nav-link"
-        >
-          Programs <i className="bx bx-chevron-down"></i>
-        </Link>
+			<li className="nav-item">
+				<Link
+					to="/programs"
+					activeClassName="active"
+					onClick={e => window.location.pathname === "/programs" ? e.preventDefault() : setCollapsed(true)}
+					// onClick={(e) => e.preventDefault()}
+					className="nav-link"
+				>
+					Programs <i className="bx bx-chevron-down"></i>
+				</Link>
 
-        <ul className="dropdown-menu">
-          <li className="nav-item">
-            <Link
-              to="/programs-junior"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              Junior (Grade 3+)
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/programs-senior"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              Senior (Grade 6+)
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/programs-leadership"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              Leaders (Grade 7+)
-            </Link>
-          </li>
-        </ul>
-      </li>
+				<ul className="dropdown-menu">
+					<li className="nav-item">
+						<Link
+							to="/programs/junior"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							Junior (Grade 3+)
+            			</Link>
+					</li>
+					<li className="nav-item">
+						<Link
+							to="/programs/senior"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							Senior (Grade 6+)
+            			</Link>
+					</li>
+					<li className="nav-item">
+						<Link
+							to="/programs/leadership"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							Leaders (Grade 7+)
+            			</Link>
+					</li>
+				</ul>
+			</li>
 
-      <li className="nav-item">
-        <Link
-          to="/hackathon"
-          activeClassName="active"
-          // onClick={e => window.location.pathname === "/about" ? e.preventDefault() : setCollapsed(true) }
-          //onClick={(e) => e.preventDefault()}
-          className="nav-link"
-        >
-          Jr.Hacks <i className="bx bx-chevron-down"></i>
-        </Link>
+			<li className="nav-item">
+				<Link
+					to="/hackathon"
+					activeClassName="active"
+					// onClick={e => window.location.pathname === "/about" ? e.preventDefault() : setCollapsed(true) }
+					//onClick={(e) => e.preventDefault()}
+					className="nav-link"
+				>
+					Jr.Hacks <i className="bx bx-chevron-down"></i>
+				</Link>
 
-        <ul className="dropdown-menu">
-          <li className="nav-item">
-            <Link
-              to="/hackathon/peel-2021"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              Jr.Hacks - Peel
-            </Link>
-          </li>
+				<ul className="dropdown-menu">
+					<li className="nav-item">
+						<Link
+							to="/hackathon/peel-2021"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							Jr.Hacks - Peel
+            			</Link>
+					</li>
 
-          <li className="nav-item">
-            <Link
-              to="/community"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              Volunteer
-            </Link>
-          </li>
+					<li className="nav-item">
+						<Link
+							to="/community"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							Volunteer
+            			</Link>
+					</li>
 
-         
 
-          <li className="nav-item">
-            <Link
-              to="/faq"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              FAQ
-            </Link>
-          </li>
-        </ul>
-      </li>
 
-      <li className="nav-item">
-        <Link
-          to="/about-us"
-          activeClassName="active"
-           //onClick={e => window.location.pathname === "/about-us" ? e.preventDefault() : setCollapsed(true) }
-         // onClick={(e) => e.preventDefault()}
-          className="nav-link"
-        >
-          About <i className="bx bx-chevron-down"></i>
-        </Link>
+					<li className="nav-item">
+						<Link
+							to="/faq"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							FAQ
+            			</Link>
+					</li>
+				</ul>
+			</li>
 
-        <ul className="dropdown-menu">
-          {/* <li className="nav-item"> 
+			<li className="nav-item">
+				<Link
+					to="/about-us"
+					activeClassName="active"
+					//onClick={e => window.location.pathname === "/about-us" ? e.preventDefault() : setCollapsed(true) }
+					// onClick={(e) => e.preventDefault()}
+					className="nav-link"
+				>
+					About <i className="bx bx-chevron-down"></i>
+				</Link>
+
+				<ul className="dropdown-menu">
+					{/* <li className="nav-item"> 
             <Link
               to="/about-us"
               activeClassName="active"
@@ -154,20 +154,20 @@ export default function Menu() {
               About Us
             </Link>
           </li> */}
-          <li className="nav-item">
-            <Link
-              to="/blog"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              Blog
-            </Link>
-          </li>
+					<li className="nav-item">
+						<Link
+							to="/blog"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							Blog
+            			</Link>
+					</li>
 
-       
-        </ul>
-      </li>
-    </ul>
-  );
+
+				</ul>
+			</li>
+		</ul>
+	);
 }

@@ -1,12 +1,12 @@
 import React from 'react'
-import Layout from "../components/App/Layout"
-import NavbarThree from "../components/App/NavbarThree"
+import Layout from "../../components/App/Layout"
+import NavbarThree from "../../components/App/NavbarThree"
+import Footer from "../../components/App/Footer"
 
-import Footer from "../components/App/Footer"
-import PageBanner from '../components/ProgramsJunior/PageBanner'
-import OurServices from '../components/ProgramsJunior/OurServices'
-import CourseDetailsContent from '../components/ProgramsJunior/CourseDetailsContent'
-// import RelatedCourses from '../components/ProgramsJunior/RelatedCourses'
+import PageBanner from '../../components/Programs/ProgramLayout/PageBanner'
+import OurServices from '../../components/Programs/ProgramLayout/OurServices'
+import CourseDetailsContent from '../../components/Programs/ProgramLayout/CourseDetailsContent'
+// import RelatedCourses from '../../components/Programs/ProgramLayout/RelatedCourses'
 
 const program = {
     title: "Junior (Grade 3+)",
