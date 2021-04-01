@@ -1,0 +1,18 @@
+
+.demo-iframe-container {
+  overflow: hidden;
+  margin-top: 100px;
+  padding-top: calc(100vh - 100px);
+  position: relative;
+}
+
+.demo-iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   overflow: hidden;
+   width: calc(100% + 30px);
+   margin-left: -15px;
+}
