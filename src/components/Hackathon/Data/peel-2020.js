@@ -7,6 +7,9 @@ const peel2020 = {
     location: "Virtual event",
     countDownTime: "February 10, 2020 10:00:00 UTC-3",
 
+    eventVideo: 'https://youtube.com/watch?v=asdfdsafsda',
+    eventGallery: [ 'hackathon1.jpg', 'hackathon2.jpg' ],
+
     eventPhoto: '/images/hackathon/hackathon2.jpg',
     eventPage: '/hackathon/peel-2020',
 

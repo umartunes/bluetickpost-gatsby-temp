@@ -7,6 +7,9 @@ const peel2021 = {
     location: "Virtual event",
     countDownTime: "April 10, 2021 10:00:00 UTC-3",
     
+    eventVideo: 'https://youtube.com/watch?v=asdfdsafsda',
+    eventGallery: [ 'hackathon1.jpg', 'hackathon2.jpg' ],
+
     eventPhoto: '/images/hackathon/hackathon1.jpg',
     eventPage: '/hackathon/peel-2021',
 
