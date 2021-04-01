@@ -7,7 +7,7 @@ import EventDetailsContent from '../../components/Hackathon/Events/EventDetailsC
 import PeelSponsors from "../../components/Hackathon/Events/Sponsors";
 import HowItWork from '../../components/Hackathon/Events/HowItWork'
 
-const peel = {
+const jrHacksEvent = {
     title: "Jr.Hacks 2020",
     year: "2020",
     calendarDate: "Sat, 10 February, 2020",
@@ -81,7 +81,7 @@ const PeelYear = () => {
     return (
         <Layout>
             <NavbarTwo />
-            <EventDetailsContent peel={peel} />
+            <EventDetailsContent peel={jrHacksEvent} />
             <HowItWork />
             <PeelSponsors sponsors={sponsors} />
             <Footer />

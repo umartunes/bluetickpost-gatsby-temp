@@ -6,6 +6,8 @@ import Footer from "../../components/App/Footer"
 import EventsCard from '../../components/Hackathon/HackathonIndex/EventsCard'
 
 const Hackathon = () => {
+//allEvents.json
+ 
     return (
         <Layout>
             <NavbarThree />

@@ -56,6 +56,7 @@ const MainBanner = () => {
 
                                     <Lottie options={{
                                         animationData: techtransfer
+                                        
                                     }} />
 
                                     <span className="sub-title">Welcome</span>
