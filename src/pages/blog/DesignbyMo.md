@@ -1,21 +1,22 @@
 ---
-id: firstBlog
-path: /firstBlog
-date: 2021-03-18
+id: DesignbyMo
+path: /DesignbyMo
+date: 2021-04-01
 
-title: My First Blog using Mark Down
-description: A little description about this blog page
-category: General
+title: This is Mo's 3D class
+description: He did a good job on this one.
+category: 3D
 
 author: Umar
 authorImage: /users/umar.png
 featuredImage: /images/blog.jpg
 
+# tags: ["3D", "Coding", "blog"]
 tags: ["my", "first", "blog"]
 seoImage: https://res.cloudinary.com/dev-empty/image/upload/v1593069801/explore-learning.jpg
 ---
 
-### Welcome to the very start of your Blogging journey!
+### Welcome to the learning 3D using TinkerCAD!
 
 **Blogging!** What is a Blog?
 
