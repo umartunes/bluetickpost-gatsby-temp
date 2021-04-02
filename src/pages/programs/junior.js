@@ -14,6 +14,8 @@ const program = {
     certification: `We gamify the learning through badges to recognize the growth of our students. Students will be awarded a certificate of completion after they finish every course. Students will have to submit a presentation or project, required to graduate the program.`,
     courseFor: `Our Junior program is designed for Grade 3+ students to teach them basics of coding. This program offers 10 levels with weekly 1 hour class. At the end of each course, we conduct exams to assess the level of learning.`,
 
+    courseDetailsImage: '/images/courses-details.jpg',
+
     price: "$84/month",
     duration: "12 - 16 Weeks",
     courses: "10",
