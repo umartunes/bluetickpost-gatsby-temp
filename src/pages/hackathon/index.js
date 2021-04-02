@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from "../../components/App/Layout"
-import NavbarThree from "../../components/App/NavbarThree"
-import PageBanner from '../../components/Common/PageBanner'
+import NavbarTwo from "../../components/App/NavbarTwo"
+// import PageBanner from '../../components/Common/PageBanner'
+import StartProject from "../../components/Hackathon/HackathonIndex/StartProject";
 import Footer from "../../components/App/Footer"
 import EventsCard from '../../components/Hackathon/HackathonIndex/EventsCard'
 
@@ -10,13 +11,14 @@ const Hackathon = () => {
  
     return (
         <Layout>
-            <NavbarThree />
-            <PageBanner
+            <NavbarTwo />
+            {/* <PageBanner
                 pageTitle="Hackathon" 
                 homePageText="Home" 
                 homePageUrl="/" 
                 activePageText="Hackathon" 
-            />
+            /> */}
+            <StartProject />
             <EventsCard />
             <Footer />
         </Layout>
