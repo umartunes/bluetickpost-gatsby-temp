@@ -1,11 +1,10 @@
 import React from 'react'
 import Layout from "../../components/App/Layout"
-import NavbarThree from "../../components/App/NavbarThree"
 import Footer from "../../components/App/Footer"
 
-import PageBanner from '../../components/Programs/ProgramLayout/PageBanner'
 import OurServices from '../../components/Programs/ProgramLayout/OurServices'
 import CourseDetailsContent from '../../components/Programs/ProgramLayout/CourseDetailsContent'
+import NavbarTwo from '../../components/App/NavbarTwo'
 // import RelatedCourses from '../../components/Programs/ProgramLayout/RelatedCourses'
 
 const program = {
@@ -14,10 +13,10 @@ const program = {
     certification: `We gamify the learning through badges to recognize the growth of our students. They will be awarded a certificate of completion after they finish every course. Students will have to submit a presentation or project, required to graduate the program. `,
     courseFor: `Our Senior program is designed for 6 to 8 graders. 10 courses are included in this program. We also conduct exams after every course to ensure that efficient results are obtained. This program also offers leadership projects to improve the soft skills of students.`,
     
-    price: "$84/month",
-    duration: "12 - 16 Weeks",
+    price: "$96*/month",
+    duration: "~12 wks/Course",
     courses: "10",
-    support: "12 - 18 Weeks",
+    support: "Unlimited",
     reports: "Quarterly",
 }
 
@@ -70,13 +69,8 @@ const Details = () => {
 
     return (
         <Layout>
-            <NavbarThree />
-            <PageBanner
-                pageTitle={program.title}
-                homePageText="Home"
-                homePageUrl="/"
-                activePageText="Course Details"
-            />
+            <NavbarTwo />
+          
             <CourseDetailsContent program={program} curriculum={curriculum} />
             {/* <RelatedCourses /> */}
             <OurServices />

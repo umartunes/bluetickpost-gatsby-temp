@@ -17,9 +17,11 @@ const Home = () => {
         >
             <NavbarTwo />
             <StartProject />
-            <AboutUs />
-            <UpcomingBootcamps />
+
             <Services />
+            <AboutUs />
+            
+            <UpcomingBootcamps />
 
             <Footer />
         </Layout>

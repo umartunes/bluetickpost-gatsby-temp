@@ -10,9 +10,9 @@ const AboutUs = () => {
                 <div className="overview-box">
                     <div className="overview-content">
                         <div className="content">
-                            <span className="sub-title">Digital Marketing</span>
-                            <h2>Creative solutions, creative results</h2>
-                            <p>We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication.</p>
+                            <span className="sub-title">Power of Coding</span>
+                            <h2>Bring their craziest ideas to life!</h2>
+                            <p>After-school program where your child learns while having fun. STEM1 is a virtual after-school coding program for grade 2 to 8 children. </p>
 
                             <div className="features-text">
                                 <h4><i className="flaticon-tick"></i> Core Development</h4>

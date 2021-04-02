@@ -1,13 +1,12 @@
-import React from 'react';
-import NavbarTwo from "../components/App/NavbarTwo"
-import Footer from "../components/App/Footer"
-import Layout from "../components/App/Layout"
+import React from "react";
+import NavbarTwo from "../components/App/NavbarTwo";
+import Footer from "../components/App/Footer";
+import Layout from "../components/App/Layout";
 
-
-import StartProject from '../components/lms/StartProject';
-import AboutUs from '../components/lms/AboutUs';
-import UpcomingBootcamps from '../components/lms/UpcomingBootcamps';
-import Services from '../components/lms/Services'
+import StartProject from "../components/lms/StartProject";
+import AboutUs from "../components/lms/AboutUs";
+import UpcomingBootcamps from "../components/lms/UpcomingBootcamps";
+import Services from "../components/lms/Services";
 // import MainBanner from '../components/lms/MainBanner'
 // import FeaturedServices from '../components/lms/FeaturedServices'
 // import WhyChooseUs from '../components/lms/WhyChooseUs'
@@ -19,35 +18,25 @@ import Services from '../components/lms/Services'
 // import CaseStudy from '../components/lms/CaseStudy'
 // import BlogPost from '../components/lms/BlogPost'
 
-import SEO from '../components/App/SEO'
+import SEO from "../components/App/SEO";
 
 const Home = () => {
-    return (
-        <Layout >
+  return (
+    <Layout>
+      <SEO
+        seoTitle="LMS Page - STEM one"
+        seoDescription="Advanced Learning Management System for structured learning "
+      />
 
-            <SEO
-                seoTitle="LMS Page - STEM one"
-                seoDescription="This is the description of SEO PAge"
-            />
+      <NavbarTwo />
+      <StartProject />
+      <AboutUs />
+      <UpcomingBootcamps />
+      <Services />
 
-            <NavbarTwo />
-            <StartProject />
-            <AboutUs />
-            <UpcomingBootcamps />
-            <Services />
-            {/* <MainBanner /> */}
-            {/* <FeaturedServices />
-            <WhyChooseUs />
-            <WhatWeDo />
-            <Funfacts />
-            <Testimonials />
-            <WeServe />
-            <TeamMembers />
-            <CaseStudy />
-            <BlogPost /> */}
-            <Footer />
-        </Layout>
-    );
-}
+      <Footer />
+    </Layout>
+  );
+};
 
 export default Home;

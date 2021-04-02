@@ -1,96 +1,170 @@
-import React from 'react'
-import service4 from '../../../assets/images/services/service4.png'
-import service5 from '../../../assets/images/services/service5.png'
-import service6 from '../../../assets/images/services/service6.png'
+import React from "react";
+import service4 from "../../../assets/images/services/service4.png";
+import service5 from "../../../assets/images/services/service5.png";
+import service6 from "../../../assets/images/services/service6.png";
+
+import Lottie from "lottie-react-web";
+
+import techtransfer from "../../../../static/lottie/TechTransfer.json";
 
 const Services = () => {
-    return (
-        <section className="overview-area ptb-100">
-            <div className="container">
-                {/* Left Image Style */}
-                <div className="overview-box">
-                    <div className="overview-image">
-                        <div className="image">
-                            <img src={service4} alt="features" />
-                        </div>
-                    </div>
-                    
-                    <div className="overview-content">
-                        <div className="content right-content">
-                            <span className="sub-title">Design & Development</span>
-                            <h2>Solving problems, building brands 2</h2>
-                            <p>We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication.</p>
+  return (
+    <section className="overview-area ptb-100">
+      <div className="container">
+        {/* Left Image Style */}
+        <div className="overview-box">
+          <div className="overview-image">
+            <Lottie
+              options={{
+                animationData: techtransfer,
+              }}
+            />
 
-                            <ul className="features-list">
-                                <li><span><i className='bx bx-check'></i> Recommender systems</span></li>
-                                <li><span><i className='bx bx-check'></i> Demand prediction</span></li>
-                                <li><span><i className='bx bx-check'></i> Omnichannel analytics</span></li>
-                                <li><span><i className='bx bx-check'></i> Lead generation</span></li>
-                                <li><span><i className='bx bx-check'></i> Dedicated Developers</span></li>
-                                <li><span><i className='bx bx-check'></i> 24/7 Support</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                {/* End Left Image Style */}
+            {/* <div className="image">
+            </div> */}
+          </div>
 
-                {/* Right Image Style */}
-                <div className="overview-box">
-                    <div className="overview-content">
-                        <div className="content">
-                            <span className="sub-title">Social Media Marketing</span>
-                            <h2>We are the next generation of the advertising world</h2>
-                            <p>We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication.</p>
+          <div className="overview-content">
+            <div className="content right-content">
+              <span className="sub-title">#FutureReady</span>
+              <h2>Solving problems, building #FutureReady students</h2>
+              <p>
+                We focus on problem solving and promote creativity and
+                persistence to solve the problems. Our students are always up
+                for the challenge to solve Real problems of the world.
+              </p>
 
-                            <div className="features-text">
-                                <h4><i className="flaticon-tick"></i> Core Development</h4>
-                                <p>No fake products and services. The customer is king, their lives and needs are the inspiration.</p>
-                            </div>
-
-                            <div className="features-text">
-                                <h4><i className="flaticon-tick"></i> Define Your Choices</h4>
-                                <p>No fake products and services. The customer is king, their lives and needs are the inspiration.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="overview-image">
-                        <div className="image">
-                            <img src={service5} alt="features" />
-                        </div>
-                    </div>
-                </div>
-                {/* End Right Image Style */}
-
-                {/* Left Image Style */}
-                <div className="overview-box">
-                    <div className="overview-image">
-                        <div className="image">
-                            <img src={service6} alt="features" />
-                        </div>
-                    </div>
-                    
-                    <div className="overview-content">
-                        <div className="content right-content">
-                            <span className="sub-title">SEO Consultancy</span>
-                            <h2>We make smart, good-looking things</h2>
-                            <p>We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication.</p>
-
-                            <ul className="features-list">
-                                <li><span><i className='bx bx-check'></i> Recommender systems</span></li>
-                                <li><span><i className='bx bx-check'></i> Demand prediction</span></li>
-                                <li><span><i className='bx bx-check'></i> Omnichannel analytics</span></li>
-                                <li><span><i className='bx bx-check'></i> Lead generation</span></li>
-                                <li><span><i className='bx bx-check'></i> Dedicated Developers</span></li>
-                                <li><span><i className='bx bx-check'></i> 24/7 Support</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                {/* End Left Image Style */}
+              <ul className="features-list">
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Competitions
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Teamwork
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Presentations
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Mentors
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Dedicated Support
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Positive learning
+                  </span>
+                </li>
+              </ul>
             </div>
-        </section>
-    )
-}
+          </div>
+        </div>
+        {/* End Left Image Style */}
 
-export default Services
+        {/* Right Image Style */}
+        <div className="overview-box">
+          <div className="overview-content">
+            <div className="content">
+              <span className="sub-title">Group Learning</span>
+              <h2>Everyone has something to offer</h2>
+              <p>
+                We believe every one has something to offer and our Instructors
+                are on a constant learning path. Forming groups and solving
+                challenges is just a regular part of our way of doing things.
+              </p>
+
+              <div className="features-text">
+                <h4>
+                  <i className="flaticon-tick"></i> Core Development
+                </h4>
+                <p>No superstars, just curious learners.</p>
+              </div>
+
+              <div className="features-text">
+                <h4>
+                  <i className="flaticon-tick"></i> Define Your Choices
+                </h4>
+                <p>Our community support is what we do.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="overview-image">
+            <div className="image">
+              <img src={service5} alt="features" />
+            </div>
+          </div>
+        </div>
+        {/* End Right Image Style */}
+
+        {/* Left Image Style */}
+        <div className="overview-box">
+          <div className="overview-image">
+            <div className="image">
+              <img src={service6} alt="features" />
+            </div>
+          </div>
+
+          <div className="overview-content">
+            <div className="content right-content">
+              <span className="sub-title">#LearnLocal</span>
+              <h2>Everything is better when its Local!</h2>
+              <p>
+                Our Instructors provide the best learning experience to the
+                students as they have grown up around the same area and have a
+                lot to offer weather it is about the schools and the paths they
+                are taking or discussing a technology problem.
+              </p>
+
+              <ul className="features-list">
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Leadership opportunities
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Community support
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Quarterly Meetups
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Team challenges
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Project Showcase
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="bx bx-check"></i> Fun
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* End Left Image Style */}
+      </div>
+    </section>
+  );
+};
+
+export default Services;

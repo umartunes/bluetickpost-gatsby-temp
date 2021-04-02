@@ -47,7 +47,7 @@ const faqs = [
 const FAQ = () => {
 
     return (
-        <Layout>
+        <Layout >
             <NavbarThree />
             <PageBanner
                 pageTitle="FAQ"

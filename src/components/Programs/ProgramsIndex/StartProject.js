@@ -11,7 +11,7 @@ const StartProject = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
                         <div className="project-start-image">
-                            <img src={start1} alt="about" />
+                            <img src='/images/lms/courses.png' alt="about" />
                         </div>
                     </div>
 
