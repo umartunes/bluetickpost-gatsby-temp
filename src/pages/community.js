@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from "../components/App/Layout"
-import NavbarThree from "../components/App/NavbarThree"
+import NavbarTwo from "../components/App/NavbarTwo"
 import PageBanner from '../components/Common/PageBanner'
+import StartProject from "../components/Community/StartProject";
 import Footer from "../components/App/Footer"
 import OurHistoryContentOne from '../components/Community/OurHistoryContentOne'
 import OurHistoryContentTwo from '../components/Community/OurHistoryContentTwo'
@@ -9,13 +10,14 @@ import OurHistoryContentTwo from '../components/Community/OurHistoryContentTwo'
 const History = () => {
     return (
         <Layout>
-            <NavbarThree />
-            <PageBanner
+            <NavbarTwo />
+            {/* <PageBanner
                 pageTitle="Community" 
                 homePageText="Home" 
                 homePageUrl="/" 
                 activePageText="Community" 
-            />
+            /> */}
+            <StartProject />
             <OurHistoryContentOne />
             <OurHistoryContentTwo />
             <Footer />
