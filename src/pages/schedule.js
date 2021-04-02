@@ -15,7 +15,7 @@ const FAQ = () => {
     return (
         <Layout>
             <NavbarThree />
-            <div className="demo-iframe-container"><iframe title="Book a Demo" loading="lazy" src="https://admin-stem2.zohobookings.com/portal-embed#/customer/workshop"></iframe></div>
+            <div className="demo-iframe-container"><iframe title="Book a Demo" loading="lazy" src="https://admin-stem2.zohobookings.com/portal-embed#/customer/demo"></iframe></div>
         </Layout>
     );
 }
