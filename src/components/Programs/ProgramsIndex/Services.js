@@ -11,17 +11,22 @@ const Services = () => {
   return (
     <section className="overview-area ptb-100">
       <div className="container">
-        {/* Left Image Style */}
-        <div className="overview-box">
-          <div className="overview-image">
+        <div className="row">
+          <div className="col">
             <Lottie
               options={{
                 animationData: techtransfer,
               }}
             />
+          </div>
+        </div>
+        {/* Left Image Style */}
+        <div className="overview-box">
+          <div className="overview-image">
 
-            {/* <div className="image">
-            </div> */}
+            <div className="image">
+              <img src={service4} alt="features" />
+            </div>
           </div>
 
           <div className="overview-content">
