@@ -13,8 +13,15 @@ const program = {
     certification: `We gamify the learning through badges to recognize the growth of our students. They will be awarded a certificate of completion after they finish every course. Students will have to submit a presentation or project, required to graduate the program. `,
     courseFor: `Our Senior program is designed for 6 to 8 graders. 10 courses are included in this program. We also conduct exams after every course to ensure that efficient results are obtained. This program also offers leadership projects to improve the soft skills of students.`,
     
+<<<<<<< HEAD
     price: "$96*/month",
     duration: "~12 wks/Course",
+=======
+    courseDetailsImage: '/images/courses-details.jpg',
+
+    price: "$84/month",
+    duration: "12 - 16 Weeks",
+>>>>>>> 0b4ee0b380501c32b231f4a4e23fa9edb6c89855
     courses: "10",
     support: "Unlimited",
     reports: "Quarterly",

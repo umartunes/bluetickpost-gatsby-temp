@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 // import { Link } from 'gatsby'
 
 import CoursesDetailsSidebar from './CoursesDetailsSidebar'
-import details from '../../../assets/images/courses/courses-details.jpg'
 
 import user1 from '../../../assets/images/user1.jpg'
 import user2 from '../../../assets/images/user2.jpg'
@@ -37,7 +36,7 @@ class CourseDetailsContent extends Component {
         return (
             <div className="courses-details-area pb-100">
                 <div className="courses-details-image">
-                    <img src={details} alt="course" />
+                    <img src={program.courseDetailsImage} alt="course" />
                 </div>
 
                 <div className="container">

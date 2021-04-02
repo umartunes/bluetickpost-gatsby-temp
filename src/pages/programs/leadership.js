@@ -12,8 +12,15 @@ const program = {
     certification: `We gamify the learning through badges to recognize the growth of our students. Leaders are required to attend two or more classes every week. They will also have to submit projects and presentations to successfully complete every course.`,
     courseFor: `Our Leader Program is designed for students above 8th grade. To enroll in this program, students must have graduated from the Senior Program. It offers both individual and team projects in each course with some additional monthly presentations. 8 courses are included in this program.`,
 
+<<<<<<< HEAD
     price: "$96*/month",
     duration: "6 - 8 Months",
+=======
+    courseDetailsImage: '/images/courses-details.jpg',
+
+    price: "$84/month",
+    duration: "12 - 16 Weeks",
+>>>>>>> 0b4ee0b380501c32b231f4a4e23fa9edb6c89855
     courses: "10",
     support: "Unlimited",
     reports: "Quarterly",
