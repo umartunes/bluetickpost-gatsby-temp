@@ -1,10 +1,11 @@
 import React from 'react'
 import Layout from "../components/App/Layout"
-import NavbarThree from "../components/App/NavbarThree"
-import PageBanner from '../components/Common/PageBanner'
+import NavbarTwo from "../components/App/NavbarTwo"
+// import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import AboutUsContent from '../components/AboutUs/AboutUsContent'
 import OurHistory from '../components/AboutUs/OurHistory'
+import StartProject from "../components/AboutUs/StartProject";
 // import WhyChooseUs from '../components/AboutUs/WhyChooseUs'
 // import HowItWork from '../components/AboutUs/HowItWork'
 import TeamMembers from '../components/AboutUs/TeamMembers'
@@ -14,13 +15,14 @@ import TeamMembers from '../components/AboutUs/TeamMembers'
 const AboutUs = () => {
     return (
         <Layout>
-            <NavbarThree />
-            <PageBanner
+            <NavbarTwo />
+            {/* <PageBanner
                 pageTitle="About Us" 
                 homePageText="Home" 
                 homePageUrl="/" 
                 activePageText="About Us" 
-            />
+            /> */}
+            <StartProject />
             <AboutUsContent />
             <OurHistory />
             {/* <WhyChooseUs />

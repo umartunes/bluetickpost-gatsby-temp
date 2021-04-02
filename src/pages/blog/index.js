@@ -1,21 +1,23 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from "../../components/App/Layout"
-import NavbarThree from "../../components/App/NavbarThree"
-import PageBanner from '../../components/Common/PageBanner'
+import NavbarTwo from "../../components/App/NavbarTwo"
+// import PageBanner from '../../components/Common/PageBanner'
 import Footer from "../../components/App/Footer"
 import BlogCard from '../../components/BlogContent/BlogCard'
+import StartProject from "../../components/BlogContent/StartProject";
 
 const Blog = (props) => {
     return (
         <Layout>
-            <NavbarThree />
-            <PageBanner
+            <NavbarTwo />
+            {/* <PageBanner
                 pageTitle="Blog"
                 homePageText="Home"
                 homePageUrl="/"
                 activePageText="Blog"
-            />
+            /> */}
+            <StartProject />
             <BlogCard {...props} />
             <Footer />
         </Layout>
