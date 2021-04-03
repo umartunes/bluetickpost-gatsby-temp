@@ -13,11 +13,12 @@ const StartProject = () => {
             <div className="project-start-content">
               <h2>About Us</h2>
               <p>
-                Coding is the easiest and the hardest thing you will come
+               Stem1 is a community based youth led organization created to provide opportunities for youth to gain confidence in coding and stem related fields.
+                {/* Coding is the easiest and the hardest thing you will come
                 across, it doesn't matter how experienced you are in
                 Programming. Our goal is to help your child have the confidence
                 to tackle the problems not just teaching some scripting
-                language.
+                language. */}
               </p>
 
                
@@ -27,7 +28,7 @@ const StartProject = () => {
           <div className="col-lg-6 col-md-12">
             <div className="project-start-image">
               <div className="image">
-                <img src="/images/lms/Python-Course.png" alt="LMS Course" />
+                <img src="/images/aboutus/gabe.jpg" alt="About us" />
               </div>
             </div>
           </div>

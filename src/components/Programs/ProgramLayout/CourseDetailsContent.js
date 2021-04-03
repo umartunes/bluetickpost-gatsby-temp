@@ -105,7 +105,7 @@ class CourseDetailsContent extends Component {
                                                 <span className="bx bxs-star checked"></span>
                                                 <span className="bx bxs-star checked"></span>
                                                 <span className="bx bxs-star checked"></span>
-                                                <span className="bx bxs-star"></span>
+                                                <span className="bx bxs-star checked"></span>
                                             </div>
 
                                         </div>

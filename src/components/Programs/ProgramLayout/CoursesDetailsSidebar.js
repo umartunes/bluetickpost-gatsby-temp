@@ -23,7 +23,7 @@ const CoursesDetailsSidebar = ({ program }) => {
                 <div className="image">
                     <img src={course1} alt="course1" />
 
-                    <Link
+                    {/* <Link
                         to="#"
                         onClick={e => { e.preventDefault(); openModal() }}
                         className="link-btn popup-youtube"
@@ -33,7 +33,7 @@ const CoursesDetailsSidebar = ({ program }) => {
                     <div className="content">
                         <i className="flaticon-google-play"></i>
                         <span>Course Preview</span>
-                    </div>
+                    </div> */}
                 </div>
 
                 <ul className="info">

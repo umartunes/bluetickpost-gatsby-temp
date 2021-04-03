@@ -1,101 +1,111 @@
-import React from 'react'
-import Layout from "../../components/App/Layout"
-import Footer from "../../components/App/Footer"
+import React from "react";
+import Layout from "../../components/App/Layout";
+import Footer from "../../components/App/Footer";
 
-import OurServices from '../../components/Programs/ProgramLayout/OurServices'
-import CourseDetailsContent from '../../components/Programs/ProgramLayout/CourseDetailsContent'
-import NavbarTwo from '../../components/App/NavbarTwo'
-import Pricing from '../../components/Programs/ProgramLayout/Pricing'
+import OurServices from "../../components/Programs/ProgramLayout/OurServices";
+import CourseDetailsContent from "../../components/Programs/ProgramLayout/CourseDetailsContent";
+import NavbarTwo from "../../components/App/NavbarTwo";
+import Pricing from "../../components/Programs/ProgramLayout/Pricing";
 // import RelatedCourses from '../../components/Programs/ProgramLayout/RelatedCourses'
 
 const program = {
-    title: "Senior (Grade 6+)",
-    description: `Coding has become an essential part of every industry. Taking their programming skills to the next level with our Senior Program, will make them independent developers. By the end of the program, they’ll know how to create online games and websites. `,
-    certification: `We gamify the learning through badges to recognize the growth of our students. They will be awarded a certificate of completion after they finish every course. Students will have to submit a presentation or project, required to graduate the program. `,
-    courseFor: `Our Senior program is designed for 6 to 8 graders. 10 courses are included in this program. We also conduct exams after every course to ensure that efficient results are obtained. This program also offers leadership projects to improve the soft skills of students.`,
-    
-    price: "$96*/month",
-    duration: "~12 wks/Course",
-    courseDetailsImage: '/images/courses-details.jpg',
+  title: "Senior (Grade 6+)",
+  description: ` Our senior program is designed for students who have graduated from Junior program at STEM1 or for students who are in Grade 6+ with no coding experience. By the end of the program, students learn to create online games, apps & websites. `,
+  certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish every level. Students are required to submit a presentation or project to graduate each course.`,
+  
+  courseFor: `Our Senior program is designed for 6 to 8 graders. 10 courses are included in this program. We also conduct exams after every course to ensure that efficient results are obtained. This program also offers leadership projects to improve the soft skills of students.`,
 
-    courses: "10",
-    support: "Unlimited",
-    reports: "Quarterly",
-}
+  price: "$96*/month",
+  duration: "~12 wks/Course",
+  courseDetailsImage: "/images/courses-details.jpg",
+
+  courses: "10",
+  support: "Unlimited",
+  reports: "Quarterly",
+};
+
+ 
 
 const curriculum = [
-    {
-        heading: `Introduction to Coding 201`,
-        description: `Did you learn the basics of coding and loved it? Dive deep into the world of programming. `
-    },
-    {
-        heading: `Animation  201`,
-        description: `Do you want to create animations to help your juniors understand the basic concept of your major? Our animation course can help you do that! `
-    },
-    {
-        heading: `Scratch  201`,
-        description: `Do you love designing games? Design impressive stories, animations, and games through the Scratch course.`
-    },
-    {
-        heading: `HTML 201`,
-        description: `Do you get amazed by the complex websites out there on the internet? Learn HTML to reveal the secrets behind them.`
-    },
-    {
-        heading: `Cyber Safety 201`,
-        description: `Do you want to ensure that nobody is spying on you while you are doing your work on the internet? Learn from our Cyber Safety course to ensure that.`
-    },
-    {
-        heading: `Game Design 201`,
-        description: `Do you not like any games on the play store? Do you have plenty of ideas in your brain? Game Design 101 is here to turn your dreams into reality.`
-    },
-    {
-        heading: `VR Vex 201`,
-        description: `Already know the basics of coding virtual robots? Enroll in our VR Vex course to further step up your game. `
-    },
-    {
-        heading: `TinkerCad 201`,
-        description: `Do you know the basics of 3D modeling and want to take it to the next level? Our TinkerCad course is designed to do just that.`
-    },
-    {
-        heading: `Python 201`,
-        description: `Python Turtle is known to be the easiest programming language. Learn through our Python Course and become a master. `
-    },
-    {
-        heading: `Hacking 201`,
-        description: `Did someone tell you that hacking can be used to protect one’s self from potential dangers on the internet? Learn ethical hacking to ensure your safety on the internet. 
-        `
-    },
-]
+  {
+    heading: `Introduction to Coding 201`,
+    description: `Did you learn the basics of coding and loved it? Dive deep into the world of programming. `,
+  },
+  {
+    heading: `Game Design  201`,
+    description: `Do you want to create animations to help your juniors understand the basic concept of your major? Our animation course can help you do that! `,
+  },
+  {
+    heading: `3D Design 201`,
+    description: `Build your 3D objects and learn more about merging and algining different objects and create print ready 3D objects in this course.`,
+  },
+  {
+    heading: `HTML 201`,
+    description: `Do you get amazed by the complex websites out there on the internet? Learn HTML to reveal the secrets behind them.`,
+  },
+  {
+    heading: `Python 101`,
+    description: `Python is a fun and powerful language which will help you start your journey into real world applications. `,
+  },
+  {
+    heading: `Python 201`,
+    description: `Complete couple of projects that are cool and good enough to boast with your friends!`,
+  },
+  {
+    heading: `Hacking 201`,
+    description: `One word: Digital Forensics & some cool problem solving. `,
+  },
+  {
+    heading: `Python 301`,
+    description: `Game on!`,
+  },
+  {
+    heading: `Python 401`,
+    description: `Space Invaders, elaborate game with everything you need to build a serious game and use your advanced concepts. `,
+  },
+  {
+    heading: `AI/ML 101`,
+    description: `Artificial Intelligence and Machine Learning are not magic, its just something cool you can understand and use in your next project.    `,
+  },
+];
 
 const reviews = [
-    {   
-        author: `James Anderson`,
-        authorImage: '/users/umar.png',
-        heading: `Excellent`,
-        details: `Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.`,
-    },
-    {
-        author: `Sarah Taylor`,
-        authorImage: '/users/dummy.jpg',
-        heading: `Video Quality!`,
-        details: `Was really easy to implement and they quickly answer my additional questions!`,
-    },
-   
-]
+  {
+    author: `Darshita Desai`,
+    authorImage: "/images/reviews/female.jpg",
+    heading: `On Task!`,
+    details: `Wonderful experience for my son who is in Grade 5. The staff is very knowledgeable, kind, and helpful. My son is always excited to go in class and do extra courses as homework at home. Felt much confident in coding after joining this program and always ahead in his batch .. Tks to all staff for doing wonderful job 👍"`,
+  },
+  {
+    author: `Balaji Pulivarthi`,
+    authorImage: "/images/reviews/balaji.png",
+    heading: `Excellent`,
+    details: `My son is leaning coding, robotics etc at Stem1, I really appreciate the faculty who takes a special attention with each student and support individual intellectual skills. During this pandemic situation, the Institute i able to conduct online classes amd kids are leaning to the best possible ways...Good luck to the future generation kids joining at STEM1..`,
+  },
+  {
+    author: `Linh Tam`,
+    authorImage: "/images/reviews/female.jpg",
+    heading: `On Task!`,
+    details: `If you're looking for an after school program for your child that is both educational and fun then STEM1 is the place.  My son is in the Robotics class and he enjoys himself all the while learning without realizing.  My son tells me "It's fun there, I like the technology and playing with Cue and Dash robots... and they keep us on task!"`,
+  },
+];
 
 const Details = () => {
+  return (
+    <Layout>
+      <NavbarTwo />
 
-    return (
-        <Layout>
-            <NavbarTwo />
-           
-            <CourseDetailsContent program={program} curriculum={curriculum} reviews={reviews} />
-            {/* <RelatedCourses /> */}
-            <Pricing />
-            <OurServices />
-            <Footer />
-        </Layout>
-    );
-}
+      <CourseDetailsContent
+        program={program}
+        curriculum={curriculum}
+        reviews={reviews}
+      />
+      {/* <RelatedCourses /> */}
+      <Pricing />
+      <OurServices />
+      <Footer />
+    </Layout>
+  );
+};
 
-export default Details
+export default Details;

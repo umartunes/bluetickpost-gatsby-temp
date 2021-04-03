@@ -11,7 +11,7 @@ const AboutUsContent = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12">
             <div className="about-image">
-              <img src={aboutImage} alt="banner" />
+            <img src="/images/aboutus/eric.jpg" alt="Teaching by Eric" />
             </div>
           </div>
 
@@ -19,6 +19,7 @@ const AboutUsContent = () => {
             <div className="about-content">
               <div className="content">
                 <span className="sub-title">
+               
                   <img src={starIcon} alt="banner" />
                   About Us
                 </span>
@@ -28,18 +29,11 @@ const AboutUsContent = () => {
                   alike
                 </h4>
                 <p>
-                  STEM1 was founded in September 2017 with just one simple
-                  motive. And that is “Make Coding fun for Kids to learn”. We
-                  are determined to bridge the gap between the demand and supply
-                  for coding experts. We have started a chain where we teach
-                  kids and employ them to spread their knowledge.
+                  STEM1 was founded in September 2017 to “Make Coding fun for Kids”. We strongly believe in empowering the younger generation 
+                  especially girls, to explore technology - tinkering, making mistakes and exploring are all part of the learning
                 </p>
                 <p>
-                  STEM1 founder, Chandra Andhe, wanted to promote that coding is
-                  not confined to males only. Therefore, most of the workforce
-                  at STEM1 are women. Besides, his inspiration was his daughter
-                  who did not know how to code. Therefore, he came forward to
-                  change that and create role models for young learners.
+                  
                 </p>
                 {/*                                 
                                 <ul className="features-list">

@@ -65,7 +65,8 @@ const HowItWork = () => {
 
           <div className="col-lg-6 col-md-12">
             <div className="how-its-work-image">
-              <img src={HowItsWork} alt="image_alt" />
+              {/* <img src={HowItsWork} alt="image_alt" /> */}
+              <img src="/images/aboutus/shreya.jpg" alt="Teaching by Eric" />
             </div>
           </div>
         </div>

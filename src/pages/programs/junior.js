@@ -67,16 +67,22 @@ const curriculum = [
 
 const reviews = [
   {
-    author: `James Anderson1`,
-    authorImage: "/users/umar.png",
-    heading: `Excellent`,
-    details: `Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.`,
+    author: `Darshita Desai`,
+    authorImage: "/images/reviews/female.jpg",
+    heading: `On Task!`,
+    details: `Wonderful experience for my son who is in Grade 5. The staff is very knowledgeable, kind, and helpful. My son is always excited to go in class and do extra courses as homework at home. Felt much confident in coding after joining this program and always ahead in his batch .. Tks to all staff for doing wonderful job 👍"`,
   },
   {
-    author: `Sarah Taylor`,
-    authorImage: "/users/dummy.jpg",
-    heading: `Video Quality!`,
-    details: `Was really easy to implement and they quickly answer my additional questions!`,
+    author: `Balaji Pulivarthi`,
+    authorImage: "/images/reviews/balaji.png",
+    heading: `Excellent`,
+    details: `My son is leaning coding, robotics etc at Stem1, I really appreciate the faculty who takes a special attention with each student and support individual intellectual skills. During this pandemic situation, the Institute i able to conduct online classes amd kids are leaning to the best possible ways...Good luck to the future generation kids joining at STEM1..`,
+  },
+  {
+    author: `Linh Tam`,
+    authorImage: "/images/reviews/female.jpg",
+    heading: `On Task!`,
+    details: `If you're looking for an after school program for your child that is both educational and fun then STEM1 is the place.  My son is in the Robotics class and he enjoys himself all the while learning without realizing.  My son tells me "It's fun there, I like the technology and playing with Cue and Dash robots... and they keep us on task!"`,
   },
 ];
 

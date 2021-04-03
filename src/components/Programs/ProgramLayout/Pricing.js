@@ -49,7 +49,7 @@ const Pricing = () => {
                             <div className="card text-center">
                                 <h5 className="card-header">{pkg.name}</h5>
                                 <div className="card-body">
-                                    <h5 className="card-title">{pkg.price}  <small className="text-muted"> / mo</small></h5>
+                                    <h5 className="card-title">{pkg.price} </h5>
                                     
                                     {pkg.description.map((d, j)=>{
                                         return <p key={j} className="card-text mb-0">{d}</p>
