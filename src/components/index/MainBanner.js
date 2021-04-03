@@ -35,12 +35,12 @@ const MainBanner = () => {
   return (
     <React.Fragment>
       {/* If you want to change the video need to update videoID */}
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         isOpen={!isOpen}
         videoId="bk7McNUjWgw"
         onClose={() => setIsOpen(!isOpen)}
-      />
+      /> */}
 
       {display ? (
         <OwlCarousel
@@ -87,9 +87,7 @@ const MainBanner = () => {
                     <span className="sub-title">Welcome</span>
                     <h1>#LearnLocal</h1>
                     <p>
-                      We think AI can bring the best results for clients
-                      business needs. Our SMART decesion making AI algorithm can
-                      identify the business needs and offers solutions.
+                    Helping students with the Instructors and mentors that are local to the community. 
                     </p>
 
                     <div className="btn-box">
@@ -98,7 +96,7 @@ const MainBanner = () => {
                         About Us <span></span>
                       </Link>
 
-                      <Link
+                      {/* <Link
                         to="#play-video"
                         onClick={(e) => {
                           e.preventDefault();
@@ -107,7 +105,7 @@ const MainBanner = () => {
                         className="video-btn popup-youtube"
                       >
                         <i className="flaticon-google-play"></i> Watch Video
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>
