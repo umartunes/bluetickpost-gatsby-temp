@@ -39,7 +39,7 @@ const StartProject = () => {
             <div className="project-start-image">
               <div className="image">
                 <img
-                  src="/images/hackathon/jrhacks-site.png"
+                  src="/images/hackathon/JrHacks-Site.png"
                   alt="LMS Course"
                 />
               </div>

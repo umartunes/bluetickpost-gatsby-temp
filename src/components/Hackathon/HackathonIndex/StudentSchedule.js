@@ -63,7 +63,7 @@ const StudentSchedule = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
               <div className="about-img">
-                <img src={service1} alt="service" />
+                <img src="/images/hackathon/volunteers2020.png" alt="service" />
               </div>
             </div>
 
