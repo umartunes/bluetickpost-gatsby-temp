@@ -25,10 +25,10 @@ const Hackathon = () => {
       <StudentSchedule />
       {/* <hacksupdate /> */}
       <HackathonExpectations />
+      <CommunityInitiative />
       <VideosSection />
       <WhyJRHacks />
-      <CommunityInitiative />
-      <Pricing />
+      {/* <Pricing /> */}
       {/* <EventsCard /> */}
       <Footer />
     </Layout>

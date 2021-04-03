@@ -21,7 +21,7 @@ const WhyJRHacks = () => {
 
                     <div className="col-lg-6 col-md-12">
                         <div className="how-its-work-image">
-                            <img className="rounded-lg" src="/images/hackathon/WhyJRHacks.jpg" alt="choose" />
+                            <img className="rounded-lg" src="/images/hackathon/sponsors.jpg" alt="choose" />
                         </div>
                     </div>
                 </div>

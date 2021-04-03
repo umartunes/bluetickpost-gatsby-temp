@@ -5,6 +5,7 @@ import Footer from "../../components/App/Footer";
 import OurServices from "../../components/Programs/ProgramLayout/OurServices";
 import CourseDetailsContent from "../../components/Programs/ProgramLayout/CourseDetailsContent";
 import NavbarTwo from "../../components/App/NavbarTwo";
+import Pricing from "../../components/Programs/ProgramLayout/Pricing";
 // import RelatedCourses from '../../components/Programs/ProgramLayout/RelatedCourses'
 
 const program = {
@@ -86,6 +87,7 @@ const Details = () => {
 
     <CourseDetailsContent program={program} curriculum={curriculum} reviews={reviews} />
     {/* <RelatedCourses /> */}
+    <Pricing />
     <OurServices />
     <Footer />
 </Layout>

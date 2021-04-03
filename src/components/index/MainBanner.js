@@ -62,7 +62,7 @@ const MainBanner = () => {
                         About Us <span></span>
                       </Link>
 
-                      <Link
+                      {/* <Link
                         to="#play-video"
                         onClick={(e) => {
                           e.preventDefault();
@@ -71,7 +71,7 @@ const MainBanner = () => {
                         className="video-btn popup-youtube"
                       >
                         <i className="flaticon-google-play"></i> Watch Video
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </div>

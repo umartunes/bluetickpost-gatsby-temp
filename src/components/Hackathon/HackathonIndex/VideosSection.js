@@ -36,7 +36,7 @@ const VideosSection = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12">
                             <div className="explore-learning-video mb-3">
-                                <img src="/images/hackathon/videobg1.png" alt="Mayor" />
+                                <img src="/images/hackathon/videobg1.jpg" alt="Mayor" />
  
                                 <Link 
                                     to="#"
@@ -50,7 +50,7 @@ const VideosSection = () => {
 
                         <div className="col-lg-6 col-md-12">
                             <div className="explore-learning-video mb-3">
-                                <img src="/images/hackathon/videobg2.png" alt="Mayor" />
+                                <img src="/images/hackathon/videobg2.jpg" alt="Mayor" />
  
                                 <Link 
                                     to="#"

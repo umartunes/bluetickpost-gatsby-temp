@@ -5,6 +5,7 @@ import Footer from "../../components/App/Footer";
 import OurServices from "../../components/Programs/ProgramLayout/OurServices";
 import CourseDetailsContent from "../../components/Programs/ProgramLayout/CourseDetailsContent";
 import NavbarTwo from "../../components/App/NavbarTwo";
+import Pricing from "../../components/Programs/ProgramLayout/Pricing";
 
 const program = {
   title: "Leadership",
@@ -43,37 +44,39 @@ const curriculum = [
     heading: `AI/ML`,
     description: `What can you build to get your feet wet in Artificial Intelligence. Its just the beginging of something really cool.`,
   },
- 
 ];
 
 const reviews = [
-  {   
-      author: `James Anderson`,
-      authorImage: '/users/umar.png',
-      heading: `Excellent`,
-      details: `Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.`,
+  {
+    author: `James Anderson`,
+    authorImage: "/users/umar.png",
+    heading: `Excellent`,
+    details: `Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.`,
   },
   {
-      author: `Sarah Taylor`,
-      authorImage: '/users/dummy.jpg',
-      heading: `Video Quality!`,
-      details: `Was really easy to implement and they quickly answer my additional questions!`,
+    author: `Sarah Taylor`,
+    authorImage: "/users/dummy.jpg",
+    heading: `Video Quality!`,
+    details: `Was really easy to implement and they quickly answer my additional questions!`,
   },
- 
-]
+];
 
 const Details = () => {
-
   return (
-      <Layout>
-          <NavbarTwo />
-         
-          <CourseDetailsContent program={program} curriculum={curriculum} reviews={reviews} />
-          {/* <RelatedCourses /> */}
-          <OurServices />
-          <Footer />
-      </Layout>
+    <Layout>
+      <NavbarTwo />
+
+      <CourseDetailsContent
+        program={program}
+        curriculum={curriculum}
+        reviews={reviews}
+      />
+      {/* <RelatedCourses /> */}
+      <Pricing />
+      <OurServices />
+      <Footer />
+    </Layout>
   );
-}
+};
 
 export default Details;

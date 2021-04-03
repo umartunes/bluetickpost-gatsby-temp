@@ -7,6 +7,7 @@ import StartProject from '../../components/Programs/ProgramsIndex/StartProject';
 import AboutUs from '../../components/Programs/ProgramsIndex/AboutUs';
 import UpcomingBootcamps from '../../components/Programs/ProgramsIndex/UpcomingBootcamps';
 import Services from '../../components/Programs/ProgramsIndex/Services'
+import Pricing from '../../components/Programs/ProgramLayout/Pricing';
 
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
 
             <Services />
             {/* <AboutUs /> */}
-            
+            <Pricing />
             <UpcomingBootcamps />
 
             <Footer />
