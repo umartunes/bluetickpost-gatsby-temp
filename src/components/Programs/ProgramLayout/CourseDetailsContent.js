@@ -3,10 +3,6 @@ import React, { Component } from 'react'
 
 import CoursesDetailsSidebar from './CoursesDetailsSidebar'
 
-import user1 from '../../../assets/images/user1.jpg'
-import user2 from '../../../assets/images/user2.jpg'
-import user3 from '../../../assets/images/user3.jpg'
-
 class CourseDetailsContent extends Component {
 
     // Tab
@@ -31,7 +27,7 @@ class CourseDetailsContent extends Component {
 
     render() {
 
-        const { program, curriculum } = this.props
+        const { program, curriculum, reviews } = this.props
 
         return (
             <div className="courses-details-area pb-100">
@@ -115,63 +111,27 @@ class CourseDetailsContent extends Component {
                                         </div>
 
                                         <div className="courses-review-comments">
-                                            <h3>3 Reviews</h3>
-                                            <div className="user-review">
-                                                <img src={user1} alt="course" />
+                                            <h3>{reviews.length} Reviews</h3>
+                                            {reviews.map((review, i) => {
+                                                return <div className="user-review">
+                                                    <img src={review.authorImage} alt="course" />
 
-                                                <div className="review-rating">
-                                                    <div className="review-stars">
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
+                                                    <div className="review-rating">
+                                                        <div className="review-stars">
+                                                            <i className='bx bxs-star checked'></i>
+                                                            <i className='bx bxs-star checked'></i>
+                                                            <i className='bx bxs-star checked'></i>
+                                                            <i className='bx bxs-star checked'></i>
+                                                            <i className='bx bxs-star checked'></i>
+                                                        </div>
+
+                                                        <span className="d-inline-block">{review.author}</span>
                                                     </div>
 
-                                                    <span className="d-inline-block">James Anderson</span>
+                                                    <span className="d-block sub-comment">{review.heading}</span>
+                                                    <p>{review.details}</p>
                                                 </div>
-
-                                                <span className="d-block sub-comment">Excellent</span>
-                                                <p>Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.</p>
-                                            </div>
-
-                                            <div className="user-review">
-                                                <img src={user2} alt="course" />
-
-                                                <div className="review-rating">
-                                                    <div className="review-stars">
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star'></i>
-                                                        <i className='bx bxs-star'></i>
-                                                    </div>
-
-                                                    <span className="d-inline-block">Sarah Taylor</span>
-                                                </div>
-
-                                                <span className="d-block sub-comment">Video Quality!</span>
-                                                <p>Was really easy to implement and they quickly answer my additional questions!</p>
-                                            </div>
-
-                                            <div className="user-review">
-                                                <img src={user3} alt="course" />
-
-                                                <div className="review-rating">
-                                                    <div className="review-stars">
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                        <i className='bx bxs-star checked'></i>
-                                                    </div>
-
-                                                    <span className="d-inline-block">David Warner</span>
-                                                </div>
-
-                                                <span className="d-block sub-comment">Perfect Coding!</span>
-                                                <p>Stunning design, very dedicated crew who welcome new ideas suggested by customers, nice support.</p>
-                                            </div>
+                                            })}
 
                                         </div>
                                     </div>

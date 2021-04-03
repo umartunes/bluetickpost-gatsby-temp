@@ -64,17 +64,43 @@ const curriculum = [
   },
 ];
 
+const reviews = [
+  {
+    author: `James Anderson1`,
+    authorImage: "/users/umar.png",
+    heading: `Excellent`,
+    details: `Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.`,
+  },
+  {
+    author: `Sarah Taylor`,
+    authorImage: "/users/dummy.jpg",
+    heading: `Video Quality!`,
+    details: `Was really easy to implement and they quickly answer my additional questions!`,
+  },
+];
+
 const Details = () => {
   return (
     <Layout>
-      <NavbarTwo />
+    <NavbarTwo />
 
-      <CourseDetailsContent program={program} curriculum={curriculum} />
-      {/* <RelatedCourses /> */}
-      <OurServices />
-      <Footer />
-    </Layout>
+    <CourseDetailsContent program={program} curriculum={curriculum} reviews={reviews} />
+    {/* <RelatedCourses /> */}
+    <OurServices />
+    <Footer />
+</Layout>
   );
 };
+// return (
+    // <Layout>
+    //     <NavbarTwo />
+
+    //     <CourseDetailsContent program={program} curriculum={curriculum} reviews={reviews} />
+    //     {/* <RelatedCourses /> */}
+    //     <OurServices />
+    //     <Footer />
+    // </Layout>
+// );
+// }
 
 export default Details;
