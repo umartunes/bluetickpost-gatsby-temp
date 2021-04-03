@@ -12,6 +12,7 @@ import StudentSchedule from "../../components/Hackathon/HackathonIndex/StudentSc
 import HackathonExpectations from "../../components/Hackathon/HackathonIndex/HackathonExpectations";
 // import hacksupdate from "../../components/Hackathon/HackathonIndex/HackathonUpdate";
 import HacksUpdates from '../../components/Hackathon/HackathonIndex/hacksupdates'
+import Pricing from '../../components/Hackathon/HackathonIndex/Pricing'
 
 const Hackathon = () => {
   //allEvents.json
@@ -27,6 +28,7 @@ const Hackathon = () => {
       <VideosSection />
       <WhyJRHacks />
       <CommunityInitiative />
+      <Pricing />
       {/* <EventsCard /> */}
       <Footer />
     </Layout>
