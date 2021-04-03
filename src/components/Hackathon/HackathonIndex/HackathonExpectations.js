@@ -79,7 +79,7 @@ const HackathonExpectations = () => {
                                     <span className="sub-title">
                                         <img src={starIcon} alt="icon" /> Expectations from Hackathon
                                     </span>
-                                    <h2>What you can expect from the Hackathont</h2>
+                                    <h2>What you can expect from the Hackathon</h2>
                                     <p>STEM1 invites all students from grade 2 to 8 from the Greater Toronto Area to participate in our virtual Jr Hacks 2021 challenge!  </p>
                                     <p><i className="flaticon-tick mr-3"></i> Exciting challenges to solve as a Team!</p>
                                     <p><i className="flaticon-tick mr-3"></i> Wonderful team lead who can guide you through different tasks.</p>

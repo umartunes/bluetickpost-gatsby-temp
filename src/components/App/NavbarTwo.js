@@ -69,7 +69,7 @@ const NavbarTwo = () => {
                                             onClick={() => setCollapsed(true)}
                                             className="default-btn"
                                         >
-                                            <i className="flaticon-right"></i> Get Started <span></span>
+                                            <i className="flaticon-right"></i> Free Demo <span></span>
                                         </Link>
                                     </div>
                                 </div>

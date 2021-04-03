@@ -9,16 +9,13 @@ import NavbarTwo from '../../components/App/NavbarTwo'
 
 const program = {
     title: "Junior (Grade 3+)",
-    description: `Children are now growing up with technology as axxxxxxxxxx. From asking Alexa to play their favorite song to finding answers to almost anything in Google, they all grow up. Therefore, it is the responsibility of parents to familiarize them with technological advancements.`,
-    certification: `We gamify the learning through badges to recognize the growth of our students. Students will be awarded a certificate of completion after they finish every course. Students will have to submit a presentation or project, required to graduate the program.`,
-    courseFor: `Our Junior program is designed for Grade 3+ students to teach them basics of coding. This program offers 10 levels with weekly 1 hour class. At the end of each course, we conduct exams to assess the level of learning.`,
+    description: ` Just as we consider Mainframe computers and Televison as old technology, students currently in Grade 3+ are going to consider YouTube, Google, Bitcoin as old technology. Its very natural for these students to ask Alexa to play their favorite song or finding answers to almost anything in Google. Our job at STEM1 is to help the students to get introduced to coding as just one more fun thing they do rather than the mandatory course they have to take.`,
+    certification: `We gamify the learning through badges to recognize the growth of our students. Students will be awarded a certificate of completion after they finish every level. Students will have to submit a presentation or project, required to graduate the program.`,
+    courseFor: `Our Junior program is designed for Grade 3+ students to teach them basics of coding. This program has 10 levels with weekly 1 hour class. At the end of each course, we conduct exams to assess the level of learning.`,
 
     price: "$96*/month",
     duration: "~12 Wks/Course",
     courseDetailsImage: '/images/courses-details.jpg',
-
-    price: "$84/month",
-    duration: "12 - 16 Weeks",
     courses: "10",
     support: "Unlimited",
     reports: "Quarterly",

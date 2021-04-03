@@ -12,10 +12,9 @@ const StartProject = () => {
 
 					<div className="col-lg-6 col-md-12">
 						<div className="project-start-content">
-							<h2>Volunteer Page Banner</h2>
+							<h2>Volunteer Information</h2>
 							<p>
-								Continue your learning using our state of the art Learning
-								Management System.
+								Volunteering is a great way to get started in understanding how to work with students in STEM fields.
               				</p>
 
 							<Link to="https://lms.stem.one" className="default-btn">

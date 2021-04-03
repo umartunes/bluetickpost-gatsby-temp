@@ -12,24 +12,19 @@ const StartProject = () => {
 
 					<div className="col-lg-6 col-md-12">
 						<div className="project-start-content">
-							<h2>Blog Banner</h2>
+							<h2>STEM1 Blog</h2>
 							<p>
-								Continue your learning using our state of the art Learning
-								Management System.
+								An opportunity to showcase our students and instructors work along with some ideas we share on Coding. 
               				</p>
 
-							<Link to="https://lms.stem.one" className="default-btn">
-								<i className="flaticon-web"></i>
-								Call to Action
-							<span></span>
-							</Link>
+							 
 						</div>
 					</div>
 
 					<div className="col-lg-6 col-md-12">
 						<div className="project-start-image">
 							<div className="image">
-								<img src="/images/lms/Python-Course.png" alt="LMS Course" />
+								<img src="/images/blog/blogging-Main.png" alt="BLOG " />
 							</div>
 						</div>
 					</div>

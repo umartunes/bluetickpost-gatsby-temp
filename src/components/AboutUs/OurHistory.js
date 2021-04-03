@@ -10,9 +10,9 @@ const OurHistory = () => {
                 <div className="section-title">
                     <span className="sub-title">
                         <img src={starIcon} alt="banner" /> 
-                        Our History
+                        Our #SupportLocal mission
                     </span>
-                    <h2>GIVING BACK TO THE COMMUNITY </h2>
+                    <h2> We believe in working & supporting local.</h2>
                 </div>
 
                 <ol className="timeline history-timeline">

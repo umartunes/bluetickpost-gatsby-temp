@@ -17,8 +17,6 @@ const program = {
     duration: "~12 wks/Course",
     courseDetailsImage: '/images/courses-details.jpg',
 
-    price: "$84/month",
-    duration: "12 - 16 Weeks",
     courses: "10",
     support: "Unlimited",
     reports: "Quarterly",

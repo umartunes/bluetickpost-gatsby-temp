@@ -95,7 +95,7 @@ export default function Menu() {
 				</Link>
 
 				<ul className="dropdown-menu">
-					<li className="nav-item">
+					{/* <li className="nav-item">
 						<Link
 							to="/hackathon/peel-2021"
 							activeClassName="active"
@@ -104,9 +104,9 @@ export default function Menu() {
 						>
 							Jr.Hacks - Peel
             			</Link>
-					</li>
+					</li> */}
 
-					<li className="nav-item">
+					{/* <li className="nav-item">
 						<Link
 							to="/community"
 							activeClassName="active"
@@ -115,7 +115,7 @@ export default function Menu() {
 						>
 							Volunteer
             			</Link>
-					</li>
+					</li> */}
 
 
 
