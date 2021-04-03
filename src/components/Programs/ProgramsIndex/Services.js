@@ -11,7 +11,7 @@ const Services = () => {
   return (
     <section className="overview-area ptb-100">
       <div className="container">
-        <div className="row">
+        {/* <div className="row">
           <div className="col">
             <Lottie
               options={{
@@ -19,11 +19,10 @@ const Services = () => {
               }}
             />
           </div>
-        </div>
+        </div> */}
         {/* Left Image Style */}
         <div className="overview-box">
           <div className="overview-image">
-
             <div className="image">
               <img src={service4} alt="features" />
             </div>
@@ -32,11 +31,12 @@ const Services = () => {
           <div className="overview-content">
             <div className="content right-content">
               <span className="sub-title">#FutureReady</span>
-              <h2>Solving problems, building #FutureReady students</h2>
+              <h2>#FutureReady students</h2>
               <p>
-                We focus on problem solving and promote creativity and
-                persistence to solve the problems. Our students are always up
-                for the challenge to solve Real problems of the world.
+                We focus on problem solving and promote creativity by
+                challenging student with different tasks every week. All our
+                lessons are tied to "Computational Thinking" which is the
+                foundation for success.
               </p>
 
               <ul className="features-list">
@@ -127,7 +127,7 @@ const Services = () => {
               <p>
                 Our Instructors provide the best learning experience to the
                 students as they have grown up around the same area and have a
-                lot to offer weather it is about the schools and the paths they
+                lot to offer whether it is about the schools and the paths they
                 are taking or discussing a technology problem.
               </p>
 

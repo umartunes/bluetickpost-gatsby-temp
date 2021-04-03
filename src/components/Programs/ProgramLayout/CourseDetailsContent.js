@@ -61,7 +61,7 @@ class CourseDetailsContent extends Component {
                                             <h3>Course Description</h3>
                                             <p>{program.description}</p>
 
-                                            <h3>Certification</h3>
+                                            <h3>Progress & Certification</h3>
                                             <p>{program.certification}</p>
 
                                             <h3>Who this course is for?</h3>

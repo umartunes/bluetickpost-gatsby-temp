@@ -68,6 +68,13 @@ const CoursesDetailsSidebar = ({ program }) => {
                             {program.reports}
                         </div>
                     </li>
+
+                    <li>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <span><i className="flaticon-open-padlock"></i> Recognition</span>
+                            {"Awards & Certificates"}
+                        </div>
+                    </li>
                 </ul>
 
                 <div className="btn-box">
@@ -80,7 +87,7 @@ const CoursesDetailsSidebar = ({ program }) => {
                     </Link> */}
                 </div>
 
-                {/* <div className="courses-share">
+                <div className="courses-share">
                     <div className="share-info">
                         <span>Share This Course <i className="flaticon-share"></i></span>
 
@@ -107,7 +114,7 @@ const CoursesDetailsSidebar = ({ program }) => {
                             </li>
                         </ul>
                     </div>
-                </div> */}
+                </div>
             </div>
         </React.Fragment>
     )

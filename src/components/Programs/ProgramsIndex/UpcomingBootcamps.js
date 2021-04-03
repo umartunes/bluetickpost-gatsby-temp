@@ -6,11 +6,11 @@ const UpcomingBootcamps = () => {
         <div className="upcoming-bootcamps-area ptb-100 bg-fafafb">
             <div className="container">
                 <div className="upcoming-bootcamps-content">
-                    <h2>Check Full Schedule for In-person Data Science Bootcamps</h2>
+                    <h2>Our upcoming classes & events</h2>
 
                     <Link to="/events" className="default-btn">
                         <i className="flaticon-view"></i> 
-                        Check Out All Bootcamps <span></span>
+                        Upcoming Classes <span></span>
                     </Link>
                 </div>
             </div>

@@ -19,7 +19,7 @@ const Home = () => {
             <StartProject />
 
             <Services />
-            <AboutUs />
+            {/* <AboutUs /> */}
             
             <UpcomingBootcamps />
 

@@ -17,10 +17,10 @@ const StartProject = () => {
 
                     <div className="col-lg-6 col-md-12">
                         <div className="project-start-content">
-                            <h2>We Like to Start Your Project With Us</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            <h2>Coding & Leadership</h2>
+                            <p>All our programs are designed to encourage to learn and master the concepts</p>
 
-                            <Link to="/contact" className="default-btn">
+                            <Link to="/demo" className="default-btn">
                                 <i className="flaticon-web"></i> 
                                 Get Started 
                                 <span></span>
