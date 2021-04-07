@@ -60,7 +60,7 @@ class CourseDetailsContent extends Component {
                                             <h3>Progress & Certification</h3>
                                             <p>{program.certification}</p>
 
-                                            <h3>Who this course is for?</h3>
+                                            <h3>Who is this course for?</h3>
                                             <p>{program.courseFor}</p>
                                         </div>
                                     </div>

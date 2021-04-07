@@ -13,13 +13,13 @@ const StartProject = () => {
             <div className="project-start-content">
               <h2>Jr.Hackathon 2021</h2>
               <p>
-                Students access their Team information using our Hackathon
-                Platform!
+                Please update Student Full Name to be printed on the
+                Jr.Hackathon Certificate.
               </p>
 
-              <Link to="https://lms.JrHacks.com" className="default-btn">
+              <Link to="/swag" className="default-btn">
                 <i className="flaticon-web"></i>
-                Login to Jr.Hacks Account
+                Schedule Pickup
                 <span></span>
               </Link>
             </div>
@@ -40,7 +40,7 @@ const StartProject = () => {
               <div className="image">
                 <img
                   src="/images/hackathon/jrhackssite.png"
-                  alt="LMS Course"
+                  alt="Jr. Hackathon"
                 />
               </div>
             </div>

@@ -2,10 +2,10 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 
 const SEO = ({
-    seoTitle = "Virtual Coding Classes | Learn Robotics Programming - STEM One",
-    seoDescription = "Virtual Coding Classes | Learn Robotics Programming - STEM One",
+    seoTitle = "Learn to Code: Grade 2 - Grade 8 by STEM One",
+    seoDescription = "Coding & Robotics program for Students by local instructors.",
     seoCanonical = "/",
-    seoOgImage = "https://res.cloudinary.com/dev-empty/image/upload/v1593069801/explore-learning.jpg",
+    seoOgImage = "/images/CodingProgram.png",
     ...otherProps
 }) => {
 

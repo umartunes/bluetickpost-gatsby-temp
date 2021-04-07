@@ -6,11 +6,11 @@ const HacksUpdates = () => {
         <div className="upcoming-bootcamps-area ptb-80 bg-fafafb">
             <div className="container">
                 <div className="upcoming-bootcamps-content">
-                    <h2>SWAG bag pickup loction information</h2>
+                    <h2>SWAG bag pickup @Streetsville Home Hardware </h2>
 
-                    <Link to="/swag" className="default-btn">
+                    <Link to="/swag" className="default-btn"  >
                         <i className="flaticon-view"></i> 
-                        Request pickup location  
+                      Schedule Pickup  
                     </Link>
                 </div>
             </div>

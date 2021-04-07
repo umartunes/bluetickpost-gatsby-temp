@@ -13,10 +13,10 @@ const packages = [
     },
     {
         name: "Yearly",
-        price: "$1146",
+        price: "$96*",
         link: '/Register',
         description: [
-            '20% discount',
+            '20% 0ff Monthly',
             'Paid in advance',
         ]
     },
