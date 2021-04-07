@@ -16,3 +16,19 @@
    width: calc(100% + 30px);
    margin-left: -15px;
 }
+
+.balloon-game-iframe-container {
+  overflow: hidden;
+  padding-top: 100vh;
+  position: relative;
+}
+
+.balloon-game-iframe-container iframe {
+   border: 0;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   overflow: hidden;
+}
