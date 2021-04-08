@@ -1,9 +1,9 @@
 import React, { useState, useEffect, forwardRef } from 'react'
 import { firestore } from '../../utils/firebase'
 import FlipMove from 'react-flip-move';
-import GameCard from './GameCard'
+import ScoreCard from './ScoreCard'
 
-const RealtimeLeaderboard = () => {
+const Leaderboard = () => {
 
     const [gameData, setGameData] = useState([
         { playerId: '0', playerName: "Loading...", score: 0 },
@@ -75,8 +75,9 @@ const RealtimeLeaderboard = () => {
                         <FlipMove easing="cubic-bezier(0.13, 1.15, 0.8, 1.5)" duration={600} staggerDurationBy={260}>
                             {sortedGameData.map((game, i) => {
                                 let rank = i + 1;
-                                let uniqeKey = game.playerId + game.playerName + game.score;
-                                return <GameCard key={uniqeKey} game={game} rank={rank} />
+                                let uniqeKey = game.id || (game.playerId + game.playerName + game.score);
+
+                                return <ScoreCard key={uniqeKey} game={game} rank={rank} />
                             })}
                         </FlipMove>
                     </div>
@@ -92,4 +93,4 @@ const RealtimeLeaderboard = () => {
     )
 }
 
-export default RealtimeLeaderboard
+export default Leaderboard

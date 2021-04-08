@@ -1,6 +1,6 @@
 import React from 'react'
 import NavbarTwo from "../components/App/NavbarTwo";
-import RealtimeLeaderboard from "../components/BalloonPopping/RealtimeLeaderboard";
+import Leaderboard from "../components/BalloonPopping/Leaderboard";
 import Footer from "../components/App/Footer"
 import Layout from "../components/App/Layout"
 
@@ -9,7 +9,7 @@ const BalloonGame = () => {
     return (
         <Layout>
             <NavbarTwo />
-            <RealtimeLeaderboard />
+            <Leaderboard />
             <Footer />
         </Layout>
     );

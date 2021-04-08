@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 
-const GameCard = forwardRef((props, ref) => {
+const ScoreCard = forwardRef((props, ref) => {
     let { game, rank } = props
     return <div class={`card ${rank <= 3 ? "bg-warning font-weight-bold" : "bg-light" } mb-1`} ref={ref}>
         <div class="card-header d-flex justify-content-between">
@@ -11,4 +11,4 @@ const GameCard = forwardRef((props, ref) => {
     </div>
 });
 
-export default GameCard
+export default ScoreCard
