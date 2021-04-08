@@ -1,4 +1,3 @@
-
 .demo-iframe-container {
   overflow: hidden;
   margin-top: 100px;
@@ -7,14 +6,14 @@
 }
 
 .demo-iframe-container iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   overflow: hidden;
-   width: calc(100% + 30px);
-   margin-left: -15px;
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: calc(100% + 30px);
+  margin-left: -15px;
 }
 
 .balloon-game-iframe-container {
@@ -24,11 +23,18 @@
 }
 
 .balloon-game-iframe-container iframe {
-   border: 0;
-   height: 100%;
-   width: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   overflow: hidden;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.balloon-popping-iframes iframe {
+  border: 0;
+  height: 560px;
+  width: 100%;
+ 
 }
