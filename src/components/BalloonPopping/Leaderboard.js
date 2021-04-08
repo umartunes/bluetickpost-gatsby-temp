@@ -56,7 +56,7 @@ const Leaderboard = () => {
     }, [])
 
     return (
-        <div className="project-start-area  bg-color py-5">
+        <div className="project-start-area bg-color py-5">
             <div className="container">
 
                 <div className="text-center">
@@ -67,7 +67,7 @@ const Leaderboard = () => {
                 <div className="row mt-5 balloon-popping-iframes">
                     <div className="col-12 col-md-8">
                         <h4 className="text-white text-center">Game</h4>
-                        <iframe style={{ width: '100%', height: '560px' }} title="" src="https://balloon-popping-stem.web.app"></iframe>
+                        <iframe title="" src="https://balloon-popping-stem.web.app"></iframe>
                     </div>
                     <div className="col-12 col-md-4">
                         <h4 className="text-white text-center">Leaderboard 🏆</h4>
@@ -75,9 +75,7 @@ const Leaderboard = () => {
                         <FlipMove easing="cubic-bezier(0.13, 1.15, 0.8, 1.5)" duration={600} staggerDurationBy={260}>
                             {sortedGameData.map((game, i) => {
                                 let rank = i + 1;
-                                let uniqeKey = game.gameId || (game.playerId + game.playerName + game.score);
-
-                                return <ScoreCard key={uniqeKey} game={game} rank={rank} />
+                                return <ScoreCard key={game.gameId} game={game} rank={rank} />
                             })}
                         </FlipMove>
                     </div>
