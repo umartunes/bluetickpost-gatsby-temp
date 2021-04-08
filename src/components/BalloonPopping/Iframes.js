@@ -6,18 +6,18 @@ const Iframes = () => {
         <div className="project-start-area  bg-color py-5">
             <div className="container">
 
-                <div className="text-center">
+                {/* <div className="text-center">
                     <h4 className="text-white">create your own game</h4>
                     <h2 className="text-white">Coding is easy like this</h2>
-                </div>
+                </div> */}
 
                 <div className="row mt-5 balloon-popping-iframes">
                     <div className="col-12 col-md-8">
-                        <h4 className="text-white text-center">Game</h4>
+                        <h4 className="text-white text-center">Coding is easy like this</h4>
                         <iframe title="" src="https://balloon-popping-stem.web.app"></iframe>
                     </div>
                     <div className="col-12 col-md-4">
-                    <h4 className="text-white text-center">Leaderboard 🏆</h4>
+                        <h4 className="text-white text-center">Leaderboard 🏆</h4>
                         <iframe title="" src="https://balloon-popping-stem.web.app/leaderboard_fullpage.html"></iframe>
                     </div>
                 </div>
