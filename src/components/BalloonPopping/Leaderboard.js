@@ -75,7 +75,7 @@ const Leaderboard = () => {
                         <FlipMove easing="cubic-bezier(0.13, 1.15, 0.8, 1.5)" duration={600} staggerDurationBy={260}>
                             {sortedGameData.map((game, i) => {
                                 let rank = i + 1;
-                                let uniqeKey = game.id || (game.playerId + game.playerName + game.score);
+                                let uniqeKey = game.gameId || (game.playerId + game.playerName + game.score);
 
                                 return <ScoreCard key={uniqeKey} game={game} rank={rank} />
                             })}
