@@ -87,7 +87,8 @@ const MainBanner = () => {
                     <span className="sub-title">Welcome</span>
                     <h1>#LearnLocal</h1>
                     <p>
-                    Helping students with the Instructors and mentors that are local to the community. 
+                      Helping students with the Instructors and mentors that are
+                      local to the community.
                     </p>
 
                     <div className="btn-box">

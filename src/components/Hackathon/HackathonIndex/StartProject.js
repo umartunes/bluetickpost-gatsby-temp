@@ -13,15 +13,15 @@ const StartProject = () => {
             <div className="project-start-content">
               <h2>Jr.Hackathon 2021</h2>
               <p>
-                Please update Student Full Name to be printed on the
-                Jr.Hackathon Certificate.
+                Please stay tuned for Jr.Hackathon Live link!
               </p>
 
-              <Link to="/swag" className="default-btn">
+              {/* <Link to="/swag" className="default-btn">
                 <i className="flaticon-web"></i>
                 Schedule Pickup
                 <span></span>
-              </Link>
+              </Link> */}
+              
             </div>
 
             {/* <div className="project-start-content">

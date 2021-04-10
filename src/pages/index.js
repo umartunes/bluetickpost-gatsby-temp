@@ -16,16 +16,19 @@ import HowItWork from '../components/index/HowItWork';
 // import OurBlog from '../components/index/OurBlog';
 // import ProjectStartArea from '../components/index/ProjectStartArea';
 
+import Youtube from '../components/index/Youtube'
 
 const Home = () => {
     return (
         <Layout>
             <NavbarTwo />
             
-            <MainBanner />
 
-            <Solutions />
+            {/* <MainBanner /> */}
+            <Youtube />
+
             <HowItWork />
+            <Solutions />
             {/* <AboutUs /> */}
             <CallToAction />
             <Services />

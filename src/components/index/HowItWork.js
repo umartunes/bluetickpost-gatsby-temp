@@ -15,7 +15,7 @@ const HowItWork = () => {
                 <img src={StarIcon} alt="image_alt" />
                 Our Program
               </span>
-              <h2>STEM1 Learning Path</h2>
+              <h2>STEM1 Learning process</h2>
               <p>
                 Learn to code by completing challenges, building games, apps,
                 and more. Continuously develop interpersonal (active listening,

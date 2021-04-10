@@ -66,7 +66,7 @@ const Leaderboard = () => {
 
                 <div className="row mt-5 balloon-popping-iframes">
                     <div className="col-12 col-md-8">
-                        <h4 className="text-white text-center">Coding is easy like this</h4>
+                        <h4 className="text-white text-center">Build this game with: HTML201</h4>
                         <iframe title="" src="https://balloon-popping-stem.web.app"></iframe>
                     </div>
                     <div className="col-12 col-md-4">
@@ -82,8 +82,8 @@ const Leaderboard = () => {
                 </div>
 
                 <div className="text-center mt-5">
-                    <h4 className="text-white">Build this game with</h4>
-                    <h2 className="text-white">HTML #201</h2>
+                    <h4 className="text-white">Coding is fun</h4>
+                    <h2 className="text-white">Start Today!</h2>
                 </div>
 
             </div>
