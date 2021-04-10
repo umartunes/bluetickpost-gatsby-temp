@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { firestore } from '../../utils/firebase'
 import FlipMove from 'react-flip-move';
 import ScoreCard from './ScoreCard'
@@ -16,6 +16,8 @@ const Leaderboard = () => {
         { playerId: '7', playerName: "Loading...", score: 0 },
         { playerId: '8', playerName: "Loading...", score: 0 },
         { playerId: '9', playerName: "Loading...", score: 0 },
+        { playerId: '10', playerName: "Loading...", score: 0 },
+        { playerId: '11', playerName: "Loading...", score: 0 },
     ])
 
     const [sortedGameData, setSortedGameData] = useState([])
@@ -27,7 +29,7 @@ const Leaderboard = () => {
         let gameDataCopy = JSON.parse(JSON.stringify(gameData))
         gameDataCopy.sort((a, b) => (a.score > b.score) ? -1 : 1)
 
-        let topTen = gameDataCopy.slice(0, 10)
+        let topTen = gameDataCopy.slice(0, 12)
 
         setSortedGameData(topTen)
 
@@ -56,37 +58,13 @@ const Leaderboard = () => {
     }, [])
 
     return (
-        <div className="project-start-area bg-color py-5">
-            <div className="container">
-
-                {/* <div className="text-center">
-                    <h4 className="text-white">create your own game</h4>
-                    <h2 className="text-white">Coding is easy like this</h2>
-                </div> */}
-
-                <div className="row mt-5 balloon-popping-iframes">
-                    <div className="col-12 col-md-8">
-                        <h4 className="text-white text-center">Build this game with: HTML201</h4>
-                        <iframe title="" src="https://balloon-popping-stem.web.app"></iframe>
-                    </div>
-                    <div className="col-12 col-md-4">
-                        <h4 className="text-white text-center">Leaderboard 🏆</h4>
-
-                        <FlipMove easing="cubic-bezier(0.13, 1.15, 0.8, 1.5)" duration={200} staggerDurationBy={175}>
-                            {sortedGameData.map((game, i) => {
-                                let rank = i + 1;
-                                return <ScoreCard key={game.gameId} game={game} rank={rank} />
-                            })}
-                        </FlipMove>
-                    </div>
-                </div>
-
-                <div className="text-center mt-5">
-                    <h4 className="text-white">Coding is fun</h4>
-                    <h2 className="text-white">Start Today!</h2>
-                </div>
-
-            </div>
+        <div className="Leaderboard">
+            <FlipMove easing="cubic-bezier(0.13, 1.15, 0.8, 1.5)" duration={200} staggerDurationBy={175}>
+                {sortedGameData.map((game, i) => {
+                    let rank = i + 1;
+                    return <ScoreCard key={game.gameId} game={game} rank={rank} />
+                })}
+            </FlipMove>
         </div>
     )
 }
