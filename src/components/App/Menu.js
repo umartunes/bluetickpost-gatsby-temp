@@ -35,6 +35,17 @@ export default function Menu() {
 							LMS
             			</Link>
 					</li>
+
+					<li className="nav-item">
+						<Link
+							to="/balloon-popping"
+							activeClassName="active"
+							onClick={() => setCollapsed(true)}
+							className="nav-link"
+						>
+							Play
+            			</Link>
+					</li>
 				</ul>
 			</li>
 
@@ -95,16 +106,16 @@ export default function Menu() {
 				</Link>
 
 				<ul className="dropdown-menu">
-					{/* <li className="nav-item">
+					<li className="nav-item">
 						<Link
-							to="/hackathon/peel-2021"
+							to="/balloon-popping-leaderboard"
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
 						>
-							Jr.Hacks - Peel
+							Leaderboard
             			</Link>
-					</li> */}
+					</li>
 
 					{/* <li className="nav-item">
 						<Link

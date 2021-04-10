@@ -64,7 +64,7 @@ const CoursesDetailsSidebar = ({ program }) => {
                     </li>
                     <li>
                         <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-open-padlock"></i> Reports</span>
+                            <span><i className="flaticon-open-padlock"></i> Feedback</span>
                             {program.reports}
                         </div>
                     </li>
@@ -79,7 +79,7 @@ const CoursesDetailsSidebar = ({ program }) => {
 
                 <div className="btn-box">
                     <Link to="/schedule" className="default-btn">
-                        <i className="flaticon-right"></i> Get Started <span></span>
+                        <i className="flaticon-right"></i> Register <span></span>
                     </Link>
                     {/* <Link to="#" className="default-btn">
                         <i className="flaticon-price-tag"></i>
