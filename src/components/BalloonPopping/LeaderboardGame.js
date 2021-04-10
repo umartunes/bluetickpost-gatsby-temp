@@ -3,7 +3,7 @@ import { firestore } from '../../utils/firebase'
 import FlipMove from 'react-flip-move';
 import ScoreCard from './ScoreCard'
 
-const Leaderboard = () => {
+const LeaderboardGame = () => {
 
     const [gameData, setGameData] = useState([
         { playerId: '0', playerName: "Loading...", score: 0 },
@@ -91,4 +91,4 @@ const Leaderboard = () => {
     )
 }
 
-export default Leaderboard
+export default LeaderboardGame
