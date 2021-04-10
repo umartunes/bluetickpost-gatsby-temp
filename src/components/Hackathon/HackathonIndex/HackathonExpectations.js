@@ -34,7 +34,7 @@ const questions = [
         question: `Benefits of Jr.Hacks 2021`,
         answer: `Working in team stimulates leadership, communication, & interpersonal skills.
         A day filled with STEM learning and activities.
-        SWAG Bags with a cool t-shirt, stickers, raffle tickets to win gift cards from local businesses and goodies from our sponsors`
+        SWAG Bags with a cool t-shirt, stickers, and goodies from our sponsors`
     },
 
 ]
@@ -75,7 +75,7 @@ const HackathonExpectations = () => {
 
                         <div className="col-lg-6 col-md-12">
                             <div className="about-img">
-                                <img src="/images/hackathon/volunteers2020.JPG" alt="service" />
+                                <img src="/images/hackathon/volunteers2020.jpg" alt="service" />
                             </div>
                         </div>
 

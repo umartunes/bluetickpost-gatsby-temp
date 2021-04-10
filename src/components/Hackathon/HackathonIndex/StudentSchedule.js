@@ -20,10 +20,7 @@ const timings = [
         heading: `10:35 - 11:00 - Meet your Team!`,
         content: `Break off into your assigned groups and get to know your fellow team members as well as your Team Lead by engaging in fun activities together`,
     },
-    {
-        heading: `11:00 - 12:30 - Activity 1 (Coding Challenge)`,
-        content: `Dive into your surprise Coding Challenge and find ways to apply your team’s skills to  efficiently complete the activity before the clock runs out!`,
-    },
+   
     {
         heading: `11:00 - 12:30 - Activity 1 (Coding Challenge)`,
         content: `Dive into your surprise Coding Challenge and find ways to apply your team’s skills to  efficiently complete the activity before the clock runs out!`,
@@ -45,8 +42,8 @@ const timings = [
         content: `Put your knowledge to the test as you partake in our highly anticipated quiz competition. Compete against other teams in your grade and answer as many questions together to earn more points for your team!`,
     },
     {
-        heading: `4:00 - 4:30 - Raffle & Talent Showcase`,
-        content: `Sit back, grab your popcorn, and enjoy our STEAM Talent Showcase from participants of the competition! Plus, you might also be one of our many Raffle Ticket winners! Stay tuned!`,
+        heading: `4:00 - 4:30 - Break`,
+        content: `Sit back, grab your popcorn, and enjoy a Balloon pop game on 'Play'!`,
     },
     {
         heading: `4:30 - 5:00 - Awards & Closing Ceremonies`,
@@ -74,7 +71,7 @@ const StudentSchedule = () => {
                                     <p><i className="flaticon-tick mr-3"></i> Wonderful team lead who can guide you through different tasks.</p>
                                     <p><i className="flaticon-tick mr-3"></i> Four different awards per grade</p>
                                     <p><i className="flaticon-tick mr-3"></i> Chance to win $1000 as Grand prize</p>
-                                    <p><i className="flaticon-tick mr-3"></i> Raffle tickets with awesome giveaways from local businesses</p>
+                                    {/* <p><i className="flaticon-tick mr-3"></i> Raffle tickets with awesome giveaways from local businesses</p> */}
 
                                 </div>
                             </div>

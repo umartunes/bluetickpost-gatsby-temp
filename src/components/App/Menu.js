@@ -38,7 +38,7 @@ export default function Menu() {
 
 					<li className="nav-item">
 						<Link
-							to="/balloon-popping"
+							to="/play"
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
