@@ -72,7 +72,7 @@ const Leaderboard = () => {
                     <div className="col-12 col-md-4">
                         <h4 className="text-white text-center">Leaderboard 🏆</h4>
 
-                        <FlipMove easing="cubic-bezier(0.13, 1.15, 0.8, 1.5)" duration={600} staggerDurationBy={260}>
+                        <FlipMove easing="cubic-bezier(0.13, 1.15, 0.8, 1.5)" duration={400} staggerDurationBy={260}>
                             {sortedGameData.map((game, i) => {
                                 let rank = i + 1;
                                 return <ScoreCard key={game.gameId} game={game} rank={rank} />
