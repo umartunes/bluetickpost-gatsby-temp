@@ -32,7 +32,7 @@ const LeaderboardVideos = () => {
                                     <div className="single-events-box">
                                         <div className="image">
                                             <div className="explore-learning-video mb-3">
-                                                <img className="rounded-0" src="/images/GroupPhotos/2a.png" alt="Mayor" />
+                                                <img className="rounded-0" src="/images/groupPhoto/2a.png" alt="Mayor" />
 
                                                 <Link
                                                     to="#"
@@ -58,7 +58,7 @@ const LeaderboardVideos = () => {
                                     <div className="single-events-box">
                                         <div className="image">
                                             <div className="explore-learning-video mb-3">
-                                                <img className="rounded-0" src="/images/GroupPhotos/3a.png" alt="Mayor" />
+                                                <img className="rounded-0" src="/images/groupPhoto/3a.png" alt="Mayor" />
 
                                                 <Link
                                                     to="#"
@@ -84,7 +84,7 @@ const LeaderboardVideos = () => {
                                     <div className="single-events-box">
                                         <div className="image">
                                             <div className="explore-learning-video mb-3">
-                                                <img className="rounded-0" src="/images/GroupPhotos/4a.png" alt="Mayor" />
+                                                <img className="rounded-0" src="/images/groupPhoto/4a.png" alt="Mayor" />
 
                                                 <Link
                                                     to="#"
@@ -110,7 +110,7 @@ const LeaderboardVideos = () => {
                                     <div className="single-events-box">
                                         <div className="image">
                                             <div className="explore-learning-video mb-3">
-                                                <img className="rounded-0" src="/images/GroupPhotos/5a.png" alt="Mayor" />
+                                                <img className="rounded-0" src="/images/groupPhoto/5a.png" alt="Mayor" />
 
                                                 <Link
                                                     to="#"
