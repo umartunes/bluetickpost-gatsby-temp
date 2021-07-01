@@ -17,17 +17,17 @@ const Footer = () => {
               </a>
 
               <p>
-                @STEM1 we believe STEAM education should start early and
-                encourage learning by doing. We partner with schools in GTA and
-                local businesses to conduct workshops and run virtual after
+                At Techna we believe IT education should start early and
+                encourage learning by doing. We partner with schools, colleges, universities and
+                local businesses to conduct seminars, workshops and run virtual after
                 school programs.
               </p>
-              <p>Book a free demo class to get an insight into our classes </p>
+              <p>Register for a free demo class to get an insight into our classes.</p>
 
               <ul className="social-link">
                 <li>
                   <a
-                    href="https://facebook.com/stem1ca"
+                    href="https://facebook.com/TechnaPK"
                     className="d-block"
                     target="_blank"
                     rel="noreferrer"
@@ -37,7 +37,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://twitter.com/stem1ca"
+                    href="https://twitter.com/TechnaPK"
                     className="d-block"
                     target="_blank"
                     rel="noreferrer"
@@ -47,7 +47,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://instagram.com/stem1ca"
+                    href="https://instagram.com/TechnaPK"
                     className="d-block"
                     target="_blank"
                     rel="noreferrer"
@@ -57,7 +57,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://linkedin.com/company/stem1ca"
+                    href="https://linkedin.com/company/TechnaPK"
                     className="d-block"
                     target="_blank"
                     rel="noreferrer"

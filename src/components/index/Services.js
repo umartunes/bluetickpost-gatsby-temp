@@ -17,7 +17,7 @@ const Services = () => {
                         <img src={StarIcon} alt="image_alt" />
                         Our Strength
                     </span>
-                    <h2>STEM1 Focus</h2>
+                    <h2>Techna Focus</h2>
                     {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p> */}
                 </div>
 
@@ -56,7 +56,7 @@ const Services = () => {
                                 <img src={ServiceIcon3} alt="Service Icon" />
                             </div>
                             <h3>Progress</h3>
-                            <p>Gamified learning for students and quarterly progress reports for parents </p>
+                            <p>Gamified learning process and module-based quizzes and progress reports for students and parents.</p>
 
                             {/* <Link to="/service-details" className="read-more-btn">
                                 Read More <i className="flaticon-right"></i>

@@ -6,13 +6,13 @@ const Solutions = () => {
   return (
     <section className="solutions-area pt-100 pb-70">
       <div className="container">
-        <div className="section-title">
+        <div className="section-title" style={{ maxWidth: 800 }}>
           <span className="sub-title">
             <img src={StarIcon} alt="StarIcon" />
             Our core values
           </span>
-          <h2>STEM1 Difference! </h2>
-          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p> */}
+          <h2>Techna Difference! </h2>
+          {/* <p style={{ maxWidth: 800 }}>All our programs are designed to encourage creativity, group learning, problem solving & mentoring. Learn to code by completing challenges, building games, apps, and more. Continuously develop interpersonal and presentation skills in each of our courses.</p> */}
         </div>
 
         <div className="row">
@@ -21,11 +21,12 @@ const Solutions = () => {
               <div className="icon">
                 <i className="flaticon-rocket"></i>
               </div>
-              <h3>Local</h3>
+              <h3>Learn Anywhere</h3>
               <p>
-                Convinience of Virtual class but with instructors are local,
+                {/* Convinience of Virtual class but with instructors are local,
                 which means they can offer a better learning experience for the
-                students.{" "}
+                students.{" "} */}
+                Techna has gone <strong>virtual!</strong>. This allows students from all areas to learn from industry experts who are passionate about teaching; while working at the comfort of their home!
               </p>
 
               {/* <Link to="/service-details-two" className="view-details-btn">
