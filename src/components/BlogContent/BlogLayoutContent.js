@@ -59,17 +59,17 @@ const BlogLayoutContent = (props) => {
                                     <ul className="social">
                                         <li><span>Share:</span></li>
                                         <li>
-                                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${`https://stem.one/blog${props.pageContext.frontmatter.path}`}`} className="facebook">
+                                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${`https://techna.pk/blog${props.pageContext.frontmatter.path}`}`} className="facebook">
                                                 <i className='bx bxl-facebook'></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href={`https://twitter.com/intent/tweet?url=${`https://stem.one/blog${props.pageContext.frontmatter.path}`}&text=${props.pageContext.frontmatter.title}`} className="twitter">
+                                            <a href={`https://twitter.com/intent/tweet?url=${`https://techna.pk/blog${props.pageContext.frontmatter.path}`}&text=${props.pageContext.frontmatter.title}`} className="twitter">
                                                 <i className='bx bxl-twitter'></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${`https://stem.one/blog${props.pageContext.frontmatter.path}`}`} className="linkedin">
+                                            <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${`https://techna.pk/blog${props.pageContext.frontmatter.path}`}`} className="linkedin">
                                                 <i className='bx bxl-linkedin'></i>
                                             </a>
                                         </li>

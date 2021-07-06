@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import StarIcon from '../../assets/images/star-icon.png'
-import course1 from '../../assets/images/courses/course1.jpg'
-import course2 from '../../assets/images/courses/course2.jpg'
-import course3 from '../../assets/images/courses/course3.jpg'
-import shape from '../../assets/images/shape/vector-shape6.png'
+import StarIcon from '../../../assets/images/star-icon.png'
+import course1 from '../../../assets/images/courses/course1.jpg'
+import course2 from '../../../assets/images/courses/course2.jpg'
+import course3 from '../../../assets/images/courses/course3.jpg'
+import shape from '../../../assets/images/shape/vector-shape6.png'
 
 const courses = [
     {
@@ -107,12 +107,7 @@ const CoursesContent = () => {
                     })}
 
                 </div>
-                <div className="btn-box text-center" >
-                    <Link to="/courses" className="default-btn">
-                        <i className="flaticon-right"></i>
-                        Browse All Courses <span></span>
-                    </Link>
-                </div>
+
             </div>
 
             <div className="vector-shape6">

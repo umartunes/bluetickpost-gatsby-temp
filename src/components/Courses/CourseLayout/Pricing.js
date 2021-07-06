@@ -3,28 +3,29 @@ import { Link } from "gatsby";
 
 const packages = [
   {
-    name: "Monthly",
-    price: "$120",
-    link: "/Register",
-    description: ["6 students", "Direct Payment"],
-  },
-  {
-    name: "Yearly",
-    price: "$96*",
-    link: "/Register",
-    description: ["20% off Monthly", "Paid in advance"],
-  },
-  {
     name: "Private",
-    price: "$200",
+    price: "$1200",
     link: "/Register",
-    description: ["1:1 Instructor", "Focussed"],
+    description: ["1:1 Instructor", "On-site / Live Zoom"],
   },
+  {
+    name: "Group",
+    price: "$1200",
+    link: "/Register",
+    description: ["6 students", "On-site / Live Zoom"],
+  },
+  {
+    name: "Normal",
+    price: "$15/month",
+    link: "/Register",
+    description: ["Normal Class", "On-site / Live Zoom"],
+  },
+  
 ];
 
 const Pricing = () => {
   return (
-    <div className="partner-area ptb-70 bg-fafafb">
+    <div className="partner-area ptb-70 ">
       <div className="container">
         <div className="row">
           <div className="col">
@@ -33,13 +34,11 @@ const Pricing = () => {
               Our programs are priced to be affordable and help more students
               get into Coding!{" "}
             </p>
-            <p className="text-center">
+            <p className="text-center mb-5">
               All of group courses will have a maximum of 6 students, each class
               is led by an Instructor and a Leader in Training.{" "}
             </p>
-            <p className="text-center mb-5">
-              10% of all profits will be used to support local communities.{" "}
-            </p>
+          
           </div>
         </div>
         <div className="row">

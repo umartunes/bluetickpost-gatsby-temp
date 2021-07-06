@@ -13,7 +13,7 @@ const Iframes = () => {
                 <div className="row mt-5 balloon-popping-iframes">
                     <div className="col-12 col-md-8">
                         <h4 className="text-white text-center">
-                            Build this with: HTML #201 (Sr. Level 4)
+                            Build this game in our Web Development Course
             </h4>
                         <iframe
                             title=""
@@ -30,7 +30,7 @@ const Iframes = () => {
                 </div>
                 <div className="project-start-content">
 
-                    <h3 className="text-center my-4 text-white">New classes starting May 01</h3>
+                    <h3 className="text-center my-4 text-white">New classes starting August 02</h3>
                     <div className="btn-box text-center">
                         <Link to="/Register" className="default-btn">
                             <i className="flaticon-right"></i>

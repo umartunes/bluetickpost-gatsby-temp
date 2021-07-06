@@ -2,11 +2,11 @@ import React from "react";
 import Layout from "../../components/App/Layout";
 import Footer from "../../components/App/Footer";
 
-import OurServices from "../../components/Programs/ProgramLayout/OurServices";
-import CourseDetailsContent from "../../components/Programs/ProgramLayout/CourseDetailsContent";
+import OurServices from "../../components/Courses/CourseLayout/OurServices";
+import CourseDetailsContent from "../../components/Courses/CourseLayout/CourseDetailsContent";
 import NavbarTwo from "../../components/App/NavbarTwo";
-import Pricing from "../../components/Programs/ProgramLayout/Pricing";
-// import RelatedCourses from '../../components/Programs/ProgramLayout/RelatedCourses'
+import Pricing from "../../components/Courses/CourseLayout/Pricing";
+// import RelatedCourses from '../../components/Courses/CourseLayout/RelatedCourses'
 
 const program = {
   title: "Senior (Grade 6+)",

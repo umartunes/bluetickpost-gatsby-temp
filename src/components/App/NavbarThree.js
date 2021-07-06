@@ -70,7 +70,7 @@ const NavbarThree = () => {
                                             onClick={() => setCollapsed(true)}
                                             className="default-btn"
                                         >
-                                            <i className="flaticon-right"></i> Free Demo <span></span>
+                                            <i className="flaticon-right"></i> Free Demo Class <span></span>
                                         </Link>
                                     </div>
                                 </div>

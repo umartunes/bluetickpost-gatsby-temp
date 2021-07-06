@@ -22,7 +22,7 @@ const ContactInfo = () => {
                                 <i className='bx bx-map'></i>
                             </div>
                             <h3>Our Address</h3>
-                            <p>1075 Ceremonial Dr #7, Mississauga, ON L5R 2Z4, Canada</p>
+                            <p>P-949 Block G, Gulistan Colony, Faisalabad, Pakistan</p>
                         </div>
                     </div>
 
@@ -35,8 +35,8 @@ const ContactInfo = () => {
                                 <i className='bx bx-phone-call'></i>
                             </div>
                             <h3>Contact</h3>
-                            <p>Mobile: <a href="tel:+16479317707">647 931 7707</a></p>
-                            <p>E-mail: <a href="mailto:admin@stem.one">admin@stem.one</a></p>
+                            <p>Mobile: <a href="tel:+923457790453">+92 345 7790453</a></p>
+                            <p>E-mail: <a href="mailto:contact@techna.pk">contact@techna.pk</a></p>
                         </div>
                     </div>
 
@@ -49,9 +49,9 @@ const ContactInfo = () => {
                                 <i className='bx bx-time-five'></i>
                             </div>
                             <h3>Hours of Operation</h3>
-                            <p>Monday - Friday: 5PM - 8PM</p>
-                            <p>Saturday: 11AM - 4PM</p>
-                            <p>Sunday: Closed</p>
+                            <p>Monday - Thursday: 9AM - 6PM</p>
+                            <p>Friday: Closed</p>
+                            <p>Saturday - Sunday: 9AM - 6PM</p>
                         </div>
                     </div>
                 </div>

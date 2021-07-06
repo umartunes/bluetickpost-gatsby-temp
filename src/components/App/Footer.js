@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-lg-2 col-sm-6">
+          <div className="col-lg-4 col-sm-6">
             <div className="single-footer-widget pl-5">
               <h3>Explore</h3>
 
@@ -80,20 +80,23 @@ const Footer = () => {
                 <li>
                   <Link to="/about-us">About</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/success-stories">Success Stories</Link>
+                </li> */}
+                <li>
+                  <Link to="/faq">FAQ</Link>
                 </li>
                 <li>
                   <Link to="/blog">Our Blog</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="col-lg-2 col-sm-6">
+          {/* <div className="col-lg-2 col-sm-6">
             <div className="single-footer-widget">
               <h3>Resources</h3>
 
@@ -115,7 +118,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
 
           <div className="col-lg-4 col-sm-6">
             <div className="single-footer-widget">
@@ -124,15 +127,15 @@ const Footer = () => {
               <ul className="footer-contact-info">
                 <li>
                   <i className="bx bx-map"></i>
-                  1075 Ceremonial Dr., Mississauga
+                  P-949 Block G, Gulistan Colony, Faisalabad, Pakistan
                 </li>
                 <li>
                   <i className="bx bx-phone-call"></i>
-                  <a href="tel:+16479317707">647 931 7707</a>
+                  <a href="tel:+923457790453">+92 345 7790453</a>
                 </li>
                 <li>
                   <i className="bx bx-envelope"></i>
-                  <a href="mailto:admin@stem.one">admin@stem.one</a>
+                  <a href="mailto:contact@techna.pk">contact@techna.pk</a>
                 </li>
                 {/* <li>
                                     <i className='bx bxs-inbox'></i>
@@ -147,7 +150,7 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-6">
               <p>
-                Copyright @{currentYear} <strong>STEM.one</strong> All rights
+                Copyright @{currentYear} <strong>Techna</strong>. All rights
                 reserved.
               </p>
             </div>
@@ -159,9 +162,6 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="/terms-of-service">Terms & Conditions</Link>
-                </li>
-                <li>
-                  <Link to="/terms-of-service">Photo & Media Waiver</Link>
                 </li>
               </ul>
             </div>

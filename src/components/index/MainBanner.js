@@ -79,22 +79,85 @@ const MainBanner = () => {
             </div>
           </div>
 
+          <div className="main-banner-item item-bg1">
+            <div className="d-table">
+              <div className="d-table-cell">
+                <div className="container">
+                  <div className="banner-item-content">
+                    {/* <span className="sub-title">Welcome</span> */}
+                    <h1>Techna Mission</h1>
+                    <p>Our mission is to train and produce 100,000 skilled application developers in Pakistan.​ This will help to solve unemployment issues of youngsters and they would be able to contribute their part to stable Pakistan.</p>
+
+                    <div className="btn-box">
+                      <Link to="/about-us" className="default-btn">
+                        <i className="flaticon-right"></i>
+                        Learn more <span></span>
+                      </Link>
+
+                      {/* <Link
+                        to="#play-video"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          openModal();
+                        }}
+                        className="video-btn popup-youtube"
+                      >
+                        <i className="flaticon-google-play"></i> Watch Video
+                      </Link> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="main-banner-item item-bg1">
+            <div className="d-table">
+              <div className="d-table-cell">
+                <div className="container">
+                  <div className="banner-item-content">
+                    {/* <span className="sub-title">Welcome</span> */}
+                    <h1>1:1 Coaching Program</h1>
+                    <p>Great mentors make great students, excel your career growth with 1:1 coaching program</p>
+
+                    <div className="btn-box">
+                      <Link to="/courses" className="default-btn" disabled>
+                        <i className="flaticon-right"></i>
+                        Apply for a personal mentor <span></span>
+                      </Link>
+
+                      {/* <Link
+                        to="#play-video"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          openModal();
+                        }}
+                        className="video-btn popup-youtube"
+                      >
+                        <i className="flaticon-google-play"></i> Watch Video
+                      </Link> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="main-banner-item item-bg2">
             <div className="d-table">
               <div className="d-table-cell">
                 <div className="container">
                   <div className="banner-item-content">
                     <span className="sub-title">Welcome</span>
-                    <h1>#LearnLocal</h1>
+                    <h1>Join Our Community</h1>
                     <p>
-                      Helping students with the Instructors and mentors that are
-                      local to the community.
+                      Join our community on facebook to keep yourself updated about our activities, news and events.
                     </p>
 
                     <div className="btn-box">
-                      <Link to="/about-us" className="default-btn">
+                      <Link to="https://facebook.com/groups/TechnaPK" className="default-btn">
                         <i className="flaticon-right"></i>
-                        About Us <span></span>
+                        Join Now <span></span>
                       </Link>
 
                       {/* <Link

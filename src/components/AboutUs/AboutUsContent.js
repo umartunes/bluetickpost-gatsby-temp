@@ -11,7 +11,7 @@ const AboutUsContent = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12">
             <div className="about-image">
-            <img src="/images/aboutus/eric.jpg" alt="Teaching by Eric" />
+              <img src="/images/aboutus/eric.jpg" alt="Teaching by Eric" />
             </div>
           </div>
 
@@ -19,22 +19,22 @@ const AboutUsContent = () => {
             <div className="about-content">
               <div className="content">
                 <span className="sub-title">
-               
+
                   <img src={starIcon} alt="banner" />
                   About Us
                 </span>
-                <h2>TRAIN NEW GENERATION FOR A BETTER FUTURE </h2>
+                <h2>TRAIN NEW GENERATION FOR A BETTER FUTURE</h2>
                 <h4>
-                  Coding or Technology is always feared by parents and students
-                  alike
+                  Coding or Technology is always feared by parents and students alike
                 </h4>
                 <p>
-                  STEM1 was founded in September 2017 to “Make Coding fun for Kids”. We strongly believe in empowering the younger generation 
-                  especially girls, to explore technology - tinkering, making mistakes and exploring are all part of the learning
+                  Techna now is a community based youth led organization; organized to provide opportunities for youth to gain confidence in technology related fields.
                 </p>
                 <p>
-                  
+                  The company was founded in January, 2013 under the name of PHPbaba; When we started delivering services on LAMP Stack. After a 2 and half years we started delivering services on State Of The Art Technologies as well; and settled with name Techna.
+                  One of the main focuses of the company was to provide cost effective and quality Software Solutions to customers across the world.
                 </p>
+              
                 {/*                                 
                                 <ul className="features-list">
                                     <li>
@@ -80,20 +80,12 @@ const AboutUsContent = () => {
               <div className="about-text">
                 <h3>Mission</h3>
                 <p>
-                  Our mission is to remove the fear of coding for students. .
+                  As our country is facing extreme unemployment and financial crisis;
                 </p>
                 <p>
-                  We empower the students by introducing the fundementals of
-                  programming and focusing on Problem solving over scripting.
-                  Students are also encouraged to develop their soft skills
-                  through presentations and public speaking challenges.{" "}
+                  Now our main focus and mission is to spread technology and produce skilled application developers in Pakistan.
                 </p>
-                <h4>Practice</h4>
-                <p>
-                  We provide opportunities for students to practice what they
-                  have learnt by being leaders in training & ultimately becoming
-                  our own Instructors.
-                </p>
+
                 {/* <ul className="features-list">
                                     <li><i className="flaticon-tick"></i> Activate Listening</li>
                                     <li><i className="flaticon-tick"></i> Brilliant minds</li>
@@ -106,23 +98,10 @@ const AboutUsContent = () => {
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="about-text">
                 <h3>Vision</h3>
-                <p>
-                  Teach 500 kids by the end of 2022 so they can do what they
-                  love and make the right career choices.
-                </p>
-                <p>
-                  Our vision is to create a environment that helps both the
-                  students and Mentors to reach their full potential by
-                  providing the tools & technologies that are needed for them to
-                  be successful and #FutureReady.
-                </p>
+                <p>Train and produce <strong>100,000</strong> skilled application developers in Pakistan by the year 2025.</p>
+                <p>If each of these Developers earn Only <strong>$1000 USD</strong> per month</p>
+                <p>It will boost I.T export of Pakistan by <strong>$1.2 Billion</strong> Annually ($ 1,200,000,000).</p>
 
-                {/* <ul className="features-list">
-                                    <li><i className="flaticon-tick"></i> Creating. Results.</li>
-                                    <li><i className="flaticon-tick"></i> Expect more</li>
-                                    <li><i className="flaticon-tick"></i> Good thinking</li>
-                                    <li><i className="flaticon-tick"></i> In real we trust</li>
-                                </ul> */}
               </div>
             </div>
 
@@ -131,9 +110,9 @@ const AboutUsContent = () => {
                 <h3>Who we are</h3>
                 <p>
                   We are a team of engineers & educators with a passion to make
-                  learning both purposeful and exciting for children.
+                  learning both purposeful and exciting for students.
                 </p>
-                <p>We teach Coding & Robotics to students from Grade 3 - 12.</p>
+                <p>We teach Coding & Robotics to students of schools, colleges, and universities.</p>
 
                 {/* <ul className="features-list">
                                     <li><i className="flaticon-tick"></i> Stay real. Always.</li>

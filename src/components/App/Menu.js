@@ -27,10 +27,11 @@ export default function Menu() {
 				<ul className="dropdown-menu">
 					<li className="nav-item">
 						<Link
-							to="/lms"
+							to="https://educa.pk"
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
+							target="_blank"
 						>
 							LMS
             			</Link>
@@ -51,19 +52,20 @@ export default function Menu() {
 
 			<li className="nav-item">
 				<Link
-					to="/programs"
+					to="/courses"
 					activeClassName="active"
-					onClick={e => window.location.pathname === "/programs" ? e.preventDefault() : setCollapsed(true)}
+					onClick={e => window.location.pathname === "/courses" ? e.preventDefault() : setCollapsed(true)}
 					// onClick={(e) => e.preventDefault()}
 					className="nav-link"
 				>
-					Programs <i className="bx bx-chevron-down"></i>
+					Courses 
+					{/* <i className="bx bx-chevron-down"></i> */}
 				</Link>
 
-				<ul className="dropdown-menu">
+				{/* <ul className="dropdown-menu">
 					<li className="nav-item">
 						<Link
-							to="/programs/junior"
+							to="/courses/junior"
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
@@ -73,7 +75,7 @@ export default function Menu() {
 					</li>
 					<li className="nav-item">
 						<Link
-							to="/programs/senior"
+							to="/courses/senior"
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
@@ -83,7 +85,7 @@ export default function Menu() {
 					</li>
 					<li className="nav-item">
 						<Link
-							to="/programs/leadership"
+							to="/courses/leadership"
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
@@ -91,93 +93,59 @@ export default function Menu() {
 							Leaders (Grade 7+)
             			</Link>
 					</li>
-				</ul>
+				</ul> */}
 			</li>
 
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link
-					to="/hackathon"
+					to="/services"
 					activeClassName="active"
-					// onClick={e => window.location.pathname === "/about" ? e.preventDefault() : setCollapsed(true) }
-					//onClick={(e) => e.preventDefault()}
+					onClick={e => window.location.pathname === "/services" ? e.preventDefault() : setCollapsed(true)}
+					// onClick={(e) => e.preventDefault()}
 					className="nav-link"
 				>
-					Jr.Hacks <i className="bx bx-chevron-down"></i>
+					Services 
 				</Link>
 
-				<ul className="dropdown-menu">
-					<li className="nav-item">
-						<Link
-							to="/balloon-popping-leaderboard"
-							activeClassName="active"
-							onClick={() => setCollapsed(true)}
-							className="nav-link"
-						>
-							Leaderboard
-            			</Link>
-					</li>
+			</li> */}
 
-					{/* <li className="nav-item">
-						<Link
-							to="/community"
-							activeClassName="active"
-							onClick={() => setCollapsed(true)}
-							className="nav-link"
-						>
-							Volunteer
-            			</Link>
-					</li> */}
+			{/* <li className="nav-item">
+				<Link
+					to="/products"
+					activeClassName="active"
+					onClick={e => window.location.pathname === "/products" ? e.preventDefault() : setCollapsed(true)}
+					// onClick={(e) => e.preventDefault()}
+					className="nav-link"
+				>
+					Products 
+				
+				</Link>
 
-
-
-					<li className="nav-item">
-						<Link
-							to="/faq"
-							activeClassName="active"
-							onClick={() => setCollapsed(true)}
-							className="nav-link"
-						>
-							FAQ
-            			</Link>
-					</li>
-				</ul>
-			</li>
+			</li> */}
 
 			<li className="nav-item">
 				<Link
 					to="/about-us"
 					activeClassName="active"
-					//onClick={e => window.location.pathname === "/about-us" ? e.preventDefault() : setCollapsed(true) }
+					onClick={e => window.location.pathname === "/about-us" ? e.preventDefault() : setCollapsed(true) }
 					// onClick={(e) => e.preventDefault()}
 					className="nav-link"
 				>
-					About <i className="bx bx-chevron-down"></i>
+					About
 				</Link>
 
-				<ul className="dropdown-menu">
-					{/* <li className="nav-item"> 
-            <Link
-              to="/about-us"
-              activeClassName="active"
-              onClick={() => setCollapsed(true)}
-              className="nav-link"
-            >
-              About Us
-            </Link>
-          </li> */}
-					<li className="nav-item">
-						<Link
-							to="/blog"
-							activeClassName="active"
-							onClick={() => setCollapsed(true)}
-							className="nav-link"
-						>
-							Blog
-            			</Link>
-					</li>
 
-
-				</ul>
+			</li>
+			<li className="nav-item">
+				<Link
+					to="/blog"
+					activeClassName="active"
+					onClick={e => window.location.pathname === "/blog" ? e.preventDefault() : setCollapsed(true) }
+					// onClick={(e) => e.preventDefault()}
+					className="nav-link"
+				>
+					Blog 
+				</Link>
 			</li>
 		</ul>
 	);

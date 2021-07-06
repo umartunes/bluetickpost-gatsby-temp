@@ -11,9 +11,9 @@ const StartProject = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12">
             <div className="project-start-content">
-              <h2>About Us</h2>
+              <h2>Techna Overview</h2>
               <p>
-               Stem1 is a community based youth led organization created to provide opportunities for youth to gain confidence in coding and stem related fields.
+               Techna is a community based youth led organization created to provide opportunities for youth to gain confidence in technology related fields.
                 {/* Coding is the easiest and the hardest thing you will come
                 across, it doesn't matter how experienced you are in
                 Programming. Our goal is to help your child have the confidence
