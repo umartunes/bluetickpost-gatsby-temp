@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "stem-one",
     "public": "public",
     "ignore": [
       "firebase.json",
