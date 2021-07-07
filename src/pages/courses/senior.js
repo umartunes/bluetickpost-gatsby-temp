@@ -12,7 +12,6 @@ const program = {
   title: "Senior (Grade 6+)",
   description: ` Our senior program is designed for students who have graduated from Junior program at STEM1 or for students who are in Grade 6+ with no coding experience. By the end of the program, students learn to create online games, apps & websites. `,
   certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish every level. Students are required to submit a presentation or project to graduate each course.`,
-  
   courseFor: `Our Senior program is designed for 6 to 8 graders. 10 courses are included in this program. We also conduct exams after every course to ensure that efficient results are obtained. This program also offers leadership projects to improve the soft skills of students.`,
 
   price: "$96*/month",
@@ -23,8 +22,6 @@ const program = {
   support: "Unlimited",
   reports: "Quarterly",
 };
-
- 
 
 const curriculum = [
   {

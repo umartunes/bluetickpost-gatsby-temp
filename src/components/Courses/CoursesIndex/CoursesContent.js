@@ -2,47 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import StarIcon from '../../../assets/images/star-icon.png'
-import course1 from '../../../assets/images/courses/course1.jpg'
-import course2 from '../../../assets/images/courses/course2.jpg'
-import course3 from '../../../assets/images/courses/course3.jpg'
 import shape from '../../../assets/images/shape/vector-shape6.png'
 
-const courses = [
-    {
-        id: "web-and-mobile-app-development",
-        name: "Web & Mobile App Development",
-        coursePage: "/course-details",
-        price: "$15/month",
-        duration: "6 months",
-        isFree: false,
-        isAvailable: true,
-        image: course1,
-        description: `An application development program for absolute beginners, which will lead you to job/freelancing industry.`,
-    },
-    {
-        id: "artificial-intelligence",
-        name: "Artificial Intelligence",
-        coursePage: "/course-details",
-        price: "$15/month",
-        duration: "1 year",
-        isFree: false,
-        isAvailable: false,
-        image: course2,
-        description: `A one year AI Program designed for absolute beginners. which will lead you to job/freelancing industry.`,
-    },
-    {
-        id: "basic-computer-course",
-        name: "Basic Computer Course",
-        coursePage: "/course-details",
-        price: "Free",
-        duration: "2 weeks",
-        isFree: true,
-        isAvailable: true,
-        image: course3,
-        description: `A short course to help you understanding all the basics of computer needed to live in the 21st century.`,
-    },
-
-]
+import {courses} from '../../../data/courses'
 
 const CoursesContent = () => {
     return (
