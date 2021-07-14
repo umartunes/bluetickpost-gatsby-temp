@@ -4,28 +4,28 @@ import { Link } from "gatsby";
 const packages = [
   {
     name: "Private",
-    price: "$1200",
+    price: "$300",
     link: "/Register",
-    description: ["1:1 Instructor", "On-site / Live Zoom"],
+    description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
   },
   {
     name: "Group",
-    price: "$1200",
+    price: "$75 / student", // $450 per month
     link: "/Register",
-    description: ["6 students", "On-site / Live Zoom"],
+    description: ["6 students", "Face To Face & Online VIA Zoom",],
   },
   {
     name: "Normal",
-    price: "$15/month",
+    price: "$15",
     link: "/Register",
-    description: ["Normal Class", "On-site / Live Zoom"],
+    description: ["Normal Class", "Face To Face & Online VIA Zoom",],
   },
   
 ];
 
 const Pricing = () => {
   return (
-    <div className="partner-area ptb-70 ">
+    <div className="partner-area ptb-70 bg-fafafb">
       <div className="container">
         <div className="row">
           <div className="col">
@@ -45,10 +45,10 @@ const Pricing = () => {
           {packages.map((pkg, i) => {
             return (
               <div key={i} className="col-12 col-md-4">
-                <div className="card text-center">
+                <div className="card text-center mb-3">
                   <h5 className="card-header">{pkg.name}</h5>
                   <div className="card-body">
-                    <h5 className="card-title">{pkg.price} </h5>
+                    <h5 className="card-title">{pkg.price} <small className="text-muted">/ month</small> </h5>
 
                     {pkg.description.map((d, j) => {
                       return (

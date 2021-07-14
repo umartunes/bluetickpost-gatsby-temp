@@ -2,10 +2,10 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 
 const SEO = ({
-    seoTitle = "Learn to Code: Grade 2 - Grade 8 by STEM One",
-    seoDescription = "Coding & Robotics program for Students by local instructors.",
+    seoTitle = "Techna - Pakistan's Lead IT Trainings Institute and Technology Solutions Center",
+    seoDescription = "Techna is the Best IT Institution in Faisalabad Pakistan. At Techna we aim to train and produce 100,000 skilled application developers to resolve the unemployment issues of youngsters.",
     seoCanonical = "/",
-    seoOgImage = "/images/CodingProgram.png",
+    seoOgImage = "/images/techna-cover.jpg",
     ...otherProps
 }) => {
 

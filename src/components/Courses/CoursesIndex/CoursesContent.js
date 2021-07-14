@@ -8,7 +8,7 @@ import {courses} from '../../../data/courses'
 
 const CoursesContent = () => {
     return (
-        <div className="courses-area ptb-100 bg-fafafb">
+        <div className="courses-area ptb-100">
             <div className="container">
                 <div className="section-title" style={{ maxWidth: 800 }}>
                     <span className="sub-title">
@@ -58,7 +58,7 @@ const CoursesContent = () => {
                                                 <i className="flaticon-right"></i>
                                                 Apply Now <span></span>
                                             </Link>
-                                            : <h4 className="mt-4">Coming Soon</h4>
+                                            : <h4 className="mt-4 pt-2">Coming Soon</h4>
                                         }
                                        
                                     </div>

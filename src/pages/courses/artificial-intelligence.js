@@ -2,13 +2,16 @@ import React from "react";
 import Layout from "../../components/App/Layout";
 import Footer from "../../components/App/Footer";
 
-import OurServices from "../../components/Courses/CourseLayout/OurServices";
-import CourseDetailsContent from "../../components/Courses/CourseLayout/CourseDetailsContent";
 import NavbarTwo from "../../components/App/NavbarTwo";
+import CourseDetailsContent from "../../components/Courses/CourseLayout/CourseDetailsContent";
 import Pricing from "../../components/Courses/CourseLayout/Pricing";
+// import OurServices from "../../components/Courses/CourseLayout/OurServices";
+// import RelatedCourses from '../../components/Courses/CourseLayout/RelatedCourses'
 
 const program = {
-  title: "Leadership",
+  title: "Artificial Intelligence",
+  slug: "artificial-intelligence",
+  image: "/images/courses/course4.jpg",
   description: ` Our Leadrship Program is designed for grade 7+ or for students who have completed the Stem1 Senior Program.
    These students have mastered the concepts of coding that include logic, problem solving and computational thinking.
    Students are required to complete 10 projects (5 team and 5 solo) and particpate in the instructor in training program
@@ -20,7 +23,7 @@ const program = {
   price: "$96*/month",
   courseDetailsImage: "/images/courses-details.jpg",
 
-  duration: "~12 Wks/Project",
+  courseDuration: "~6 months",
   courses: "10",
   support: "Unlimited",
   reports: "Quarterly",
@@ -53,22 +56,22 @@ const curriculum = [
 
 const reviews = [
   {
-    author: `Darshita Desai`,
+    author: `Muhammad Zain Ul Haq`,
     authorImage: "/images/reviews/female.jpg",
-    heading: `On Task!`,
-    details: `Wonderful experience for my son who is in Grade 5. The staff is very knowledgeable, kind, and helpful. My son is always excited to go in class and do extra courses as homework at home. Felt much confident in coding after joining this program and always ahead in his batch .. Tks to all staff for doing wonderful job 👍"`,
+    heading: `Fantastic Experience`,
+    details: `A really good and fantastic experience in this institute Alhamdolillah. The management of this institute is outstanding. Teachers and all staff are very hardworking. One of my best decision of life to join this institute.`,
   },
   {
-    author: `Balaji Pulivarthi`,
+    author: `Muhammad Abu Bakar`,
+    authorImage: "/images/reviews/female.jpg",
+    heading: `Fantastic Experience`,
+    details: `I'm feeling a really good experience. And gaining information about system. A good teacher and management. They give information about your course which you want. ALLAH blessed.`,
+  },
+  {
+    author: `Ali Haider`,
     authorImage: "/images/reviews/balaji.png",
     heading: `Excellent`,
-    details: `My son is leaning coding, robotics etc at Stem1, I really appreciate the faculty who takes a special attention with each student and support individual intellectual skills. During this pandemic situation, the Institute i able to conduct online classes amd kids are leaning to the best possible ways...Good luck to the future generation kids joining at STEM1..`,
-  },
-  {
-    author: `Linh Tam`,
-    authorImage: "/images/reviews/female.jpg",
-    heading: `On Task!`,
-    details: `If you're looking for an after school program for your child that is both educational and fun then STEM1 is the place.  My son is in the Robotics class and he enjoys himself all the while learning without realizing.  My son tells me "It's fun there, I like the technology and playing with Cue and Dash robots... and they keep us on task!"`,
+    details: `First-time connect with Web Development. In the beginning I thought that Web Development is really hard to learn but after this course, it seems easy and fun to learn and implement. Our instructors Sir Umar is a nice person, explaining everything at a good pace. Thank you, Techna, for this great job.`,
   },
 ];
 
@@ -83,9 +86,9 @@ const Details = () => {
         curriculum={curriculum}
         reviews={reviews}
       />
-      {/* <RelatedCourses /> */}
       <Pricing />
-      <OurServices />
+      {/* <RelatedCourses /> */}
+      {/* <OurServices /> */}
       <Footer />
     </Layout>
   );

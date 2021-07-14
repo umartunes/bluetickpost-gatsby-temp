@@ -2,8 +2,8 @@ export const courses = [
     {
         id: "web-and-mobile-app-development",
         name: "Web & Mobile App Development",
-        coursePage: "/courses/senior",
-        image: "/images/courses/course1.jpg",
+        coursePage: "/courses/web-and-mobile-app-development",
+        image: "/images/courses/course3.jpg",
         price: "$15/month",
         duration: "6 months",
         isFree: false,
@@ -14,8 +14,8 @@ export const courses = [
     {
         id: "artificial-intelligence",
         name: "Artificial Intelligence",
-        coursePage: "/course-details",
-        image: "/images/courses/course2.jpg",
+        coursePage: "/courses/artificial-intelligence",
+        image: "/images/courses/course4.jpg",
         price: "$15/month",
         duration: "1 year",
         isFree: false,
@@ -26,8 +26,8 @@ export const courses = [
     {
         id: "basic-computer-course",
         name: "Basic Computer Course",
-        coursePage: "/course-details",
-        image: "/images/courses/course3.jpg",
+        coursePage: "/courses/basic-computer-course",
+        image: "/images/courses/course1.jpg",
         price: "Free",
         duration: "2 weeks",
         isFree: true,

@@ -60,8 +60,8 @@ class CourseDetailsContent extends Component {
                                             <h3>Progress & Certification</h3>
                                             <p>{program.certification}</p>
 
-                                            <h3>Who is this course for?</h3>
-                                            <p>{program.courseFor}</p>
+                                            {/* <h3>Who is this course for?</h3>
+                                            <p>{program.courseFor}</p> */}
                                         </div>
                                     </div>
 
@@ -128,7 +128,7 @@ class CourseDetailsContent extends Component {
                                                         <span className="d-inline-block">{review.author}</span>
                                                     </div>
 
-                                                    <span className="d-block sub-comment">{review.heading}</span>
+                                                    {/* <span className="d-block sub-comment">{review.heading}</span> */}
                                                     <p>{review.details}</p>
                                                 </div>
                                             })}

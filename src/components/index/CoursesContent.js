@@ -58,7 +58,7 @@ const CoursesContent = () => {
                                                 <i className="flaticon-right"></i>
                                                 Apply Now <span></span>
                                             </Link>
-                                            : <h4 className="mt-4">Coming Soon</h4>
+                                            : <h4 className="mt-4 pt-2">Coming Soon</h4>
                                         }
                                        
                                     </div>

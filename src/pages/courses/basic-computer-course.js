@@ -2,20 +2,22 @@ import React from "react";
 import Layout from "../../components/App/Layout";
 import Footer from "../../components/App/Footer";
 
-import OurServices from "../../components/Courses/CourseLayout/OurServices";
-import CourseDetailsContent from "../../components/Courses/CourseLayout/CourseDetailsContent";
 import NavbarTwo from "../../components/App/NavbarTwo";
-import Pricing from "../../components/Courses/CourseLayout/Pricing";
+import CourseDetailsContent from "../../components/Courses/CourseLayout/CourseDetailsContent";
+// import Pricing from "../../components/Courses/CourseLayout/Pricing";
+// import OurServices from "../../components/Courses/CourseLayout/OurServices";
 // import RelatedCourses from '../../components/Courses/CourseLayout/RelatedCourses'
 
 const program = {
-  title: "Junior (Grade 3+)",
+  title: "Basic Computer Course",
+  slug: "basic-computer-course",
+  image: "/images/courses/course1.jpg",
   description: ` Just as we consider Mainframe computers and Televison as old technology, students currently in Grade 3+ are going to consider YouTube, Google, Bitcoin as old technology. Its very natural for these students to ask Alexa to play their favorite song or find answers to almost anything in Google. Our job at STEM1 is to help students to get introduced to coding as another cool thing to do rather than thinking of it as a boring mandatory class. This program has 10 levels with weekly 1 hour class.`,
   certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish every level. Students are required to submit a presentation or project to graduate each course.`,
   courseFor: `Our Junior program is designed for Grade 3+ students to teach them basics of coding. At the end of each level/course, we conduct quiz & assessment to understand the student's progress.`,
 
   price: "$96*/month",
-  duration: "~12 Wks/Course",
+  courseDuration: "~6 months",
   courseDetailsImage: "/images/courses-details.jpg",
   courses: "10",
   support: "Unlimited",
@@ -92,9 +94,9 @@ const Details = () => {
     <NavbarTwo />
 
     <CourseDetailsContent program={program} curriculum={curriculum} reviews={reviews} />
+    {/* <Pricing /> */}
     {/* <RelatedCourses /> */}
-    <Pricing />
-    <OurServices />
+    {/* <OurServices /> */}
     <Footer />
 </Layout>
   );

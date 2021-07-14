@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import ModalVideo from 'react-modal-video'
-import course1 from '../../../assets/images/courses/course1.jpg'
+// import ModalVideo from 'react-modal-video'
+
 // functional component
 const CoursesDetailsSidebar = ({ program }) => {
     const [isOpen, setIsOpen] = React.useState(true);
@@ -12,16 +12,16 @@ const CoursesDetailsSidebar = ({ program }) => {
     return (
         <React.Fragment>
             {/* If you want to change the video need to update videoID */}
-            <ModalVideo
+            {/* <ModalVideo
                 channel='youtube'
                 isOpen={!isOpen}
                 videoId='bk7McNUjWgw'
                 onClose={() => setIsOpen(!isOpen)}
-            />
+            /> */}
 
             <div className="courses-details-info">
                 <div className="image">
-                    <img src={course1} alt="course1" />
+                    <img src={program.image} alt="course1" />
 
                     {/* <Link
                         to="#"
@@ -35,57 +35,45 @@ const CoursesDetailsSidebar = ({ program }) => {
                         <span>Course Preview</span>
                     </div> */}
                 </div>
-
-                <ul className="info">
-                    <li className="price">
-                        <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-price-tag"></i> Price</span>
-                            {program.price}
-
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-stopwatch"></i> Duration</span>
-                            {program.duration}
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-distance-education"></i> Courses</span>
-                            {program.courses}
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-web"></i> Support</span>
-                            {program.support}
-                        </div>
-                    </li>
-                    <li>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-open-padlock"></i> Feedback</span>
-                            {program.reports}
-                        </div>
-                    </li>
-
-                    {/* <li>
-                        <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-open-padlock"></i> Recognition</span>
-                            {"Awards & Certificates"}
-                        </div>
-                    </li> */}
-                </ul>
-
                 <div className="btn-box">
                     <Link to="/schedule" className="default-btn">
                         <i className="flaticon-right"></i> Register <span></span>
                     </Link>
+
                     {/* <Link to="#" className="default-btn">
                         <i className="flaticon-price-tag"></i>
                         Buy Now <span></span>
                     </Link> */}
                 </div>
+                <ul className="info">
+                    <li className="price">
+                        <div className="d-flex justify-content-between align-items-center">
+                            <span><i className="flaticon-price-tag"></i> Price</span>
+                            <small style={{ fontWeight: 'bold' }}>{program.price}</small>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p className="mb-1">This course includes</p>
+                                <p className="mb-0"><small><span><i className="flaticon-tick" style={{ fontSize: 12 }}></i>Some premium software</span></small></p>
+                                <p className="mb-0"><small><span><i className="flaticon-tick" style={{ fontSize: 12 }}></i>Course material (Soft copy)</span></small></p>
+                                <p className="mb-0"><small><span><i className="flaticon-tick" style={{ fontSize: 12 }}></i>Certificate of completion</span></small></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <div>
+                                <p className="mb-1">Timings &amp; Duration</p>
+                                <p className="mb-0"><small><strong className="text-dark">Course Duration</strong>: {program.courseDuration}</small></p>
+                                <p className="mb-0"><small><strong className="text-dark">Class Duration</strong>: {program.classDuration}</small></p>
+                                <p className="mb-0"><small><strong className="text-dark">Class Days</strong>: {program.classDays}</small></p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
 
                 <div className="courses-share">
                     <div className="share-info">
@@ -93,26 +81,27 @@ const CoursesDetailsSidebar = ({ program }) => {
 
                         <ul className="social-link">
                             <li>
-                                <Link to="#" className="d-block">
+                                <Link to={`https://www.facebook.com/sharer/sharer.php?u=${`https://techna.pk/courses/${program.slug}`}`} className="d-block">
                                     <i className='bx bxl-facebook'></i>
                                 </Link>
                             </li>
                             <li>
-                                <Link to="#" className="d-block">
+                                <Link to={`https://twitter.com/intent/tweet?url=${`https://techna.pk/courses/${program.slug}`}&text=${program.title}`} className="d-block">
                                     <i className='bx bxl-twitter'></i>
                                 </Link>
                             </li>
                             <li>
-                                <Link to="#" className="d-block">
-                                    <i className='bx bxl-instagram'></i>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="#" className="d-block">
+                                <Link to={`https://www.linkedin.com/shareArticle?mini=true&url=${`https://techna.pk/courses/${program.slug}`}`} className="d-block">
                                     <i className='bx bxl-linkedin'></i>
                                 </Link>
                             </li>
+                            {/* <li>
+                                <Link to="#" className="d-block">
+                                    <i className='bx bxl-instagram'></i>
+                                </Link>
+                            </li> */}
                         </ul>
+
                     </div>
                 </div>
             </div>
