@@ -7,15 +7,14 @@ require("firebase/firestore");
 // require("firebase/analytics");
 
 // Firebase Config
-let firebaseConfig = {
-    apiKey: "AIzaSyBG4oWX934EU9dOsOY5r3V0ZRV-_v6YDIo",
-    authDomain: "stem1-78af9.firebaseapp.com",
-    databaseURL: "https://stem1-78af9.firebaseio.com",
-    projectId: "stem1-78af9",
-    storageBucket: "stem1-78af9.appspot.com",
-    messagingSenderId: "753973198781",
-    appId: "1:753973198781:web:cb4706ff6c88487a9d9cd4",
-    measurementId: "G-SY1ZMQ7QNS"
+const firebaseConfig = {
+    apiKey: "AIzaSyCoJonxISopHc6rZmt_znmHU7th1Va5_X8",
+    authDomain: "techna-pk.firebaseapp.com",
+    databaseURL: "https://techna-pk.firebaseio.com",
+    projectId: "techna-pk",
+    storageBucket: "techna-pk.appspot.com",
+    messagingSenderId: "776458310170",
+    appId: "1:776458310170:web:52b7c58fe031ad1d"
 };
 
 /* Init Firebase */
