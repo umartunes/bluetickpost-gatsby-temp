@@ -95,11 +95,14 @@ const ContactForm = () => {
                     </div>
                     {isSubmitted
                         ? <>
+                        <div className="col-lg-6 col-md-12">
+
                             <div className="p-5 bg-success text-white d-flex flex-column justify-content-center align-items-center">
                                 <h3>Thanks!</h3>
                                 <h5>Your message has been submitted.</h5>
                                 <h5>We'll get back to you as soon as possible.</h5>
                             </div>
+                        </div>
                         </>
                         : <>
                             <div className="col-lg-6 col-md-12">
