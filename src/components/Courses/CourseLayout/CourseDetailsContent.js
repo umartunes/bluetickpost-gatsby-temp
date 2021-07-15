@@ -113,7 +113,7 @@ class CourseDetailsContent extends Component {
                                         <div className="courses-review-comments">
                                             <h3>{reviews.length} Reviews</h3>
                                             {reviews.map((review, i) => {
-                                                return <div className="user-review">
+                                                return <div key={i} className="user-review">
                                                     <img src={review.authorImage} alt="course" />
 
                                                     <div className="review-rating">
