@@ -5,19 +5,19 @@ const packages = [
   {
     name: "Private",
     price: "$300",
-    link: "/Register",
+    link: "/register?type=private",
     description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
   },
   {
     name: "Group",
     price: "$75 / student", // $450 per month
-    link: "/Register",
+    link: "/register?type=group",
     description: ["6 students", "Face To Face & Online VIA Zoom",],
   },
   {
     name: "Normal",
     price: "$15",
-    link: "/Register",
+    link: "/register?type=normal",
     description: ["Normal Class", "Face To Face & Online VIA Zoom",],
   },
   
@@ -60,7 +60,7 @@ const Pricing = () => {
 
                     <Link to={pkg.link} className="default-btn mt-3">
                       {" "}
-                      <i className="flaticon-right"></i>Register{" "}
+                      <i className="flaticon-right"></i>Apply Now!
                     </Link>
                   </div>
                 </div>

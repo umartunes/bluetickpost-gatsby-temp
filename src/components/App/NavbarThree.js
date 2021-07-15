@@ -65,12 +65,12 @@ const NavbarThree = () => {
                                 <div className="others-option d-flex align-items-center">
                                     <div className="option-item">
                                         <Link
-                                            to="/schedule"
+                                            to="/register"
                                             activeClassName="active"
                                             onClick={() => setCollapsed(true)}
                                             className="default-btn"
                                         >
-                                            <i className="flaticon-right"></i> Free Demo Class <span></span>
+                                            <i className="flaticon-right"></i> Apply For A Course <span></span>
                                         </Link>
                                     </div>
                                 </div>

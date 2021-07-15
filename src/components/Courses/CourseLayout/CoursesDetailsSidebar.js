@@ -37,7 +37,7 @@ const CoursesDetailsSidebar = ({ program }) => {
                 </div>
                 <div className="btn-box">
                     <Link to="/schedule" className="default-btn">
-                        <i className="flaticon-right"></i> Register <span></span>
+                        <i className="flaticon-right"></i> Apply Now! <span></span>
                     </Link>
 
                     {/* <Link to="#" className="default-btn">

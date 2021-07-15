@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import StarIcon from '../../assets/images/star-icon.png'
 import shape from '../../assets/images/shape/vector-shape6.png'
 
-import {courses} from '../../data/courses'
+import { courses } from '../../data/courses'
 
 const CoursesContent = () => {
     return (
@@ -20,7 +20,7 @@ const CoursesContent = () => {
                 </div>
                 <div className="row">
 
-                    {courses.filter((course,i)=>{ return course.showInHome === true }).map((course, i) => {
+                    {courses.filter((course, i) => { return course.showInHome === true }).map((course, i) => {
 
                         return <div className="col-lg-4 col-md-6">
 
@@ -53,14 +53,10 @@ const CoursesContent = () => {
                                         </li>
                                     </ul>
                                     <div className="mt-3 text-right">
-                                        {course.isAvailable
-                                            ? <Link to={course.coursePage} className="default-btn disabled">
-                                                <i className="flaticon-right"></i>
-                                                Apply Now <span></span>
-                                            </Link>
-                                            : <h4 className="mt-4 pt-2">Coming Soon</h4>
-                                        }
-                                       
+                                        <Link to={course.coursePage} className="default-btn disabled">
+                                            <i className="flaticon-right"></i>
+                                            Learn more <span></span>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

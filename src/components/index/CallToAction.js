@@ -6,10 +6,10 @@ const CallToAction = () => {
         <div className="project-start-area bg-color ptb-100">
             <div className="container">
                 <div className="project-start-content text-center">
-                    <h2 className="text-white">Register for a free demo class</h2>
+                    <h2 className="text-white">New classes starting August 02</h2>
 
-                    <Link to="/schedule" className="default-btn" style={{paddingLeft: 25}}>
-                        Register Now! <span></span>
+                    <Link to="/register" className="default-btn" style={{paddingLeft: 25}}>
+                        Apply Now! <span></span>
                     </Link>
 
                 </div>
