@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import starIcon from '../../assets/images/star-icon.png'
 import contact from '../../assets/images/contact.png'
 import { firebase, firestore } from '../../utils/firebase'
+import { useToasts } from 'react-toast-notifications'
 
 const ContactForm = () => {
 
+    const { addToast } = useToasts()
     const [isLoading, setIsLoading] = useState(false)
     const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -31,20 +33,22 @@ const ContactForm = () => {
         phoneNumber = phoneNumber.trim()
         message = message.trim()
 
+        let notify = (message, type="success") => { addToast(message, { appearance: type, autoDismiss: true }) }
+
         if (fullName.length < 3) {
-            alert('Please enter your name correctly', 'error')
+            notify('Please enter your name correctly', 'error')
             return;
         }
         if (!(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email))) {
-            alert('Please enter a valid email address', 'error')
+            notify('Please enter a valid email address', 'error')
             return;
         }
         if (phoneNumber.length < 10) {
-            alert('Please enter your phone number correctly', 'error')
+            notify('Please enter your valid phone number', 'error')
             return;
         }
         if (message.length < 10) {
-            alert('Please enter your message', 'error')
+            notify('Please enter your message', 'error')
             return;
         }
 
@@ -56,11 +60,11 @@ const ContactForm = () => {
         dataToSave.status = "active"
 
         setIsLoading(true)
-        
+
         let ContactForms = firestore.collection("ContactForms").doc(dataToSave.id)
 
         ContactForms.set(dataToSave).then(() => {
-            alert("Success")
+            notify('Thanks! Your message has been submitted successfully')
             setIsSubmitted(true)
         }).catch((error) => {
             alert("Something went wrong. Please try again later.")
@@ -89,7 +93,7 @@ const ContactForm = () => {
                             <img src={contact} alt="contact" />
                         </div>
                     </div>
-                    {!isSubmitted
+                    {isSubmitted
                         ? <>
                             <div className="p-5 bg-success text-white d-flex flex-column justify-content-center align-items-center">
                                 <h3>Thanks!</h3>
