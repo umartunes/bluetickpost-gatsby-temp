@@ -31,7 +31,7 @@ export const courses = [
         price: "Free",
         duration: "2 weeks",
         isFree: true,
-        isAvailable: true,
+        isAvailable: false,
         showInHome: true,
         description: `A short course to help you understanding all the basics of computer needed to live in the 21st century.`,
     },
