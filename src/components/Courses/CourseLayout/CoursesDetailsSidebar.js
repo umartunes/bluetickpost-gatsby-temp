@@ -39,6 +39,8 @@ const CoursesDetailsSidebar = ({ program }) => {
                     <Link to="/apply" className="default-btn">
                         <i className="flaticon-right"></i> Apply Now! <span></span>
                     </Link>
+                    
+                    {program.isAvailable ? "" : <div class="alert alert-danger mt-2 text-center" role="alert"> <small>Admissions closed for this program</small>  </div>}
 
                     {/* <Link to="#" className="default-btn">
                         <i className="flaticon-price-tag"></i>
