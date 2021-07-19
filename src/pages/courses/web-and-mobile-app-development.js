@@ -16,10 +16,10 @@ const program = {
   certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish the course. Students are required to submit assignments and projects assigned to them to graduate this course.`,
   courseFor: `Our Web & Mobile App Development program is designed for students who have passed grade 10 from their schools. and are motivated to do achieve big things in life.`,
 
-  price: "Rs. 2000/month",
-  courseDuration: "~6 months",
-  classDuration: "2 Hours",
-  classDays: "3 days a week(Mon-Wed)",
+  price: "Rs. 1500 / month",
+  courseDuration: "~8 months",
+  classDuration: "~2 Hours",
+  classDays: "2 days a week(Sat & Sunday)",
   courseDetailsImage: "/images/courses-details.jpg",
 
   courses: "10",
@@ -94,7 +94,7 @@ const reviews = [
   },
   {
     author: `Ali Haider`,
-    authorImage: "/images/reviews/ali.png",
+    authorImage: "/images/reviews/ali.jpg",
     heading: `Excellent`,
     details: `First-time connect with Web Development. In the beginning I thought that Web Development is really hard to learn but after this course, it seems easy and fun to learn and implement. Our instructors Sir Umar is a nice person, explaining everything at a good pace. Thank you, Techna, for this great job.`,
   },

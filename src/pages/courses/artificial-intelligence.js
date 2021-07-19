@@ -20,10 +20,12 @@ const program = {
   courseFor: `Our Leadership Program is designed for students grade 7+. After graduating from this program, we’ll offer students 
   a chance to become instructors at STEM1.`,
 
-  price: "$96*/month",
+  price: "Rs. 1500 / month",
+  courseDuration: "~12 months",
+  classDuration: "~2 Hours",
+  classDays: "2 days a week(Sat & Sunday)",
   courseDetailsImage: "/images/courses-details.jpg",
 
-  courseDuration: "~6 months",
   courses: "10",
   support: "Unlimited",
   reports: "Quarterly",
@@ -57,19 +59,19 @@ const curriculum = [
 const reviews = [
   {
     author: `Muhammad Zain Ul Haq`,
-    authorImage: "/images/reviews/female.jpg",
+    authorImage: "/images/reviews/zain.jpg",
     heading: `Fantastic Experience`,
     details: `A really good and fantastic experience in this institute Alhamdolillah. The management of this institute is outstanding. Teachers and all staff are very hardworking. One of my best decision of life to join this institute.`,
   },
   {
     author: `Muhammad Abu Bakar`,
-    authorImage: "/images/reviews/female.jpg",
+    authorImage: "/images/reviews/abubakar.jpg",
     heading: `Fantastic Experience`,
     details: `I'm feeling a really good experience. And gaining information about system. A good teacher and management. They give information about your course which you want. ALLAH blessed.`,
   },
   {
     author: `Ali Haider`,
-    authorImage: "/images/reviews/balaji.png",
+    authorImage: "/images/reviews/ali.jpg",
     heading: `Excellent`,
     details: `First-time connect with Web Development. In the beginning I thought that Web Development is really hard to learn but after this course, it seems easy and fun to learn and implement. Our instructors Sir Umar is a nice person, explaining everything at a good pace. Thank you, Techna, for this great job.`,
   },
