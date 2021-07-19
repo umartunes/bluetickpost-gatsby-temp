@@ -64,7 +64,7 @@ const NavbarTwo = () => {
                                 <div className="others-option d-flex align-items-center">
                                     <div className="option-item">
                                         <Link
-                                            to="/register"
+                                            to="/apply"
                                             activeClassName="active"
                                             onClick={() => setCollapsed(true)}
                                             className="default-btn"

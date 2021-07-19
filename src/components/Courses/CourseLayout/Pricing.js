@@ -17,7 +17,7 @@ const packages = [
   {
     name: "Normal",
     price: "$10",
-    link: "/register?type=normal",
+    link: "/apply",
     description: ["Normal Class", "Face To Face & Online VIA Zoom",],
   },
   

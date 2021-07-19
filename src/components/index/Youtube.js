@@ -40,7 +40,7 @@ const Youtube = () => {
 
       <h3 className="text-center mt-3 " >New classes starting May 01</h3>
       <div className="btn-box text-center" >
-        <Link to="/Register" className="default-btn">
+        <Link to="/apply" className="default-btn">
           <i className="flaticon-right"></i>
           Register Today! <span></span>
         </Link>

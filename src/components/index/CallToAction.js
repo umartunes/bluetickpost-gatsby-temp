@@ -8,7 +8,7 @@ const CallToAction = () => {
                 <div className="project-start-content text-center">
                     <h2 className="text-white">New classes starting August 02</h2>
 
-                    <Link to="/register" className="default-btn" style={{paddingLeft: 25}}>
+                    <Link to="/apply" className="default-btn" style={{paddingLeft: 25}}>
                         Apply Now! <span></span>
                     </Link>
 
