@@ -12,7 +12,7 @@ const program = {
   title: "Basic Computer Course",
   slug: "basic-computer-course",
   image: "/images/courses/course1.jpg",
-  description: ` Just as we consider Mainframe computers and Televison as old technology, students currently in Grade 3+ are going to consider YouTube, Google, Bitcoin as old technology. Its very natural for these students to ask Alexa to play their favorite song or find answers to almost anything in Google. Our job at STEM1 is to help students to get introduced to coding as another cool thing to do rather than thinking of it as a boring mandatory class. This program has 10 levels with weekly 1 hour class.`,
+  description: `A short course specially designed for those people who are unaware of computer, to help these people understanding all the basics of computer needed to live in the 21st century. In this course; we teach students how to use a computer right from turning it on and off, how you can earn money now a days using internet online, how to play basic games, learn to type fast, core settings, and software knowledge like notepad, paint... In this day an age you will be considered uneducated if you cannot use a computer. So, we're offering this course 100% free of cost.`,
   certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish every level. Students are required to submit a presentation or project to graduate each course.`,
   courseFor: `Our Junior program is designed for Grade 3+ students to teach them basics of coding. At the end of each level/course, we conduct quiz & assessment to understand the student's progress.`,
 
@@ -29,44 +29,36 @@ const program = {
 
 const curriculum = [
   {
-    heading: `Introduction to Coding 101`,
-    description: `Learn the basics of coding. The use of different languages and basic command styles that are common in the world of programming languages are included in this course.`,
+    heading: `Introduction to Computer`,
+    description: `A brief introductory lecture specifically designed to help you understanding the fundamentals of a computer`,
   },
   {
-    heading: `Animation  101`,
-    description: `Animations are a great way to learn difficult concepts. Learn programming to create interactive drawings and animations.`,
+    heading: `Basic hardware information, settings in Windows to make your computer secure`,
+    description: `It's important to know the basic hardware information of a computer, and important settings to keep your computer safe and secure`,
   },
   {
-    heading: `Scratch  101`,
-    description: `Let your children learn scratch, a programming language, to create their own stories, animations, and games.`,
+    heading: `Knowledge of laptops and other mobile devices & accessories`,
+    description: `Students would be given knowledge of laptops, mobile devices and other accessories.`,
   },
   {
-    heading: `HTML 101`,
-    description: `Learn the fundamentals of HTML and design headings, paragraphs, and links. Let your child dive into the world of website and application development.`,
+    heading: `Operating Systems - Windows, Linux and macOS`,
+    description: `Different kind of operating systems, their manufacturers, history and use case`,
   },
   {
-    heading: `Cyber Safety 101`,
-    description: `Children are exposed to a lot of risks while using the internet. Teach your kids the basics of Cyber Safety to ensure safe browsing.`,
+    heading: `Typing Master - Learn to type faster`,
+    description: `Double your typing speed. Learn keyboarding in a fun way. Test your words per minute speed and accuracy. Play top-notch typing games and more...`,
   },
   {
-    heading: `Game Design 101`,
-    description: `Do you love playing games? They are certainly a great way to boost your skills. Learn to design your games through our Game Design 101 course.`,
+    heading: `Several ways to earn money online using internet`,
+    description: `Students would be given proper information about earning online using legit ways and proper channels such as: web development, mobile apps development, seo, digital marketing, graphic designing, video editing, youtube.`,
   },
   {
-    heading: `VR Vex 101`,
-    description: `Love robots and are interested in how they work? Through our VR Vex, learn how to code a virtual robot based on block-based coding.`,
+    heading: `Scope & opportunities of different fields in marketplace`,
+    description: `Proper information about Freelancing, Remote Jobs. Average Salary of different fields an individual is making in job marketplaces. (eg: how much a we developer is making now a days.)`,
   },
   {
-    heading: `TinkerCad 101`,
-    description: `Want to design 3D models of your imaginations? Lucky for you, we have got the right thing for you. Use TinkerCAD course to do just that!`,
-  },
-  {
-    heading: `Python 101`,
-    description: `Learn the basics of python language and create software for your everyday small tasks such as calculating percentages and average.`,
-  },
-  {
-    heading: `Hacking 101`,
-    description: `Hacking is not always bad as it is generally considered. Teach your child the basics of ethical hacking to protect them from online dangers.`,
+    heading: `and much more...`,
+    description: `Students would learn to play games, use of different computer software, accessories, and much more...`,
   },
 ];
 
