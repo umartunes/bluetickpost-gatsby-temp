@@ -78,7 +78,7 @@ const RegisterForm = () => {
             notify('Please enter your valid phone number', 'error')
             return;
         }
-    
+
 
         let dataToSave = { course, fullName, fatherName, email, CNIC, phoneNumber, qualification, city, country, referrer }
 
@@ -134,7 +134,17 @@ const RegisterForm = () => {
                         </>
                         : <>
                             <div className="col-12">
-                                <div className="contact-form">
+
+                                <div className="card bg-info text-center">
+                                    <div className="card-body py-5">
+                                        <h2 className="text-white">New classes starting soon...</h2>
+                                        <h2 className="text-white">Stay in touch with us.</h2>
+                                    </div>
+                                </div>
+
+
+                                {/* Code below to be Uncomment to open registration */}
+                                {/* <div className="contact-form">
                                     <form id="contactForm">
 
                                         <div className="row">
@@ -145,8 +155,8 @@ const RegisterForm = () => {
                                         <div className="row">
                                             <div className="col-md-12">
                                                 <div className="form-group">
-                                                    <select name="course" defaultValue="web-and-mobile-app-development" className="form-control" onChange={handleFormData}>
-                                                        <option value="" disabled>Select</option>
+                                                    <select name="course" defaultValue="" className="form-control" onChange={handleFormData}>
+                                                        <option value="">Select</option>
 
                                                         {courses
                                                             .filter((course, i) => { return course.isAvailable })
@@ -252,7 +262,8 @@ const RegisterForm = () => {
                                             </div>
                                         </div>
                                     </form>
-                                </div>
+                                </div> */}
+                            
                             </div>
                         </>
                     }

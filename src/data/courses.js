@@ -7,7 +7,7 @@ export const courses = [
         price: "Rs. 1500 / month",
         duration: "6 months",
         isFree: false,
-        isAvailable: true,
+        isAvailable: false,
         showInHome: true,
         description: `An application development program for absolute beginners, which will lead you to job/freelancing industry.`,
     },
