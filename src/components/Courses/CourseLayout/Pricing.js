@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const packages = [
   {
     name: "Private",
-    price: "Rs. 10000",
+    price: "Rs. 9000",
     link: "/register?type=private",
     description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
   },
