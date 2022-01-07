@@ -17,7 +17,7 @@ const program = {
   courseFor: `Our Leadership Program is designed for students grade 7+. After graduating from this program, we’ll offer students 
   a chance to become instructors at STEM1.`,
 
-  price: "Rs. 1500 / month",
+  price: "Rs. 2000 / month",
   courseDuration: "~12 months",
   classDuration: "~2 Hours",
   classDays: "2 days a week(Sat & Sunday)",

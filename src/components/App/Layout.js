@@ -18,7 +18,7 @@ const Layout = ({ children, ...otherProps }) => {
                 {children}
                 <GoTop scrollStepInPx="100" delayInMs="10.50" />
             </ToastProvider>
-            {/* <FacebookMessenger /> */} //
+            {/* <FacebookMessenger /> */}
             {/* <TawkTo /> */}
             {/* <ZohoSalesIQ /> */}
         </RecoilRoot>

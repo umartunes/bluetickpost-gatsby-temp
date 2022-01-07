@@ -4,19 +4,19 @@ import { Link } from "gatsby";
 const packages = [
   {
     name: "Private",
-    price: "$300",
+    price: "Rs. 10000",
     link: "/register?type=private",
     description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
   },
   {
     name: "Group",
-    price: "$75 / student", // $450 per month
+    price: "Rs. 4000 / student", // $450 per month
     link: "/register?type=group",
     description: ["6 students", "Face To Face & Online VIA Zoom",],
   },
   {
     name: "Normal",
-    price: "$10",
+    price: "Rs. 2000",
     link: "/apply",
     description: ["Normal Class", "Face To Face & Online VIA Zoom",],
   },
