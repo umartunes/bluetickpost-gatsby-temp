@@ -11,7 +11,7 @@ const Contact = () => {
         <Layout>
             <NavbarTwo />
             {/* <RegisterForm /> */}
-            <section className="contact-area ptb-100 bg-fafafb">
+            <section className="contact-area ptb-100" style={{backgroundColor: '#eeeeee'}}>
                 <div className="container">
                     <div className="section-title mb-0 pb-0">
                         <span className="sub-title">
@@ -24,7 +24,7 @@ const Contact = () => {
 
                     <div style={{ minHeight: 400 }} className="d-flex justify-content-center align-items-center">
                         <div className="container">
-                            <div className="demo-iframe-container mt-5" style={{ height: 1200 }}>
+                            <div className="demo-iframe-container mt-5" style={{ height: 1300 }}>
                                 <iframe title="" loading="lazy" src="https://techna.web.app/apply"></iframe>
                             </div>
                         </div>
@@ -32,7 +32,6 @@ const Contact = () => {
 
                 </div>
             </section>
-
 
             <Footer />
         </Layout>
