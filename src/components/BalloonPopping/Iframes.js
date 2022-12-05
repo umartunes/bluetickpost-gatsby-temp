@@ -30,7 +30,7 @@ const Iframes = () => {
                 </div>
                 <div className="project-start-content">
 
-                    <h3 className="text-center my-4 text-white">New classes starting August 02</h3>
+                    <h3 className="text-center my-4 text-white">New classes starting December 17</h3>
                     <div className="btn-box text-center">
                         <Link to="/apply" className="default-btn">
                             <i className="flaticon-right"></i>

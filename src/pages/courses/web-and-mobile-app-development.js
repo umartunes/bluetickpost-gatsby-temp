@@ -17,7 +17,9 @@ const program = {
   courseFor: `Our Web & Mobile App Development program is designed for students who have passed grade 10 from their schools. and are motivated to do achieve big things in life.`,
 
   price: "Rs. 2000 / month",
-  courseDuration: "~8 months",
+  discountPercentage: "50% Off",
+  priceBeforeDiscount: "Rs. 4000 / month",
+  courseDuration: "~6 months",
   classDuration: "~2 Hours",
   classDays: "2 days a week(Sat & Sunday)",
   courseDetailsImage: "/images/courses-details.jpg",
@@ -74,7 +76,7 @@ const curriculum = [
     heading: `React Native`,
     description: `In this module you'll get a brief overview of how hybrid mobile applications are built in real life now-a-days. At the end of this module we'll be building a mobile application using React Native`,
   },
-  
+
   {
     heading: `Final Project`,
     description: `At the end of this course you'll be assigned a final project which you would code on your own and submit, which will lead you to course certification.`,

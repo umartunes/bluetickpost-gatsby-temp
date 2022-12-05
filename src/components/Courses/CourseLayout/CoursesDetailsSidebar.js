@@ -39,7 +39,7 @@ const CoursesDetailsSidebar = ({ program }) => {
                     <Link to="/apply" className="default-btn">
                         <i className="flaticon-right"></i> Apply Now! <span></span>
                     </Link>
-                    
+
                     {program.isAvailable ? "" : <div class="alert alert-danger mt-2 text-center" role="alert"> <small>Admissions closed for this program</small>  </div>}
 
                     {/* <Link to="#" className="default-btn">
@@ -48,9 +48,20 @@ const CoursesDetailsSidebar = ({ program }) => {
                     </Link> */}
                 </div>
                 <ul className="info">
+                    <div className="d-flex justify-content-between align-items-center">
+                        {/* <div className=""> */}
+                        {program.discountPercentage
+                            ? <>
+                                <span></span>
+                                <span><del>{program.priceBeforeDiscount}</del> <span className="badge badge-success ml-1">{program.discountPercentage}</span></span>
+                            </>
+                            : <></>
+                        }
+                    </div>
                     <li className="price">
+
                         <div className="d-flex justify-content-between align-items-center">
-                            <span><i className="flaticon-price-tag"></i> Price</span>
+                            <span><i className="flaticon-price-tag"></i> Fee</span>
                             <small style={{ fontWeight: 'bold' }}>{program.price}</small>
                         </div>
                     </li>

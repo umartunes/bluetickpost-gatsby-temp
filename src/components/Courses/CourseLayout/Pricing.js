@@ -4,23 +4,25 @@ import { Link } from "gatsby";
 const packages = [
   {
     name: "Private",
-    price: "Rs. 9000",
+    price: "Rs. 12000",
     link: "/register?type=private",
     description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
   },
   {
     name: "Group",
-    price: "Rs. 4000 / student", // $450 per month
+    price: "Rs. 6000 / student", // $450 per month
     link: "/register?type=group",
     description: ["6 students", "Face To Face & Online VIA Zoom",],
   },
   {
-    name: "Normal",
+    name: "Normal Class",
     price: "Rs. 2000",
+    discountPercentage: "50% Off",
+    priceBeforeDiscount: "Rs. 4000",
     link: "/apply",
-    description: ["Normal Class", "Face To Face & Online VIA Zoom",],
+    description: ["Face To Face & Online VIA Zoom",],
   },
-  
+
 ];
 
 const Pricing = () => {
@@ -38,7 +40,7 @@ const Pricing = () => {
               All of group courses will have a maximum of 6 students, each class
               is led by an Instructor and a Leader in Training.{" "}
             </p>
-          
+
           </div>
         </div>
         <div className="row">
@@ -48,6 +50,14 @@ const Pricing = () => {
                 <div className="card text-center mb-3">
                   <h5 className="card-header">{pkg.name}</h5>
                   <div className="card-body">
+
+                  {pkg.discountPercentage
+                      ? <p className="card-text mb-0">
+                        <del>{pkg.priceBeforeDiscount}</del> <span className="badge badge-success">{pkg.discountPercentage}</span>
+                      </p>
+                      : <></>
+                    }
+
                     <h5 className="card-title">{pkg.price} <small className="text-muted">/ month</small> </h5>
 
                     {pkg.description.map((d, j) => {
@@ -69,7 +79,7 @@ const Pricing = () => {
           })}
         </div>
 
-       
+
       </div>
     </div>
   );
