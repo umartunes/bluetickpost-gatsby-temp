@@ -12,7 +12,7 @@ const Contact = () => {
             <NavbarTwo />
             {/* <RegisterForm /> */}
             <section className="contact-area ptb-100" style={{backgroundColor: '#eeeeee'}}>
-                <div className="container">
+                <div className="container-fluid">
                     <div className="section-title mb-0 pb-0">
                         <span className="sub-title">
                             <img src={starIcon} alt="contact" />
@@ -22,9 +22,9 @@ const Contact = () => {
                         <p>Please fill in the form below to apply for a course. All fields are required.</p>
                     </div>
 
-                    <div style={{ minHeight: 400 }} className="d-flex justify-content-center align-items-center">
+                    <div style={{ minHeight: 500 }} className="d-flex justify-content-center align-items-center">
                         <div className="container" style={{ padding: 0 }}>
-                            <div className="demo-iframe-container mt-5" style={{ height: 1300 }}>
+                            <div className="demo-iframe-container mt-3" style={{ height: '100vh', paddingTop: '100vh' }}>
                                 <iframe title="" loading="lazy" src="https://techna.web.app/apply"></iframe>
                             </div>
                         </div>
