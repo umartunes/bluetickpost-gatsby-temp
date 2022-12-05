@@ -23,7 +23,7 @@ const Contact = () => {
                     </div>
 
                     <div style={{ minHeight: 400 }} className="d-flex justify-content-center align-items-center">
-                        <div className="container">
+                        <div className="container" style={{ padding: 0 }}>
                             <div className="demo-iframe-container mt-5" style={{ height: 1300 }}>
                                 <iframe title="" loading="lazy" src="https://techna.web.app/apply"></iframe>
                             </div>
