@@ -27,7 +27,7 @@ class CourseDetailsContent extends Component {
 
     render() {
 
-        const { program, curriculum, reviews } = this.props
+        const { program, curriculum, modules, reviews } = this.props
 
         return (
             <div className="courses-details-area pb-100">
@@ -41,27 +41,81 @@ class CourseDetailsContent extends Component {
                             <div className="courses-details-desc">
                                 <ul className="nav nav-tabs" id="myTab">
                                     <li className="current" >
-                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab1') }}>Overview</a >
+                                        <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab1') }}>Course Overview</a >
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab2') }}>Curriculum</a >
                                     </li>
                                     <li>
                                         <a href="/#" onClick={(e) => { e.preventDefault(); this.openTabSection(e, 'tab4') }}>Reviews</a >
-                                    </li>
+                                    </li> */}
                                 </ul>
 
                                 <div className="tab-content">
                                     <div id="tab1" className="tab-pane tabs_item">
                                         <div className="courses-overview">
-                                            <h3>Course Description</h3>
+                                            {/* <h3>Course Description</h3> */}
                                             <p>{program.description}</p>
 
-                                            <h3>Progress & Certification</h3>
-                                            <p>{program.certification}</p>
+                                            {/* <h3>Progress & Certification</h3>
+                                            <p>{program.certification}</p> */}
 
                                             {/* <h3>Who is this course for?</h3>
                                             <p>{program.courseFor}</p> */}
+
+                                            {
+                                                !modules.length
+                                                    ? <>
+                                                        <div className="courses-curriculum">
+
+                                                            <h3>You'll Learn These Core Skills</h3>
+
+                                                            <ul>
+                                                                {curriculum.map((cur, i) => {
+                                                                    return <li key={i}>
+                                                                        <a
+                                                                            href="/"
+                                                                            onClick={(e) => e.preventDefault()}
+                                                                            className="d-flex justify-content-between align-items-center"
+                                                                        >
+                                                                            <span className="courses-name">
+                                                                                <span>{cur.heading}</span>
+                                                                                <br /><br />
+                                                                                <span className="text-muted">{cur.description}</span>
+                                                                            </span>
+
+                                                                            {/* <div className="courses-meta">
+                                                                                <span className="duration">Preview</span>
+                                                                            </div> */}
+                                                                        </a>
+                                                                    </li>
+                                                                })}
+
+                                                            </ul>
+
+                                                        </div>
+                                                    </>
+                                                    : <>
+                                                    
+                                                        <h3>You'll Learn These Core Skills</h3>
+                                                        {modules.map((mod, i) => {
+                                                            return <div key={i}>
+
+                                                                <h6><span>{mod.name}</span></h6>
+                                                                <ol style={{ listStyleType: "lower-alpha" }}>
+                                                                    {mod.topics.map((topic, j) => {
+                                                                        return <li key={j}>
+                                                                            <small>{topic}</small>
+                                                                        </li>
+                                                                    })}
+                                                                </ol>
+                                                            </div>
+                                                        })}
+                                                    </>
+                                            }
+
+
+
                                         </div>
                                     </div>
 

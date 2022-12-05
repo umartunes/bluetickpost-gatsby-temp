@@ -83,6 +83,60 @@ const curriculum = [
   },
 ];
 
+
+const modules = [
+  {
+    name: "Module 1 (Duration 2 Months)",
+    topics: [
+      "Intro to Web & Mobile App Development",
+      "HTML / HTML5 - Hypertext Markup Language",
+      "CSS / CSS3 - Cascading Style Sheet",
+      "SCSS - Sassy Cascading Style Sheet",
+      "Bootstrap 5 - CSS Framework",
+      "Git & GitHub - Source code control",
+      "Google Firebase, Netlify, Surge, GitHub Pages (Hosting)",
+    ]
+  },
+  {
+    name: "Module 2 (Duration 4 Months)",
+    topics: [
+      "Javascript and Object-Oriented Programming (OOP)",
+      "ReactJS - Front-end Development",
+      "Context API / Redux - Data Management For Frond-end Application",
+      "Google Firebase (Authentication, Firestore Database, Storage, Analytics, Hosting)",
+      "Send Emails, and SMS from websites",
+    ]
+  },
+  {
+    name: "Module 3 (Duration 1 Month)",
+    topics: [
+      "Node.js - Backend Development",
+      "MongoDB - NoSQL Database",
+      "React Native - Create Hybrid apps for Android and iOS using React",
+      "Publish the built App on Google Play Store and other different platforms.",
+    ]
+  },
+
+  {
+    name: "You'll Also Learn",
+    topics: [
+      "8+ Practical Projects & Several Assignments (Small-Big)",
+      "How to add Google Maps on websites.",
+      "How to send emails and SMS from websites and mobile apps.",
+      "How to purchase a domain & hosting service.",
+      "How to get domains & hosting for free.",
+      "How to deploy your websites to the hosting platforms.",
+      "How to start your career as a Programmer.",
+      "The difference between Freelancing, Local Jobs, and Remote Jobs",
+      "How to find and apply for remote jobs",
+      "How to write job winning CVs",
+      "How to create/open accounts and get projects on different International Freelancing platforms.",
+      "And Many more…",
+    ]
+  },
+  
+]
+
 const reviews = [
   {
     author: `Muhammad Zain Ul Haq`,
@@ -112,6 +166,7 @@ const Details = () => {
       <CourseDetailsContent
         program={program}
         curriculum={curriculum}
+        modules={modules}
         reviews={reviews}
       />
       <Pricing />

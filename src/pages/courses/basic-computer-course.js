@@ -62,6 +62,8 @@ const curriculum = [
   },
 ];
 
+const modules = []
+
 const reviews = [
   {
     author: `Muhammad Zain Ul Haq`,
@@ -88,7 +90,7 @@ const Details = () => {
     <Layout>
       <NavbarTwo />
 
-      <CourseDetailsContent program={program} curriculum={curriculum} reviews={reviews} />
+      <CourseDetailsContent program={program} curriculum={curriculum} modules={modules} reviews={reviews} />
       {/* <Pricing /> */}
       {/* <RelatedCourses /> */}
       {/* <OurServices /> */}

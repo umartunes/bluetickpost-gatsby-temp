@@ -28,6 +28,8 @@ const program = {
   reports: "Quarterly",
 };
 
+const modules = []
+
 const curriculum = [
   {
     heading: `Intro to Artificial Intelligence`,
@@ -110,6 +112,7 @@ const Details = () => {
       <CourseDetailsContent
         program={program}
         curriculum={curriculum}
+        modules={modules}
         reviews={reviews}
       />
       <Pricing />
