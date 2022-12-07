@@ -136,7 +136,7 @@ export default function Menu() {
 
 
 			</li>
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link
 					to="/blog"
 					activeClassName="active"
@@ -146,7 +146,7 @@ export default function Menu() {
 				>
 					Blog 
 				</Link>
-			</li>
+			</li> */}
 		</ul>
 	);
 }
