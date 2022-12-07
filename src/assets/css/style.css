@@ -1378,7 +1378,7 @@ Main Banner Area CSS
 }
 
 .main-banner-item {
-  height: 700px;
+  height: 600px;
   position: relative;
   z-index: 1;
   background-position: center center;
@@ -2487,7 +2487,7 @@ History Area CSS
   display: none;
 }
 .history-timeline .timeline-block::before {
-  content: "";
+  content: "\ea17";
   position: absolute;
   left: 116px;
   color: #78b92d;
@@ -3100,7 +3100,7 @@ Services Details Area CSS
   font-weight: 800;
 }
 .services-details-info .services-list li a::before {
-  content: "";
+  content: "\f104";
   position: absolute;
   right: 30px;
   top: 50%;
@@ -3498,7 +3498,7 @@ How It's Work Area CSS
   color: #78b92d;
   border-radius: 50%;
   background-color: #ffffff;
-  box-shadow: #edf1fe 0px 0px 0px 7px;
+  box-shadow: rgb(237, 241, 254) 0px 0px 0px 7px;
   font-size: 30px;
   font-weight: 800;
   font-style: italic;
@@ -3518,7 +3518,7 @@ How It's Work Area CSS
   left: 40px;
 }
 .how-its-work-content .inner-box .single-item::after {
-  content: "";
+  content: "\ea17";
   position: absolute;
   left: 26px;
   color: #78b92d;
@@ -3763,7 +3763,7 @@ Courses Details Area CSS
   margin-right: -30px;
 }
 .courses-details-desc .tab-content .courses-curriculum ul li a::before {
-  content: "";
+  content: "\f12c";
   position: absolute;
   left: 30px;
   color: #78b92d;
@@ -5798,7 +5798,7 @@ Products Area CSS
   color: #2c2a28;
 }
 .tracer-grid-sorting .ordering .nice-select .list .option::before {
-  content: "";
+  content: "\f10f";
   position: absolute;
   left: 10px;
   top: 0;
@@ -6650,7 +6650,7 @@ Checkout Area CSS
   color: #2c2a28;
 }
 .billing-details .form-group .nice-select .list .option::before {
-  content: "";
+  content: "\f10f";
   position: absolute;
   left: 10px;
   top: 0;
@@ -7230,7 +7230,7 @@ Testimonials Area CSS
   right: 0;
 }
 .single-testimonials-item::after {
-  content: "";
+  content: "\f106";
   position: absolute;
   left: 0;
   color: #2c2a28;
@@ -7295,7 +7295,7 @@ Testimonials Area CSS
   font-size: 18px;
 }
 .single-testimonials-box::after {
-  content: "";
+  content: "\f106";
   position: absolute;
   bottom: 0;
   color: #2c2a28;
@@ -7862,7 +7862,7 @@ blockquote::before, .blockquote::before {
   left: 50px;
   top: -50px;
   z-index: -1;
-  content: "";
+  content: "\f106";
   font-family: Flaticon;
   font-size: 135px;
 }
@@ -8366,7 +8366,7 @@ Page Title Area CSS
   right: -18px;
   top: 6.5px;
   line-height: 1;
-  content: "";
+  content: "\f104";
   font-family: Flaticon;
   font-size: 11px;
 }
@@ -9819,17 +9819,17 @@ Go Top CSS
   position: fixed;
   cursor: pointer;
   bottom: -100px;
-  right: 20px;
+  right: 125px;
   color: #ffffff;
   background-color: #2c2a28;
   z-index: 4;
-  width: 45px;
+  width: 42px;
   text-align: center;
-  height: 45px;
+  height: 42px;
   opacity: 0;
   visibility: hidden;
   border-radius: 50%;
-  font-size: 22px;
+  font-size: 18px;
   transition: 0.9s;
   overflow: hidden;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
@@ -9847,7 +9847,7 @@ Go Top CSS
 .go-top.active {
   opacity: 1;
   visibility: visible;
-  bottom: 20px;
+  bottom: 25px;
 }
 .go-top:hover {
   background-color: #78b92d;
