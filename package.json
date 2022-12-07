@@ -19,6 +19,7 @@
     "@mdx-js/react": "^1.6.22",
     "firebase": "^8.3.2",
     "gatsby": "^2.24.41",
+    "gatsby-plugin-facebook-pixel": "^1.0.8",
     "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-mdx": "^2.1.0",
     "gatsby-plugin-page-creator": "^3.1.0",

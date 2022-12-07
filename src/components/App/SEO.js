@@ -21,6 +21,11 @@ const SEO = ({
                 <meta name="og:title" property="og:title" content={seoTitle}></meta>
                 <meta name="twitter:card" content={seoTitle}></meta>
                 <meta property="og:image" content={seoOgImage} />
+
+
+                {/* Facebook Domain Verification Meta Tag */}
+                <meta name="facebook-domain-verification" content="0dw4w932imlkc1e4o0nn2plr4ovxzx" />
+
             </Helmet>
         </div>
     )
