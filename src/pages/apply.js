@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react'
 import Layout from "../components/App/Layout"
 import NavbarTwo from "../components/App/NavbarTwo";
-import Footer from "../components/App/Footer"
+// import Footer from "../components/App/Footer"
 // import RegisterForm from '../components/Register/RegisterForm'
 
-import starIcon from '../assets/images/star-icon.png'
+// import starIcon from '../assets/images/star-icon.png'
 
 const Contact = () => {
 
     useEffect(() => {
 
         document.body.style.overflowY = 'hidden'
-        document.body.style.backgroundColor = '#eeeeee'
-
+        
         return () => {
             document.body.style.overflowY = 'auto'
         };
