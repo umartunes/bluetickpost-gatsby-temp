@@ -3,7 +3,7 @@ export const courses = [
         id: "web-and-mobile-app-development",
         name: "Web & Mobile App Development",
         coursePage: "/courses/web-and-mobile-app-development",
-        image: "/images/courses/course3.jpg",
+        image: "/images/courses/web-and-mobile-app-development.jpg",
         price: "Rs. 2000",
         duration: "~ 6 months",
         isFree: false,

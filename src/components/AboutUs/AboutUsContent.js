@@ -11,7 +11,7 @@ const AboutUsContent = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12">
             <div className="about-image">
-              <img src="/images/aboutus/eric.jpg" alt="Teaching by Eric" />
+              <img src="/images/aboutus/techna-collage.png" alt="Teaching at Techna" />
             </div>
           </div>
 

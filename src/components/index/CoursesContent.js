@@ -26,7 +26,7 @@ const CoursesContent = () => {
 
                             <div className="single-courses-box">
 
-                                <div className="courses-image">
+                                <div className="courses-image border-bottom">
 
                                     <Link to={course.coursePage} className="d-block image">
                                         <img src={course.image} alt="about" />

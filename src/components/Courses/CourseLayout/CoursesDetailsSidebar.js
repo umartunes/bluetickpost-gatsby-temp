@@ -20,7 +20,7 @@ const CoursesDetailsSidebar = ({ program }) => {
             /> */}
 
             <div className="courses-details-info">
-                <div className="image">
+                <div className="image border-bottom">
                     <img src={program.image} alt="course1" />
 
                     {/* <Link
