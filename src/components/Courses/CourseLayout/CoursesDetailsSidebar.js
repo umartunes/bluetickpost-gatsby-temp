@@ -53,12 +53,12 @@ const CoursesDetailsSidebar = ({ program }) => {
                         {program.discountPercentage
                             ? <>
                                 <span></span>
-                                <span><del>{program.priceBeforeDiscount}</del> <span className="badge badge-success ml-1">{program.discountPercentage}</span></span>
+                                <span><del style={{fontWeight: 'bold'}}>{program.priceBeforeDiscount}</del> <span className="badge badge-success ml-1">{program.discountPercentage}</span></span>
                             </>
                             : <></>
                         }
                     </div>
-                    <li className="price">
+                    <li className="price pt-1">
 
                         <div className="d-flex justify-content-between align-items-center">
                             <span><i className="flaticon-price-tag"></i> Fee</span>

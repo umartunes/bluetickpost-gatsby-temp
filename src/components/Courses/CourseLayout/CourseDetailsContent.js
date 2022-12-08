@@ -105,7 +105,7 @@ class CourseDetailsContent extends Component {
                                                                 <ol style={{ listStyleType: "lower-alpha" }}>
                                                                     {mod.topics.map((topic, j) => {
                                                                         return <li key={j}>
-                                                                            <small>{topic}</small>
+                                                                            <small dangerouslySetInnerHTML={{ __html: topic }}></small>
                                                                         </li>
                                                                     })}
                                                                 </ol>
