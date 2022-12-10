@@ -44,14 +44,15 @@ const Contact = () => {
                 </div>
             </section> */}
 
+            {/* URL for quick website update */}
             <iframe style={{
                 display: 'block',
                 background: "#000",
                 border: "none",         
-                height: "calc( 100vh - 95px )",  
+                height: "calc( 100vh - 110px )",  
                 width: "100%",
                 maxWidth: '100vw'
-            }} title="" loading="lazy" src="https://techna.web.app/apply"></iframe>
+            }} title="" loading="lazy" src={`https://techna.web.app/apply?random=${Math.random().toString(36).slice(2)}`}></iframe>
 
             {/* <Footer /> */}
         </Layout>

@@ -3,15 +3,17 @@ import { Link } from "gatsby";
 
 const packages = [
   {
-    name: "Private",
+    name: "Personal / Private",
     price: "Rs. 12000",
-    link: "/register?type=private",
+    link: "/apply",
+    // link: "/register?type=private",
     description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
   },
   {
     name: "Group",
     price: "Rs. 6000 / student", // $450 per month
-    link: "/register?type=group",
+    link: "/apply",
+    // link: "/register?type=group",
     description: ["6 students", "Face To Face & Online VIA Zoom",],
   },
   {
@@ -51,7 +53,7 @@ const Pricing = () => {
                   <h5 className="card-header">{pkg.name}</h5>
                   <div className="card-body">
 
-                  {pkg.discountPercentage
+                    {pkg.discountPercentage
                       ? <p className="card-text mb-0">
                         <del>{pkg.priceBeforeDiscount}</del> <span className="badge badge-success">{pkg.discountPercentage}</span>
                       </p>
