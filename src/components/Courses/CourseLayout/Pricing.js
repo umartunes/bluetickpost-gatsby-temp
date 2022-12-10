@@ -2,12 +2,14 @@ import React from "react";
 import { Link } from "gatsby";
 
 const packages = [
+  
   {
-    name: "Personal / Private",
-    price: "Rs. 12000",
+    name: "Normal Class",
+    price: "Rs. 2000",
+    discountPercentage: "50% Off",
+    priceBeforeDiscount: "Rs. 4000",
     link: "/apply",
-    // link: "/register?type=private",
-    description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
+    description: ["Face To Face & Online VIA Zoom",],
   },
   {
     name: "Group",
@@ -17,12 +19,11 @@ const packages = [
     description: ["6 students", "Face To Face & Online VIA Zoom",],
   },
   {
-    name: "Normal Class",
-    price: "Rs. 2000",
-    discountPercentage: "50% Off",
-    priceBeforeDiscount: "Rs. 4000",
+    name: "Personal / Private",
+    price: "Rs. 12000",
     link: "/apply",
-    description: ["Face To Face & Online VIA Zoom",],
+    // link: "/register?type=private",
+    description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
   },
 
 ];
