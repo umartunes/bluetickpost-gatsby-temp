@@ -137,8 +137,10 @@ const RegisterForm = () => {
 
                                 <div className="card bg-info text-center">
                                     <div className="card-body py-5">
-                                        <h2 className="text-white">New classes starting soon...</h2>
-                                        <h2 className="text-white">Stay in touch with us.</h2>
+                                        <h2 className="text-white">Admissions Are Closed.</h2>
+                                        <h2 className="text-white">New classes would be starting soon...</h2>
+                                        <h2 className="text-white">Stay in touch with us on Facebook to keep yourself updated.</h2>
+                                        <h2 className="text-white">Thanks!</h2>
                                     </div>
                                 </div>
 
