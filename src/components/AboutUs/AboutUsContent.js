@@ -98,7 +98,7 @@ const AboutUsContent = () => {
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="about-text">
                 <h3>Vision</h3>
-                <p>Train and produce <strong>100,000</strong> skilled application developers in Pakistan by the year 2025.</p>
+                <p>Train and produce <strong>100,000</strong> skilled application developers in Pakistan by the year 2027.</p>
                 <p>If each of these Developers earn Only <strong>$1000 USD</strong> per month</p>
                 <p>It will boost I.T export of Pakistan by <strong>$1.2 Billion</strong> Annually ($ 1,200,000,000).</p>
 
