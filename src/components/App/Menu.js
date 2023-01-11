@@ -27,11 +27,11 @@ export default function Menu() {
 				<ul className="dropdown-menu">
 					<li className="nav-item">
 						<Link
-							to="https://educa.pk"
+							to="https://lms.techna.pk"
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
-							target="_blank"
+							// target="_blank"
 						>
 							LMS
 						</Link>
