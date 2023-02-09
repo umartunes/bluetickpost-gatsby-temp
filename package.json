@@ -38,6 +38,7 @@
     "react-modal-video": "^1.2.5",
     "react-owl-carousel3": "^2.2.5",
     "react-player": "^2.9.0",
+    "react-scroll": "^1.8.7",
     "react-toast-notifications": "^2.5.1",
     "react-wow": "^1.0.0",
     "recoil": "0.0.10",

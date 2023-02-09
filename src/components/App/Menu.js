@@ -114,6 +114,67 @@ export default function Menu() {
 					</li>
 				</ul> */}
 			</li>
+			
+			<li className="nav-item">
+				<Link
+					to="/services"
+					activeClassName="active"
+					onClick={(e) =>
+						window.location.pathname === "/services"
+							? e.preventDefault()
+							: setCollapsed(true)
+					}
+					// onClick={(e) => e.preventDefault()}
+					className="nav-link"
+				>
+					Services <i className="bx bx-chevron-down"></i>
+				</Link>
+
+				<ul className="dropdown-menu">
+
+					<li className="nav-item">
+						<Link
+							to="/services/website-development"
+							activeClassName="active"
+							onClick={() => {
+								setCollapsed(true)
+							}}
+							className="nav-link"
+						>
+							Web Design & Development
+						</Link>
+					</li>
+
+					<li className="nav-item">
+						<Link
+							to="/services/logo-designing"
+							activeClassName="active"
+							onClick={() => {
+								setCollapsed(true)
+							}}
+							className="nav-link"
+						>
+							Logo Designing
+						</Link>
+					</li>
+
+					<li className="nav-item">
+						<Link
+							to="/services/business-stationery-designing"
+							activeClassName="active"
+							onClick={() => {
+								setCollapsed(true)
+							}}
+							className="nav-link"
+						>
+							Business Card, Letterhead, and Stationery Designing
+						</Link>
+					</li>
+
+
+				</ul>
+
+			</li>
 
 			{/* <li className="nav-item">
 				<Link
