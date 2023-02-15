@@ -3,6 +3,8 @@ import service3 from '../../assets/images/services/service3.png'
 import service6 from '../../assets/images/services/service6.png'
 import service7 from '../../assets/images/services/service7.png'
 
+import { Link } from 'gatsby'
+
 import { Element } from 'react-scroll'
 
 const ServicesDescription = () => {
@@ -22,22 +24,34 @@ const ServicesDescription = () => {
                     <div className="overview-content">
                         <div className="content right-content">
                             <span className="sub-title">Web Design & Development</span>
-                            <h2>Amazing, Lightning Fast, and High-Converting Websites</h2>
-                            <p>We design and develop amazing, lightning fast, and high-converting websites that make your business grow.</p>
+                            <h2>Professional, Clean, and Modern Websites</h2>
+                            <p>At Techna; we design & develop clean & attractive websites and e-commerce (online) stores which are SEO optimized, has fast-loading pages, and is responsive across all devices (Mobile, Desktop, Tablet)</p>
 
-
-                            <ul className="features-list">
-                                <li><span><i className='bx bx-check'></i> E-commerce Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> Business Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> Blogging Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> News Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> Magazine Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> Company Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> Portfolio Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> Restaurant Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> Real Estate Websites</span></li>
-                                <li><span><i className='bx bx-check'></i> NGO Websites</span></li>
+                            <ul className="features-list mb-3">
+                                <li><span><i className='bx bx-check'></i> E-commerce Websites / Online Stores</span></li>
+                                <li><span><i className='bx bx-check'></i> Blogging / News / Magazine Websites</span></li>
+                                <li><span><i className='bx bx-check'></i> Business / Company / Agency Websites</span></li>
+                                <li><span><i className='bx bx-check'></i> Personal (Bio) / Portfolio / Coaching Websites</span></li>
+                                <li><span><i className='bx bx-check'></i> School / Education / LMS Websites</span></li>
+                                <li><span><i className='bx bx-check'></i> Health / Doctors / Medical Websites </span></li>
+                                <li><span><i className='bx bx-check'></i> Restaurant / Hotel Booking Websites</span></li>
+                                <li><span><i className='bx bx-check'></i> Consultation / Accountant / Lawyer Firm Websites</span></li>
+                                <li><span><i className='bx bx-check'></i> Real Estate / Constructors (Architect) Websites</span></li>
+                                <li><span><i className='bx bx-check'></i> NGO / Charity / Donation Websites</span></li>
                             </ul>
+
+                            <Link to="/contact" className="default-btn">
+                                <i className="flaticon-right"></i>
+                                Order Now!
+                                <span></span>
+                            </Link>
+
+                            {/* <Link to="/pricing/" className=""> */}
+                            <Link to="/services/website-development#pricing-section" className="default-btn ml-1 ml-sm-3" >
+                                <i className="flaticon-price-tag"></i>
+                                Pricing
+                                <span></span>
+                            </Link>
                         </div>
                     </div>
                 </div>

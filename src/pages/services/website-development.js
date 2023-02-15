@@ -35,16 +35,16 @@ const servicePackages = {
         },
         standard: {
             title: `Standard`,
-            price: `Rs. 44,000`,
+            price: `Rs. 54,000`,
             saving: `Save Rs. 15,000`,
-            discountedPrice: `Rs. 29,000`,
+            discountedPrice: `Rs. 39,000`,
             description: `Standard E-Commerce Website: Complete business website with eCommerce functionality. Fully responsive & SEO optimized.`
         },
         premium: {
             title: `Premium`,
             price: `Rs. 89,000`,
-            saving: `Save Rs. 30,000`,
-            discountedPrice: `Rs. 59,000`,
+            saving: `Save Rs. 20,000`,
+            discountedPrice: `Rs. 69,000`,
             description: `Premium E-Commerce Website: Highly customized ecommerce website with premium features, Plugins, & advance layouts.`
         },
     },
