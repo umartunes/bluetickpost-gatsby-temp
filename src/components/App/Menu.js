@@ -145,7 +145,7 @@ export default function Menu() {
 						</Link>
 					</li>
 
-					<li className="nav-item">
+					{/* <li className="nav-item">
 						<Link
 							to="/services/logo-designing"
 							activeClassName="active"
@@ -169,7 +169,7 @@ export default function Menu() {
 						>
 							Business Card, Letterhead, and Stationery Designing
 						</Link>
-					</li>
+					</li> */}
 
 
 				</ul>
