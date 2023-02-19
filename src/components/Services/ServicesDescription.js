@@ -25,7 +25,7 @@ const ServicesDescription = () => {
                         <div className="content right-content">
                             <span className="sub-title">Web Design & Development</span>
                             <h2>Professional, Clean, and Modern Websites</h2>
-                            <p>At Techna; we design & develop clean & attractive websites and e-commerce (online) stores which are SEO optimized, has fast-loading pages, and is responsive across all devices (Mobile, Desktop, Tablet)</p>
+                            <p>At Techna; we design and develop clean and attractive websites and e-commerce (online) stores which are SEO optimized, has fast-loading pages, and is responsive across all devices (Mobile, Desktop, Tablet)</p>
 
                             <ul className="features-list mb-3">
                                 <li><span><i className='bx bx-check'></i> E-commerce Websites / Online Stores</span></li>
