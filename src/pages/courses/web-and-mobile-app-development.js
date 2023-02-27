@@ -16,9 +16,9 @@ const program = {
   certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish the course. Students are required to submit assignments and projects assigned to them to graduate this course.`,
   courseFor: `Our Web & Mobile App Development program is designed for students who have passed grade 10 from their schools. and are motivated to do achieve big things in life.`,
 
-  price: "Rs. 2000 / month",
+  price: "Rs. 2500 / month",
   discountPercentage: "50% Off",
-  priceBeforeDiscount: "Rs. 4000",
+  priceBeforeDiscount: "Rs. 5000",
   courseDuration: "~6 months",
   classDuration: "~2 Hours",
   classDays: "2 days a week(Sat & Sunday)",
