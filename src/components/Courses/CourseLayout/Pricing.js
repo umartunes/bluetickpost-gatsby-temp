@@ -4,29 +4,59 @@ import { Link } from "gatsby";
 const packages = [
   
   {
-    name: "Normal Class",
+    name: "Normal Classes",
     price: "Rs. 2500",
     discountPercentage: "50% Off",
     priceBeforeDiscount: "Rs. 5000",
     link: "/apply",
-    description: ["Face To Face & Online VIA Zoom",],
+    description: ["Onsite / Face To Face",],
   },
-  // {
-  //   name: "Group",
-  //   price: "Rs. 8000 / student", // $450 per month
-  //   link: "/apply",
-  //   // link: "/register?type=group",
-  //   description: ["6 students", "Face To Face & Online VIA Zoom",],
-  // },
+  {
+    name: "Online Classes",
+    price: "Rs. 2500",
+    discountPercentage: "50% Off",
+    priceBeforeDiscount: "Rs. 5000",
+    isOneTimeFee: true,
+    link: "/apply",
+    // link: "/register?type=group",
+    description: ["Online VIA Zoom",],
+  },
   {
     name: "Personal / Private",
     price: "Rs. 12000",
     link: "/apply",
     // link: "/register?type=private",
-    description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
+    description: ["1:1 Instructor", "Onsite & Online VIA Zoom",],
   },
 
 ];
+
+// const packages = [
+  
+//   {
+//     name: "Normal Class",
+//     price: "Rs. 2500",
+//     discountPercentage: "50% Off",
+//     priceBeforeDiscount: "Rs. 5000",
+//     link: "/apply",
+//     description: ["Face To Face & Online VIA Zoom",],
+//   },
+//   {
+//     name: "Group",
+//     price: "Rs. 8000 / student", // $450 per month
+//     link: "/apply",
+//     // link: "/register?type=group",
+//     description: ["6 students", "Face To Face & Online VIA Zoom",],
+//   },
+//   {
+//     name: "Personal / Private",
+//     price: "Rs. 12000",
+//     link: "/apply",
+//     // link: "/register?type=private",
+//     description: ["1:1 Instructor", "Face To Face & Online VIA Zoom",],
+//   },
+
+// ];
 
 const Pricing = () => {
   return (
@@ -49,7 +79,7 @@ const Pricing = () => {
         <div className="row">
           {packages.map((pkg, i) => {
             return (
-              <div key={i} className="col-12 col-md-6">
+              <div key={i} className="col-12 col-md-4">
                 <div className="card text-center mb-3">
                   <h5 className="card-header">{pkg.name}</h5>
                   <div className="card-body">
@@ -61,7 +91,7 @@ const Pricing = () => {
                       : <></>
                     }
 
-                    <h5 className="card-title">{pkg.price} <small className="text-muted">/ month</small> </h5>
+                    <h5 className="card-title">{pkg.price} <small className="text-muted">/ {pkg.isOneTimeFee ? `One-time Fees` : `month`}</small> </h5>
 
                     {pkg.description.map((d, j) => {
                       return (

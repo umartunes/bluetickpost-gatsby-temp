@@ -72,6 +72,8 @@ const CoursesDetailsSidebar = ({ program }) => {
                                 <p className="mb-0"><small><span><i className="flaticon-tick" style={{ fontSize: 12 }}></i>Some premium software</span></small></p>
                                 <p className="mb-0"><small><span><i className="flaticon-tick" style={{ fontSize: 12 }}></i>Course material (Soft copy)</span></small></p>
                                 <p className="mb-0"><small><span><i className="flaticon-tick" style={{ fontSize: 12 }}></i>Certificate of completion</span></small></p>
+                                <p className="mb-0"><small><span><i className="flaticon-tick" style={{ fontSize: 12 }}></i>Access to LMS (Student Portal)</span></small></p>
+                                <p className="mb-0"><small><span><i className="flaticon-tick" style={{ fontSize: 12 }}></i>Weekly Assignments & Quizzes</span></small></p>
                             </div>
                         </div>
                     </li>
