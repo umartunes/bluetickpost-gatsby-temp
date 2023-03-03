@@ -11,16 +11,16 @@ const packages = [
     link: "/apply",
     description: ["Onsite / Face To Face",],
   },
-  {
-    name: "Online Classes",
-    price: "Rs. 2500",
-    discountPercentage: "50% Off",
-    priceBeforeDiscount: "Rs. 5000",
-    isOneTimeFee: true,
-    link: "/apply",
-    // link: "/register?type=group",
-    description: ["Online VIA Zoom",],
-  },
+  // {
+  //   name: "Online Classes",
+  //   price: "Rs. 2500",
+  //   discountPercentage: "50% Off",
+  //   priceBeforeDiscount: "Rs. 5000",
+  //   isOneTimeFee: true,
+  //   link: "/apply",
+  //   // link: "/register?type=group",
+  //   description: ["Online VIA Zoom",],
+  // },
   {
     name: "Personal / Private",
     price: "Rs. 12000",
@@ -79,7 +79,7 @@ const Pricing = () => {
         <div className="row">
           {packages.map((pkg, i) => {
             return (
-              <div key={i} className="col-12 col-md-4">
+              <div key={i} className="col-12 col-md-6">
                 <div className="card text-center mb-3">
                   <h5 className="card-header">{pkg.name}</h5>
                   <div className="card-body">
