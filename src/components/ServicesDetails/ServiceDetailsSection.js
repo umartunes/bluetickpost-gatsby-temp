@@ -28,13 +28,13 @@ const ServiceDetailsSection = ({ service }) => {
                             <div className="explore-learning-video">
                                 <img src={service.serviceVideoThumb} className="mb-4" alt={service.serviceHeading} />
 
-                                <Link
+                                {/* <Link
                                     to="#"
                                     onClick={e => { e.preventDefault(); openModal() }}
                                     className="video-btn popup-youtube"
                                 >
                                     <i className="flaticon-google-play"></i>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
 
