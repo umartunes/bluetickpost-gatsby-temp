@@ -9,7 +9,7 @@ const packages = [
     discountPercentage: "50% Off",
     priceBeforeDiscount: "Rs. 5000",
     link: "/apply",
-    description: ["Onsite / Face To Face",],
+    description: ["Onsite & Online VIA Zoom",],
   },
   // {
   //   name: "Online Classes",
