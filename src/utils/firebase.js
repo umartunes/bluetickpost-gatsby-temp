@@ -3,7 +3,7 @@ require("firebase/firestore");
 // require("firebase/auth");
 // require("firebase/functions");
 // require("firebase/messaging");
-// require("firebase/storage");
+require("firebase/storage");
 // require("firebase/analytics");
 
 // Firebase Config
@@ -46,9 +46,9 @@ const firestore = firebase.firestore();
 
 /* Firebase Storage */
 // Get a reference to the storage service, which is used to create references in your storage bucket
-// const storage = firebase.storage();
-// const storageRef = storage.ref(); // Create a storage reference from our storage service
-// const imagesRef = storageRef.child('images'); // Create a child reference; imagesRef now points to 'images'
+const storage = firebase.storage();
+const storageRef = storage.ref(); // Create a storage reference from our storage service
+const resumesRef = storageRef.child('resumes'); // Create a child reference; imagesRef now points to 'images'
 // const audiosRef = storageRef.child('audios'); // Create a child reference; imagesRef now points to 'images'
 // Child references can also take paths delimited by '/'
 // var spaceRef = storageRef.child('images/space.jpg');
@@ -59,4 +59,4 @@ const firestore = firebase.firestore();
 // Uncomment the desired reference from all aspects for usage
 // export {storageRef, imagesRef, firestore, auth, functions, facebookProvider, googleProvider, firebaseProjectId }
 // export { firebase, firestore, functions, storageRef, imagesRef, PADRef, auth, facebookProvider, googleProvider, firebaseProjectId }
-export { firebase, firestore }
+export { firebase, firestore, resumesRef }

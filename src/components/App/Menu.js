@@ -216,6 +216,19 @@ export default function Menu() {
 
 
 			</li>
+			<li className="nav-item">
+				<Link
+					to="/jobs"
+					activeClassName="active"
+					onClick={e => window.location.pathname === "/jobs" ? e.preventDefault() : setCollapsed(true)}
+					// onClick={(e) => e.preventDefault()}
+					className="nav-link"
+				>
+					Careers
+				</Link>
+
+
+			</li>
 			{/* <li className="nav-item">
 				<Link
 					to="/blog"
