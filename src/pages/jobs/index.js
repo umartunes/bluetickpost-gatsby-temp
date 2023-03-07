@@ -40,7 +40,21 @@ const Jobs = () => {
                                         </AccordionItemButton>
                                     </AccordionItemHeading>
                                     <AccordionItemPanel>
+                                        <div className='my-3' style={{ color: '#6b6b84' }}>
+                                            <h6>💼 {job.jobType} | 🌎 {job.jobLocation} | ⏳ {job.experienceLevel} | Available:  {job.isAvailable ? `🟢` : `🔴`} </h6>
+
+                                        </div>
+
                                         <p dangerouslySetInnerHTML={{ __html: job.description }}></p>
+
+                                        {job.isAvailable ? ``
+                                            : <div class="alert alert-info" role="alert">
+                                                <strong>
+                                                    We currently don't have any seats vacant for this job post. But you can still apply for this job. We will reach out to you when a seat is vacant, and if we think you're a good fit!
+                                                </strong>
+                                            </div>
+                                        }
+
                                         <Link to="/jobs/apply" className="default-btn">
                                             <i className="flaticon-right"></i>
                                             Apply Now!

@@ -1,8 +1,11 @@
 export const jobs = [
     {
         id: `sales-and-marketing-manager`,
-        title: `Sales & Marketing Manager ( Contract Basis )`,
+        title: `Sales & Marketing Manager`,
         isAvailable: true,
+        jobType: `Contract Basis`, // Full-time, Part-time, Contract, Temporary, Internship, Other
+        jobLocation: `Remote`, // On-site (CityName), Remote, Hybrid
+        experienceLevel: `1+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
         <h5>Job Description:</h5>
         <p>We are seeking an experienced Sales and Marketing Manager to join our team on a contract basis. The ideal candidate will be responsible for developing and implementing sales and marketing strategies to increase brand awareness, generate leads, and close deals, with a focus on digital and social media marketing. In addition, the candidate will be responsible for managing customer relationships and developing new business opportunities.</p>
@@ -34,6 +37,9 @@ export const jobs = [
         id: `mern-stack-developer`,
         title: `MERN Stack Developer`,
         isAvailable: false,
+        jobType: `Full-time`, //Full-time, Part-time, Contract, Temporary, Internship, Other
+        jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
+        experienceLevel: `2+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
         <h5>Job Description:</h5>
         <p>We are seeking a highly skilled MERN Stack Developer to join our team. As a MERN Stack Developer, you will be responsible for developing and maintaining web applications using the MERN stack (MongoDB, Express, React, and Node.js). You should be a problem solver, have good communication skills, and be able to work well in a team environment.</p>
@@ -72,6 +78,9 @@ export const jobs = [
         id: `wordpress-developer`,
         title: `WordPress Developer`,
         isAvailable: false,
+        jobType: `Full-time`, //Full-time, Part-time, Contract, Temporary, Internship, Other
+        jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
+        experienceLevel: `1+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
         <h5>Job Description:</h5>
         <p>We are seeking a skilled WordPress Developer to join our team. As a WordPress Developer, you will be responsible for designing and implementing custom WordPress websites for our clients. Your primary focus will be on the development of websites and plugins, as well as maintaining and updating existing WordPress websites. The ideal candidate should have a strong understanding of WordPress development, website design principles, and be able to work effectively both independently and as part of a team.</p>
@@ -103,6 +112,9 @@ export const jobs = [
         id: `graphic-designer`,
         title: `Graphic Designer`,
         isAvailable: false,
+        jobType: `Part-time`, //Full-time, Part-time, Contract, Temporary, Internship, Other
+        jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
+        experienceLevel: `Entry level`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
         <h5>Job Description:</h5>
         <p>We are seeking a talented and creative Graphic Designer to join our team. As a Graphic Designer, you will be responsible for creating visually appealing graphics, logos, banners, and other design elements for our clients. You will collaborate with our team of web developers and digital marketers to ensure that the designs you create are optimized for digital platforms and effectively communicate the client's message.</p>

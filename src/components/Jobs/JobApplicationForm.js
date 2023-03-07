@@ -345,13 +345,14 @@ const JobApplicationForm = () => {
                                                 <div className="form-group">
                                                     <select name="jobPosition" defaultValue="" className="form-control" required onChange={handleFormData}>
                                                         <option value="">Select</option>
-
                                                         {jobs
-                                                            .filter((job, i) => { return job.isAvailable })
+                                                            // .filter((job, i) => { return job.isAvailable })
                                                             .map((job, i) => {
-                                                                return <option key={job.id} value={job.title}>{job.title}</option>
+                                                                return <option key={job.id} value={job.title}>{job.title} {job.jobType === "Contract Basis" ? `( ${job.jobType} )` : ''} </option>
                                                             })}
                                                     </select>
+
+                                                    
                                                 </div>
                                             </div>
 
