@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import starIcon from '../../assets/images/star-icon.png'
 import contact from '../../assets/images/contact.png'
-import { firebase, firestore } from '../../utils/firebase'
+// import { firebase, firestore } from '../../utils/firebase'
 import { useToasts } from 'react-toast-notifications'
+
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
 
@@ -52,26 +54,53 @@ const ContactForm = () => {
             return;
         }
 
-        let dataToSave = { fullName, email, phoneNumber, message }
-
-        dataToSave.id = Math.random().toString(36).slice(2)
-        dataToSave.dateCreated = firebase.firestore.Timestamp.fromDate(new Date())
-        dataToSave.dateModified = firebase.firestore.Timestamp.fromDate(new Date())
-        dataToSave.status = "active"
-
         setIsLoading(true)
 
-        let ContactForms = firestore.collection("ContactForms").doc(dataToSave.id)
+        let postData = {}
+        postData.from_name = fullName
+        postData.from_email = email
+        postData.from_phone = phoneNumber
+        postData.message = message
 
-        ContactForms.set(dataToSave).then(() => {
-            notify('Thanks! Your message has been submitted successfully')
-            setIsSubmitted(true)
-        }).catch((error) => {
-            alert("Something went wrong. Please try again later.")
-            console.log(error)
-        }).finally(() => {
-            setIsLoading(false)
-        })
+        let serviceId = "service_irinftl"
+        let templateId = "template_7svim2c"
+        let publicKey = "a9gON-kp1nNytbrUf"
+
+        emailjs.send(serviceId, templateId, postData, publicKey)
+            .then((result) => {
+                console.log(result.text);
+                notify('Thanks! Your message has been submitted successfully')
+                setIsSubmitted(true)
+            })
+            .catch(err => {
+                notify('Something went wrong. Please contact us using chat below OR via facebook page', 'error')
+                console.log(err)
+            })
+            .finally(() => {
+                setIsLoading(false)
+            });
+
+
+        // let dataToSave = { fullName, email, phoneNumber, message }
+
+        // dataToSave.id = Math.random().toString(36).slice(2)
+        // dataToSave.dateCreated = firebase.firestore.Timestamp.fromDate(new Date())
+        // dataToSave.dateModified = firebase.firestore.Timestamp.fromDate(new Date())
+        // dataToSave.status = "active"
+
+        // setIsLoading(true)
+
+        // let ContactForms = firestore.collection("ContactForms").doc(dataToSave.id)
+
+        // ContactForms.set(dataToSave).then(() => {
+        //     notify('Thanks! Your message has been submitted successfully')
+        //     setIsSubmitted(true)
+        // }).catch((error) => {
+        //     alert("Something went wrong. Please try again later.")
+        //     console.log(error)
+        // }).finally(() => {
+        //     setIsLoading(false)
+        // })
 
     }
 
