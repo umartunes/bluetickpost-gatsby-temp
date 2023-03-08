@@ -37,11 +37,12 @@ const Jobs = () => {
                                     <AccordionItemHeading>
                                         <AccordionItemButton>
                                             {job.title}
+                                            {/* {job.title} <span className='float-right'>{job.isAvailable ? `🟢` : `🔴`}</span> */}
                                         </AccordionItemButton>
                                     </AccordionItemHeading>
                                     <AccordionItemPanel>
                                         <div className='my-3' style={{ color: '#6b6b84' }}>
-                                            <h6>💼 {job.jobType} | 🌎 {job.jobLocation} | ⏳ {job.experienceLevel} | Available:  {job.isAvailable ? `🟢` : `🔴`} </h6>
+                                            <h6>💼 {job.jobType} | 🌎 {job.jobLocation} | ⏳ {job.experienceLevel} | Available: {job.isAvailable ? `🟢` : `🔴`}</h6>
 
                                         </div>
 

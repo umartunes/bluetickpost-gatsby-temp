@@ -8,6 +8,8 @@ import { jobs } from '../../data/jobs'
 
 import { Element, scroller } from 'react-scroll'
 
+import emailjs from '@emailjs/browser';
+
 const JobApplicationForm = () => {
 
     const { addToast } = useToasts()
@@ -108,11 +110,11 @@ const JobApplicationForm = () => {
         uploadFileAsPromise(resumeFile)
             .then((snapshot) => {
 
-                console.log(snapshot)
+                // console.log(snapshot)
 
                 snapshot.ref.getDownloadURL().then((downloadURL) => {
 
-                    console.log(downloadURL)
+                    // console.log(downloadURL)
 
                     dataToSave.resumeFileURL = downloadURL
 
@@ -124,11 +126,13 @@ const JobApplicationForm = () => {
 
                         scroller.scrollTo('success-section', {
                             duration: 500,
-                            delay: 1000,
+                            delay: 300,
                             smooth: true,
                             // containerId: 'ContainerElementID',
                             offset: -100, // Scrolls to element -10 pixels down the page
                         })
+
+                        sendEmailNotification( dataToSave )
 
                     }).catch((error) => {
                         notify("Something went wrong. Please try again later.", 'error')
@@ -150,6 +154,31 @@ const JobApplicationForm = () => {
 
     }
 
+    const sendEmailNotification = (postData) => {
+
+        let serviceId = "service_irinftl"
+        let templateId = "template_pshpstp"
+        let publicKey = "a9gON-kp1nNytbrUf"
+
+        postData.from_name = postData.fullName
+        postData.from_email = postData.email
+        postData.from_phone = postData.phoneNumber
+
+
+        emailjs.send(serviceId, templateId, postData, publicKey)
+            .then((result) => {
+                console.log(result.text);
+                // notify('Thanks! Your message has been submitted successfully')
+                // setIsSubmitted(true)
+            })
+            .catch(err => {
+                // notify('Something went wrong. Please contact us using chat below OR via facebook page', 'error')
+                // console.log(err)
+            })
+            .finally(() => {
+                // setIsLoading(false)
+            });
+    }
 
     const onFileSelect = e => {
 
@@ -179,7 +208,7 @@ const JobApplicationForm = () => {
             return;
         }
 
-        console.log(file)
+        // console.log(file)
 
         setResumeFile(file)
 
@@ -352,7 +381,7 @@ const JobApplicationForm = () => {
                                                             })}
                                                     </select>
 
-                                                    
+
                                                 </div>
                                             </div>
 
