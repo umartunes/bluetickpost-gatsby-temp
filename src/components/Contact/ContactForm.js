@@ -4,6 +4,8 @@ import contact from '../../assets/images/contact.png'
 // import { firebase, firestore } from '../../utils/firebase'
 import { useToasts } from 'react-toast-notifications'
 
+import { Element, scroller } from 'react-scroll'
+
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
@@ -35,7 +37,7 @@ const ContactForm = () => {
         phoneNumber = phoneNumber.trim()
         message = message.trim()
 
-        let notify = (message, type="success") => { addToast(message, { appearance: type, autoDismiss: true }) }
+        let notify = (message, type = "success") => { addToast(message, { appearance: type, autoDismiss: true }) }
 
         if (fullName.length < 3) {
             notify('Please enter your name correctly', 'error')
@@ -71,6 +73,14 @@ const ContactForm = () => {
                 console.log(result.text);
                 notify('Thanks! Your message has been submitted successfully')
                 setIsSubmitted(true)
+
+                scroller.scrollTo('success-section', {
+                    duration: 500,
+                    delay: 300,
+                    smooth: true,
+                    // containerId: 'ContainerElementID',
+                    offset: -100, // Scrolls to element -10 pixels down the page
+                })
             })
             .catch(err => {
                 notify('Something went wrong. Please contact us using chat below OR via facebook page', 'error')
@@ -124,14 +134,14 @@ const ContactForm = () => {
                     </div>
                     {isSubmitted
                         ? <>
-                        <div className="col-lg-6 col-md-12">
-
-                            <div className="p-5 bg-success text-white d-flex flex-column justify-content-center align-items-center">
-                                <h3>Thanks!</h3>
-                                <h5>Your message has been submitted.</h5>
-                                <h5>We'll get back to you as soon as possible.</h5>
+                            <div className="col-lg-6 col-md-12">
+                                <Element name="success-section" className="element">&nbsp;</Element>
+                                <div className="p-5 bg-success text-white d-flex flex-column justify-content-center align-items-center">
+                                    <h3>Thanks!</h3>
+                                    <h5>Your message has been submitted.</h5>
+                                    <h5>We'll get back to you as soon as possible.</h5>
+                                </div>
                             </div>
-                        </div>
                         </>
                         : <>
                             <div className="col-lg-6 col-md-12">

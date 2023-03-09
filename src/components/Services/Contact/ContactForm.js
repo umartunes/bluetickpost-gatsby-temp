@@ -4,6 +4,8 @@ import contact from '../../../assets/images/contact.png'
 // import { firebase, firestore } from '../../../utils/firebase'
 import { useToasts } from 'react-toast-notifications'
 
+import { Element, scroller } from 'react-scroll'
+
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
@@ -94,6 +96,14 @@ const ContactForm = () => {
                 console.log(result.text);
                 notify('Thanks! Your message has been submitted successfully')
                 setIsSubmitted(true)
+
+                scroller.scrollTo('success-section', {
+                    duration: 500,
+                    delay: 300,
+                    smooth: true,
+                    // containerId: 'ContainerElementID',
+                    offset: -100, // Scrolls to element -10 pixels down the page
+                })
             })
             .catch(err => {
                 notify('Something went wrong. Please contact us using chat below OR via facebook page', 'error')
@@ -149,7 +159,7 @@ const ContactForm = () => {
                     {isSubmitted
                         ? <>
                             <div className="col-lg-7 col-md-12">
-
+                                <Element name="success-section" className="element">&nbsp;</Element>
                                 <div className="p-5 bg-success text-white text-center d-flex flex-column justify-content-center align-items-center">
                                     <h3>Thank you!</h3>
                                     <h5>Thanks for getting in touch with us.</h5>
