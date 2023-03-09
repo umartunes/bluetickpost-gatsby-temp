@@ -3,8 +3,8 @@ import Layout from "../../components/App/Layout"
 import NavbarTwo from "../../components/App/NavbarTwo"
 import Footer from "../../components/App/Footer"
 
-import ServiceDetailsSection from '../../components/ServicesDetails/ServiceDetailsSection'
-import ServicePricingSection from '../../components/ServicesDetails/ServicePricingSection'
+import ServiceDetailsSection from '../../components/Services/ServiceDetailsSection'
+import ServicePricingSection from '../../components/Services/ServicePricingSection'
 
 import { Element, scroller } from 'react-scroll'
 
