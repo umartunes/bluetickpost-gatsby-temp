@@ -162,8 +162,7 @@ const ContactForm = () => {
                                 <Element name="success-section" className="element">&nbsp;</Element>
                                 <div className="p-5 bg-success text-white text-center d-flex flex-column justify-content-center align-items-center">
                                     <h3>Thank you!</h3>
-                                    <h5>Thanks for getting in touch with us.</h5>
-                                    <h5>A team member from Techna will get back to you within 24 - 48 hours.</h5>
+                                    <h5>Thanks for getting in touch with us. A team member from Techna will get back to you within 24 - 48 hours.</h5>
                                 </div>
                             </div>
                         </>
