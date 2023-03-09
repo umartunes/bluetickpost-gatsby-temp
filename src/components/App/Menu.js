@@ -130,7 +130,7 @@ export default function Menu() {
 					Services <i className="bx bx-chevron-down"></i>
 				</Link>
 
-				<ul className="dropdown-menu">
+				{/* <ul className="dropdown-menu">
 
 					<li className="nav-item">
 						<Link
@@ -145,7 +145,7 @@ export default function Menu() {
 						</Link>
 					</li>
 
-					{/* <li className="nav-item">
+					<li className="nav-item">
 						<Link
 							to="/services/logo-designing"
 							activeClassName="active"
@@ -169,12 +169,12 @@ export default function Menu() {
 						>
 							Business Card, Letterhead, and Stationery Designing
 						</Link>
-					</li> */}
+					</li>
 
 
 				</ul>
 
-			</li>
+			</li> */}
 
 			{/* <li className="nav-item">
 				<Link
