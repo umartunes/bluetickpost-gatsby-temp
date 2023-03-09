@@ -45,7 +45,7 @@ const ServiceDetailsSection = ({ service }) => {
                                     return <p key={i} dangerouslySetInnerHTML={{ __html: para }}></p>
                                 })}
                                 
-                                <Link to="/contact" className="default-btn">
+                                <Link to="/services/contact" className="default-btn">
                                     <i className="flaticon-right"></i>
                                     Order Now!
                                     <span></span>

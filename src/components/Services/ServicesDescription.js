@@ -40,7 +40,7 @@ const ServicesDescription = () => {
                                 <li><span><i className='bx bx-check'></i> NGO / Charity / Donation Websites</span></li>
                             </ul>
 
-                            <Link to="/contact" className="default-btn">
+                            <Link to="/services/contact" className="default-btn">
                                 <i className="flaticon-right"></i>
                                 Order Now!
                                 <span></span>

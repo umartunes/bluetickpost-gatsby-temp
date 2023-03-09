@@ -87,17 +87,17 @@ const ServicePricingSection = ({ servicePackages }) => {
                                 <tr className='d-none d-md-table-row'>
                                     <td></td>
                                     <td>
-                                        <Link to="/contact" target="_blank" className="select-btn">
+                                        <Link to="/services/contact" target="_blank" className="select-btn">
                                             Order Now
                                         </Link>
                                     </td>
                                     <td>
-                                        <Link to="/contact" target="_blank" className="select-btn">
+                                        <Link to="/services/contact" target="_blank" className="select-btn">
                                             Order Now
                                         </Link>
                                     </td>
                                     <td>
-                                        <Link to="/contact" target="_blank" className="select-btn">
+                                        <Link to="/services/contact" target="_blank" className="select-btn">
                                             Order Now
                                         </Link>
                                     </td>
@@ -105,7 +105,7 @@ const ServicePricingSection = ({ servicePackages }) => {
 
                                 <tr className='d-table-row d-md-none'>
                                     <td className='p-0' colSpan={4}>
-                                        <Link to="/contact" target="_blank" className="select-btn w-100 text-center" >
+                                        <Link to="/services/contact" target="_blank" className="select-btn w-100 text-center" >
                                             Order Now
                                         </Link>
                                     </td>
