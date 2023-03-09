@@ -115,7 +115,7 @@ export default function Menu() {
 				</ul> */}
 			</li>
 			
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link
 					to="/services"
 					activeClassName="active"
@@ -130,7 +130,7 @@ export default function Menu() {
 					Services <i className="bx bx-chevron-down"></i>
 				</Link>
 
-				{/* <ul className="dropdown-menu">
+				<ul className="dropdown-menu">
 
 					<li className="nav-item">
 						<Link
