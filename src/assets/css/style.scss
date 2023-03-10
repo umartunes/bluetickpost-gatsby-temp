@@ -6348,6 +6348,10 @@ FAQ Area CSS
                 line-height: 1.8;
                 font-size: 15px;
             }
+            li {
+                font-size: 15px !important;
+                color: #6b6b84 !important;
+            }
             &.show {
                 display: block;
             }

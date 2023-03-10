@@ -48,7 +48,9 @@ const Jobs = () => {
                                             <h6>💼 {job.jobType} | 🌎 {job.jobLocation} | ⏳ {job.experienceLevel} | Available: {job.isAvailable ? `🟢` : `🔴`}</h6>
                                         </div>
 
-                                        <p dangerouslySetInnerHTML={{ __html: job.description }}></p>
+
+
+                                        <div dangerouslySetInnerHTML={{ __html: job.description }}></div>
 
                                         {job.isAvailable ? ``
                                             : <div className="alert alert-info" role="alert">

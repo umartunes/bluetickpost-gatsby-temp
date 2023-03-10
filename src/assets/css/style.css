@@ -962,7 +962,6 @@ Navbar Area CSS
     padding-top: 17px;
     padding-bottom: 17px;
   }
-
   .others-option-for-responsive {
     display: block;
   }
@@ -5419,6 +5418,10 @@ FAQ Area CSS
 .faq-accordion .accordion .accordion__panel p {
   line-height: 1.8;
   font-size: 15px;
+}
+.faq-accordion .accordion .accordion__panel li {
+  font-size: 15px !important;
+  color: #6b6b84 !important;
 }
 .faq-accordion .accordion .accordion__panel.show {
   display: block;
