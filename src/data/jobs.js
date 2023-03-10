@@ -7,10 +7,10 @@ export const jobs = [
         jobLocation: `Remote`, // On-site (CityName), Remote, Hybrid
         experienceLevel: `1+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
-        <h5>Job Description:</h5>
+        <h6>Job Description:</h6>
         <p>We are seeking an experienced Sales and Marketing Manager to join our team on a contract basis. The ideal candidate will be responsible for developing and implementing sales and marketing strategies to increase brand awareness, generate leads, and close deals, with a focus on digital and social media marketing. In addition, the candidate will be responsible for managing customer relationships and developing new business opportunities.</p>
         
-        <h5>Key Responsibilities:</h5>
+        <h6>Key Responsibilities:</h6>
         <ul>
             <li>Develop and implement sales and marketing strategies with a focus on digital and social media marketing to increase brand awareness and drive sales.</li>
             <li>Identify potential customers and generate leads through various digital channels.</li>
@@ -20,7 +20,7 @@ export const jobs = [
             <li>Collaborate with other departments, such as product development and customer service, to ensure alignment and customer satisfaction.</li>
         </ul>
         
-        <h5>Qualifications:</h5>
+        <h6>Qualifications:</h6>
         <ul>
             <li>Proven track record of success in sales and marketing, with a strong emphasis on digital and social media marketing.</li>
             <li>Excellent communication and interpersonal skills.</li>
@@ -41,10 +41,10 @@ export const jobs = [
         jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
         experienceLevel: `2+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
-        <h5>Job Description:</h5>
+        <h6>Job Description:</h6>
         <p>We are seeking a highly skilled MERN Stack Developer to join our team. As a MERN Stack Developer, you will be responsible for developing and maintaining web applications using the MERN stack (MongoDB, Express, React, and Node.js). You should be a problem solver, have good communication skills, and be able to work well in a team environment.</p>
         
-        <h5>Key Responsibilities:</h5>
+        <h6>Key Responsibilities:</h6>
         <ul>
             <li>Design, develop and maintain web applications using the MERN stack.</li>
             <li>Collaborate with the team to identify, prioritize and execute tasks in a timely manner.</li>
@@ -53,7 +53,7 @@ export const jobs = [
             <li>Ensure the scalability and maintainability of the applications.</li>
         </ul>
         
-        <h5>Requirements:</h5>
+        <h6>Requirements:</h6>
         <ul>
             <li>Proven experience as a MERN Stack Developer or similar role.</li>
             <li>Strong proficiency in JavaScript, React, Node.js, and MongoDB.</li>
@@ -65,7 +65,7 @@ export const jobs = [
             <li>Excellent communication and teamwork skills.</li>
         </ul>
 
-        <h5>Education and Experience:</h5>
+        <h6>Education and Experience:</h6>
         <ul>
             <li>Bachelor’s degree in Computer Science, Engineering or a related field.</li>
             <li>Minimum of 2 years of relevant work experience.</li>
@@ -82,10 +82,10 @@ export const jobs = [
         jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
         experienceLevel: `1+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
-        <h5>Job Description:</h5>
+        <h6>Job Description:</h6>
         <p>We are seeking a skilled WordPress Developer to join our team. As a WordPress Developer, you will be responsible for designing and implementing custom WordPress websites for our clients. Your primary focus will be on the development of websites and plugins, as well as maintaining and updating existing WordPress websites. The ideal candidate should have a strong understanding of WordPress development, website design principles, and be able to work effectively both independently and as part of a team.</p>
         
-        <h5>Key Responsibilities:</h5>
+        <h6>Key Responsibilities:</h6>
         <ul>
             <li>Develop custom WordPress websites using best practices and standards</li>
             <li>Create, modify and maintain WordPress plugins and themes</li>
@@ -95,7 +95,7 @@ export const jobs = [
             <li>Keep up-to-date with emerging trends and technologies in web development</li>
         </ul>
         
-        <h5>Requirements:</h5>
+        <h6>Requirements:</h6>
         <ul>
             <li>Strong proficiency in WordPress development, including custom themes and plugins</li>
             <li>Proficient in PHP, HTML5, CSS3, JavaScript, and jQuery</li>
@@ -116,10 +116,10 @@ export const jobs = [
         jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
         experienceLevel: `Entry level`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
-        <h5>Job Description:</h5>
+        <h6>Job Description:</h6>
         <p>We are seeking a talented and creative Graphic Designer to join our team. As a Graphic Designer, you will be responsible for creating visually appealing graphics, logos, banners, and other design elements for our clients. You will collaborate with our team of web developers and digital marketers to ensure that the designs you create are optimized for digital platforms and effectively communicate the client's message.</p>
         
-        <h5>Key Responsibilities:</h5>
+        <h6>Key Responsibilities:</h6>
         <ul>
             <li>Create visually appealing designs for web and print media, including logos, banners, social media graphics, and other marketing collateral.</li>
             <li>Develop and present design concepts to clients and collaborate with them to refine and finalize designs.</li>
@@ -129,7 +129,7 @@ export const jobs = [
             
         </ul>
         
-        <h5>Qualifications:</h5>
+        <h6>Qualifications:</h6>
         <ul>
             <li>Certificate / Degree in Graphic Design, Visual Communication, or related field.</li>
             <li>Proven experience as a Graphic Designer or similar role.</li>
