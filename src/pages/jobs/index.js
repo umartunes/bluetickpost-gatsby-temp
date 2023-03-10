@@ -33,6 +33,9 @@ const Jobs = () => {
                     <div className="faq-accordion">
                         <Accordion>
                             {jobs.map((job, i) => {
+
+                                console.log( job.description )
+
                                 return <AccordionItem key={i}>
                                     <AccordionItemHeading>
                                         <AccordionItemButton>
@@ -43,13 +46,12 @@ const Jobs = () => {
                                     <AccordionItemPanel>
                                         <div className='my-3' style={{ color: '#6b6b84' }}>
                                             <h6>💼 {job.jobType} | 🌎 {job.jobLocation} | ⏳ {job.experienceLevel} | Available: {job.isAvailable ? `🟢` : `🔴`}</h6>
-
                                         </div>
 
                                         <p dangerouslySetInnerHTML={{ __html: job.description }}></p>
 
                                         {job.isAvailable ? ``
-                                            : <div class="alert alert-info" role="alert">
+                                            : <div className="alert alert-info" role="alert">
                                                 <strong>
                                                     We currently don't have any seats vacant for this job post. But you can still apply for this job. We will reach out to you when a seat is vacant, and if we think you're a good fit!
                                                 </strong>
