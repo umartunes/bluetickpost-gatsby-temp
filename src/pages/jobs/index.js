@@ -34,7 +34,7 @@ const Jobs = () => {
                         <Accordion>
                             {jobs.map((job, i) => {
 
-                                console.log( job.description )
+                                // console.log( job.description )
 
                                 return <AccordionItem key={i}>
                                     <AccordionItemHeading>
