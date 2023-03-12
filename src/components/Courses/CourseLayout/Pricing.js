@@ -5,9 +5,9 @@ const packages = [
   
   {
     name: "Normal Classes",
-    price: "Rs. 2500",
+    price: "PKR 2500",
     discountPercentage: "50% Off",
-    priceBeforeDiscount: "Rs. 5000",
+    priceBeforeDiscount: "PKR 5000",
     link: "/apply",
     description: ["Onsite & Online VIA Zoom",],
   },
@@ -23,7 +23,7 @@ const packages = [
   // },
   {
     name: "Personal / Private",
-    price: "Rs. 12000",
+    price: "USD 70",
     link: "/apply",
     // link: "/register?type=private",
     description: ["1:1 Instructor", "Onsite & Online VIA Zoom",],
