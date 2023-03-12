@@ -78,7 +78,7 @@ export const jobs = [
     },
     {
         id: `sales-and-marketing-manager`,
-        title: `Sales & Marketing Manager`,
+        title: `Business Development Manager`,
         isAvailable: true,
         positions: 1,
         jobType: `Contract Basis`, // Full-time, Part-time, Contract, Temporary, Internship, Other
@@ -86,7 +86,7 @@ export const jobs = [
         experienceLevel: `1+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
         description: `
         <h6>Job Description:</h6>
-        <p>We are seeking an experienced Sales and Marketing Manager to join our team on a contract basis. The ideal candidate will be responsible for developing and implementing sales and marketing strategies to increase brand awareness, generate leads, and close deals, with a focus on digital and social media marketing. In addition, the candidate will be responsible for managing customer relationships and developing new business opportunities.</p>
+        <p>We are seeking an experienced Business Development Manager to join our team on a contract basis. The ideal candidate will be responsible for developing and implementing sales and marketing strategies to increase brand awareness, generate leads, and close deals, with a focus on digital and social media marketing. In addition, the candidate will be responsible for managing customer relationships and developing new business opportunities.</p>
         
         <h6>Key Responsibilities:</h6>
         <ul>
