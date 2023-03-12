@@ -39,13 +39,14 @@ const Jobs = () => {
                                 return <AccordionItem key={i}>
                                     <AccordionItemHeading>
                                         <AccordionItemButton>
-                                            {job.title}
+                                            {job.title} <span class="badge badge-info float-right">{job.positions} position(s)</span>
                                             {/* {job.title} <span className='float-right'>{job.isAvailable ? `🟢` : `🔴`}</span> */}
                                         </AccordionItemButton>
                                     </AccordionItemHeading>
                                     <AccordionItemPanel>
                                         <div className='my-3' style={{ color: '#6b6b84' }}>
-                                            <h6>💼 {job.jobType} | 🌎 {job.jobLocation} | ⏳ {job.experienceLevel} | Available: {job.isAvailable ? `🟢` : `🔴`}</h6>
+                                            <h6>💼 {job.jobType}  | 🌎 {job.jobLocation} | ⏳ {job.experienceLevel} | 👨‍💼 {job.positions} position(s)</h6>
+                                            {/* <h6>💼 {job.jobType}  | 🌎 {job.jobLocation} | ⏳ {job.experienceLevel} | Available: {job.isAvailable ? `🟢` : `🔴`}</h6> */}
                                         </div>
 
 
@@ -60,7 +61,7 @@ const Jobs = () => {
                                             </div>
                                         }
 
-                                        <Link to="/jobs/apply" className="default-btn">
+                                        <Link to="/jobs/apply" className="default-btn mt-3">
                                             <i className="flaticon-right"></i>
                                             Apply Now!
                                             <span></span>

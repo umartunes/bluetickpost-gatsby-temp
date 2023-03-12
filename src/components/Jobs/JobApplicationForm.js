@@ -270,8 +270,8 @@ const JobApplicationForm = () => {
                             <div className="col-12">
 
                                 <div className="p-5 bg-success text-white d-flex flex-column justify-content-center align-items-center">
-                                    <h5>Your application have been submitted successfully.</h5>
-                                    <h5>Thank you for your interest in joining our team! Someone will reach out to you if we think it's a good fit!</h5>
+                                    <h3>Thank you!</h3>
+                                    <h5>Your application have been submitted successfully. Someone will reach out to you if we think it's a good fit!</h5>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +284,7 @@ const JobApplicationForm = () => {
                                 Job Application Form
                             </span>
                             <h2>Join The Lead Tech Industry</h2>
-                            <p className='mx-auto' style={{ maxWidth: '80%' }}>Please complete the form below to apply for one of many great opportunities with Techna - and someone will reach out to you if we think it's a good fit!</p>
+                            <p className='mx-auto' style={{ maxWidth: '80%' }}>Thank you for your interest in joining our team! Please complete the form below to apply for one of many great opportunities with Techna.</p>
                         </div>
 
                         <div className="row">

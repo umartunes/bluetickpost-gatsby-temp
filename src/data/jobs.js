@@ -1,42 +1,9 @@
 export const jobs = [
     {
-        id: `sales-and-marketing-manager`,
-        title: `Sales & Marketing Manager`,
-        isAvailable: true,
-        jobType: `Contract Basis`, // Full-time, Part-time, Contract, Temporary, Internship, Other
-        jobLocation: `Remote`, // On-site (CityName), Remote, Hybrid
-        experienceLevel: `1+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
-        description: `
-        <h6>Job Description:</h6>
-        <p>We are seeking an experienced Sales and Marketing Manager to join our team on a contract basis. The ideal candidate will be responsible for developing and implementing sales and marketing strategies to increase brand awareness, generate leads, and close deals, with a focus on digital and social media marketing. In addition, the candidate will be responsible for managing customer relationships and developing new business opportunities.</p>
-        
-        <h6>Key Responsibilities:</h6>
-        <ul>
-            <li>Develop and implement sales and marketing strategies with a focus on digital and social media marketing to increase brand awareness and drive sales.</li>
-            <li>Identify potential customers and generate leads through various digital channels.</li>
-            <li>Manage customer relationships and develop new business opportunities through digital marketing initiatives.</li>
-            <li>Negotiate contracts and close deals with potential customers.</li>
-            <li>Analyze and report on the performance of digital marketing campaigns to identify areas for improvement.</li>
-            <li>Collaborate with other departments, such as product development and customer service, to ensure alignment and customer satisfaction.</li>
-        </ul>
-        
-        <h6>Qualifications:</h6>
-        <ul>
-            <li>Proven track record of success in sales and marketing, with a strong emphasis on digital and social media marketing.</li>
-            <li>Excellent communication and interpersonal skills.</li>
-            <li>Strong negotiating skills and the ability to close deals.</li>
-            <li>Experience with digital marketing tools and social media platforms.</li>
-            <li>Ability to work independently and in a team environment.</li>
-            <li>Strong analytical and problem-solving skills.</li>
-        </ul>
-
-        <p>We offer competitive salary and benefits packages, as well as opportunities for growth and development within the company. If you are a results-driven sales and marketing professional with a passion for building relationships and driving business growth, we encourage you to apply for this exciting opportunity.</p>
-        `
-    },
-    {
         id: `mern-stack-developer`,
         title: `MERN Stack Developer`,
-        isAvailable: false,
+        isAvailable: true,
+        positions: 2,
         jobType: `Full-time`, //Full-time, Part-time, Contract, Temporary, Internship, Other
         jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
         experienceLevel: `2+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
@@ -77,7 +44,8 @@ export const jobs = [
     {
         id: `wordpress-developer`,
         title: `WordPress Developer`,
-        isAvailable: false,
+        isAvailable: true,
+        positions: 1,
         jobType: `Full-time`, //Full-time, Part-time, Contract, Temporary, Internship, Other
         jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
         experienceLevel: `1+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
@@ -109,9 +77,45 @@ export const jobs = [
         `
     },
     {
+        id: `sales-and-marketing-manager`,
+        title: `Sales & Marketing Manager`,
+        isAvailable: true,
+        positions: 1,
+        jobType: `Contract Basis`, // Full-time, Part-time, Contract, Temporary, Internship, Other
+        jobLocation: `Remote`, // On-site (CityName), Remote, Hybrid
+        experienceLevel: `1+ Year(s)`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
+        description: `
+        <h6>Job Description:</h6>
+        <p>We are seeking an experienced Sales and Marketing Manager to join our team on a contract basis. The ideal candidate will be responsible for developing and implementing sales and marketing strategies to increase brand awareness, generate leads, and close deals, with a focus on digital and social media marketing. In addition, the candidate will be responsible for managing customer relationships and developing new business opportunities.</p>
+        
+        <h6>Key Responsibilities:</h6>
+        <ul>
+            <li>Develop and implement sales and marketing strategies with a focus on digital and social media marketing to increase brand awareness and drive sales.</li>
+            <li>Identify potential customers and generate leads through various digital channels.</li>
+            <li>Manage customer relationships and develop new business opportunities through digital marketing initiatives.</li>
+            <li>Negotiate contracts and close deals with potential customers.</li>
+            <li>Analyze and report on the performance of digital marketing campaigns to identify areas for improvement.</li>
+            <li>Collaborate with other departments, such as product development and customer service, to ensure alignment and customer satisfaction.</li>
+        </ul>
+        
+        <h6>Qualifications:</h6>
+        <ul>
+            <li>Proven track record of success in sales and marketing, with a strong emphasis on digital and social media marketing.</li>
+            <li>Excellent communication and interpersonal skills.</li>
+            <li>Strong negotiating skills and the ability to close deals.</li>
+            <li>Experience with digital marketing tools and social media platforms.</li>
+            <li>Ability to work independently and in a team environment.</li>
+            <li>Strong analytical and problem-solving skills.</li>
+        </ul>
+
+        <p>We offer competitive salary and benefits packages, as well as opportunities for growth and development within the company. If you are a results-driven sales and marketing professional with a passion for building relationships and driving business growth, we encourage you to apply for this exciting opportunity.</p>
+        `
+    },
+    {
         id: `graphic-designer`,
         title: `Graphic Designer`,
-        isAvailable: false,
+        isAvailable: true,
+        positions: 1,
         jobType: `Part-time`, //Full-time, Part-time, Contract, Temporary, Internship, Other
         jobLocation: `Remote`, //On-site (CityName), Remote, Hybrid
         experienceLevel: `Entry level`, // Internship, Entry level, Associate, Mid-Senior Level, Director, Executive
@@ -142,5 +146,6 @@ export const jobs = [
         <p>If you are a creative individual with a passion for design and a desire to work in a fast-paced and dynamic environment, we encourage you to apply for this position. We offer a competitive salary, flexible working hours, and opportunities for growth and career development.</p>
         `
     },
+
 
 ]
