@@ -30,7 +30,7 @@ const program = {
   support: "Unlimited",
   reports: "Quarterly",
 
-  isAvailable: true,
+  isAvailable: false,
 };
 
 const curriculum = [
