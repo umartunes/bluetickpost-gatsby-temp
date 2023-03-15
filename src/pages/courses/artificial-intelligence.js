@@ -4,7 +4,7 @@ import Footer from "../../components/App/Footer";
 
 import NavbarTwo from "../../components/App/NavbarTwo";
 import CourseDetailsContent from "../../components/Courses/CourseLayout/CourseDetailsContent";
-import Pricing from "../../components/Courses/CourseLayout/Pricing";
+import Pricing from "../../components/Courses/CourseLayout/PricingSingle";
 // import OurServices from "../../components/Courses/CourseLayout/OurServices";
 // import RelatedCourses from '../../components/Courses/CourseLayout/RelatedCourses'
 
@@ -17,7 +17,11 @@ const program = {
   courseFor: `Our Leadership Program is designed for students grade 7+. After graduating from this program, we’ll offer students 
   a chance to become instructors at STEM1.`,
 
-  price: "Rs. 2000 / month",
+  price: "PKR 6000",
+  discountPercentage: "80% Off",
+  priceBeforeDiscount: "PKR 30000",
+  isOneTimeFee: true,
+  
   courseDuration: "~12 months",
   classDuration: "~2 Hours",
   classDays: "2 days a week(Sat & Sunday)",
@@ -115,7 +119,7 @@ const Details = () => {
         modules={modules}
         reviews={reviews}
       />
-      <Pricing />
+      <Pricing program={program} />
       {/* <RelatedCourses /> */}
       {/* <OurServices /> */}
       <Footer />

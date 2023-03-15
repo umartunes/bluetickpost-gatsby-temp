@@ -8,7 +8,7 @@ import CoursesContent from '../../components/Courses/CoursesIndex/CoursesContent
 // import StartProject from "../../components/Courses/CoursesIndex/StartProject";
 // import Services from "../../components/Courses/CoursesIndex/Services";
 // import AboutUs from "../../components/Courses/CoursesIndex/AboutUs";
-import Pricing from "../../components/Courses/CourseLayout/Pricing";
+// import Pricing from "../../components/Courses/CourseLayout/Pricing";
 // import UpcomingBootcamps from "../../components/Courses/CoursesIndex/UpcomingBootcamps";
 
 const Home = () => {
@@ -28,7 +28,7 @@ const Home = () => {
       {/* <StartProject /> */}
       {/* <Services /> */}
       {/* <AboutUs /> */}
-      <Pricing />
+      {/* <Pricing /> */}
       {/* <UpcomingBootcamps /> */}
 
       <Footer />

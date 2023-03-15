@@ -4,14 +4,14 @@ import { Link } from "gatsby";
 const packages = [
 
   {
-    name: "Normal Online Classes",
+    name: "Skills Development Program",
     price: "PKR 3000",
     discountPercentage: "80% Off",
     priceBeforeDiscount: "PKR 15000",
+    isOneTimeFee: true,
     isSkillsDevelopmentProgram: true,
-    link: "/courses",
-    description: [],
-    // description: ["Online VIA Zoom"],
+    link: "/apply",
+    description: ["Online VIA Zoom"],
   },
   // {
   //   name: "Online Classes",
@@ -62,7 +62,7 @@ const packages = [
 
 // ];
 
-const Pricing = (program) => {
+const PricingSingle = ({ program }) => {
   return (
     <div className="partner-area ptb-70 bg-fafafb">
       <div className="container">
@@ -88,20 +88,19 @@ const Pricing = (program) => {
                   <h5 className="card-header">{pkg.name}</h5>
                   <div className="card-body">
 
-                    {/* {pkg.discountPercentage
-                      ? <p className="card-text mb-0">
-                        <del>{pkg.priceBeforeDiscount}</del> <span className="badge badge-success">{pkg.discountPercentage}</span>
-                      </p>
-                      : <></>
-                    } */}
-
+                    {
+                      pkg.isSkillsDevelopmentProgram
+                        ? <p className="card-text mb-0">
+                          <del>{program.priceBeforeDiscount}</del> <span className="badge badge-success">{program.discountPercentage}</span>
+                        </p>
+                        : <></>
+                    }
 
                     {
                       pkg.isSkillsDevelopmentProgram
-                        ? <p className="card-text my-1"> All our normal classes are run under the <strong>Skills Development Program</strong> and have very low fees; which are designed for the sake of our students and our country!</p>
+                        ? <h5 className="card-title">{program.price} <small className="text-muted">/ {pkg.isOneTimeFee ? `One-time Fee` : `month`}</small> </h5>
                         : <h5 className="card-title">{pkg.price} <small className="text-muted"> / month </small></h5>
                     }
-
 
                     {pkg.description.map((d, j) => {
                       return (
@@ -111,18 +110,10 @@ const Pricing = (program) => {
                       );
                     })}
 
-                    {
-                      pkg.isSkillsDevelopmentProgram
-                        ? <Link to={pkg.link} className="default-btn mt-3">
-                          {" "}
-                          <i className="flaticon-right"></i>Visit Each Course To Learn More about It's Fee
-                        </Link>
-                        : <Link to={pkg.link} className="default-btn mt-3">
-                          {" "}
-                          <i className="flaticon-right"></i>Apply Now!
-                        </Link>
-                    }
-
+                    <Link to={pkg.link} className="default-btn mt-3">
+                      {" "}
+                      <i className="flaticon-right"></i>Apply Now!
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -136,4 +127,4 @@ const Pricing = (program) => {
   );
 };
 
-export default Pricing;
+export default PricingSingle;

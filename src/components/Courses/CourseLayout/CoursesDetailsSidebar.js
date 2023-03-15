@@ -53,7 +53,7 @@ const CoursesDetailsSidebar = ({ program }) => {
                         {program.discountPercentage
                             ? <>
                                 <span></span>
-                                <span><del style={{fontWeight: 'bold'}}>{program.priceBeforeDiscount}</del> <span className="badge badge-success ml-1">{program.discountPercentage}</span></span>
+                                <span><del style={{ fontWeight: 'bold' }}>{program.priceBeforeDiscount}</del> <span className="badge badge-success ml-1">{program.discountPercentage}</span></span>
                             </>
                             : <></>
                         }
