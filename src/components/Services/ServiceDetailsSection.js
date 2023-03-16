@@ -41,22 +41,45 @@ const ServiceDetailsSection = ({ service }) => {
                         <div className="col-lg-6 col-md-12">
                             <div className="explore-learning-content">
                                 <h2>{service.serviceHeading}</h2>
+
                                 {service.serviceDetails.map((para, i) => {
                                     return <p key={i} dangerouslySetInnerHTML={{ __html: para }}></p>
                                 })}
-                                
+
+                                {service.serviceFeatures
+                                    ? <>
+                                        <div className="overview-box mb-0">
+                                            <div className="overview-content" style={{flex: "1", maxWidth: "100%"}}>
+                                                <div className="content">
+                                                    <ul className="features-list mb-3">
+                                                        {service.serviceFeatures.map((feature, i) => {
+                                                            return <li key={i}><span><i className='bx bx-check'></i> {feature}</span></li>
+                                                        })}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+                                    : <></>
+                                }
+
                                 <Link to="/services/contact" className="default-btn">
                                     <i className="flaticon-right"></i>
-                                    Order Now!
+                                    Get Quote
                                     <span></span>
                                 </Link>
 
                                 {/* <Link to="/pricing/" className=""> */}
-                                <ScrollLink href="#" className="default-btn ml-1 ml-sm-3" activeClass="active" to="pricing-section" spy={false} smooth={true} offset={-5} duration={750}>
-                                    <i className="flaticon-price-tag"></i>
-                                    Pricing
-                                    <span></span>
-                                </ScrollLink>
+                                {
+                                    service.hidePricingButton
+                                        ? <></>
+                                        : <ScrollLink href="#" className="default-btn ml-1 ml-sm-3" activeClass="active" to="pricing-section" spy={false} smooth={true} offset={-5} duration={750}>
+                                            <i className="flaticon-price-tag"></i>
+                                            View Pricing
+                                            <span></span>
+                                        </ScrollLink>
+                                }
+
                                 {/* </Link> */}
                             </div>
                         </div>

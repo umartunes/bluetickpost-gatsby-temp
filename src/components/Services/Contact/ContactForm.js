@@ -222,7 +222,7 @@ const ContactForm = () => {
                                                         <option value="Website Development ( WordPress )">Website Development ( WordPress )</option>
                                                         <option value="Web App Development ( Custom )">Web App Development ( Custom )</option>
                                                         <option value="Mobile App Development">Mobile App Development</option>
-                                                        <option value="UI/UX Design">UI/UX Design</option>
+                                                        {/* <option value="UI/UX Design">UI/UX Design</option> */}
                                                         <option value="Other">Other</option>
                                                     </select>
                                                 </div>

@@ -3,8 +3,10 @@ import { Link } from 'gatsby'
 
 import starIcon from '../../assets/images/star-icon.png'
 import serviceIcon1 from '../../assets/images/services/service-icon1.png'
-import serviceIcon2 from '../../assets/images/services/service-icon2.png'
-import serviceIcon3 from '../../assets/images/services/service-icon3.png'
+// import serviceIcon2 from '../../assets/images/services/service-icon2.png'
+// import serviceIcon3 from '../../assets/images/services/service-icon3.png'
+import serviceIcon4 from '../../assets/images/services/service-icon4.png'
+import serviceIcon6 from '../../assets/images/services/service-icon6.png'
 
 import { Link as ScrollLink } from 'react-scroll'
 
@@ -46,7 +48,7 @@ const ServicesOverview = () => {
                     <div className="col-lg-4 col-sm-6">
                         <div className="single-solutions-box" style={{ position: 'relative' }}>
                             <div className="icon">
-                                <img src={serviceIcon2} alt="features" />
+                                <img src={serviceIcon6} alt="features" />
                             </div>
                             <h3>
                                 <Link to="/services">
@@ -66,7 +68,7 @@ const ServicesOverview = () => {
                     <div className="col-lg-4 col-sm-6 offset-lg-0 offset-sm-3">
                         <div className="single-solutions-box" style={{ position: 'relative' }}>
                             <div className="icon">
-                                <img src={serviceIcon3} alt="features" />
+                                <img src={serviceIcon4} alt="features" />
                             </div>
                             <h3>
                                 <Link to="/services">

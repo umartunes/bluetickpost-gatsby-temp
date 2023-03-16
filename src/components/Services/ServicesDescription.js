@@ -1,7 +1,8 @@
 import React from 'react'
 import service3 from '../../assets/images/services/service3.png'
-import service6 from '../../assets/images/services/service6.png'
+// import service6 from '../../assets/images/services/service6.png'
 import service7 from '../../assets/images/services/service7.png'
+import service5 from '../../assets/images/services/service5.png'
 
 import { Link } from 'gatsby'
 
@@ -42,14 +43,14 @@ const ServicesDescription = () => {
 
                             <Link to="/services/contact" className="default-btn">
                                 <i className="flaticon-right"></i>
-                                Order Now!
+                                Get Quote
                                 <span></span>
                             </Link>
 
                             {/* <Link to="/pricing/" className=""> */}
                             <Link to="/services/website-development#pricing-section" className="default-btn ml-1 ml-sm-3" >
                                 <i className="flaticon-price-tag"></i>
-                                Pricing
+                                View Pricing
                                 <span></span>
                             </Link>
                         </div>
@@ -67,7 +68,7 @@ const ServicesDescription = () => {
                             <p>We develop customized, scalable, and responsive web applications according to your business needs using state-of-the-art technologies.</p>
                             <p>We use the latest tools and technologies to build your app</p>
 
-                            <ul className="features-list">
+                            <ul className="features-list mb-3">
                                 <li><span><i className='bx bx-check'></i> HTML5 / CSS3</span></li>
                                 <li><span><i className='bx bx-check'></i> JavaScript / jQuery</span></li>
                                 <li><span><i className='bx bx-check'></i> Bootstrap / Material UI</span></li>
@@ -79,6 +80,13 @@ const ServicesDescription = () => {
                                 <li><span><i className='bx bx-check'></i> Gatsby (SSG)</span></li>
                                 <li><span><i className='bx bx-check'></i> NextJS (SSR)</span></li>
                             </ul>
+
+                            <Link to="/services/contact" className="default-btn">
+                                <i className="flaticon-right"></i>
+                                Get Quote
+                                <span></span>
+                            </Link>
+
                         </div>
                     </div>
 
@@ -95,7 +103,7 @@ const ServicesDescription = () => {
                 <div className="overview-box">
                     <div className="overview-image">
                         <div className="image">
-                            <img src={service6} alt="features" />
+                            <img src={service5} alt="features" />
                         </div>
                     </div>
 
@@ -106,8 +114,8 @@ const ServicesDescription = () => {
                             <p>We build smart hybrid mobile apps for both android & iOS with high performance and reusability</p>
                             <p>We use the latest tools and technologies to build your app</p>
 
-                            <ul className="features-list">
-                                
+                            <ul className="features-list mb-3">
+
                                 <li><span><i className='bx bx-check'></i> React Native</span></li>
                                 <li><span><i className='bx bx-check'></i> NodeJS</span></li>
                                 <li><span><i className='bx bx-check'></i> MongoDB</span></li>
@@ -118,8 +126,15 @@ const ServicesDescription = () => {
                                 <li><span><i className='bx bx-check'></i> Redis</span></li>
                                 <li><span><i className='bx bx-check'></i> Python Flask</span></li>
                                 <li><span><i className='bx bx-check'></i> MySQL</span></li>
-                                
+
                             </ul>
+
+                            <Link to="/services/contact" className="default-btn">
+                                <i className="flaticon-right"></i>
+                                Get Quote
+                                <span></span>
+                            </Link>
+
                         </div>
                     </div>
                 </div>
