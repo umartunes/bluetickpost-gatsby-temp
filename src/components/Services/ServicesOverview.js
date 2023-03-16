@@ -30,8 +30,8 @@ const ServicesOverview = () => {
                             </div>
                             <h3>
                                 <Link to="/services">
-                                    <ScrollLink className="stretched-link" activeClass="active" to="web-development" spy={false} smooth={true} offset={-175} duration={750}>
-                                        Web Development
+                                    <ScrollLink className="stretched-link" activeClass="active" to="website-development" spy={false} smooth={true} offset={-175} duration={750}>
+                                        Website Development
                                     </ScrollLink>
                                 </Link>
                             </h3>
@@ -44,6 +44,49 @@ const ServicesOverview = () => {
                     </div>
 
                     <div className="col-lg-4 col-sm-6">
+                        <div className="single-solutions-box" style={{ position: 'relative' }}>
+                            <div className="icon">
+                                <img src={serviceIcon2} alt="features" />
+                            </div>
+                            <h3>
+                                <Link to="/services">
+                                    <ScrollLink className="stretched-link" activeClass="active" to="web-app-development" spy={false} smooth={true} offset={-175} duration={750}>
+                                        Custom App Development
+                                    </ScrollLink>
+                                </Link>
+                            </h3>
+                            <p>We develop customized, scalable and responsive web applications tailored for your business needs.</p>
+
+                            <Link className="view-details-btn" to="/services">
+                                View Details
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-4 col-sm-6 offset-lg-0 offset-sm-3">
+                        <div className="single-solutions-box" style={{ position: 'relative' }}>
+                            <div className="icon">
+                                <img src={serviceIcon3} alt="features" />
+                            </div>
+                            <h3>
+                                <Link to="/services">
+                                    <ScrollLink className="stretched-link" activeClass="active" to="mobile-app-development" spy={false} smooth={true} offset={-175} duration={750}>
+                                        Mobile App Development
+                                    </ScrollLink>
+                                </Link>
+                            </h3>
+
+                            <p>We build smart hybrid mobile apps for both android & iOS with high performance and reusability</p>
+
+                            {/* <span class="badge badge-success d-inline-block mb-2">Coming soon...</span> <br /> */}
+
+                            <Link className="view-details-btn" to="/services">
+                                View Details
+                            </Link>
+                        </div>
+                    </div>
+                    
+                    {/* <div className="col-lg-4 col-sm-6">
                         <div className="single-solutions-box" style={{ position: 'relative' }}>
                             <div className="icon">
                                 <img src={serviceIcon2} alt="features" />
@@ -78,13 +121,14 @@ const ServicesOverview = () => {
 
                             <p>We help your product reach the most accurate lead and the target audience in attempt for it to be traded on the spot.</p>
 
-                            {/* <span class="badge badge-success d-inline-block mb-2">Coming soon...</span> <br /> */}
+                             <span class="badge badge-success d-inline-block mb-2">Coming soon...</span> <br /> 
 
                             <Link className="view-details-btn" to="/services">
                                 View Details
                             </Link>
                         </div>
-                    </div>
+                    </div> */}
+
                 </div>
 
             </div>

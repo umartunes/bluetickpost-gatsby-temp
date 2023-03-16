@@ -141,9 +141,36 @@ export default function Menu() {
 							}}
 							className="nav-link"
 						>
-							Web Design & Development
+							Website Development
 						</Link>
 					</li>
+
+					<li className="nav-item">
+						<Link
+							to="/services/web-app-development"
+							activeClassName="active"
+							onClick={() => {
+								setCollapsed(true)
+							}}
+							className="nav-link"
+						>
+							Web App Development (Custom)
+						</Link>
+					</li>
+
+					<li className="nav-item">
+						<Link
+							to="/services/mobile-app-development"
+							activeClassName="active"
+							onClick={() => {
+								setCollapsed(true)
+							}}
+							className="nav-link"
+						>
+							Mobile App Development
+						</Link>
+					</li>
+
 
 					{/* <li className="nav-item">
 						<Link

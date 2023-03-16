@@ -13,7 +13,7 @@ const ServicesDescription = () => {
             <div className="container">
 
                 {/* Left Image Style */}
-                <Element name="web-development" className="element">&nbsp;</Element>
+                <Element name="website-development" className="element">&nbsp;</Element>
                 <div className="overview-box">
                     <div className="overview-image">
                         <div className="image">
@@ -23,9 +23,9 @@ const ServicesDescription = () => {
 
                     <div className="overview-content">
                         <div className="content right-content">
-                            <span className="sub-title">Web Design & Development</span>
+                            <span className="sub-title">Website Development</span>
                             <h2>Professional, Clean, and Modern Websites</h2>
-                            <p>At Techna; we design and develop clean and attractive websites and e-commerce (online) stores which are SEO optimized, has fast-loading pages, and is responsive across all devices (Mobile, Desktop, Tablet)</p>
+                            <p>We design and develop clean and attractive websites and e-commerce (online) stores which are SEO optimized, has fast-loading pages, and is responsive across all devices (Mobile, Desktop, Tablet)</p>
 
                             <ul className="features-list mb-3">
                                 <li><span><i className='bx bx-check'></i> E-commerce Websites / Online Stores</span></li>
@@ -58,7 +58,75 @@ const ServicesDescription = () => {
                 {/* End Left Image Style */}
 
                 {/* Right Image Style */}
-                <Element name="graphics-designing" className="element">&nbsp;</Element>
+                <Element name="web-app-development" className="element">&nbsp;</Element>
+                <div className="overview-box">
+                    <div className="overview-content">
+                        <div className="content">
+                            <span className="sub-title">Web App Development (Custom)</span>
+                            <h2>Customized, Scalable and Responsive Web Applications</h2>
+                            <p>We develop customized, scalable, and responsive web applications according to your business needs using state-of-the-art technologies.</p>
+                            <p>We use the latest tools and technologies to build your app</p>
+
+                            <ul className="features-list">
+                                <li><span><i className='bx bx-check'></i> HTML5 / CSS3</span></li>
+                                <li><span><i className='bx bx-check'></i> JavaScript / jQuery</span></li>
+                                <li><span><i className='bx bx-check'></i> Bootstrap / Material UI</span></li>
+                                <li><span><i className='bx bx-check'></i> SASS / SCSS</span></li>
+                                <li><span><i className='bx bx-check'></i> ReactJS</span></li>
+                                <li><span><i className='bx bx-check'></i> NodeJS</span></li>
+                                <li><span><i className='bx bx-check'></i> MongoDB</span></li>
+                                <li><span><i className='bx bx-check'></i> Firebase</span></li>
+                                <li><span><i className='bx bx-check'></i> Gatsby (SSG)</span></li>
+                                <li><span><i className='bx bx-check'></i> NextJS (SSR)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="overview-image">
+                        <div className="image">
+                            <img src={service7} alt="features" />
+                        </div>
+                    </div>
+                </div>
+                {/* End Right Image Style */}
+
+                {/* Left Image Style */}
+                <Element name="mobile-app-development" className="element">&nbsp;</Element>
+                <div className="overview-box">
+                    <div className="overview-image">
+                        <div className="image">
+                            <img src={service6} alt="features" />
+                        </div>
+                    </div>
+
+                    <div className="overview-content">
+                        <div className="content right-content">
+                            <span className="sub-title">Mobile App Development</span>
+                            <h2>Smart and Hybrid Mobile Apps</h2>
+                            <p>We build smart hybrid mobile apps for both android & iOS with high performance and reusability</p>
+                            <p>We use the latest tools and technologies to build your app</p>
+
+                            <ul className="features-list">
+                                
+                                <li><span><i className='bx bx-check'></i> React Native</span></li>
+                                <li><span><i className='bx bx-check'></i> NodeJS</span></li>
+                                <li><span><i className='bx bx-check'></i> MongoDB</span></li>
+                                <li><span><i className='bx bx-check'></i> Firebase</span></li>
+                                <li><span><i className='bx bx-check'></i> GraphQL</span></li>
+                                <li><span><i className='bx bx-check'></i> Flux Architecture</span></li>
+                                <li><span><i className='bx bx-check'></i> Redux</span></li>
+                                <li><span><i className='bx bx-check'></i> Redis</span></li>
+                                <li><span><i className='bx bx-check'></i> Python Flask</span></li>
+                                <li><span><i className='bx bx-check'></i> MySQL</span></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {/* End Left Image Style */}
+
+                {/* Right Image Style */}
+                {/* <Element name="graphics-designing" className="element">&nbsp;</Element>
                 <div className="overview-box">
                     <div className="overview-content">
                         <div className="content">
@@ -86,11 +154,11 @@ const ServicesDescription = () => {
                             <img src={service7} alt="features" />
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* End Right Image Style */}
 
                 {/* Left Image Style */}
-                <Element name="digital-marketing" className="element">&nbsp;</Element>
+                {/* <Element name="digital-marketing" className="element">&nbsp;</Element>
                 <div className="overview-box">
                     <div className="overview-image">
                         <div className="image">
@@ -118,7 +186,7 @@ const ServicesDescription = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* End Left Image Style */}
 
             </div>
