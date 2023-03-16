@@ -28,23 +28,23 @@ const servicePackages = {
     pricing: {
         basic: {
             title: `Basic`,
-            price: `Rs. 29,000`,
-            saving: `Save Rs. 10,000`,
-            discountedPrice: `Rs. 19,000`,
+            price: `$290`,
+            saving: `Save $100`,
+            discountedPrice: `$190`,
             description: `Business / Blog Website: Clean & modern website with contact form, social media etc. Responsive & SEO optimized.`
         },
         standard: {
             title: `Standard`,
-            price: `Rs. 54,000`,
-            saving: `Save Rs. 15,000`,
-            discountedPrice: `Rs. 39,000`,
+            price: `$440`,
+            saving: `Save $150`,
+            discountedPrice: `$290`,
             description: `Standard E-Commerce Website: Complete business website with eCommerce functionality. Fully responsive & SEO optimized.`
         },
         premium: {
             title: `Premium`,
-            price: `Rs. 89,000`,
-            saving: `Save Rs. 20,000`,
-            discountedPrice: `Rs. 69,000`,
+            price: `$890`,
+            saving: `Save $300`,
+            discountedPrice: `$590`,
             description: `Premium E-Commerce Website: Highly customized ecommerce website with premium features, Plugins, & advance layouts.`
         },
     },
