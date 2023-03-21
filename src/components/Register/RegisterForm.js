@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, } from 'gatsby'
 
-import starIcon from '../../assets/images/star-icon.png'
+// import starIcon from '../../assets/images/star-icon.png'
 import displayPhoto from '../../assets/images/dp.jpg'
 
 import { firebase, firestore } from '../../utils/firebase'
@@ -34,7 +34,6 @@ const RegisterForm = () => {
         address: '',
         city: '',
         country: '',
-
         referrer: '',
 
     })
@@ -49,29 +48,33 @@ const RegisterForm = () => {
 
     const saveApplicantDataToFirebase = applicantData => {
 
-        // let randomInteger = (min, max) => {
-        //     return Math.floor(Math.random() * (max - min + 1)) + min;
-        // }
+        let selectedCourseData = courses.find((c) => {
+            return c.slug === applicantData.course && c.isAvailable === true
+        })
+
+        if (!selectedCourseData.id) {
+            notify("Please select a course to proceed", 'error')
+            setIsLoading(false)
+            return;
+        }
 
         applicantData.id = Math.random().toString(36).slice(2)
         applicantData.dateCreated = firebase.firestore.Timestamp.fromDate(new Date())
         applicantData.dateModified = firebase.firestore.Timestamp.fromDate(new Date())
-
         applicantData.status = "active"
-        applicantData.section = "A"
-        applicantData.batch = "02"
-        applicantData.lastDateOfFormSubmission = "December 18, 2022"
 
-        let courseFee = 2500
+        applicantData.section = selectedCourseData.upcomingBatchSection
+        applicantData.batch = selectedCourseData.upcomingBatchNumber
+        applicantData.lastDateOfFormSubmission = selectedCourseData.lastDateOfFormSubmission
 
-        if (applicantData.learningMode === "Group")
-            courseFee = 6000
+        applicantData.isOneTimeFee = selectedCourseData.isOneTimeFee
+
+        if (applicantData.learningMode === "Normal")
+            applicantData.courseFee = selectedCourseData.courseFeeNormalClasses
+        else if (applicantData.learningMode === "Group")
+            applicantData.courseFee = selectedCourseData.courseFeeGroupClasses
         else if (applicantData.learningMode === "Personal")
-            courseFee = 15000
-
-        applicantData.courseFee = courseFee
-
-        // applicantData.aId = randomInteger(520, 999)
+            applicantData.courseFee = selectedCourseData.courseFeePersonalClasses
 
 
         firestore.collection("CourseApplications")
@@ -510,9 +513,9 @@ const RegisterForm = () => {
 
                                                     <div className="previewOuter" style={{
                                                         border: `2px solid #eee`,
-                                                        width: `85px`,
-                                                        height: `110px`,
-                                                        padding: `5px`,
+                                                        width: `95px`,
+                                                        height: `120px`,
+                                                        padding: `8px`,
                                                         boxSizing: `border-box`,
                                                         margin: `0 auto`,
                                                     }}>

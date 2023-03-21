@@ -2,7 +2,15 @@ export const courses = [
     {
         slug: "cmad",
         type: 'online',
-        courseFee: 3000,
+
+        isOneTimeFee: true,
+        courseFeeNormalClasses: `PKR 3000`,
+        courseFeeGroupClasses: `PKR 7000`,
+        courseFeePersonalClasses: `USD 70`,
+
+        upcomingBatchNumber: "02",
+        upcomingBatchSection: "A",
+        lastDateOfFormSubmission: "April 07, 2023",
 
         id: "web-and-mobile-app-development",
         name: "Web & Mobile App Development",
@@ -18,7 +26,15 @@ export const courses = [
     {
         slug: "ai",
         type: 'online',
-        courseFee: 6000,
+
+        isOneTimeFee: true,
+        courseFeeNormalClasses: `PKR 6000`,
+        courseFeeGroupClasses: `PKR 7000`,
+        courseFeePersonalClasses: `USD 70`,
+
+        upcomingBatchNumber: "02",
+        upcomingBatchSection: "A",
+        lastDateOfFormSubmission: "April 07, 2023",
 
         id: "artificial-intelligence",
         name: "Artificial Intelligence",
@@ -34,7 +50,15 @@ export const courses = [
     {
         slug: "bcc",
         type: 'online',
-        courseFee: 0,
+
+        isOneTimeFee: true,
+        courseFeeNormalClasses: `PKR 0`,
+        courseFeeGroupClasses: `PKR 7000`,
+        courseFeePersonalClasses: `USD 70`,
+
+        upcomingBatchNumber: "02",
+        upcomingBatchSection: "A",
+        lastDateOfFormSubmission: "April 07, 2023",
 
         id: "basic-computer-course",
         name: "Basic Computer Course",

@@ -192,7 +192,7 @@ export default class PDFApplication extends React.Component {
                     </View>
                 </View>
             </View>
-            
+
             <View style={styles.cardMain}>
                 <View style={styles.cardData}>
 
@@ -217,7 +217,7 @@ export default class PDFApplication extends React.Component {
                             <Text style={styles.textPara}>Course: </Text>
                         </View>
                         <View style={styles.cardDataSecondColumn}>
-                            <Text style={[styles.textPara, { fontSize: 9 }]}> {this.getCourseName(application.course)}</Text>
+                            <Text style={[styles.textPara, { fontSize: 8 }]}> {this.getCourseName(application.course)}</Text>
                         </View>
                     </View>
                     <View style={styles.cardDataRow}>
@@ -341,7 +341,7 @@ export default class PDFApplication extends React.Component {
                         </View> */}
 
                         <Text style={styles.heading}>Instructions:</Text>
-                        <Text style={{fontSize: 12, color: "#222222", marginTop: 5}}>To confirm your seat; you have to follow the instructions carefully:</Text>
+                        <Text style={{ fontSize: 12, color: "#222222", marginTop: 5 }}>To confirm your seat; you have to follow the instructions carefully:</Text>
 
                         <Text style={styles.note}>You would receive a call from Techna Office for a Basic Test, and Form Submission date. If you do not receive a call from us by 19 December 2022. Contact us at the phone number given below.</Text>
 
@@ -356,7 +356,11 @@ export default class PDFApplication extends React.Component {
                         </View>
 
                         <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
-                        <Text style={{ fontSize: 9 }}>*) The monthly fee for this course is PKR {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text>
+                        {
+                            application.isOneTimeFee && application.learningMode === "Normal"
+                                ? <Text style={{ fontSize: 9 }}>*) There is no monthly or tuition fee for this course. One time course enrollment fee is {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text>
+                                : <Text style={{ fontSize: 9 }}>*) The monthly fee for this course is {application.courseFee}/- only; which would be submitted at the time of submission of this form.</Text>
+                        }
 
                         <View style={styles.signatureLine}>
                             <View style={styles.signatureLineRow}>
@@ -374,7 +378,7 @@ export default class PDFApplication extends React.Component {
                                 <Text>_____________</Text>
                             </View>
                         </View>
-                        
+
                         <Text style={{ fontSize: 15 }}>&nbsp;</Text>
 
                         <Text style={styles.heading}>Contact Info:</Text>

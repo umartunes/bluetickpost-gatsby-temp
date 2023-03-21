@@ -221,7 +221,7 @@ export default class PDFOnline extends React.Component {
                             <Text style={styles.textPara}>Course: </Text>
                         </View>
                         <View style={styles.cardDataSecondColumn}>
-                            <Text style={[styles.textPara, { fontSize: 9 }]}> {this.getCourseName(application.course)}</Text>
+                            <Text style={[styles.textPara, { fontSize: 8 }]}> {this.getCourseName(application.course)}</Text>
                         </View>
                     </View>
                     <View style={styles.cardDataRow}>
@@ -361,8 +361,11 @@ export default class PDFOnline extends React.Component {
                         </View>
 
                         <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
-                        <Text style={{ fontSize: 9 }}>*) The monthly fee for this course is PKR {application.courseFee}/- only; which would be submitted at the time of submission of this form.</Text>
-                        {/* <Text style={{ fontSize: 9 }}>*) There is no monthly or tuition fee for this course. One time course enrollment fee is PKR {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text> */}
+                        {
+                            application.isOneTimeFee && application.learningMode === "Normal"
+                                ? <Text style={{ fontSize: 9 }}>*) There is no monthly or tuition fee for this course. One time course enrollment fee is {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text>
+                                : <Text style={{ fontSize: 9 }}>*) The monthly fee for this course is {application.courseFee}/- only; which would be submitted at the time of submission of this form.</Text>
+                        }
 
                         <Text style={{ fontSize: 15 }}>&nbsp;</Text>
 
