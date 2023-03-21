@@ -98,7 +98,7 @@ const Pricing = (program) => {
 
                     {
                       pkg.isSkillsDevelopmentProgram
-                        ? <p className="card-text my-1"> All our normal classes are run under the <strong>Skills Development Program</strong> and have very low fees; which are designed for the sake of our students and our country!</p>
+                        ? <p className="card-text my-1"> All our normal classes are run under the <strong>Skills Development Program</strong> and have very low fees; It helps to spread technology education to more people and produce skilled people in our country!</p>
                         : <h5 className="card-title">{pkg.price} <small className="text-muted"> / month </small></h5>
                     }
 

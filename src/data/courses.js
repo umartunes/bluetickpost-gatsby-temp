@@ -1,5 +1,9 @@
 export const courses = [
     {
+        slug: "cmad",
+        type: 'online',
+        courseFee: 3000,
+
         id: "web-and-mobile-app-development",
         name: "Web & Mobile App Development",
         coursePage: "/courses/web-and-mobile-app-development",
@@ -7,11 +11,15 @@ export const courses = [
         price: "PKR 3000",
         duration: "~ 6 months",
         isFree: false,
-        isAvailable: false,
+        isAvailable: true,
         showInHome: true,
         description: `An application development program for absolute beginners, which will lead you to job/freelancing industry.`,
     },
     {
+        slug: "ai",
+        type: 'online',
+        courseFee: 6000,
+
         id: "artificial-intelligence",
         name: "Artificial Intelligence",
         coursePage: "/courses/artificial-intelligence",
@@ -24,6 +32,10 @@ export const courses = [
         description: `A one year AI Program designed for absolute beginners. which will lead you to job/freelancing industry.`,
     },
     {
+        slug: "bcc",
+        type: 'online',
+        courseFee: 0,
+
         id: "basic-computer-course",
         name: "Basic Computer Course",
         coursePage: "/courses/basic-computer-course",
