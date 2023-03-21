@@ -158,7 +158,7 @@ const FormDownload = () => {
                                                 <div className="col-12 col-md-8 offset-md-2">
 
 
-                                                    <button type="submit" className="default-btn btn-block" disabled={isLoading} onClick={getFormData}>
+                                                    <button type="submit" className="default-btn btn-block px-2" disabled={isLoading} onClick={getFormData}>
 
                                                         {!isLoading
                                                             ? <>
