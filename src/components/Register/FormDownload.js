@@ -198,10 +198,31 @@ const FormDownload = () => {
                                     <div className="row">
                                         <div className="col-12 col-md-8 offset-md-2">
 
-                                            <div className="form-group">
+                                            {/* <div className="form-group">
                                                 <input type="CNIC" name="CNIC" value={formData.CNIC} className="form-control" required placeholder="Enter your CNIC number here" onChange={handleFormData} />
                                                 <small className='text-info'>🛈 CNIC or B-Form Number (Only numbers without hyphens).</small>
+                                            </div> */}
+
+                                            <div className="input-group rounded-right">
+                                                <input type="text" name="CNIC" value={formData.CNIC} className="form-control" required placeholder='Enter your CNIC number here' onChange={handleFormData} />
+                                               
+                                                <div className="input-group-append rounded-right" style={{maxWidth: '175px'}}>
+
+                                                    <select name="course" defaultValue="" className="form-control pr-3 bg-dark text-white rounded-0 rounded-right w-100" onChange={handleFormData}>
+
+                                                        <option selected value="">Select course</option>
+                                                        {courses
+                                                            .filter((course, i) => { return course.isAvailable })
+                                                            .map((course, i) => {
+                                                                return <option key={course.id} value={course.slug}>{course.name}</option>
+                                                            })}
+                                                    </select>
+
+                                                </div>
                                             </div>
+                                            <small className='text-info'>🛈 CNIC or B-Form Number (Only numbers without hyphens).</small>
+
+
                                         </div>
                                     </div>
                                     <div className="row mt-3">
