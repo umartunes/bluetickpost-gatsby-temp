@@ -36,11 +36,16 @@ const CoursesDetailsSidebar = ({ program }) => {
                     </div> */}
                 </div>
                 <div className="btn-box">
-                    <Link to="/apply" className="default-btn">
-                        <i className="flaticon-right"></i> Apply Now! <span></span>
-                    </Link>
 
-                    {program.isAvailable ? "" : <div class="alert alert-danger mt-2 text-center" role="alert"> <small>Admissions closed for this program</small>  </div>}
+                    {
+                        program.isAvailable
+                            ? <Link to="/apply" className="default-btn">
+                                <i className="flaticon-right"></i> Apply Now! <span></span>
+                            </Link> 
+                            : <button type='button' className="btn btn-secondary border border-dark w-100 py-2 font-weight-bold" disabled style={{cursor: 'context-menu'}}> Apply Now <span></span> </button>
+                    }
+
+                    {program.isAvailable ? "" : <div class="alert alert-danger mt-2 py-1 text-center" role="alert"> <small>Admissions closed for this course</small>  </div>}
 
                     {/* <Link to="#" className="default-btn">
                         <i className="flaticon-price-tag"></i>

@@ -157,7 +157,7 @@ const MainBanner = () => {
                     <div className="btn-box">
                       <Link to="https://facebook.com/groups/TechnaPK" className="default-btn">
                         <i className="flaticon-right"></i>
-                        Join Now <span></span>
+                        Click Here To Join Us On Facebook <span></span>
                       </Link>
 
                       {/* <Link

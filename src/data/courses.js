@@ -5,7 +5,7 @@ export const courses = [
         name: "Web & Mobile App Development",
 
         isFree: false,
-        isAvailable: true,
+        isAvailable: false,
         isOneTimeFee: true,
 
         price: "PKR 3000",

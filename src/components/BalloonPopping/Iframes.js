@@ -14,7 +14,7 @@ const Iframes = () => {
                     <div className="col-12 col-md-8">
                         <h4 className="text-white text-center">
                             Build this game in our Web Development Course
-            </h4>
+                        </h4>
                         <iframe
                             title=""
                             src="https://balloon-popping-stem.web.app"
@@ -33,9 +33,9 @@ const Iframes = () => {
                     {/* <h3 className="text-center my-4 text-white">New classes starting December 24</h3> */}
                     <h3 className="text-center my-4 text-white">New classes starting soon...</h3>
                     <div className="btn-box text-center">
-                        <Link to="/apply" className="default-btn">
+                        <Link to="/courses" className="default-btn">
                             <i className="flaticon-right"></i>
-            Apply Now! <span></span>
+                            Browse All Courses <span></span>
                         </Link>
                     </div>
 

@@ -2,16 +2,19 @@ import React, { useEffect } from 'react'
 import Layout from "../components/App/Layout"
 import NavbarTwo from "../components/App/NavbarTwo";
 import Footer from "../components/App/Footer"
+import AdmissionsClosed from '../components/Register/AdmissionsClosed'
 import RegisterForm from '../components/Register/RegisterForm'
 
-import starIcon from '../assets/images/star-icon.png'
+import { courses } from '../data/courses'
+
+const availableCourses = courses.filter((course, i) => { return course.isAvailable })
 
 const Contact = () => {
 
     // useEffect(() => {
 
     //     document.body.style.overflowY = 'hidden'
-        
+
     //     return () => {
     //         document.body.style.overflowY = 'auto'
     //     };
@@ -21,7 +24,8 @@ const Contact = () => {
     return (
         <Layout>
             <NavbarTwo />
-            <RegisterForm />
+
+            {availableCourses.length ? <RegisterForm /> : <AdmissionsClosed />}
 
             {/* URL for quick website update */}
             {/* <iframe style={{
