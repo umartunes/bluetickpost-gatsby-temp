@@ -43,10 +43,10 @@ const CoursesContent = () => {
                                             {course.name}
                                         </Link>
                                     </h5>
-                                    <p>{course.description}</p>
+                                    <p>{course.descriptionSummary}</p>
                                     <ul className="courses-box-footer d-flex justify-content-between align-items-center">
                                         <li>
-                                            <i className='flaticon-agendas'></i> {course.duration}
+                                            <i className='flaticon-agendas'></i> {course.courseDuration}
                                         </li>
                                         <li>
                                             <i className='flaticon-price-tag'></i> {course.price}

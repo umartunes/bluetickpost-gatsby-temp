@@ -8,24 +8,9 @@ import CourseDetailsContent from "../../components/Courses/CourseLayout/CourseDe
 // import OurServices from "../../components/Courses/CourseLayout/OurServices";
 // import RelatedCourses from '../../components/Courses/CourseLayout/RelatedCourses'
 
-const program = {
-  title: "Basic Computer Course",
-  slug: "basic-computer-course",
-  image: "/images/courses/course1.jpg",
-  description: `A short course specially designed for those people who are unaware of computer, to help these people understanding all the basics of computer needed to live in the 21st century. In this course; we teach students how to use a computer right from turning it on and off, how you can earn money now a days using internet online, how to play basic games, learn to type fast, core settings, and software knowledge like notepad, paint... In this day an age you will be considered uneducated if you cannot use a computer. So, we're offering this course 100% free of cost.`,
-  certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish every level. Students are required to submit a presentation or project to graduate each course.`,
-  courseFor: `Our Junior program is designed for Grade 3+ students to teach them basics of coding. At the end of each level/course, we conduct quiz & assessment to understand the student's progress.`,
+import { courses } from '../../data/courses'
 
-  price: "Free",
-  courseDuration: "~1 week",
-  classDuration: "~2 Hours",
-  classDays: "5 days a week(Mon-Friday)",
-
-  courseDetailsImage: "/images/courses-details.jpg",
-  courses: "10",
-  support: "Unlimited",
-  reports: "Quarterly",
-};
+const program = courses.find((c) => { return c.id === "basic-computer-course" })
 
 const curriculum = [
   {

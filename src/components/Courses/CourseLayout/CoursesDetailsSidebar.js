@@ -96,17 +96,17 @@ const CoursesDetailsSidebar = ({ program }) => {
 
                         <ul className="social-link">
                             <li>
-                                <Link to={`https://www.facebook.com/sharer/sharer.php?u=${`https://techna.pk/courses/${program.slug}`}`} className="d-block">
+                                <Link to={`https://www.facebook.com/sharer/sharer.php?u=${`https://techna.pk/courses/${program.id}`}`} className="d-block">
                                     <i className='bx bxl-facebook'></i>
                                 </Link>
                             </li>
                             <li>
-                                <Link to={`https://twitter.com/intent/tweet?url=${`https://techna.pk/courses/${program.slug}`}&text=${program.title}`} className="d-block">
+                                <Link to={`https://twitter.com/intent/tweet?url=${`https://techna.pk/courses/${program.id}`}&text=${program.name}`} className="d-block">
                                     <i className='bx bxl-twitter'></i>
                                 </Link>
                             </li>
                             <li>
-                                <Link to={`https://www.linkedin.com/shareArticle?mini=true&url=${`https://techna.pk/courses/${program.slug}`}`} className="d-block">
+                                <Link to={`https://www.linkedin.com/shareArticle?mini=true&url=${`https://techna.pk/courses/${program.id}`}`} className="d-block">
                                     <i className='bx bxl-linkedin'></i>
                                 </Link>
                             </li>

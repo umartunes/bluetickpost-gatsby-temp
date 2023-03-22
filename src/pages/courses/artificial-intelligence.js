@@ -8,29 +8,9 @@ import Pricing from "../../components/Courses/CourseLayout/PricingSingle";
 // import OurServices from "../../components/Courses/CourseLayout/OurServices";
 // import RelatedCourses from '../../components/Courses/CourseLayout/RelatedCourses'
 
-const program = {
-  title: "Artificial Intelligence",
-  slug: "artificial-intelligence",
-  image: "/images/courses/course4.jpg",
-  description: `A one year AI program in Data Science, Machine Learning, and Deep Learning designed for absolute beginners. Getting Pakistan ready for the new era of computing enabled by the rise of AI. The objective to design this program is to train and produce skilled applications developer which are in high demand in Local and International job marketplace.`,
-  certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish the course. Students are required to submit assignments and projects assigned to them to graduate this course.`,
-  courseFor: `Our Leadership Program is designed for students grade 7+. After graduating from this program, we’ll offer students 
-  a chance to become instructors at STEM1.`,
+import { courses } from '../../data/courses'
 
-  price: "PKR 6000",
-  discountPercentage: "80% Off",
-  priceBeforeDiscount: "PKR 30000",
-  isOneTimeFee: true,
-  
-  courseDuration: "~12 months",
-  classDuration: "~2 Hours",
-  classDays: "2 days a week(Sat & Sunday)",
-  courseDetailsImage: "/images/courses-details.jpg",
-
-  courses: "10",
-  support: "Unlimited",
-  reports: "Quarterly",
-};
+const program = courses.find((c) => { return c.id === "artificial-intelligence" })
 
 const modules = []
 

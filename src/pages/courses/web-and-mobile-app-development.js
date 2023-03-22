@@ -8,30 +8,9 @@ import Pricing from "../../components/Courses/CourseLayout/PricingSingle";
 // import OurServices from "../../components/Courses/CourseLayout/OurServices";
 // import RelatedCourses from '../../components/Courses/CourseLayout/RelatedCourses'
 
-const program = {
-  title: "Web & Mobile App Development",
-  slug: "web-and-mobile-app-development",
-  image: "/images/courses/web-and-mobile-app-development.jpg",
-  description: ` Take your career as a Full Stack Web & Mobile App Developer to the next level with our Application Development Program; where you’ll become an expert at front-end and back-end using latest state of the art technologies MERN (MongoDB, Express, React and Node.js) Stack. The objective to design this program is to train and produce skilled applications developer which are in high demand in Local and International job marketplace.`,
-  certification: `We gamify learning through awarding points, badges and certificates to recognize the progress & hardwork of our students. Students will be awarded a certificate of completion after they finish the course. Students are required to submit assignments and projects assigned to them to graduate this course.`,
-  courseFor: `Our Web & Mobile App Development program is designed for students who have passed grade 10 from their schools. and are motivated to do achieve big things in life.`,
+import { courses } from '../../data/courses'
 
-  price: "PKR 3000",
-  discountPercentage: "80% Off",
-  priceBeforeDiscount: "PKR 15000",
-  isOneTimeFee: true,
-
-  courseDuration: "~6 months",
-  classDuration: "~2 Hours",
-  classDays: "2 days a week(Sat & Sunday)",
-  courseDetailsImage: "/images/courses-details.jpg",
-
-  courses: "10",
-  support: "Unlimited",
-  reports: "Quarterly",
-
-  isAvailable: false,
-};
+const program =  courses.find((c)=>{ return c.id === "web-and-mobile-app-development" })
 
 const curriculum = [
   {
