@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, } from 'gatsby'
 
 import { firebase, firestore } from '../../utils/firebase'
@@ -17,49 +17,96 @@ import { courses } from '../../data/courses'
 const FormDownload = () => {
 
     const { addToast } = useToasts()
-    const [isLoading, setIsLoading] = useState(false)
-    const [isSubmitted, setIsSubmitted] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
     // if window.courseApplication is set in RegisterForm Component then use that application otherwise it wouldn't have any data, and we would find this data below
-    const [userApplication, setUserApplication] = useState(window.courseApplication ? window.courseApplication : { id: false, rollNumber: false })
+    const [userApplication, setUserApplication] = useState({ id: false, rollNumber: false })
     const [qrImage, setQrImage] = useState('')
 
     const [formData, setFormData] = useState({
         CNIC: '',
+        course: '',
+        batch: '',
     })
+
+    const notify = (message, type = "success") => { addToast(message, { appearance: type, autoDismiss: true }) }
 
     const handleFormData = e => {
         e.persist() // hack to be used on gatsby, I saw it first time
         setFormData((s) => ({ ...s, [e.target.name]: e.target.value }))
     }
 
-    const notify = (message, type = "success") => { addToast(message, { appearance: type, autoDismiss: true }) }
+    // Check if form application data available in url, and user is coming from register page then set form data automatically
+    useEffect(() => {
 
-    const getFormData = e => {
+        // Ref: https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+
+        const urlParams = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+
+        // // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+        // let value = urlParams.some_key; // "some_value"
+
+        let urlData = {}
+        if (urlParams.CNIC)
+            urlData.CNIC = urlParams.CNIC.trim()
+
+        if (urlParams.course)
+            urlData.course = urlParams.course.trim()
+
+        if (urlParams.batch)
+            urlData.batch = urlParams.batch.trim()
+
+        if (urlParams.CNIC) {
+            getApplicationData(urlData)
+        } else {
+            setIsLoading(false)
+        }
+
+    }, [])
+
+    const handleSubmit = e => {
 
         e.preventDefault();
 
-        let { CNIC } = formData
+        let { CNIC, course, batch } = formData
 
         CNIC = CNIC.trim()
+        course = course.trim()
+        batch = batch.trim()
 
         if (CNIC.length !== 13) {
             notify('Please enter your CNIC / B-Form # correctly without hyphens', 'error')
             return;
         }
 
+        let queryData = { CNIC, course, batch }
+
         setIsLoading(true)
 
-        let course;
-        if (window.location.hash) {
-            course = window.location.hash.replace("#", "")
-        }
+        getApplicationData(queryData)
 
-        firestore.collection("CourseApplications")
-            .where("CNIC", "==", CNIC)
-            .where("course", "==", "cmad")
+    }
+
+    const getApplicationData = (query) => {
+
+        console.log(query)
+
+        let docRef = firestore.collection("CourseApplications")
+
+        if (query.CNIC && query.CNIC.length)
+            docRef = docRef.where("CNIC", "==", query.CNIC)
+
+        if (query.course && query.course.length)
+            docRef = docRef.where("course", "==", query.course)
+
+        if (query.batch && query.batch.length)
+            docRef = docRef.where("batch", "==", query.batch)
+
+        docRef
             .orderBy("dateCreated", "desc")
-            .limit(3)
+            .limit(1)
             .get().then((querySnapshot) => {
 
                 let applications = []
@@ -110,88 +157,7 @@ const FormDownload = () => {
 
     }
 
-    if (!userApplication.rollNumber)
-        return (
-            <section className="contact-area ptb-70 bg-fafafb">
-                <div className="container">
-
-                    {isSubmitted
-                        ? <>
-                            <div className="row">
-                                <div className="col-12">
-
-                                    <div className="p-5 bg-success text-white d-flex flex-column justify-content-center align-items-center">
-                                        <h3>Success!</h3>
-                                        <h5>Your application have been submitted successfully.</h5>
-                                        <h5>We'll get back to you as soon as possible.</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </>
-                        : <>
-
-                            <div className="row">
-                                <div className="col-12">
-
-                                    <div className="contact-form">
-                                        <form id="contactForm">
-
-                                            <div className="row mb-4">
-                                                <div className="col">
-                                                    <h4 className='text-center'>Enter your CNIC number to download your card</h4>
-                                                </div>
-                                            </div>
-
-                                            <div className="row">
-
-                                                <div className="col-12 col-md-8 offset-md-2">
-
-                                                    <div className="form-group">
-                                                        <input type="CNIC" name="CNIC" value={formData.CNIC} className="form-control" required placeholder="Enter your CNIC number here" onChange={handleFormData} />
-                                                        <small className='text-info'>🛈 CNIC or B-Form Number (Only numbers without hyphens).</small>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div className="row mt-3">
-                                                <div className="col-12 col-md-8 offset-md-2">
-
-
-                                                    <button type="submit" className="default-btn btn-block px-2" disabled={isLoading} onClick={getFormData}>
-
-                                                        {!isLoading
-                                                            ? <>
-                                                                {/* <i className="flaticon-right"></i> */}
-                                                                Show Application Form <span></span>
-                                                            </>
-                                                            : <>
-                                                                {/* <i className="flaticon-right"></i> */}
-                                                                Checking... <span></span>
-                                                            </>
-                                                        }
-
-                                                    </button>
-
-                                                </div>
-
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </>
-                    }
-
-
-                </div>
-            </section>
-        )
-
-    if (qrImage === '') {
-        //encrypt roll number for qrCode
-        let encryptedRollNumber = window.btoa(userApplication.rollNumber)
+    const LoadingSection = () => {
         return <section className="contact-area ptb-70 bg-fafafb">
             <div className="container">
                 <div className="row">
@@ -205,15 +171,64 @@ const FormDownload = () => {
                                 <h3 className='mt-3'>Loading...</h3>
                             </div>
                         </div>
-
-                        {/* <QRCode id="qrComponent" value={encryptedRollNumber} size={160} level={"H"} /> */}
-                        <QRCode id="qrComponent" value={encryptedRollNumber} size={160} level={"H"} style={{ visibility: 'hidden' }} />
-                        {qrToImage()}
-
                     </div>
                 </div>
             </div>
         </section>
+    }
+
+    if (isLoading) {
+        return <LoadingSection />
+    }
+
+    if (!userApplication.rollNumber)
+        return (
+            <section className="contact-area ptb-70 bg-fafafb">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="contact-form">
+                                <form id="contactForm" onSubmit={handleSubmit}>
+                                    <div className="row mb-4">
+                                        <div className="col">
+                                            <h4 className='text-center'>Enter your CNIC number to download your card</h4>
+                                        </div>
+                                    </div>
+
+                                    <div className="row">
+                                        <div className="col-12 col-md-8 offset-md-2">
+
+                                            <div className="form-group">
+                                                <input type="CNIC" name="CNIC" value={formData.CNIC} className="form-control" required placeholder="Enter your CNIC number here" onChange={handleFormData} />
+                                                <small className='text-info'>🛈 CNIC or B-Form Number (Only numbers without hyphens).</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row mt-3">
+                                        <div className="col-12 col-md-8 offset-md-2">
+                                            <button type="button" className="default-btn btn-block px-4" disabled={isLoading} onClick={handleSubmit}>
+                                                {!isLoading ? <>Show Application Form <span></span> </> : <>Checking... <span></span></>}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        )
+
+    if (qrImage === '') {
+        //encrypt roll number for qrCode
+        let encryptedRollNumber = window.btoa(userApplication.rollNumber)
+        return <>
+            <LoadingSection />
+            <QRCode id="qrComponent" value={encryptedRollNumber} size={160} level={"H"} style={{ visibility: 'hidden' }} />
+            {/* <QRCode id="qrComponent" value={encryptedRollNumber} size={160} level={"H"} /> */}
+            {qrToImage()}
+        </>
     }
 
     let PDFDocument;
@@ -252,30 +267,11 @@ const FormDownload = () => {
                                     // {/* Download Form Automatically after 5 seconds */ }
                                     // let autoDownload = loading ? "" : setTimeout(function () { document.getElementById("formDownloadButton").click() }, 500)
 
-                                    // return <button type="submit" className="default-btn btn-block" id="formDownloadButton" disabled={isLoading} onClick={getFormData}>
-
-                                    //     {(loading ? 'Loading...' : 'Download Form')}
-
-                                    // </button>
-                                    return <button id="formDownloadButton" className="default-btn px-3 btn-block" disabled={loading} >
-
-                                        {loading
-                                            ? <>
-                                                {/* <i className="flaticon-right"></i> */}
-                                                Loading...<span></span>
-                                            </>
-                                            : <>
-                                                {/* <i className="flaticon-right"></i> */}
-                                                Download Form <span></span>
-                                            </>
-                                        }
-
+                                    return <button id="formDownloadButton" className="default-btn px-4 btn-block" disabled={loading} >
+                                        {loading ? <>Loading...<span></span></> : <>Download Form <span></span></>}
                                     </button>
-
-
                                 }}
                             </PDFDownloadLink>
-
 
                         </div>
                     </div>

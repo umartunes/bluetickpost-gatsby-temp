@@ -7,6 +7,8 @@ import displayPhoto from '../../assets/images/dp.jpg'
 import { firebase, firestore } from '../../utils/firebase'
 import { useToasts } from 'react-toast-notifications'
 
+import { Element, scroller } from 'react-scroll'
+
 import { courses } from '../../data/courses'
 
 const RegisterForm = () => {
@@ -101,13 +103,9 @@ const RegisterForm = () => {
 
                     console.log(applications[0])
 
-                    window.courseApplication = applications[0]
-                    window.location.href = `/form-download`
-
                     notify("You've already applied for this course. Download the PDF and follow the instructions carefully", 'success')
 
-                    setIsLoading(false)
-                    setIsSubmitted(true)
+                    actionOnSuccess(applicantData)
 
                 } else {
 
@@ -138,17 +136,9 @@ const RegisterForm = () => {
                             batch.commit()
                                 .then((docRef) => {
 
-                                    // this.props.history.push('/form-download')
-                                    // this.props.dispatch(setOptions({ application: applicantData }))
-
-                                    console.log(applicantData)
-
                                     notify("Your application have been submitted successfully", 'success')
+                                    actionOnSuccess(applicantData)
 
-                                    window.courseApplication = applicantData
-                                    window.location.href = `/form-download`
-                                    setIsSubmitted(true)
-                                    setIsLoading(false)
                                 })
                                 .catch((error) => {
                                     showServerError(error)
@@ -169,6 +159,25 @@ const RegisterForm = () => {
             }).catch(function (error) {
                 showServerError(error)
             });
+
+    }
+
+    const actionOnSuccess = (applicantData) => {
+
+        // console.log(applicantData)
+
+        window.location.assign(`/form-download?course=${applicantData.course}&CNIC=${applicantData.CNIC}&batch=${applicantData.batch}`)
+
+        setIsSubmitted(true)
+        setIsLoading(false)
+
+        scroller.scrollTo('success-section', {
+            duration: 500,
+            delay: 300,
+            smooth: true,
+            // containerId: 'ContainerElementID',
+            offset: -100, // Scrolls to element -10 pixels down the page
+        })
 
     }
 
@@ -358,19 +367,20 @@ const RegisterForm = () => {
     }
 
     return (
-        <section className="contact-area ptb-100 bg-fafafb">
+        <section className="contact-area ptb-70 bg-fafafb">
             <div className="container">
 
 
                 {isSubmitted
                     ? <>
+                        <Element name="success-section" className="element">&nbsp;</Element>
                         <div className="row">
                             <div className="col-12">
 
-                                <div className="p-5 bg-success text-white d-flex flex-column justify-content-center align-items-center">
-                                    <h3>Success!</h3>
-                                    <h5>Your application have been submitted successfully.</h5>
-                                    <Link to="/form-download" className='btn btn-white btn-block'>Click Here to download your application form.</Link>
+                                <div className="p-4 bg-info text-white d-flex flex-column justify-content-center align-items-center">
+                                    
+                                    <h5 className='m-0 text-center'>Your application was submitted successfully.</h5>
+                                    <Link type='button' to={`/form-download?course=${formData.course}&CNIC=${formData.CNIC}&autoDownload=1`} className='default-btn px-4 mt-3'>Click Here to download your application form.</Link>
                                 </div>
 
                             </div>

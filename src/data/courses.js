@@ -15,7 +15,7 @@ export const courses = [
         courseFeeGroupClasses: `PKR 7000`,
         courseFeePersonalClasses: `USD 70`,
 
-        upcomingBatchNumber: "03",
+        upcomingBatchNumber: "02",
         upcomingBatchSection: "A",
         lastDateOfFormSubmission: "April 07, 2023",
 
