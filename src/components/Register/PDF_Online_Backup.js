@@ -5,6 +5,8 @@ import { Page, Text, Image, View, Document, StyleSheet } from '@react-pdf/render
 import logo from '../../assets/images/logo-pdf.png'
 import logoSDP from '../../assets/images/logo-sdp.png'
 
+// import JazzCashQR from '../../assets/images/jazzCash_qr.jpeg'
+
 // Create styles
 const styles = StyleSheet.create({
     page: {
@@ -23,8 +25,6 @@ const styles = StyleSheet.create({
     },
     cardsGroup: {
         flexDirection: 'row',
-        borderBottom: '1px solid black',
-        borderTop: '1px solid black'
     },
     card: {
         margin: 10,
@@ -102,11 +102,11 @@ const styles = StyleSheet.create({
     },
     heading: {
         fontSize: 15,
-        color: '#598627',
+        color: '#96ca3e',
         textDecoration: 'underline'
     },
     paragraphsGroup: {
-        margin: 12,
+        margin: 15,
         fontSize: 10,
         color: '#666666'
     },
@@ -142,6 +142,10 @@ const styles = StyleSheet.create({
         letterSpacing: 1,
         color: '#222222'
     },
+    strongUnderline: {
+        fontWeight: 'bold',
+        textDecoration: 'underline'
+    },
     note: {
         fontSize: 10.5,
         letterSpacing: 1.1,
@@ -162,7 +166,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default class PDFApplication extends React.Component {
+export default class PDFOnline extends React.Component {
 
     getCourseName = courseSlug => {
 
@@ -288,9 +292,6 @@ export default class PDFApplication extends React.Component {
 
                     <View style={styles.descriptions}>
 
-                        {/* <Text style={styles.heading}>Personal Details:</Text>
-                        <Text style={{fontSize: 5 }}>&nbsp;</Text> */}
-
                         {/* <View style={styles.studentDetailsLine}>
                             <View style={styles.studentDetailsRow}>
                                 <Text>Full Name: </Text>
@@ -336,23 +337,27 @@ export default class PDFApplication extends React.Component {
 
                         {/* <Text style={styles.heading}>Course Details:</Text>
                         <View style={styles.paragraphsGroup}>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Course Name:</Text> {this.getCourseName(application.course)} </Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Course Name:</Text> {this.getCourseName(application.course)} ( Live Online Classes ) </Text>
                             <Text style={styles.textPara}><Text style={styles.bold}>Duration:</Text> {application.course === 'cmad' ? '6' : '3'} months ( 2 days a week )  </Text>
+                        </View>
+
+                        <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
+                            <Text style={{ marginTop: -15, marginBottom: 15 }}>_______________________________________________</Text>
                         </View> */}
+
 
                         <Text style={styles.heading}>Instructions:</Text>
                         <Text style={{ fontSize: 12, color: "#222222", marginTop: 5 }}>To confirm your seat; you have to follow the instructions carefully:</Text>
 
-                        <Text style={styles.note}>You would receive a call from Techna Office for a Basic Test, and Form Submission date. If you do not receive a call from us by 19 December 2022. Contact us at the phone number given below.</Text>
+                        <Text style={styles.note}>Please submit your documents and fee submission receipt on this <Text style={styles.strongUnderline}>WhatsApp # 0345 779 0453</Text> to confirm your seat. Please submit your fee on this <Text style={styles.strongUnderline}>JazzCash # 0324 667 8889</Text>.</Text>
 
                         <View style={styles.paragraphsGroup}>
-                            {/* <Text style={styles.textPara}>1) Color Print this PDF for attestation of Registration Card and Identity Card from <Text style={styles.bold}>Techna</Text> Office.</Text> */}
-                            {/* <Text style={styles.textPara}>2) Bring Original CNIC/B-Form &amp; Last Qualification Mark sheet/Certificate to the below given office address, along with course enrollment fee of PKR {application.courseFee}/- </Text> */}
-
-                            <Text style={styles.textPara}>1) Bring 1 color copy of this document for attestation from <Text style={styles.bold}>Techna</Text> Office. </Text>
-                            <Text style={styles.textPara}>2) Bring your original CNIC or B-Form, Also bring 1 copy of CNIC or B-Form.</Text>
-                            <Text style={styles.textPara}>3) Bring your original mark sheet, certificate or degree of your highest qualification, which you've mentioned in the application form. Also bring 1 copy of mark sheet, certificate or degree.</Text>
-                            {/* <Text style={styles.textPara}>4) The monthly fee for this course is PKR {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text> */}
+                            <Text style={styles.textPara}>1) Send the picture or PDF of this document for attestation from <Text style={styles.bold}>Techna</Text> Office. </Text>
+                            <Text style={styles.textPara}>2) Send the picture of your original CNIC or B-Form</Text>
+                            <Text style={styles.textPara}>3) Send the picture of your original mark sheet, certificate or degree of your highest qualification, which you've mentioned in the application form.</Text>
+                            <Text style={styles.textPara}>4) Send the receipt of fee submission</Text>
+                            <Text style={styles.textPara}>5) The last date for the Admit Card submission is {application.lastDateOfFormSubmission}. </Text>
+                            <Text style={styles.textPara}>6) Submission Hours: Monday to Saturday 09:00 AM to 08:00 PM</Text>
                         </View>
 
                         <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
@@ -361,23 +366,6 @@ export default class PDFApplication extends React.Component {
                                 ? <Text style={{ fontSize: 9 }}>*) There is no monthly or tuition fee for this course. One time course enrollment fee is {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text>
                                 : <Text style={{ fontSize: 9 }}>*) The monthly fee for this course is {application.courseFee}/- only; which would be submitted at the time of submission of this form.</Text>
                         }
-
-                        <View style={styles.signatureLine}>
-                            <View style={styles.signatureLineRow}>
-                                <Text >Date:</Text>
-                                <Text>_____________</Text>
-                            </View>
-
-                            <View style={styles.signatureLineRow}>
-                                <Text >Student Signature:</Text>
-                                <Text>_____________</Text>
-                            </View>
-
-                            <View style={styles.signatureLineRow}>
-                                <Text >Guardian Signature:</Text>
-                                <Text>_____________</Text>
-                            </View>
-                        </View>
 
                         <Text style={{ fontSize: 15 }}>&nbsp;</Text>
 
@@ -391,7 +379,38 @@ export default class PDFApplication extends React.Component {
                             <Text style={styles.textPara}><Text style={styles.bold}>Website:             </Text> www.techna.pk</Text>
                         </View>
 
+
+
+                        {/* <Text style={styles.heading}>Fee Submission Instructions:</Text>
+                        <View style={styles.paragraphsGroup}>
+                            <Text style={styles.textPara}>1) To submit your fee using <Text style={styles.bold}>JazzCash App</Text>, scan QR Code via <Text style={styles.bold}>Scan QR option</Text> on JazzCash App. After submission of your fee contact us using one of the method provided above.</Text>
+                            <Text style={styles.textPara}>2) To submit your fee via <Text style={styles.bold}>EasyPaisa</Text> or <Text style={styles.bold}>UBL Bank Transfer</Text>, Contact us using one of the contact method provided above.</Text>
+                            <Text style={styles.textPara}>3) To submit your fee by <Text style={styles.bold}>Hand</Text>, Visit our office address provided above along with this Application Form between 9am - 4pm.</Text>
+                        </View>
+
+                        <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
+                        <Text style={{ fontSize: 9 }}>*) There is no monthly or tuition fee for this course. One time course enrollment fee is PKR {application.courseFee}/- only; which would be submitted using JazzCash, EasyPaisa or UBL Bank Transfer.</Text>
+                        <Text style={{ fontSize: 9 }}>*) For further information or queries please contact us using one of the method provided above.</Text>
+
+                        <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
+                            <Text style={{ marginTop: 0, marginBottom: 15 }}>_______________________________________________</Text>
+                        </View>
+
+                        <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
+                            <Image src={JazzCashQR} style={{ height: 170, width: 'auto' }} />
+                        </View> */}
+
+
+
                     </View>
+
+
+
+                    {/* <View style={styles.cardsGroup}>
+                        {this.card("Admit Card")}
+                        {this.card("Identity Card")}
+                    </View> */}
+
                 </Page>
             </Document >
         )

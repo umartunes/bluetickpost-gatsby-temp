@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
     },
     pageLogo: {
         justifyContent: 'space-between',
-        marginBottom: 5,
-        marginTop: 10,
+        marginBottom: 2,
+        marginTop: 5,
         padding: 10,
         flexDirection: 'row',
     },
@@ -97,16 +97,17 @@ const styles = StyleSheet.create({
         height: 106
     },
     descriptions: {
-        margin: 10,
+        margin: `10px 10px 0`,
         flexGrow: 1
     },
     heading: {
-        fontSize: 15,
-        color: '#96ca3e',
-        textDecoration: 'underline'
+        fontSize: 13,
+        color: '#598627',
+        textDecoration: 'underline',
+        marginTop: 12
     },
     paragraphsGroup: {
-        margin: 15,
+        margin: `12px 10px 8px`,
         fontSize: 10,
         color: '#666666'
     },
@@ -159,8 +160,20 @@ const styles = StyleSheet.create({
     blankLine: {
         fontSize: 1,
         backgroundColor: '#555555',
-        margin: "10px 0",
+        margin: "8px 0",
     },
+
+    boldHeading: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        letterSpacing: 1.1,
+        color: "#ffffff",
+        backgroundColor: '#333333',
+        margin: "8px 0 0",
+        padding: "7px 10px",
+        textAlign: "center"
+    },
+
     smallText: {
         fontSize: 9,
     },
@@ -287,8 +300,9 @@ export default class PDFOnline extends React.Component {
                         {this.card("Identity Card", rollNo)}
                     </View>
 
-                    <Text style={styles.blankLine}>&nbsp;</Text>
+                    {/* <Text style={styles.blankLine}>&nbsp;</Text> */}
 
+                    <Text style={styles.boldHeading}>Instructions</Text>
 
                     <View style={styles.descriptions}>
 
@@ -346,38 +360,41 @@ export default class PDFOnline extends React.Component {
                         </View> */}
 
 
-                        <Text style={styles.heading}>Instructions:</Text>
-                        <Text style={{ fontSize: 12, color: "#222222", marginTop: 5 }}>To confirm your seat; you have to follow the instructions carefully:</Text>
+                        <Text style={{ fontSize: 12, fontWeight: 'bold', color: "#222222", marginTop: 5, textAlign: 'center', textDecoration: 'underline' }}>To Confirm Your Seat; You Have To Follow The Instructions Carefully.</Text>
 
-                        <Text style={styles.note}>Please submit your documents and fee submission receipt on this <Text style={styles.strongUnderline}>WhatsApp # 0345 779 0453</Text> to confirm your seat. Please submit your fee on this <Text style={styles.strongUnderline}>JazzCash # 0324 667 8889</Text>.</Text>
+                        <Text style={styles.heading}>Step 1: Submit Your Fee</Text>
+                        <Text style={{ fontSize: 11, color: "#222222", marginTop: 5 }}>Please submit your fee of <Text style={styles.strongUnderline}>{application.courseFee}/-</Text> to JazzCash Account # <Text style={styles.strongUnderline}>0324 667 8889</Text></Text>
+
+                        {/* <Text style={styles.note}>Please submit your documents and fee submission receipt on this <Text style={styles.strongUnderline}>WhatsApp # 0345 779 0453</Text> to confirm your seat. </Text> */}
+
+                        <Text style={styles.heading}>Step 2: Submit Your Documents</Text>
+                        <Text style={{ fontSize: 11, color: "#222222", marginTop: 5 }}>Please submit your documents and fee submission receipt to our WhatsApp # <Text style={styles.strongUnderline}>0345 779 0453</Text> to confirm your seat.</Text>
 
                         <View style={styles.paragraphsGroup}>
                             <Text style={styles.textPara}>1) Send the picture or PDF of this document for attestation from <Text style={styles.bold}>Techna</Text> Office. </Text>
                             <Text style={styles.textPara}>2) Send the picture of your original CNIC or B-Form</Text>
                             <Text style={styles.textPara}>3) Send the picture of your original mark sheet, certificate or degree of your highest qualification, which you've mentioned in the application form.</Text>
                             <Text style={styles.textPara}>4) Send the receipt of fee submission</Text>
-                            <Text style={styles.textPara}>5) The last date for the Admit Card submission is {application.lastDateOfFormSubmission}. </Text>
-                            <Text style={styles.textPara}>6) Submission Hours: Monday to Saturday 09:00 AM to 08:00 PM</Text>
                         </View>
 
-                        <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
+                        <Text style={{ fontSize: 9 }}>*) The last date of documents and fee receipt submission is <Text style={styles.strongUnderline}>{application.lastDateOfFormSubmission}</Text>. Submission Hours: <Text style={styles.strongUnderline}>Monday to Saturday 09:00 AM to 08:00 PM</Text></Text>
                         {
                             application.isOneTimeFee && application.learningMode === "Normal"
                                 ? <Text style={{ fontSize: 9 }}>*) There is no monthly or tuition fee for this course. One time course enrollment fee is {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text>
                                 : <Text style={{ fontSize: 9 }}>*) The monthly fee for this course is {application.courseFee}/- only; which would be submitted at the time of submission of this form.</Text>
+
                         }
-
-                        <Text style={{ fontSize: 15 }}>&nbsp;</Text>
-
-                        <Text style={styles.heading}>Contact Info:</Text>
+                        <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
+                        
+                        {/* <Text style={styles.heading}>Contact Info:</Text>
                         <View style={styles.paragraphsGroup}>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Office Address:   </Text> P-949 Block G, Gulistan Colony # 1, Akbar Chowk near MC Boys High School, Faisalabad.</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0345 779 0453</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Office Address:   </Text> P-949 Block G, Gulistan Colony # 1, Akbar Chowk, Faisalabad.</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0345 779 0453 | 0324 667 8889</Text>
                             <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0324 667 8889</Text>
                             <Text style={styles.textPara}><Text style={styles.bold}>Facebook Group: </Text> www.facebook.com/groups/TechnaPK</Text>
                             <Text style={styles.textPara}><Text style={styles.bold}>Facebook Page:  </Text> www.facebook.com/TechnaPK</Text>
                             <Text style={styles.textPara}><Text style={styles.bold}>Website:             </Text> www.techna.pk</Text>
-                        </View>
+                        </View> */}
 
 
 
@@ -405,6 +422,20 @@ export default class PDFOnline extends React.Component {
                     </View>
 
 
+                    <Text style={styles.boldHeading}>Contact Information</Text>
+
+                    <View style={styles.descriptions}>
+
+                        <View style={styles.paragraphsGroup}>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Office Address:   </Text> P-949 Block G, Gulistan Colony # 1, Akbar Chowk, Faisalabad.</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0345 779 0453 || 0324 667 8889</Text>
+                            {/* <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0324 667 8889</Text> */}
+                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Group: </Text> www.facebook.com/groups/TechnaPK</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Page:  </Text> www.facebook.com/TechnaPK</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Website:             </Text> www.techna.pk</Text>
+                        </View>
+
+                    </View>
 
                     {/* <View style={styles.cardsGroup}>
                         {this.card("Admit Card")}

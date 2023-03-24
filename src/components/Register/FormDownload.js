@@ -272,7 +272,7 @@ const FormDownload = () => {
                         <div className="col-12">
 
                             <div className="p-4 bg-info text-white">
-                                <h5 className='m-0 text-center'>Your application was submitted successfully. Download PDF by clicking the button below and follow the instructions carefully written on it to confirm your seat.</h5>
+                                <h5 className='m-0 text-center'>Your application was submitted successfully. To confirm your seat; Download PDF by clicking the button below and follow the instructions carefully written on it.</h5>
                             </div>
 
                         </div>
