@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
     },
     pageLogo: {
         justifyContent: 'space-between',
-        marginBottom: 5,
-        marginTop: 10,
+        marginBottom: 2,
+        marginTop: 5,
         padding: 10,
         flexDirection: 'row',
     },
@@ -23,8 +23,6 @@ const styles = StyleSheet.create({
     },
     cardsGroup: {
         flexDirection: 'row',
-        borderBottom: '1px solid black',
-        borderTop: '1px solid black'
     },
     card: {
         margin: 10,
@@ -97,18 +95,20 @@ const styles = StyleSheet.create({
         height: 106
     },
     descriptions: {
-        margin: 10,
+        margin: `10px 10px 0`,
+        padding: 0,
         flexGrow: 1
     },
     heading: {
-        fontSize: 15,
+        fontSize: 13,
         color: '#598627',
-        textDecoration: 'underline'
+        textDecoration: 'underline',
+        marginTop: 12
     },
     paragraphsGroup: {
-        margin: 12,
+        margin: `10px 10px 8px`,
         fontSize: 10,
-        color: '#666666'
+        color: '#555555'
     },
     textPara: {
         marginBottom: 5
@@ -142,6 +142,10 @@ const styles = StyleSheet.create({
         letterSpacing: 1,
         color: '#222222'
     },
+    strongUnderline: {
+        fontWeight: 'bold',
+        textDecoration: 'underline'
+    },
     note: {
         fontSize: 10.5,
         letterSpacing: 1.1,
@@ -155,8 +159,20 @@ const styles = StyleSheet.create({
     blankLine: {
         fontSize: 1,
         backgroundColor: '#555555',
-        margin: "10px 0",
+        margin: "8px 0",
     },
+
+    boldHeading: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        letterSpacing: 1.1,
+        color: "#ffffff",
+        backgroundColor: '#333333',
+        margin: "5px 0 0",
+        padding: "7px 10px",
+        textAlign: "center"
+    },
+
     smallText: {
         fontSize: 9,
     },
@@ -283,84 +299,33 @@ export default class PDFApplication extends React.Component {
                         {this.card("Identity Card", rollNo)}
                     </View>
 
-                    <Text style={styles.blankLine}>&nbsp;</Text>
+                    {/* <Text style={styles.blankLine}>&nbsp;</Text> */}
 
+                    <Text style={styles.boldHeading}>Instructions</Text>
 
                     <View style={styles.descriptions}>
 
-                        {/* <Text style={styles.heading}>Personal Details:</Text>
-                        <Text style={{fontSize: 5 }}>&nbsp;</Text> */}
+                        <Text style={{ fontSize: 12, fontWeight: 'bold', color: "#222222", marginTop: 5, textAlign: 'center', textDecoration: 'underline' }}>To Confirm Your Seat; You Have To Follow The Instructions Carefully.</Text>
 
-                        {/* <View style={styles.studentDetailsLine}>
-                            <View style={styles.studentDetailsRow}>
-                                <Text>Full Name: </Text>
-                                <Text style={styles.borderBottom}>{application.fullName}</Text>
-                            </View>
-                            <View style={styles.studentDetailsRow}>
-                                <Text >CNIC / B-Form: </Text>
-                                <Text style={styles.borderBottom}>{application.CNIC}</Text>
-                            </View>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Date Of Birth: </Text>
-                                <Text style={styles.borderBottom}>{application.DOB}</Text>
-                            </View>
-
-
-                        </View> */}
-
-                        {/* <View style={styles.studentDetailsLine}>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Father Name: </Text>
-                                <Text style={styles.borderBottom}>{application.fatherName}</Text>
-                            </View>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Mobile Number: </Text>
-                                <Text style={styles.borderBottom}>{application.mobileNumber}</Text>
-                            </View>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Qualification: </Text>
-                                <Text style={styles.borderBottom}>{application.qualification}</Text>
-                            </View>
-                        </View> */}
-                        {/* <View style={styles.studentDetailsLine}>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Address: </Text>
-                                <Text style={styles.borderBottom}>{application.address}</Text>
-                            </View>
-                        </View> */}
-
-                        {/* <Text style={styles.heading}>Course Details:</Text>
-                        <View style={styles.paragraphsGroup}>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Course Name:</Text> {this.getCourseName(application.course)} </Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Duration:</Text> {application.course === 'cmad' ? '6' : '3'} months ( 2 days a week )  </Text>
-                        </View> */}
-
-                        <Text style={styles.heading}>Instructions:</Text>
-                        <Text style={{ fontSize: 12, color: "#222222", marginTop: 5 }}>To confirm your seat; you have to follow the instructions carefully:</Text>
-
-                        <Text style={styles.note}>You would receive a call from Techna Office for a Basic Test, and Form Submission date. If you do not receive a call from us by 19 December 2022. Contact us at the phone number given below.</Text>
+                        <Text style={styles.note}>You would receive a call from Techna Office for a Basic Test, and Form Submission date. If you do not receive a call from us by <Text style={styles.strongUnderline}>{application.lastDateOfFormSubmission}</Text>. Contact us at the phone number given below.</Text>
 
                         <View style={styles.paragraphsGroup}>
                             {/* <Text style={styles.textPara}>1) Color Print this PDF for attestation of Registration Card and Identity Card from <Text style={styles.bold}>Techna</Text> Office.</Text> */}
                             {/* <Text style={styles.textPara}>2) Bring Original CNIC/B-Form &amp; Last Qualification Mark sheet/Certificate to the below given office address, along with course enrollment fee of PKR {application.courseFee}/- </Text> */}
-
                             <Text style={styles.textPara}>1) Bring 1 color copy of this document for attestation from <Text style={styles.bold}>Techna</Text> Office. </Text>
                             <Text style={styles.textPara}>2) Bring your original CNIC or B-Form, Also bring 1 copy of CNIC or B-Form.</Text>
                             <Text style={styles.textPara}>3) Bring your original mark sheet, certificate or degree of your highest qualification, which you've mentioned in the application form. Also bring 1 copy of mark sheet, certificate or degree.</Text>
-                            {/* <Text style={styles.textPara}>4) The monthly fee for this course is PKR {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text> */}
                         </View>
 
-                        <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
+                        {/* <Text style={{ fontSize: 9 }}>*) The last date of documents and fee receipt submission is <Text style={styles.strongUnderline}>{application.lastDateOfFormSubmission}</Text>. Submission Hours: <Text style={styles.strongUnderline}>Monday to Saturday 09:00 AM to 08:00 PM</Text></Text> */}
                         {
                             application.isOneTimeFee && application.learningMode === "Normal"
                                 ? <Text style={{ fontSize: 9 }}>*) There is no monthly or tuition fee for this course. One time course enrollment fee is {application.courseFee}/- only; which would be submitted at the time of attestation and submission of this form.</Text>
                                 : <Text style={{ fontSize: 9 }}>*) The monthly fee for this course is {application.courseFee}/- only; which would be submitted at the time of submission of this form.</Text>
+
                         }
+                        <Text style={{ fontSize: 9, marginBottom: 1 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
+                        {/* <Text style={{ fontSize: 9 }}>*) For further information or queries please contact us using one of the method provided above.</Text> */}
 
                         <View style={styles.signatureLine}>
                             <View style={styles.signatureLineRow}>
@@ -379,19 +344,20 @@ export default class PDFApplication extends React.Component {
                             </View>
                         </View>
 
-                        <Text style={{ fontSize: 15 }}>&nbsp;</Text>
-
-                        <Text style={styles.heading}>Contact Info:</Text>
-                        <View style={styles.paragraphsGroup}>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Office Address:   </Text> P-949 Block G, Gulistan Colony # 1, Akbar Chowk near MC Boys High School, Faisalabad.</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0345 779 0453</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0324 667 8889</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Group: </Text> www.facebook.com/groups/TechnaPK</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Page:  </Text> www.facebook.com/TechnaPK</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Website:             </Text> www.techna.pk</Text>
-                        </View>
-
                     </View>
+                    
+                    <Text style={styles.boldHeading}>Contact Information</Text>
+                    <View style={styles.descriptions}>
+                        <View style={styles.paragraphsGroup}>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Office Address:   </Text> P-949 Block G, Gulistan Colony # 1, Akbar Chowk, Faisalabad.</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0345 779 0453 </Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0324 667 8889</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Website:             </Text> www.techna.pk</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Page:  </Text> www.facebook.com/TechnaPK</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Group: </Text> www.facebook.com/groups/TechnaPK</Text>
+                        </View>
+                    </View>
+
                 </Page>
             </Document >
         )

@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
     },
     descriptions: {
         margin: `10px 10px 0`,
+        padding: 0,
         flexGrow: 1
     },
     heading: {
@@ -107,9 +108,9 @@ const styles = StyleSheet.create({
         marginTop: 12
     },
     paragraphsGroup: {
-        margin: `12px 10px 8px`,
+        margin: `10px 10px 8px`,
         fontSize: 10,
-        color: '#666666'
+        color: '#555555'
     },
     textPara: {
         marginBottom: 5
@@ -169,7 +170,7 @@ const styles = StyleSheet.create({
         letterSpacing: 1.1,
         color: "#ffffff",
         backgroundColor: '#333333',
-        margin: "8px 0 0",
+        margin: "5px 0 0",
         padding: "7px 10px",
         textAlign: "center"
     },
@@ -306,66 +307,10 @@ export default class PDFOnline extends React.Component {
 
                     <View style={styles.descriptions}>
 
-                        {/* <View style={styles.studentDetailsLine}>
-                            <View style={styles.studentDetailsRow}>
-                                <Text>Full Name: </Text>
-                                <Text style={styles.borderBottom}>{application.fullName}</Text>
-                            </View>
-                            <View style={styles.studentDetailsRow}>
-                                <Text >CNIC / B-Form: </Text>
-                                <Text style={styles.borderBottom}>{application.CNIC}</Text>
-                            </View>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Date Of Birth: </Text>
-                                <Text style={styles.borderBottom}>{application.DOB}</Text>
-                            </View>
-
-
-                        </View> */}
-
-                        {/* <View style={styles.studentDetailsLine}>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Father Name: </Text>
-                                <Text style={styles.borderBottom}>{application.fatherName}</Text>
-                            </View>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Mobile Number: </Text>
-                                <Text style={styles.borderBottom}>{application.mobileNumber}</Text>
-                            </View>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Qualification: </Text>
-                                <Text style={styles.borderBottom}>{application.qualification}</Text>
-                            </View>
-                        </View> */}
-                        {/* <View style={styles.studentDetailsLine}>
-
-                            <View style={styles.studentDetailsRow}>
-                                <Text >Address: </Text>
-                                <Text style={styles.borderBottom}>{application.address}</Text>
-                            </View>
-                        </View> */}
-
-                        {/* <Text style={styles.heading}>Course Details:</Text>
-                        <View style={styles.paragraphsGroup}>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Course Name:</Text> {this.getCourseName(application.course)} ( Live Online Classes ) </Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Duration:</Text> {application.course === 'cmad' ? '6' : '3'} months ( 2 days a week )  </Text>
-                        </View>
-
-                        <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                            <Text style={{ marginTop: -15, marginBottom: 15 }}>_______________________________________________</Text>
-                        </View> */}
-
-
                         <Text style={{ fontSize: 12, fontWeight: 'bold', color: "#222222", marginTop: 5, textAlign: 'center', textDecoration: 'underline' }}>To Confirm Your Seat; You Have To Follow The Instructions Carefully.</Text>
 
                         <Text style={styles.heading}>Step 1: Submit Your Fee</Text>
                         <Text style={{ fontSize: 11, color: "#222222", marginTop: 5 }}>Please submit your fee of <Text style={styles.strongUnderline}>{application.courseFee}/-</Text> to JazzCash Account # <Text style={styles.strongUnderline}>0324 667 8889</Text></Text>
-
-                        {/* <Text style={styles.note}>Please submit your documents and fee submission receipt on this <Text style={styles.strongUnderline}>WhatsApp # 0345 779 0453</Text> to confirm your seat. </Text> */}
 
                         <Text style={styles.heading}>Step 2: Submit Your Documents</Text>
                         <Text style={{ fontSize: 11, color: "#222222", marginTop: 5 }}>Please submit your documents and fee submission receipt to our WhatsApp # <Text style={styles.strongUnderline}>0345 779 0453</Text> to confirm your seat.</Text>
@@ -384,19 +329,8 @@ export default class PDFOnline extends React.Component {
                                 : <Text style={{ fontSize: 9 }}>*) The monthly fee for this course is {application.courseFee}/- only; which would be submitted at the time of submission of this form.</Text>
 
                         }
-                        <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
-                        
-                        {/* <Text style={styles.heading}>Contact Info:</Text>
-                        <View style={styles.paragraphsGroup}>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Office Address:   </Text> P-949 Block G, Gulistan Colony # 1, Akbar Chowk, Faisalabad.</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0345 779 0453 | 0324 667 8889</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0324 667 8889</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Group: </Text> www.facebook.com/groups/TechnaPK</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Page:  </Text> www.facebook.com/TechnaPK</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Website:             </Text> www.techna.pk</Text>
-                        </View> */}
-
-
+                        <Text style={{ fontSize: 9, marginBottom: 1 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
+                        {/* <Text style={{ fontSize: 9 }}>*) For further information or queries please contact us using one of the method provided above.</Text> */}
 
                         {/* <Text style={styles.heading}>Fee Submission Instructions:</Text>
                         <View style={styles.paragraphsGroup}>
@@ -405,10 +339,6 @@ export default class PDFOnline extends React.Component {
                             <Text style={styles.textPara}>3) To submit your fee by <Text style={styles.bold}>Hand</Text>, Visit our office address provided above along with this Application Form between 9am - 4pm.</Text>
                         </View>
 
-                        <Text style={{ fontSize: 9 }}>*) I acknowledge that I've read all the rules and policies at the time of filling this form online. </Text>
-                        <Text style={{ fontSize: 9 }}>*) There is no monthly or tuition fee for this course. One time course enrollment fee is PKR {application.courseFee}/- only; which would be submitted using JazzCash, EasyPaisa or UBL Bank Transfer.</Text>
-                        <Text style={{ fontSize: 9 }}>*) For further information or queries please contact us using one of the method provided above.</Text>
-
                         <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                             <Text style={{ marginTop: 0, marginBottom: 15 }}>_______________________________________________</Text>
                         </View>
@@ -416,25 +346,18 @@ export default class PDFOnline extends React.Component {
                         <View style={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                             <Image src={JazzCashQR} style={{ height: 170, width: 'auto' }} />
                         </View> */}
-
-
-
                     </View>
-
-
+                    
                     <Text style={styles.boldHeading}>Contact Information</Text>
-
                     <View style={styles.descriptions}>
-
                         <View style={styles.paragraphsGroup}>
                             <Text style={styles.textPara}><Text style={styles.bold}>Office Address:   </Text> P-949 Block G, Gulistan Colony # 1, Akbar Chowk, Faisalabad.</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0345 779 0453 || 0324 667 8889</Text>
-                            {/* <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0324 667 8889</Text> */}
-                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Group: </Text> www.facebook.com/groups/TechnaPK</Text>
-                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Page:  </Text> www.facebook.com/TechnaPK</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0345 779 0453 </Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Contact Number: </Text> 0324 667 8889</Text>
                             <Text style={styles.textPara}><Text style={styles.bold}>Website:             </Text> www.techna.pk</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Page:  </Text> www.facebook.com/TechnaPK</Text>
+                            <Text style={styles.textPara}><Text style={styles.bold}>Facebook Group: </Text> www.facebook.com/groups/TechnaPK</Text>
                         </View>
-
                     </View>
 
                     {/* <View style={styles.cardsGroup}>
