@@ -31,7 +31,7 @@ export default function Menu() {
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
-							// target="_blank"
+						// target="_blank"
 						>
 							LMS
 						</Link>
@@ -61,7 +61,7 @@ export default function Menu() {
 					Courses <i className="bx bx-chevron-down"></i>
 				</Link>
 				<ul className="dropdown-menu">
-				<li className="nav-item">
+					<li className="nav-item">
 						<Link
 							to="/courses"
 							activeClassName="active"
@@ -114,7 +114,7 @@ export default function Menu() {
 					</li>
 				</ul> */}
 			</li>
-			
+
 			<li className="nav-item">
 				<Link
 					to="/services"
@@ -256,17 +256,19 @@ export default function Menu() {
 
 
 			</li>
-			{/* <li className="nav-item">
+			<li className="nav-item">
 				<Link
-					to="/blog"
+					to="https://technablog.com"
 					activeClassName="active"
-					onClick={e => window.location.pathname === "/blog" ? e.preventDefault() : setCollapsed(true) }
+					onClick={e => window.location.pathname === "/blog" ? e.preventDefault() : setCollapsed(true)}
 					// onClick={(e) => e.preventDefault()}
 					className="nav-link"
+					target="_blank"
 				>
-					Blog 
+					Blog
 				</Link>
-			</li> */}
+
+			</li>
 		</ul>
 	);
 }

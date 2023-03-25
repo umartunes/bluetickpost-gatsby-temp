@@ -15,20 +15,20 @@ import StartProject from '../components/Common/StartProject'
 const faqs = [
     {
         question: `Does my child need previous coding experience?`,
-        answer: `No, your child doesn’t need prior coding experience for Junior and Senior Programs. Only students who graduate from our Senior Program can enrol in STEM1’s Leader Program.`
+        answer: `No, your child doesn’t need prior coding experience for Junior and Senior Programs. Only students who graduate from our Senior Program can enrol in Techna’s Leader Program.`
     },
-    {
-        question: `Who can participate in Jr.Hacks 2021?`,
-        answer: `Peel Students from grade 2 to 8 are eligible to participate. No prior hackathon or coding experience required.`
-    },
+    // {
+    //     question: `Who can participate in Jr.Hacks 2021?`,
+    //     answer: `Peel Students from grade 2 to 8 are eligible to participate. No prior hackathon or coding experience required.`
+    // },
     {
         question: `Will my child have to work in groups or alone?`,
-        answer: `STEM1 is designed to foster leadership and communication skills in children. All participants will be divided into groups and guided by a skilled mentor to complete the challenge.`
+        answer: `Techna is designed to foster leadership and communication skills in children. All participants will be divided into groups and guided by a skilled mentor to complete the challenge.`
     },
-    {
-        question: `Where and when can I pickup the SWAG bag?`,
-        answer: `SWAG bags will be available for pickup from Wednesday Noon till Friday 2PM at select Meridian branches & Streetsville HomeHardware store.`
-    },
+    // {
+    //     question: `Where and when can I pickup the SWAG bag?`,
+    //     answer: `SWAG bags will be available for pickup from Wednesday Noon till Friday 2PM at select Meridian branches & Streetsville HomeHardware store.`
+    // },
     {
         question: `How will you make sure my child can access the information for the event?`,
         answer: `Students will be using our learning platform. Our Mentors will contact them before the event to make sure everything is working fine.`
@@ -39,21 +39,20 @@ const faqs = [
     },
     {
         question: `Can my child directly enrol in the Leader Program?`,
-        answer: `Only students who graduate from our Senior Program can enrol in STEM1’s Leader Program.`
+        answer: `Only students who graduate from our Senior Program can enrol in Techna’s Leader Program.`
     },
-    
     {
         question: `How do you charge your fees?`,
-        answer: `STEM1 offers two payment options - monthly and yearly. Monthly costs $120, which you must pay at the beginning of every month. 
-        <br><br>Yearly fee has a 20% discount, which needs to be paid in advance. If you’re unsatisfied with our programs, we offer a money back guarantee.`
+        answer: `Techna offers two payment options - monthly and yearly. Monthly costs PKR 3000/- only, which you must pay at the beginning of every month. 
+        <br><br>Yearly fee has a 20% discount, which needs to be paid in advance.`
     },
     {
         question: `What if my child misses a class?`,
-        answer: `STEM1 only conducts one class per week. We highly encourage our students to not miss any class as we do not conduct any backup classes. All information will be available on their LMS. If your child misses more than 3 classes per course, they will have to re-do the course.`
+        answer: `We highly encourage our students to not miss any class as we do not conduct any backup classes. All information will be available on their LMS. If your child misses more than 3 classes per course, they will have to re-do the course.`
     },
     {
         question: `Will my child get to participate in activities other than the coursework? `,
-        answer: `Yes, STEM1 is a for-community enterprise. Our students actively help build websites for local non-profitable organizations.`
+        answer: `Yes, Techna is a for-community enterprise. Our students actively help build websites for local non-profitable organizations.`
     },
 ]
 

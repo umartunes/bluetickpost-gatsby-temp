@@ -87,7 +87,7 @@ const Footer = () => {
                   <Link to="/faq">FAQ</Link>
                 </li>
                 <li>
-                  <Link to="/blog">Our Blog</Link>
+                  <Link to="https://technablog.com" target="_blank">Our Blog</Link>
                 </li>
                 <li>
                   <Link to="/contact">Contact Us</Link>
