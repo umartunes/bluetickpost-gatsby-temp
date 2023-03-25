@@ -310,7 +310,7 @@ export default class PDFOnline extends React.Component {
                         <Text style={{ fontSize: 12, fontWeight: 'bold', color: "#222222", marginTop: 5, textAlign: 'center', textDecoration: 'underline' }}>To Confirm Your Seat; You Have To Follow The Instructions Carefully.</Text>
 
                         <Text style={styles.heading}>Step 1: Submit Your Fee</Text>
-                        <Text style={{ fontSize: 11, color: "#222222", marginTop: 5 }}>Please submit your fee of <Text style={styles.strongUnderline}>{application.courseFee}/-</Text> to JazzCash Account # <Text style={styles.strongUnderline}>0324 667 8889</Text></Text>
+                        <Text style={{ fontSize: 11, color: "#222222", marginTop: 5 }}>Please submit your fee of <Text style={styles.strongUnderline}>{application.courseFee}/-</Text> to any of the following JazzCash, Easypaisa, or NayaPay Account # <Text style={styles.strongUnderline}>0324 667 8889</Text></Text>
 
                         <Text style={styles.heading}>Step 2: Submit Your Documents</Text>
                         <Text style={{ fontSize: 11, color: "#222222", marginTop: 5 }}>Please submit your documents and fee submission receipt to our WhatsApp # <Text style={styles.strongUnderline}>0345 779 0453</Text> to confirm your seat.</Text>
