@@ -43,8 +43,11 @@ const faqs = [
     },
     {
         question: `How do you charge your fees?`,
-        answer: `Techna offers two payment options - monthly and yearly. Monthly costs PKR 3000/- only, which you must pay at the beginning of every month. 
-        <br><br>Yearly fee has a 20% discount, which needs to be paid in advance.`
+        answer: `Techna offers two types of courses - Monthly Fee Courses and One-time Fee Courses. 
+        <br><br>
+        For Monthly Fee Courses: The 1st fee for the courses is submitted at the time of submission of the admission form, and then at the beginning of every month.
+        <br>
+        For One-time Fee Courses: The course enrollment fees are submitted at the time of attestation and submission of the admission form.`
     },
     {
         question: `What if my child misses a class?`,
