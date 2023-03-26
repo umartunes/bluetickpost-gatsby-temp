@@ -51,7 +51,7 @@ export const courses = [
         discountPercentage: "80% Off",
         priceBeforeDiscount: "PKR 30000",
         courseFeeNormalClasses: `PKR 6000`,
-        courseFeeGroupClasses: `PKR 7000`,
+        courseFeeGroupClasses: `PKR 10000`,
         courseFeePersonalClasses: `USD 70`,
 
         upcomingBatchNumber: "01",
@@ -86,11 +86,11 @@ export const courses = [
         isAvailable: false,
         isOneTimeFee: true,
 
-        price: "PKR 2000",
+        price: "PKR 1000",
         discountPercentage: "80% Off",
-        priceBeforeDiscount: "PKR 10000",
-        courseFeeNormalClasses: `PKR 2000`,
-        courseFeeGroupClasses: `PKR 7000`,
+        priceBeforeDiscount: "PKR 5000",
+        courseFeeNormalClasses: `PKR 1000`,
+        courseFeeGroupClasses: `PKR 10000`,
         courseFeePersonalClasses: `USD 70`,
 
         upcomingBatchNumber: "01",
