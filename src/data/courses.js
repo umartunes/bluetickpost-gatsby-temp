@@ -5,14 +5,14 @@ export const courses = [
         name: "Web & Mobile App Development",
 
         isFree: false,
-        isAvailable: true,
+        isAvailable: false,
         isOneTimeFee: true,
 
-        price: "PKR 3000",
-        discountPercentage: "80% Off",
+        price: "PKR 4500",
+        discountPercentage: "70% Off",
         priceBeforeDiscount: "PKR 15000",
-        courseFeeNormalClasses: `PKR 3000`,
-        courseFeeGroupClasses: `PKR 7000`,
+        courseFeeNormalClasses: `PKR 4500`,
+        courseFeeGroupClasses: `PKR 10000`,
         courseFeePersonalClasses: `USD 70`,
 
         upcomingBatchNumber: "02",
@@ -82,14 +82,14 @@ export const courses = [
         id: "basic-computer-course",
         name: "Basic Computer Course",
 
-        isFree: true,
+        isFree: false,
         isAvailable: false,
-        isOneTimeFee: false,
+        isOneTimeFee: true,
 
-        price: "Free",
-        discountPercentage: "100% Off",
+        price: "PKR 2000",
+        discountPercentage: "80% Off",
         priceBeforeDiscount: "PKR 10000",
-        courseFeeNormalClasses: `PKR 0`,
+        courseFeeNormalClasses: `PKR 2000`,
         courseFeeGroupClasses: `PKR 7000`,
         courseFeePersonalClasses: `USD 70`,
 
