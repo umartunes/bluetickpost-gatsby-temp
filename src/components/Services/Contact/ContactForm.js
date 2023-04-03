@@ -205,6 +205,7 @@ const ContactForm = () => {
                                                 <div className="form-group">
                                                     <select name="budget" className="form-control" required onChange={handleFormData}>
                                                         <option value="">Select your budget</option>
+                                                        <option value="$99 ( Blogging Website Offer )">$99 ( Blogging Website Offer )</option>
                                                         <option value="$100 - $1,000">$100 - $1,000</option>
                                                         <option value="$1,000 - $2,500">$1,000 - $2,500</option>
                                                         <option value="$2,500 - $10,000">$2,500 - $10,000</option>
