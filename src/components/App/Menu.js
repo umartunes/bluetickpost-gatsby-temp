@@ -115,7 +115,7 @@ export default function Menu() {
 				</ul> */}
 			</li>
 
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link
 					to="/services"
 					activeClassName="active"
@@ -128,10 +128,10 @@ export default function Menu() {
 					className="nav-link"
 				>
 					Services
-					{/* Services <i className="bx bx-chevron-down"></i> */}
+					Services <i className="bx bx-chevron-down"></i>
 				</Link>
 
-				{/* <ul className="dropdown-menu">
+				<ul className="dropdown-menu">
 
 					<li className="nav-item">
 						<Link
@@ -199,9 +199,9 @@ export default function Menu() {
 						</Link>
 					</li>
 
-				</ul> */}
+				</ul>
 
-			</li>
+			</li> */}
 
 			{/* <li className="nav-item">
 				<Link
@@ -243,7 +243,7 @@ export default function Menu() {
 
 
 			</li>
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link
 					to="/jobs"
 					activeClassName="active"
@@ -255,8 +255,8 @@ export default function Menu() {
 				</Link>
 
 
-			</li>
-			<li className="nav-item">
+			</li> */}
+			{/* <li className="nav-item">
 				<Link
 					to="https://technablog.com"
 					activeClassName="active"
@@ -268,7 +268,7 @@ export default function Menu() {
 					Blog
 				</Link>
 
-			</li>
+			</li> */}
 		</ul>
 	);
 }
