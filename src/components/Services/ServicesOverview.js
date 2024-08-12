@@ -21,7 +21,7 @@ const ServicesOverview = () => {
                         Our Services
                     </span>
                     <h2>Amazing Business Solution Whatever Your Needs</h2>
-                    <p>The amazing team of developers &amp; designers behind Techna are ready to help and provide you top-level services for your business needs.</p>
+                    <p>The amazing team of developers &amp; designers behind BlueTickPost are ready to help and provide you top-level services for your business needs.</p>
                 </div>
 
                 <div className="row">

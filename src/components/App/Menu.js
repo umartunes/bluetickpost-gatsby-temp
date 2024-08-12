@@ -21,13 +21,14 @@ export default function Menu() {
 					// onClick={(e) => e.preventDefault()}
 					className="nav-link"
 				>
-					Home <i className="bx bx-chevron-down"></i>
+					Home 
+					{/* <i className="bx bx-chevron-down"></i> */}
 				</Link>
 
-				<ul className="dropdown-menu">
+				{/* <ul className="dropdown-menu">
 					<li className="nav-item">
 						<Link
-							to="https://lms.techna.pk"
+							to="https://lms.bluetickpost.com"
 							activeClassName="active"
 							onClick={() => setCollapsed(true)}
 							className="nav-link"
@@ -47,10 +48,10 @@ export default function Menu() {
 							Play
 						</Link>
 					</li>
-				</ul>
+				</ul> */}
 			</li>
 
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link
 					to="/courses"
 					activeClassName="active"
@@ -81,39 +82,8 @@ export default function Menu() {
 					</li>
 
 				</ul>
-				{/* <ul className="dropdown-menu">
-					<li className="nav-item">
-						<Link
-							to="/courses/junior"
-							activeClassName="active"
-							onClick={() => setCollapsed(true)}
-							className="nav-link"
-						>
-							Junior (Grade 3+)
-            			</Link>
-					</li>
-					<li className="nav-item">
-						<Link
-							to="/courses/senior"
-							activeClassName="active"
-							onClick={() => setCollapsed(true)}
-							className="nav-link"
-						>
-							Senior (Grade 6+)
-            			</Link>
-					</li>
-					<li className="nav-item">
-						<Link
-							to="/courses/leadership"
-							activeClassName="active"
-							onClick={() => setCollapsed(true)}
-							className="nav-link"
-						>
-							Leaders (Grade 7+)
-            			</Link>
-					</li>
-				</ul> */}
-			</li>
+				
+			</li> */}
 
 			{/* <li className="nav-item">
 				<Link

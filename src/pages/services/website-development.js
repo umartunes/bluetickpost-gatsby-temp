@@ -9,7 +9,7 @@ import ServicePricingSection from '../../components/Services/ServicePricingSecti
 import { Element, scroller } from 'react-scroll'
 
 const service = {
-    seoTitle: `Web Design & Development Service & Pricing - Techna`,
+    seoTitle: `Web Design & Development Service & Pricing - BlueTickPost`,
 
     serviceVideoId: "_e0Hh9mnun8",
     serviceVideoThumb: '/images/services/website-development.png',

@@ -9,7 +9,7 @@ import ServiceDetailsSection from '../../components/Services/ServiceDetailsSecti
 // import { Element, scroller } from 'react-scroll'
 
 const service = {
-    seoTitle: `Web App Development Service - Techna`,
+    seoTitle: `Web App Development Service - BlueTickPost`,
 
     serviceVideoId: "_e0Hh9mnun8",
     serviceVideoThumb: '/images/services/website-development.png',

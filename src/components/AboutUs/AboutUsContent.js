@@ -11,7 +11,7 @@ const AboutUsContent = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12">
             <div className="about-image">
-              <img src="/images/aboutus/techna-collage.png" alt="Teaching at Techna" />
+              <img src="/images/aboutus/techna-collage.png" alt="Teaching at BlueTickPost" />
             </div>
           </div>
 
@@ -28,10 +28,10 @@ const AboutUsContent = () => {
                   Coding or Technology is always feared by parents and students alike
                 </h4>
                 <p>
-                  Techna now is a community based youth led organization; organized to provide opportunities for youth to gain confidence in technology related fields.
+                  BlueTickPost now is a community based youth led organization; organized to provide opportunities for youth to gain confidence in technology related fields.
                 </p>
                 <p>
-                  The company was founded in January, 2013 under the name of PHPbaba; When we started delivering services on LAMP Stack. After a 2 and half years we started delivering services on State Of The Art Technologies as well; and settled with name Techna.
+                  The company was founded in January, 2013 under the name of PHPbaba; When we started delivering services on LAMP Stack. After a 2 and half years we started delivering services on State Of The Art Technologies as well; and settled with name BlueTickPost.
                   One of the main focuses of the company was to provide cost effective and quality Software Solutions to customers across the world.
                 </p>
               

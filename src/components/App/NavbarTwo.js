@@ -2,7 +2,7 @@ import React from 'react';
 import { useRecoilState } from 'recoil'
 import { collapsedState } from '../../utils/recoil-atoms'
 import { Link } from 'gatsby'
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo-bluetick2.png"
 import Menu from "./Menu"
 
 const NavbarTwo = () => {
@@ -64,12 +64,13 @@ const NavbarTwo = () => {
                                 <div className="others-option d-flex align-items-center">
                                     <div className="option-item">
                                         <Link
-                                            to="/apply"
+                                            to="/create"
                                             activeClassName="active"
                                             onClick={() => setCollapsed(true)}
                                             className="default-btn"
                                         >
-                                            <i className="flaticon-right"></i> Apply For A Course <span></span>
+                                            
+                                            <i className="flaticon-right"></i> Create A Post<span></span>
                                         </Link>
                                     </div>
                                 </div>

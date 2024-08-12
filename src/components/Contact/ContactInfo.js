@@ -36,7 +36,7 @@ const ContactInfo = () => {
                             </div>
                             <h3>Contact</h3>
                             <p>Mobile: <a href="tel:+923457790453">+92 345 7790453</a></p>
-                            <p>E-mail: <a href="mailto:contact@techna.pk">contact@techna.pk</a></p>
+                            <p>E-mail: <a href="mailto:contact@bluetickpost.com">contact@bluetickpost.com</a></p>
                         </div>
                     </div>
 

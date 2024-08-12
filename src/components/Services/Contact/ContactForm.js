@@ -146,7 +146,7 @@ const ContactForm = () => {
                         Contact Us
                     </span>
                     <h2>Let us help your business.</h2>
-                    <p style={{ maxWidth: '90%' }}>Techna specialises in bespoke software solutions built upon modern technologies. Our mission is to enable businesses worldwide both large and small to build their products with a cost-efficient, resilient and modern technology stack.</p>
+                    <p style={{ maxWidth: '90%' }}>BlueTickPost specialises in bespoke software solutions built upon modern technologies. Our mission is to enable businesses worldwide both large and small to build their products with a cost-efficient, resilient and modern technology stack.</p>
                     <p></p>
                 </div>
 
@@ -162,7 +162,7 @@ const ContactForm = () => {
                                 <Element name="success-section" className="element">&nbsp;</Element>
                                 <div className="p-5 bg-success text-white text-center d-flex flex-column justify-content-center align-items-center">
                                     <h3>Thank you!</h3>
-                                    <h5>Thanks for getting in touch with us. A team member from Techna will get back to you within 24 - 48 hours.</h5>
+                                    <h5>Thanks for getting in touch with us. A team member from BlueTickPost will get back to you within 24 - 48 hours.</h5>
                                 </div>
                             </div>
                         </>

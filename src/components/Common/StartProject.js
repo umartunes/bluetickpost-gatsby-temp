@@ -18,7 +18,7 @@ const StartProject = () => {
                     <div className="col-lg-6 col-md-12">
                         <div className="project-start-content">
                             <h2>We Like to Start Your Project With Us</h2>
-                            <p>At Techna; We are providing top-level digital services to our customers across the globe. We are passionate about helping people to Start, Grow and Succeed in their own businesses.</p>
+                            <p>At BlueTickPost; We are providing top-level digital services to our customers across the globe. We are passionate about helping people to Start, Grow and Succeed in their own businesses.</p>
 
                             <Link to="/services/contact" className="default-btn">
                                 <i className="flaticon-web"></i> 

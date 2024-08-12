@@ -11,7 +11,7 @@ const Solutions = () => {
             <img src={StarIcon} alt="StarIcon" />
             Our core values
           </span>
-          <h2>Techna Difference! </h2>
+          <h2>BlueTickPost Difference! </h2>
           {/* <p style={{ maxWidth: 800 }}>All our programs are designed to encourage creativity, group learning, problem solving & mentoring. Learn to code by completing challenges, building games, apps, and more. Continuously develop interpersonal and presentation skills in each of our courses.</p> */}
         </div>
 
@@ -26,7 +26,7 @@ const Solutions = () => {
                 {/* Convinience of Virtual class but with instructors are local,
                 which means they can offer a better learning experience for the
                 students.{" "} */}
-                Techna has gone <strong>virtual!</strong>. This allows students from all areas to learn from industry experts who are passionate about teaching; while working at the comfort of their home!
+                BlueTickPost has gone <strong>virtual!</strong>. This allows students from all areas to learn from industry experts who are passionate about teaching; while working at the comfort of their home!
               </p>
 
               {/* <Link to="/service-details-two" className="view-details-btn">

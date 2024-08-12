@@ -5,7 +5,7 @@ import NavbarThree from "../components/App/NavbarThree"
 import Footer from "../components/App/Footer"
 import StartProject from '../components/Common/StartProject'
 import PageBanner from '../components/Schedule/PageBanner'
-import WhyStem1 from '../components/Schedule/WhyStem1'
+// import WhyStem1 from '../components/Schedule/WhyStem1'
 import VirtualClass from '../components/Schedule/VirtualClass'
 
 import { InlineWidget } from "react-calendly";
@@ -30,7 +30,7 @@ const FAQ = () => {
                     </div>
                 </div>
             </div>
-            <WhyStem1 />
+            {/* <WhyStem1 /> */}
             <VirtualClass />
             <StartProject />
             <Footer />

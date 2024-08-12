@@ -17,7 +17,7 @@ const Services = () => {
                         <img src={StarIcon} alt="image_alt" />
                         Our Strength
                     </span>
-                    <h2>Techna Focus</h2>
+                    <h2>BlueTickPost Focus</h2>
                     {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p> */}
                 </div>
 

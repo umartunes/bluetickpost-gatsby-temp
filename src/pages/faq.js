@@ -15,7 +15,7 @@ import StartProject from '../components/Common/StartProject'
 const faqs = [
     {
         question: `Does my child need previous coding experience?`,
-        answer: `No, your child doesn’t need prior coding experience for Junior and Senior Programs. Only students who graduate from our Senior Program can enrol in Techna’s Leader Program.`
+        answer: `No, your child doesn’t need prior coding experience for Junior and Senior Programs. Only students who graduate from our Senior Program can enrol in BlueTickPost’s Leader Program.`
     },
     // {
     //     question: `Who can participate in Jr.Hacks 2021?`,
@@ -23,7 +23,7 @@ const faqs = [
     // },
     {
         question: `Will my child have to work in groups or alone?`,
-        answer: `Techna is designed to foster leadership and communication skills in children. All participants will be divided into groups and guided by a skilled mentor to complete the challenge.`
+        answer: `BlueTickPost is designed to foster leadership and communication skills in children. All participants will be divided into groups and guided by a skilled mentor to complete the challenge.`
     },
     // {
     //     question: `Where and when can I pickup the SWAG bag?`,
@@ -39,11 +39,11 @@ const faqs = [
     },
     {
         question: `Can my child directly enrol in the Leader Program?`,
-        answer: `Only students who graduate from our Senior Program can enrol in Techna’s Leader Program.`
+        answer: `Only students who graduate from our Senior Program can enrol in BlueTickPost’s Leader Program.`
     },
     {
         question: `How do you charge your fees?`,
-        answer: `Techna offers two types of courses - Monthly Fee Courses and One-time Fee Courses. 
+        answer: `BlueTickPost offers two types of courses - Monthly Fee Courses and One-time Fee Courses. 
         <br><br>
         For Monthly Fee Courses: The 1st fee for the courses is submitted at the time of submission of the admission form, and then at the beginning of every month.
         <br>
@@ -55,7 +55,7 @@ const faqs = [
     },
     {
         question: `Will my child get to participate in activities other than the coursework? `,
-        answer: `Yes, Techna is a for-community enterprise. Our students actively help build websites for local non-profitable organizations.`
+        answer: `Yes, BlueTickPost is a for-community enterprise. Our students actively help build websites for local non-profitable organizations.`
     },
 ]
 

@@ -15,7 +15,7 @@ const CoursesContent = () => {
                         <img src={StarIcon} alt="StarIcon" />
                         Our Courses
                     </span>
-                    <h2>Techna Learning Process! </h2>
+                    <h2>BlueTickPost Learning Process! </h2>
                     <p style={{ maxWidth: 800 }}>All our programs are designed to encourage creativity, group learning, problem solving & mentoring. Learn to code by completing challenges, building games, apps, and more. Continuously develop interpersonal and presentation skills in each of our courses.</p>
                 </div>
                 <div className="row">

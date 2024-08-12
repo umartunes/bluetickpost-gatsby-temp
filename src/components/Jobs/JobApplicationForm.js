@@ -284,7 +284,7 @@ const JobApplicationForm = () => {
                                 Job Application Form
                             </span>
                             <h2>Join The Lead Tech Industry</h2>
-                            <p className='mx-auto' style={{ maxWidth: '80%' }}>Thank you for your interest in joining our team! Please complete the form below to apply for one of many great opportunities with Techna.</p>
+                            <p className='mx-auto' style={{ maxWidth: '80%' }}>Thank you for your interest in joining our team! Please complete the form below to apply for one of many great opportunities with BlueTickPost.</p>
                         </div>
 
                         <div className="row">

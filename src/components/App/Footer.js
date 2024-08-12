@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo-bluetick2.png";
 import footerMap from "../../assets/images/footer-map.png";
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
               </a>
 
               <p>
-                At Techna we believe IT education should start early and
+                At BlueTickPost we believe IT education should start early and
                 encourage learning by doing. We partner with schools, colleges, universities and
                 local businesses to conduct seminars, workshops and run virtual after
                 school programs.
@@ -27,7 +27,7 @@ const Footer = () => {
               <ul className="social-link">
                 <li>
                   <a
-                    href="https://facebook.com/TechnaPK"
+                    href="https://facebook.com/bluetickpost"
                     className="d-block"
                     target="_blank"
                     rel="noreferrer"
@@ -37,7 +37,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://twitter.com/TechnaPK"
+                    href="https://twitter.com/bluetickpost_"
                     className="d-block"
                     target="_blank"
                     rel="noreferrer"
@@ -47,22 +47,12 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://instagram.com/TechnaPK"
+                    href="https://instagram.com/bluetickpost_"
                     className="d-block"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <i className="bx bxl-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://linkedin.com/company/TechnaPK"
-                    className="d-block"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="bx bxl-linkedin"></i>
                   </a>
                 </li>
               </ul>
@@ -135,7 +125,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <i className="bx bx-envelope"></i>
-                  <a href="mailto:contact@techna.pk">contact@techna.pk</a>
+                  <a href="mailto:contact@bluetickpost.com">contact@bluetickpost.com</a>
                 </li>
                 {/* <li>
                                     <i className='bx bxs-inbox'></i>
@@ -150,7 +140,7 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-6">
               <p>
-                Copyright @{currentYear} <strong>Techna</strong>. All rights
+                Copyright @{currentYear} <strong>BlueTickPost</strong>. All rights
                 reserved.
               </p>
             </div>

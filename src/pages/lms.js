@@ -24,8 +24,8 @@ const Home = () => {
   return (
     <Layout>
       <SEO
-        seoTitle="Techna LMS - Techna"
-        seoDescription="Techna LMS - A Game-Based Learning Platform (Courses, Quizzes and Surveys)"
+        seoTitle="BlueTickPost LMS - BlueTickPost"
+        seoDescription="BlueTickPost LMS - A Game-Based Learning Platform (Courses, Quizzes and Surveys)"
       />
 
       <iframe style={{
@@ -35,7 +35,7 @@ const Home = () => {
         height: "100vh",
         width: "100%",
         maxWidth: '100vw'
-      }} title="" loading="lazy" src={`https://lms.techna.pk/?random=${Math.random().toString(36).slice(2)}`}></iframe>
+      }} title="" loading="lazy" src={`https://lms.bluetickpost.com/?random=${Math.random().toString(36).slice(2)}`}></iframe>
 
       {/* 
       <StartProject />

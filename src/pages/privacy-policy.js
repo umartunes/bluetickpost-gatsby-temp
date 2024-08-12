@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
                             <div className="privacy-policy-content">
 
 
-                                <p>It is Techna policy to respect your privacy regarding any information we may collect while operating our website. Accordingly, we have developed this privacy policy in order for you to understand how we collect, use, communicate, disclose and otherwise make use of personal information. We have outlined our privacy policy below.</p>
+                                <p>It is BlueTickPost policy to respect your privacy regarding any information we may collect while operating our website. Accordingly, we have developed this privacy policy in order for you to understand how we collect, use, communicate, disclose and otherwise make use of personal information. We have outlined our privacy policy below.</p>
                                 <ul class="">
                                     <li>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</li>
                                     <li>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</li>
@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
                                     <li>We will make readily available to customers information about our policies and practices relating to the management of personal information.</li>
                                     <li>We will only retain personal information for as long as necessary for the fulfilment of those purposes.</li>
                                 </ul>
-                                <p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. Techna may change this privacy policy from time to time at Techna’s sole discretion.</p>
+                                <p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. BlueTickPost may change this privacy policy from time to time at BlueTickPost’s sole discretion.</p>
 
                             </div>
                         </div>

@@ -85,7 +85,7 @@ const MainBanner = () => {
                 <div className="container">
                   <div className="banner-item-content">
                     {/* <span className="sub-title">Welcome</span> */}
-                    <h1>Techna Mission</h1>
+                    <h1>BlueTickPost Mission</h1>
                     <p>Our mission is to train and produce 100,000 skilled application developers in Pakistan.​ This will help to solve unemployment issues of youngsters and they would be able to contribute their part to a stable Pakistan.</p>
 
                     <div className="btn-box">

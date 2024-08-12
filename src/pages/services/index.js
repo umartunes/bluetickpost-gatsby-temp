@@ -11,7 +11,7 @@ import StartProject from '../../components/Common/StartProject'
 const Services = () => {
     return (
         <Layout
-            seoTitle="Our Services - Techna"
+            seoTitle="Our Services - BlueTickPost"
         >
             <NavbarTwo />
             {/* <PageBanner

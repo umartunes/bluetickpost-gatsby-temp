@@ -61,7 +61,7 @@ const curriculum = [
   },
   {
     heading: `Artificial Intelligence (AI) in Practice`,
-    description: `This module is structured around a series of practical code examples, demonstrating on real world problems. Techna strongly believes in the value of teaching using concrete examples, anchoring theoretical ideas into actual results and tangible code patterns. These examples all rely on Keras, the Python deep learning library. Students will learn Deep Learning for computer vision, text and sequences, finance, and advanced neural network design.`,
+    description: `This module is structured around a series of practical code examples, demonstrating on real world problems. BlueTickPost strongly believes in the value of teaching using concrete examples, anchoring theoretical ideas into actual results and tangible code patterns. These examples all rely on Keras, the Python deep learning library. Students will learn Deep Learning for computer vision, text and sequences, finance, and advanced neural network design.`,
   },
 ];
 
@@ -83,7 +83,7 @@ const reviews = [
     author: `Ali Haider`,
     authorImage: "/images/reviews/ali.jpg",
     heading: `Excellent`,
-    details: `First-time connect with Web Development. In the beginning I thought that Web Development is really hard to learn but after this course, it seems easy and fun to learn and implement. Our instructors Sir Umar is a nice person, explaining everything at a good pace. Thank you, Techna, for this great job.`,
+    details: `First-time connect with Web Development. In the beginning I thought that Web Development is really hard to learn but after this course, it seems easy and fun to learn and implement. Our instructors Sir Umar is a nice person, explaining everything at a good pace. Thank you, BlueTickPost, for this great job.`,
   },
 ];
 

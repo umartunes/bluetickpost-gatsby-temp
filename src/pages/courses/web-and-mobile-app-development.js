@@ -138,7 +138,7 @@ const reviews = [
     author: `Ali Haider`,
     authorImage: "/images/reviews/ali.jpg",
     heading: `Excellent`,
-    details: `First-time connect with Web Development. In the beginning I thought that Web Development is really hard to learn but after this course, it seems easy and fun to learn and implement. Our instructors Sir Umar is a nice person, explaining everything at a good pace. Thank you, Techna, for this great job.`,
+    details: `First-time connect with Web Development. In the beginning I thought that Web Development is really hard to learn but after this course, it seems easy and fun to learn and implement. Our instructors Sir Umar is a nice person, explaining everything at a good pace. Thank you, BlueTickPost, for this great job.`,
   },
 ];
 
