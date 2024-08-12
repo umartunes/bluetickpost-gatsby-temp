@@ -173,6 +173,7 @@ const PostForm = ({ onGenerate }) => {
             // const imageUrl = window.URL.createObjectURL(blob);
 
         } catch (error) {
+            setIsLoading(false)
             console.error('Error generating post image:', error);
             alert('Failed to generate post image');
         }
@@ -181,7 +182,7 @@ const PostForm = ({ onGenerate }) => {
     const downloadImage = (imageUrl) => {
         const link = document.createElement('a');
         link.href = imageUrl;
-        link.download = `${formData.theme}-post-bluetickpost.com.png`;
+        link.download = `${formData.theme}-post-bluetickpost.com.jpg`;
         link.click();
         // document.body.removeChild(link);
     };
@@ -220,13 +221,13 @@ const PostForm = ({ onGenerate }) => {
 
                                 <div className="generated-post p-0 text-center">
                                     <div className="bg-light border rounded p-4">
-                                        <p className='my-4 text-center'>Your post is successfully created.</p>
-                                        <img src={generatedPost.imageUrl} alt="Generated Post" className="img-fluid" />
-                                        <div className="my-5">
-                                            <button className="btn btn-info mx-2" onClick={() => { handleEdit() }}>Edit</button>
-                                            <button className="btn btn-secondary mx-2" onClick={() => { handleRegenerate() }}>Regenerate</button>
-                                            <button className="btn btn-success mx-2" onClick={() => { downloadImage(generatedPost.imageUrl) }}>Download</button>
+                                        <h5 className='my-4 text-center'>Your post is successfully created.</h5>
+                                        <div className="my-4">
+                                            <button className="btn btn-secondary mx-2" onClick={() => { handleEdit() }}>Edit <i class="fas fa-edit"></i></button>
+                                            <button className="btn btn-info mx-2" onClick={() => { handleRegenerate() }}>Regenerate <i class="fas fa-redo"></i></button>
+                                            <button className="btn btn-success mx-2" onClick={() => { downloadImage(generatedPost.imageUrl) }}>Download <i class="fas fa-download"></i></button>
                                         </div>
+                                        <img src={generatedPost.imageUrl} alt="Generated Post" className="img-fluid" />
                                     </div>
                                 </div>
 
@@ -254,7 +255,7 @@ const PostForm = ({ onGenerate }) => {
                                                 <div className="row" >
                                                     <div className="col-md-12">
 
-                                                        <div className="d-flex p-3 flex-column align-items-center justify-content-center" style={{ background: "#f5f5f5" }} onClick={() => {
+                                                        <div className="d-flex p-3 flex-column align-items-center justify-content-center" style={{ background: "#f5f5f5", cursor: "pointer" }} onClick={() => {
                                                             document.getElementById("profileImageInput").click();
                                                         }}>
 
@@ -278,8 +279,8 @@ const PostForm = ({ onGenerate }) => {
 
                                                                 </div>
                                                             </div>
-                                                            <button type="button" class="btn btn-info btn-sm my-1 px-5">Profile Photo</button>
 
+                                                            <small className="mt-3"> <strong>Select Profile Image</strong> </small>
                                                             <div className="form-group border border-1 mb-0 d-none">
                                                                 <input id="profileImageInput" type="file" name="photo" accept="image/*" className="form-control pl-0" onChange={handleProfileImageChange} style={{ height: `50px` }} />
                                                             </div>
@@ -313,7 +314,7 @@ const PostForm = ({ onGenerate }) => {
                                             <div className="col-md-12">
                                                 <h6 className='mt-3'>Content</h6>
                                                 <div className="form-group">
-                                                    <textarea name="content" value={formData.content} style={{ textAlign: `center`, fontSize: `${formData.fontSize}px` }} className="form-control" cols="30" rows="6" required placeholder="Write post content" onChange={handleFormData} />
+                                                    <textarea name="content" className={`form-control font-${formData.fontFamily}`} value={formData.content} style={{ textAlign: `center`, fontSize: `${formData.fontSize}px` }} cols="30" rows="6" required placeholder="Write post content" onChange={handleFormData} />
                                                 </div>
                                             </div>
 
@@ -364,7 +365,11 @@ const PostForm = ({ onGenerate }) => {
                                             </div>
 
                                             <div className="col-md-12">
-                                                <h6 className='mt-3'>Font Size</h6>
+                                                <div className="row mt-3">
+                                                    <div className="col-10"><h6>Font Size</h6></div>
+                                                    <div className="col-2 text-right"><h6>{formData.fontSize}px</h6></div>
+                                                </div>
+                                                
                                                 <div className="form-group">
                                                     <input type="range" class="custom-range" min="10" max="50" step="1" name='fontSize' id="fontSize" value={formData.fontSize} onChange={handleFormData} />
                                                 </div>
@@ -386,6 +391,7 @@ const PostForm = ({ onGenerate }) => {
                                                 {
                                                     useCustomBackground
                                                         ? <Fragment>
+                                                            <p className='mt-1 mb-3'><small className='text-info'> 🛈 If you're using custom background image make sure image size is less than 1mb.  <a href="https://bulkresizephotos.com/en" rel='nofollow'>[OR] reduce image size by clicking here.</a> We're working on this feature to improve it. </small> </p>
                                                             <div className="d-flex p-3 flex-column align-items-center justify-content-center" style={{ background: "#f5f5f5", cursor: "pointer" }} onClick={() => {
                                                                 document.getElementById("backgroundImageInput").click();
                                                             }}>
@@ -406,7 +412,7 @@ const PostForm = ({ onGenerate }) => {
                                                                     {
                                                                         backgroundImage
                                                                             ? <Fragment>
-                                                                                <p ><small><i class="fas fa-edit fa-2x text-dark"></i></small></p>
+                                                                                <button type="button" className="btn btn-light btn-lg"><i className="fas fa-sync fa-lg text-dark"></i></button>
                                                                             </Fragment>
                                                                             : <Fragment>
                                                                                 <p className='mb-1'><small><span className="fas fa-image fa-lg text-grey"></span></small></p>
