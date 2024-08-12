@@ -391,7 +391,7 @@ const PostForm = ({ onGenerate }) => {
                                                 {
                                                     useCustomBackground
                                                         ? <Fragment>
-                                                            <p className='mt-1 mb-3'><small className='text-info'> 🛈 If you're using custom background image make sure image size is less than 1mb.  <a href="https://bulkresizephotos.com/en" rel='nofollow'>[OR] reduce image size by clicking here.</a> We're working on this feature to improve it. </small> </p>
+                                                            <p className='mt-1 mb-3'><small className='text-info'> 🛈 If you're using custom background image make sure image size is less than 1mb.  <a href="https://bulkresizephotos.com/en?type=filesize" rel='nofollow'>[OR] reduce image size by clicking here.</a> We're working on this feature to improve it. </small> </p>
                                                             <div className="d-flex p-3 flex-column align-items-center justify-content-center" style={{ background: "#f5f5f5", cursor: "pointer" }} onClick={() => {
                                                                 document.getElementById("backgroundImageInput").click();
                                                             }}>
