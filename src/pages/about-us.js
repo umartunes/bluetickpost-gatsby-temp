@@ -9,7 +9,7 @@ import AboutUsContent from '../components/AboutUs/AboutUsContent'
 // import StartProject from "../components/AboutUs/StartProject";
 // import WhyChooseUs from '../components/AboutUs/WhyChooseUs'
 // import HowItWork from '../components/AboutUs/HowItWork'
-import TeamMembers from '../components/AboutUs/TeamMembers'
+// import TeamMembers from '../components/AboutUs/TeamMembers'
 // import Testimonials from '../components/AboutUs/Testimonials'
 // import Partner from '../components/AboutUs/Partner'
  
@@ -28,7 +28,7 @@ const AboutUs = () => {
             {/* <OurHistory /> */}
             {/* <WhyChooseUs />
             <HowItWork /> */}
-            <TeamMembers />
+            {/* <TeamMembers /> */}
             {/* <Testimonials /> */}
             {/* <Partner /> */}
             <Footer />
