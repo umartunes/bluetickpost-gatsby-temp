@@ -16,15 +16,10 @@ const Footer = () => {
                 <img src={logo} alt="logo" />
               </a>
 
-              <p>
-                At BlueTickPost we believe IT education should start early and
-                encourage learning by doing. We partner with schools, colleges, universities and
-                local businesses to conduct seminars, workshops and run virtual after
-                school programs.
-              </p>
-              <p>Register for a free demo class to get an insight into our classes.</p>
+              <p>Generate professional-looking social media posts with BlueTickPost.</p>
+              <p>Stand out with posts that give the feeling of being verified. Customize with your photo, name, username, content, and hashtags to make your posts shine!</p>
 
-              <ul className="social-link">
+              {/* <ul className="social-link">
                 <li>
                   <a
                     href="https://facebook.com/bluetickpost"
@@ -55,7 +50,8 @@ const Footer = () => {
                     <i className="bx bxl-instagram"></i>
                   </a>
                 </li>
-              </ul>
+              </ul> */}
+
             </div>
           </div>
 
@@ -73,15 +69,15 @@ const Footer = () => {
                 {/* <li>
                   <Link to="/success-stories">Success Stories</Link>
                 </li> */}
-                <li>
+                {/* <li>
                   <Link to="/faq">FAQ</Link>
-                </li>
+                </li> */}
                 <li>
-                  <Link to="https://technablog.com" target="_blank">Our Blog</Link>
+                  <Link to="/create">Create A Post</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/contact">Contact Us</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -110,7 +106,7 @@ const Footer = () => {
             </div>
           </div> */}
 
-          <div className="col-lg-4 col-sm-6">
+          {/* <div className="col-lg-4 col-sm-6">
             <div className="single-footer-widget">
               <h3>Address</h3>
 
@@ -127,13 +123,13 @@ const Footer = () => {
                   <i className="bx bx-envelope"></i>
                   <a href="mailto:contact@bluetickpost.com">contact@bluetickpost.com</a>
                 </li>
-                {/* <li>
-                                    <i className='bx bxs-inbox'></i>
-                                    <a href="tel:+557854578964">+55 785 4578964</a>
-                                </li> */}
+                <li>
+                      <i className='bx bxs-inbox'></i>
+                      <a href="tel:+557854578964">+55 785 4578964</a>
+                  </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="footer-bottom-area">
@@ -151,7 +147,7 @@ const Footer = () => {
                   <Link to="/privacy-policy">Privacy Policy</Link>
                 </li>
                 <li>
-                  <Link to="/terms-of-service">Terms & Conditions</Link>
+                  <Link to="/terms-and-conditions">Terms & Conditions</Link>
                 </li>
               </ul>
             </div>

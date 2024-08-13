@@ -85,11 +85,11 @@ const PrivacyPolicy = () => {
                                                 About Us
                                             </Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link to="/contact">
                                                 Contact Us
                                             </Link>
-                                        </li>
+                                        </li> */}
 
                                         <li className="active">
                                             <Link to="#">
@@ -97,7 +97,7 @@ const PrivacyPolicy = () => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/terms-of-service">
+                                            <Link to="/terms-and-conditions">
                                                 Terms &amp; Conditions
                                             </Link>
                                         </li>

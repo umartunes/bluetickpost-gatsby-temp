@@ -561,7 +561,7 @@ const PostForm = ({ onGenerate }) => {
                                                         }
                                                     </button>
                                                 </div>
-                                                <p><small><i className="flaticon-right"></i> By Clicking <strong>'Generate Post'</strong> button, you acknowledge that you agree to the <a href="https://bluetickpost.com/terms-of-service" target="_blank">Terms &amp; Conditions</a>.</small></p>
+                                                <p><small><i className="flaticon-right"></i> By Clicking <strong>'Generate Post'</strong> button, you acknowledge that you agree to the <a href="https://bluetickpost.com/terms-and-conditions" target="_blank">Terms &amp; Conditions</a>.</small></p>
                                                 {/* <p className='mb-2'><small className='text-info'> 🛈 By Clicking <strong>'Generate Post'</strong> button, you confirm that all the information provided above is valid [OR] you're allowed to use it without any conflict, and generated image would be used only in good context.</small></p> */}
 
                                             </div>

@@ -631,7 +631,7 @@ const RegisterForm = () => {
                                                         }
                                                     </button>
                                                 </div>
-                                                {/* <p><small><i className="flaticon-right"></i> By Registering I acknowledge that I agree to the <a href="https://bluetickpost.com/terms-of-service" target="_blank">Terms &amp; Conditions</a>.</small></p> */}
+                                                {/* <p><small><i className="flaticon-right"></i> By Registering I acknowledge that I agree to the <a href="https://bluetickpost.com/terms-and-conditions" target="_blank">Terms &amp; Conditions</a>.</small></p> */}
                                                 <p className='mb-2'><small className='text-danger'> 🛈 By Clicking <strong>'Apply Now'</strong> button, I confirm that all the information provided above is valid, truthful and belongs to me and <strong>BlueTickPost Institute</strong> reserve the right to take necessary action for incorrect or misleading information.</small></p>
                                                 <p><small className='text-info'> 🛈 Use Chrome or Firefox for better experience..</small></p>
                                             </div>

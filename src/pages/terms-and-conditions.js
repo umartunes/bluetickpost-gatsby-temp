@@ -4,7 +4,6 @@ import NavbarThree from "../components/App/NavbarThree"
 import PageBanner from '../components/Common/PageBanner'
 import Footer from "../components/App/Footer"
 import { Link } from 'gatsby'
-import termsImg from '../assets//images/terms-of-service.jpg'
 
 const TermsOfService = () => {
     return (
@@ -108,11 +107,11 @@ const TermsOfService = () => {
                                                 About Us
                                             </Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link to="/contact">
                                                 Contact Us
                                             </Link>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <Link to="/privacy-policy">
                                                 Privacy Policy
