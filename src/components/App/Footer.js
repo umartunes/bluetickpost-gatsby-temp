@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../../assets/images/logo-bluetick2.png";
+import logo from "../../assets/images/logo-bluetick-capital.png";
 import footerMap from "../../assets/images/footer-map.png";
 
 const Footer = () => {

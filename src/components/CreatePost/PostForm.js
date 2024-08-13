@@ -6,7 +6,7 @@ import {
     AccordionItemPanel,
     AccordionItemButton
 } from 'react-accessible-accordion'
-import { Link, } from 'gatsby'
+// import { Link, } from 'gatsby'
 
 // import starIcon from '../../assets/images/star-icon.png'
 import displayPhoto from '../../assets/images/dp.jpg'

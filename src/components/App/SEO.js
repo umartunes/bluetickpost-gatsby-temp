@@ -6,7 +6,7 @@ const SEO = ({
     seoDescription = "Generate professional-looking social media posts with BlueTickPost. Stand out with posts that give the feeling of being verified. Customize with your name, username, content, and hashtags to make your posts shine!",
     seoKeywords = "BlueTickPost, Verified social media posts, Social media post generator, Custom social media posts, Professional social posts, Verified-like posts, Create social media posts, Blue tick posts, Social media tools",
     seoCanonical = "/",
-    seoOgImage = "/images/bluetickpost.jpg",
+    seoOgImage = "/images/bluetickpost-cover.png",
     ...otherProps
 }) => {
 

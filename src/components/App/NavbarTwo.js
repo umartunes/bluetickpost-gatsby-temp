@@ -2,7 +2,7 @@ import React from 'react';
 import { useRecoilState } from 'recoil'
 import { collapsedState } from '../../utils/recoil-atoms'
 import { Link } from 'gatsby'
-import logo from "../../assets/images/logo-bluetick2.png"
+import logo from "../../assets/images/logo-bluetick-capital.png"
 import Menu from "./Menu"
 
 const NavbarTwo = () => {
