@@ -1,4 +1,11 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemPanel,
+    AccordionItemButton
+} from 'react-accessible-accordion'
 import { Link, } from 'gatsby'
 
 // import starIcon from '../../assets/images/star-icon.png'
@@ -33,7 +40,9 @@ const PostForm = ({ onGenerate }) => {
     const [useCustomBackground, setUseCustomBackground] = useState(false);
     const [hideVerifiedTick, setHideVerifiedTick] = useState(false);
     const [hideWatermark, setHideWatermark] = useState(false);
-
+    const [contentAlign, setContentAlign] = useState('center');
+    const [showFontSizeSettings, setShowFontSizeSettings] = useState(false);
+    const [showFontFamilySettings, setShowFontFamilySettings] = useState(false);
     const [formData, setFormData] = useState({ ...initialValues })
 
     const handleFormData = e => {
@@ -43,24 +52,26 @@ const PostForm = ({ onGenerate }) => {
 
     const notify = (message, type = "success") => { addToast(message, { appearance: type, autoDismiss: true }) }
 
-    // const actionOnSuccess = (applicantData) => {
+    // Check if query data available in url
+    useEffect(() => {
 
-    //     // console.log(applicantData)
+        // Ref: https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+        const urlParams = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
 
-    //     window.location.assign(`/form-download?course=${applicantData.course}&CNIC=${applicantData.CNIC}&batch=${applicantData.batch}`)
+        // // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+        // let value = urlParams.some_key; // "some_value"
 
-    //     setIsSubmitted(true)
-    //     setIsLoading(false)
+        let initValuesToSet = {}
+        if (urlParams.theme)
+            initValuesToSet.theme = urlParams.theme.trim()
 
-    //     scroller.scrollTo('success-section', {
-    //         duration: 500,
-    //         delay: 300,
-    //         smooth: true,
-    //         // containerId: 'ContainerElementID',
-    //         offset: -100, // Scrolls to element -10 pixels down the page
-    //     })
+        setTimeout(() => {
+            setFormData({ ...formData, ...initValuesToSet })
+        }, 1000)
 
-    // }
+    }, [])
 
     const handleSubmit = e => {
 
@@ -101,6 +112,7 @@ const PostForm = ({ onGenerate }) => {
             theme,
             fontSize,
             fontFamily,
+            contentAlign,
             useCustomBackground: useCustomBackground ? "true" : "false", // send value as string
             hideVerifiedTick: hideVerifiedTick ? "true" : "false", // send value as string
             hideWatermark: hideWatermark ? "true" : "false", // send value as string
@@ -312,10 +324,86 @@ const PostForm = ({ onGenerate }) => {
                                         <div className="row">
 
                                             <div className="col-md-12">
+
                                                 <h6 className='mt-3'>Content</h6>
-                                                <div className="form-group">
-                                                    <textarea name="content" className={`form-control font-${formData.fontFamily}`} value={formData.content} style={{ textAlign: `center`, fontSize: `${formData.fontSize}px` }} cols="30" rows="6" required placeholder="Write post content" onChange={handleFormData} />
+                                                <div className="row">
+                                                    <div className="col">
+                                                        <div className="btn-toolbar justify-content-end mb-2" role="toolbar" aria-label="Content Toolbar">
+                                                            <div className="btn-group mr-2" role="group" aria-label="Content Align">
+                                                                {['left', 'center', 'right'].map((align) => {
+                                                                    return <button type="button" className={`btn btn-secondary ${align === contentAlign ? 'active' : ''}`}
+                                                                        onClick={() => { setContentAlign(align) }}>
+                                                                        <i class={`fas fa-align-${align}`}></i>
+                                                                    </button>
+                                                                })}
+                                                            </div>
+                                                            <div className="btn-group mr-2" role="group" aria-label="Font Size">
+                                                                <button type="button" className={`btn btn-secondary ${showFontSizeSettings === true ? 'active' : ''}`}
+                                                                    onClick={() => {
+                                                                        setShowFontSizeSettings(!showFontSizeSettings)
+                                                                        setShowFontFamilySettings(false)
+                                                                    }}
+                                                                >
+                                                                    <i class="fas fa-text-height"></i>
+                                                                </button>
+                                                            </div>
+                                                            <div className="btn-group" role="group" aria-label="Font Family">
+                                                                <button type="button" className={`btn btn-secondary ${showFontFamilySettings === true ? 'active' : ''}`}
+                                                                    onClick={() => {
+                                                                        setShowFontFamilySettings(!showFontFamilySettings)
+                                                                        setShowFontSizeSettings(false)
+                                                                    }}
+                                                                >
+                                                                    <i class="fas fa-font"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
                                                 </div>
+
+                                                {showFontSizeSettings && <div className="row justify-content-end">
+                                                    <div className="col-md-4">
+                                                        <div className="d-flex justify-content-end">
+                                                            <div className="form-group flex-grow-1">
+                                                                <input type="range" class="custom-range" min="10" max="50" step="1" name='fontSize' id="fontSize" value={formData.fontSize} onChange={handleFormData} />
+                                                            </div>
+                                                            <h6 className='ml-2'>{formData.fontSize}px</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>}
+
+                                                {showFontFamilySettings && <div className="row justify-content-end">
+                                                    <div className="col-md-4">
+                                                        <h6 className='mr-2'>Font Style</h6>
+                                                        <div className="form-group flex-grow-1">
+                                                            <select name="fontFamily" className={`form-control font-${formData.fontFamily}`} value={formData.fontFamily} onChange={handleFormData}>
+                                                                <option className='font-option font-Roboto' value="Roboto">Roboto</option>
+                                                                <option className='font-option font-OpenSans' value="OpenSans">Open Sans</option>
+                                                                <option className='font-option font-Lato' value="Lato">Lato</option>
+                                                                <option className='font-option font-Montserrat' value="Montserrat">Montserrat</option>
+                                                                <option className='font-option font-Oswald' value="Oswald">Oswald</option>
+                                                                <option className='font-option font-Raleway' value="Raleway">Raleway</option>
+                                                                <option className='font-option font-Slabo' value="Slabo 27px">Slabo</option>
+                                                                <option className='font-option font-Merriweather' value="Merriweather">Merriweather</option>
+                                                                <option className='font-option font-Arimo' value="Arimo">Arimo</option>
+                                                                <option className='font-option font-Ubuntu' value="Ubuntu">Ubuntu</option>
+                                                                <option className='font-option font-Roboto' value="Roboto"></option>
+                                                                <option className='font-option font-NastaliqUrdu' value="NastaliqUrdu">Urdu Nastaliq ( اردو ) </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>}
+
+                                                <div className="form-group">
+                                                    <textarea name="content"
+                                                        className={`form-control font-${formData.fontFamily}`}
+                                                        value={formData.content}
+                                                        style={{ textAlign: `${contentAlign}`, fontSize: `${formData.fontSize}px` }}
+                                                        cols="30" rows="6" required placeholder="Write post content..."
+                                                        onChange={handleFormData} />
+                                                </div>
+
                                             </div>
 
                                             <div className="col-md-12">
@@ -344,123 +432,108 @@ const PostForm = ({ onGenerate }) => {
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div className="col-md-12">
-                                                <h6 className='mt-3'>Font Style</h6>
-                                                <div className="form-group">
-                                                    <select name="fontFamily" className={`form-control font-${formData.fontFamily}`} value={formData.fontFamily} onChange={handleFormData}>
-                                                        <option className='font-option font-Roboto' value="Roboto">Roboto</option>
-                                                        <option className='font-option font-OpenSans' value="OpenSans">Open Sans</option>
-                                                        <option className='font-option font-Lato' value="Lato">Lato</option>
-                                                        <option className='font-option font-Montserrat' value="Montserrat">Montserrat</option>
-                                                        <option className='font-option font-Oswald' value="Oswald">Oswald</option>
-                                                        <option className='font-option font-Raleway' value="Raleway">Raleway</option>
-                                                        <option className='font-option font-Slabo' value="Slabo 27px">Slabo</option>
-                                                        <option className='font-option font-Merriweather' value="Merriweather">Merriweather</option>
-                                                        <option className='font-option font-Arimo' value="Arimo">Arimo</option>
-                                                        <option className='font-option font-Ubuntu' value="Ubuntu">Ubuntu</option>
-                                                        <option className='font-option font-Roboto' value="Roboto"></option>
-                                                        <option className='font-option font-NastaliqUrdu' value="NastaliqUrdu">Urdu Nastaliq ( اردو ) </option>
-                                                    </select>
-                                                </div>
-                                            </div>
+
+
+
 
                                             <div className="col-md-12">
-                                                <div className="row mt-3">
-                                                    <div className="col-10"><h6>Font Size</h6></div>
-                                                    <div className="col-2 text-right"><h6>{formData.fontSize}px</h6></div>
-                                                </div>
-                                                
-                                                <div className="form-group">
-                                                    <input type="range" class="custom-range" min="10" max="50" step="1" name='fontSize' id="fontSize" value={formData.fontSize} onChange={handleFormData} />
-                                                </div>
-                                            </div>
+                                                <Accordion>
+                                                    <AccordionItem>
+                                                        <AccordionItemHeading >
+                                                            <AccordionItemButton style={{ backgroundColor: '#17a2b8', color: 'white', fontWeight: 'bold' }}>
+                                                                Additional Post Settings
+                                                            </AccordionItemButton>
+                                                        </AccordionItemHeading>
+                                                        <AccordionItemPanel>
+                                                            <div className="row">
+                                                                <div className="col-md-12 mt-2">
 
-                                            <div className="col-md-12 mt-2">
+                                                                    <div className="row">
+                                                                        <div className="col-10"><h6>Use Custom Background Image?</h6></div>
+                                                                        <div className="col-2">
+                                                                            <div className="custom-control custom-switch text-right">
+                                                                                <input type="checkbox" className="custom-control-input" id="useCustomBackground" checked={useCustomBackground} onChange={() => setUseCustomBackground(!useCustomBackground)} />
+                                                                                <label className="custom-control-label" for="useCustomBackground"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
 
-                                                <div className="row">
-                                                    <div className="col-10"><h6>Use Custom Background Image?</h6></div>
-                                                    <div className="col-2">
-                                                        <div className="custom-control custom-switch text-right">
-                                                            <input type="checkbox" className="custom-control-input" id="useCustomBackground" checked={useCustomBackground} onChange={() => setUseCustomBackground(!useCustomBackground)} />
-                                                            <label className="custom-control-label" for="useCustomBackground"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                {
-                                                    useCustomBackground
-                                                        ? <Fragment>
-                                                            <p className='mt-1 mb-3'><small className='text-info'> 🛈 If you're using custom background image make sure image size is less than 1mb.  <a href="https://bulkresizephotos.com/en?type=filesize" rel='nofollow'>[OR] reduce image size by clicking here.</a> We're working on this feature to improve it. </small> </p>
-                                                            <div className="d-flex p-3 flex-column align-items-center justify-content-center" style={{ background: "#f5f5f5", cursor: "pointer" }} onClick={() => {
-                                                                document.getElementById("backgroundImageInput").click();
-                                                            }}>
-
-                                                                <div className="previewOuter d-flex align-items-center justify-content-center flex-column cursor-pointer" style={{
-                                                                    border: `2px solid #eee`,
-                                                                    width: `250px`,
-                                                                    maxWidth: `100%`,
-                                                                    height: `250px`,
-                                                                    padding: `8px`,
-                                                                    boxSizing: `border-box`,
-                                                                    margin: `0 auto`,
-                                                                    backgroundImage: `url("${backgroundImage}")`,
-                                                                    backgroundSize: "cover",
-                                                                    backgroundPosition: "center",
-                                                                }}>
 
                                                                     {
-                                                                        backgroundImage
-                                                                            ? <Fragment>
-                                                                                <button type="button" className="btn btn-light btn-lg"><i className="fas fa-sync fa-lg text-dark"></i></button>
-                                                                            </Fragment>
-                                                                            : <Fragment>
-                                                                                <p className='mb-1'><small><span className="fas fa-image fa-lg text-grey"></span></small></p>
-                                                                                <small className="mb-1"><span className="fas fa-plus mr-2"></span>Select Background Image</small>
-                                                                            </Fragment>
+                                                                        useCustomBackground && <>
+                                                                            <p className='mt-1 mb-3'><small className='text-info'> 🛈 If you're using custom background image make sure image size is less than 1mb.  <a className='font-weight-bold' href="https://bulkresizephotos.com/en?type=filesize" rel='nofollow'>[OR] REDUCE IMAGE SIZE BY CLICKING HERE.</a> We're working on this feature to improve it. </small> </p>
+                                                                            <div className="d-flex p-3 flex-column align-items-center justify-content-center" style={{ background: "#f5f5f5", cursor: "pointer" }} onClick={() => {
+                                                                                document.getElementById("backgroundImageInput").click();
+                                                                            }}>
+
+                                                                                <div className="previewOuter d-flex align-items-center justify-content-center flex-column cursor-pointer" style={{
+                                                                                    border: `2px solid #eee`,
+                                                                                    width: `250px`,
+                                                                                    maxWidth: `100%`,
+                                                                                    height: `250px`,
+                                                                                    padding: `8px`,
+                                                                                    boxSizing: `border-box`,
+                                                                                    margin: `0 auto`,
+                                                                                    backgroundImage: `url("${backgroundImage}")`,
+                                                                                    backgroundSize: "cover",
+                                                                                    backgroundPosition: "center",
+                                                                                }}>
+
+                                                                                    {
+                                                                                        backgroundImage
+                                                                                            ? <>
+                                                                                                <button type="button" className="btn btn-light btn-lg"><i className="fas fa-sync fa-lg text-dark"></i></button>
+                                                                                            </>
+                                                                                            : <>
+                                                                                                <p className='mb-1'><small><span className="fas fa-image fa-lg text-grey"></span></small></p>
+                                                                                                <small className="mb-1"><span className="fas fa-plus mr-2"></span>Select Background Image</small>
+                                                                                            </>
+                                                                                    }
+
+                                                                                </div>
+
+                                                                                <div className="form-group border border-1 mb-0 d-none">
+                                                                                    <input id="backgroundImageInput" type="file" name="photo" accept="image/*" className="form-control pl-0" onChange={handleBackgroundImageChange} style={{ height: `50px` }} />
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </>
+
                                                                     }
 
                                                                 </div>
 
-                                                                <div className="form-group border border-1 mb-0 d-none">
-                                                                    <input id="backgroundImageInput" type="file" name="photo" accept="image/*" className="form-control pl-0" onChange={handleBackgroundImageChange} style={{ height: `50px` }} />
+                                                                <div className="col-md-12 mt-2">
+
+                                                                    <div className="row">
+                                                                        <div className="col-10"><h6>Hide Verified Tick?</h6></div>
+                                                                        <div className="col-2">
+                                                                            <div className="custom-control custom-switch text-right">
+                                                                                <input type="checkbox" className="custom-control-input" id="hideVerifiedTick" checked={hideVerifiedTick} onChange={() => setHideVerifiedTick(!hideVerifiedTick)} />
+                                                                                <label className="custom-control-label" for="hideVerifiedTick"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </div>
+                                                                <div className="col-md-12 mt-2">
 
+                                                                    <div className="row">
+                                                                        <div className="col-10"><h6>Hide Watermark?</h6></div>
+                                                                        <div className="col-2">
+                                                                            <div className="custom-control custom-switch text-right">
+                                                                                <input type="checkbox" className="custom-control-input" id="hideWatermark" checked={hideWatermark} onChange={() => setHideWatermark(!hideWatermark)} />
+                                                                                <label className="custom-control-label" for="hideWatermark"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
                                                             </div>
-                                                        </Fragment>
-                                                        : <Fragment>
-
-                                                        </Fragment>
-                                                }
-
+                                                        </AccordionItemPanel>
+                                                    </AccordionItem>
+                                                </Accordion>
                                             </div>
-                                            <div className="col-md-12 mt-2">
-
-                                                <div className="row">
-                                                    <div className="col-10"><h6>Hide Verified Tick?</h6></div>
-                                                    <div className="col-2">
-                                                        <div className="custom-control custom-switch text-right">
-                                                            <input type="checkbox" className="custom-control-input" id="hideVerifiedTick" checked={hideVerifiedTick} onChange={() => setHideVerifiedTick(!hideVerifiedTick)} />
-                                                            <label className="custom-control-label" for="hideVerifiedTick"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div className="col-md-12 mt-2">
-
-                                                <div className="row">
-                                                    <div className="col-10"><h6>Hide Watermark?</h6></div>
-                                                    <div className="col-2">
-                                                        <div className="custom-control custom-switch text-right">
-                                                            <input type="checkbox" className="custom-control-input" id="hideWatermark" checked={hideWatermark} onChange={() => setHideWatermark(!hideWatermark)} />
-                                                            <label className="custom-control-label" for="hideWatermark"></label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
 
                                             <div className="col-md-12">
                                                 <hr />
