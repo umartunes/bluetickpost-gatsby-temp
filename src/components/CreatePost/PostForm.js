@@ -154,7 +154,7 @@ const PostForm = ({ onGenerate }) => {
             }
 
             const response = await fetch('https://api.bluetickpost.com/blue-tick/generate-post', {
-            // const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
+                // const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
                 method: 'POST',
                 body: postFormData
             });
@@ -199,14 +199,95 @@ const PostForm = ({ onGenerate }) => {
         // document.body.removeChild(link);
     };
 
+    /**
+ * Processes an image file by resizing, compressing, and logging details.
+ * @param {File} file - The image file to be processed.
+ * @param {number} maxDimension - The maximum width or height for resizing the image.
+ * @param {number} quality - The quality of the compressed image (0 to 1).
+ * @param {function} callback - Function to call with the processed image URL.
+ */
+    const processImageFile = (file, maxDimension, quality, callback) => {
+        const fileType = file.type;
+        const validImageTypes = ["image/jpeg", "image/jpg", "image/png"];
+
+        // Check if the file type is valid
+        if (!validImageTypes.includes(fileType)) {
+            alert("Please upload a valid image file (jpg, jpeg, png).");
+            return;
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = (event) => {
+            const img = new Image();
+
+            img.onload = () => {
+                const canvas = document.createElement("canvas");
+                const ctx = canvas.getContext("2d");
+
+                // Initialize image dimensions
+                let { width, height } = img;
+
+                // Resize the image if its dimensions exceed maxDimension
+                if (width > maxDimension || height > maxDimension) {
+                    // Calculate scale factor to maintain aspect ratio
+                    const scale = Math.min(maxDimension / width, maxDimension / height);
+                    width = width * scale;
+                    height = height * scale;
+                }
+
+                // Set canvas dimensions to resized image dimensions
+                canvas.width = width;
+                canvas.height = height;
+
+                // Draw the resized image on the canvas
+                ctx.drawImage(img, 0, 0, width, height);
+
+                // Convert canvas content to a compressed image blob
+                canvas.toBlob(
+                    (blob) => {
+                        // Log image dimensions and size
+                        console.log(`Image Dimensions: ${width}x${height}`);
+                        console.log(`Image Size: ${(blob.size / 1024).toFixed(2)} KB`); // Size in KB
+
+                        // Create a URL for the image blob and call the callback with it
+                        const imageURL = window.URL.createObjectURL(blob);
+                        callback(imageURL);
+                    },
+                    fileType, // Image MIME type
+                    quality // Compression quality (0 to 1)
+                );
+            };
+
+            // Set image source to the file data URL
+            img.src = event.target.result;
+        };
+
+        // Read the file as a data URL
+        reader.readAsDataURL(file);
+    };
+
     const handleProfileImageChange = (e) => {
-        if (e.target.files && e.target.files[0]) {
-            setProfileImage(window.URL.createObjectURL(e.target.files[0]));
+        const file = e.target.files[0];
+
+        if (file) {
+            // Process the image file with max dimension 512px and quality 90%
+            processImageFile(file, 256, 0.9, (imageURL) => {
+                // Update state with the URL of the processed profile image
+                setProfileImage(imageURL);
+            });
         }
     };
+
     const handleBackgroundImageChange = (e) => {
-        if (e.target.files && e.target.files[0]) {
-            setBackgroundImage(window.URL.createObjectURL(e.target.files[0]));
+        const file = e.target.files[0];
+
+        if (file) {
+            // Process the image file with max dimension 1368px and quality 80%
+            processImageFile(file, 1368, 0.8, (imageURL) => {
+                // Update state with the URL of the processed background image
+                setBackgroundImage(imageURL);
+            });
         }
     };
 
@@ -234,7 +315,7 @@ const PostForm = ({ onGenerate }) => {
                                 <div className="generated-post p-0 text-center">
                                     <div className="bg-light border rounded p-4">
                                         <h5 className='my-4 text-center'>Your post is ready to be shared. Click on the button below to download it.</h5>
-                                        
+
                                         <div className="my-4">
                                             <button className="btn btn-secondary mx-2 my-2" onClick={() => { handleEdit() }}>Edit <i class="fas fa-edit"></i></button>
                                             <button className="btn btn-info mx-2 my-2" onClick={() => { handleRegenerate() }}>Regenerate <i class="fas fa-redo"></i></button>
@@ -363,7 +444,7 @@ const PostForm = ({ onGenerate }) => {
 
                                                     </div>
                                                 </div>
-                                                
+
 
                                                 {showFontSizeSettings && <div className="row justify-content-end">
                                                     <div className="col-md-4">
@@ -436,9 +517,6 @@ const PostForm = ({ onGenerate }) => {
                                                 </div>
                                             </div>
 
-
-
-
                                             <div className="col-md-12">
                                                 <Accordion>
                                                     <AccordionItem>
@@ -464,7 +542,7 @@ const PostForm = ({ onGenerate }) => {
 
                                                                     {
                                                                         useCustomBackground && <>
-                                                                            <p className='mt-1 mb-3'><small className='text-info'> 🛈 If you're using custom background image make sure image size is less than 1mb.  <a className='font-weight-bold' href="https://bulkresizephotos.com/en?type=filesize" rel='nofollow'>[OR] REDUCE IMAGE SIZE BY CLICKING HERE.</a> We're working on this feature to improve it. </small> </p>
+                                                                            {/* <p className='mt-1 mb-3'><small className='text-info'> 🛈 If you're using custom background image make sure image size is less than 1mb.  <a className='font-weight-bold' href="https://bulkresizephotos.com/en?type=filesize" rel='nofollow'>[OR] REDUCE IMAGE SIZE BY CLICKING HERE.</a> We're working on this feature to improve it. </small> </p> */}
                                                                             <div className="d-flex p-3 flex-column align-items-center justify-content-center" style={{ background: "#f5f5f5", cursor: "pointer" }} onClick={() => {
                                                                                 document.getElementById("backgroundImageInput").click();
                                                                             }}>
@@ -534,7 +612,7 @@ const PostForm = ({ onGenerate }) => {
                                                                 </div>
                                                             </div>
                                                         </AccordionItemPanel>
-                                                       
+
                                                     </AccordionItem>
                                                 </Accordion>
                                             </div>
