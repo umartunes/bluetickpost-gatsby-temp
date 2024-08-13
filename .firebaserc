@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "techna-pk"
-  }
+    "default": "bluetickpost-com"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
