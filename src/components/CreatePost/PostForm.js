@@ -15,8 +15,6 @@ import { useToasts } from 'react-toast-notifications'
 
 import { Element, scroller } from 'react-scroll'
 
-import { courses } from '../../data/courses'
-
 const initialValues = {
     name: '',
     username: '',
@@ -98,8 +96,6 @@ const PostForm = ({ onGenerate }) => {
             return;
         }
 
-        // let applicantData = { name, fatherName, email, CNIC, mobileNumber, DOB, gender, qualification, address, city, country, course, classMode, learningMode, referrer }
-        // applicantData.photo = userPhoto.src
 
         const postData = {
             name,
@@ -113,10 +109,13 @@ const PostForm = ({ onGenerate }) => {
             fontSize,
             fontFamily,
             contentAlign,
-            useCustomBackground: useCustomBackground ? "true" : "false", // send value as string
             hideVerifiedTick: hideVerifiedTick ? "true" : "false", // send value as string
             hideWatermark: hideWatermark ? "true" : "false", // send value as string
+            useCustomBackground: useCustomBackground ? "true" : "false", // send value as string
         };
+
+        console.log(postData)
+
         handleGenerate(postData);
 
     }
@@ -134,6 +133,8 @@ const PostForm = ({ onGenerate }) => {
             postFormData.append('theme', postData.theme);
             postFormData.append('fontSize', postData.fontSize);
             postFormData.append('fontFamily', postData.fontFamily);
+            postFormData.append('contentAlign', postData.contentAlign);
+            postFormData.append('useCustomBackground', postData.useCustomBackground);
             postFormData.append('hideVerifiedTick', postData.hideVerifiedTick);
             postFormData.append('hideWatermark', postData.hideWatermark);
 
@@ -152,9 +153,8 @@ const PostForm = ({ onGenerate }) => {
                 postFormData.append('backgroundImage', blob, 'background-image.png');
             }
 
-            console.log(postFormData)
-
             const response = await fetch('https://api.bluetickpost.com/blue-tick/generate-post', {
+            // const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
                 method: 'POST',
                 body: postFormData
             });
@@ -174,7 +174,7 @@ const PostForm = ({ onGenerate }) => {
                 offset: 10, // Scrolls to element -10 pixels down the page
             })
 
-            // const response = await axios.post('http://localhost:8000/blue-tick/generate-post', formData, {
+            // const response = await axios.post('http://localhost:5000/blue-tick/generate-post', formData, {
             //   headers: {
             //     'Content-Type': 'multipart/form-data'
             //   }, 
@@ -233,11 +233,12 @@ const PostForm = ({ onGenerate }) => {
 
                                 <div className="generated-post p-0 text-center">
                                     <div className="bg-light border rounded p-4">
-                                        <h5 className='my-4 text-center'>Your post is successfully created.</h5>
+                                        <h5 className='my-4 text-center'>Your post is ready to be shared. Click on the button below to download it.</h5>
+                                        
                                         <div className="my-4">
-                                            <button className="btn btn-secondary mx-2" onClick={() => { handleEdit() }}>Edit <i class="fas fa-edit"></i></button>
-                                            <button className="btn btn-info mx-2" onClick={() => { handleRegenerate() }}>Regenerate <i class="fas fa-redo"></i></button>
-                                            <button className="btn btn-success mx-2" onClick={() => { downloadImage(generatedPost.imageUrl) }}>Download <i class="fas fa-download"></i></button>
+                                            <button className="btn btn-secondary mx-2 my-2" onClick={() => { handleEdit() }}>Edit <i class="fas fa-edit"></i></button>
+                                            <button className="btn btn-info mx-2 my-2" onClick={() => { handleRegenerate() }}>Regenerate <i class="fas fa-redo"></i></button>
+                                            <button className="btn btn-success mx-2 my-2" onClick={() => { downloadImage(generatedPost.imageUrl) }}>Download <i class="fas fa-download"></i></button>
                                         </div>
                                         <img src={generatedPost.imageUrl} alt="Generated Post" className="img-fluid" />
                                     </div>
@@ -251,7 +252,7 @@ const PostForm = ({ onGenerate }) => {
 
                         <div className="section-title mb-4" style={{ maxWidth: '100%' }}>
                             <h2>Create A Post</h2>
-                            <p className='mx-auto' style={{ maxWidth: '80%' }}>Please fill in the form below to apply for a course. All fields are required.</p>
+                            <p className='mx-auto' style={{ maxWidth: '80%' }}>Generate professional-looking social media posts with BlueTickPost. Stand out with posts that give the feeling of being verified. Customize with your photo, name, username, content, and hashtags to make your posts shine!</p>
                         </div>
 
 
@@ -292,7 +293,7 @@ const PostForm = ({ onGenerate }) => {
                                                                 </div>
                                                             </div>
 
-                                                            <small className="mt-3"> <strong>Select Profile Image</strong> </small>
+                                                            <small className="mt-3"> <strong>Select Profile Photo</strong> </small>
                                                             <div className="form-group border border-1 mb-0 d-none">
                                                                 <input id="profileImageInput" type="file" name="photo" accept="image/*" className="form-control pl-0" onChange={handleProfileImageChange} style={{ height: `50px` }} />
                                                             </div>
@@ -325,7 +326,8 @@ const PostForm = ({ onGenerate }) => {
 
                                             <div className="col-md-12">
 
-                                                <h6 className='mt-3'>Content</h6>
+                                                <h5 className='mt-3 mb-0'>Post Content</h5>
+                                                <p className='mb-2'><small className='text-dark'> 🛈 You can change the <strong>Font Size</strong> and <strong>Font Style</strong> from the toolbar buttons available on the right side.</small></p>
                                                 <div className="row">
                                                     <div className="col">
                                                         <div className="btn-toolbar justify-content-end mb-2" role="toolbar" aria-label="Content Toolbar">
@@ -361,12 +363,13 @@ const PostForm = ({ onGenerate }) => {
 
                                                     </div>
                                                 </div>
+                                                
 
                                                 {showFontSizeSettings && <div className="row justify-content-end">
                                                     <div className="col-md-4">
                                                         <div className="d-flex justify-content-end">
                                                             <div className="form-group flex-grow-1">
-                                                                <input type="range" class="custom-range" min="10" max="50" step="1" name='fontSize' id="fontSize" value={formData.fontSize} onChange={handleFormData} />
+                                                                <input type="range" class="custom-range" min="10" max="100" step="1" name='fontSize' id="fontSize" value={formData.fontSize} onChange={handleFormData} />
                                                             </div>
                                                             <h6 className='ml-2'>{formData.fontSize}px</h6>
                                                         </div>
@@ -531,6 +534,7 @@ const PostForm = ({ onGenerate }) => {
                                                                 </div>
                                                             </div>
                                                         </AccordionItemPanel>
+                                                       
                                                     </AccordionItem>
                                                 </Accordion>
                                             </div>

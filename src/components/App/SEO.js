@@ -2,10 +2,11 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 
 const SEO = ({
-    seoTitle = "BlueTickPost - Pakistan's Lead IT Trainings Institute and Technology Solutions Center",
-    seoDescription = "BlueTickPost is the Best IT Institution in Faisalabad Pakistan. At BlueTickPost we aim to train and produce 100,000 skilled application developers to resolve the unemployment issues of youngsters.",
+    seoTitle = "BlueTickPost - Create Verified-Like Social Media Posts",
+    seoDescription = "Generate professional-looking social media posts with BlueTickPost. Stand out with posts that give the feeling of being verified. Customize with your name, username, content, and hashtags to make your posts shine!",
+    seoKeywords = "BlueTickPost, Verified social media posts, Social media post generator, Custom social media posts, Professional social posts, Verified-like posts, Create social media posts, Blue tick posts, Social media tools",
     seoCanonical = "/",
-    seoOgImage = "/images/techna-cover.jpg",
+    seoOgImage = "/images/bluetickpost.jpg",
     ...otherProps
 }) => {
 
@@ -16,15 +17,28 @@ const SEO = ({
 
                 <title>{seoTitle}</title>
                 <meta name="description" content={seoDescription} />
-                <link rel="canonical" href={`https://stem.one${seoCanonical}`}></link>
+                <meta name="keywords" content={seoKeywords} />
+                <link rel="canonical" href={`https://bluetickpost.com${seoCanonical}`}></link>
 
-                <meta name="og:title" property="og:title" content={seoTitle}></meta>
-                <meta name="twitter:card" content={seoTitle}></meta>
+                <meta name="author" content="BlueTickPost Team" />
+                {/* <meta name="robots" content="index, follow" /> */}
+
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:title" content={seoTitle} />
+                <meta property="og:description" content="Generate professional-looking posts that make you feel verified on social media. Customize and share your unique posts today!" />
                 <meta property="og:image" content={seoOgImage} />
+                <meta property="og:url" content="https://bluetickpost.com" />
+
+                {/* Twitter */}
+                <meta name="twitter:title" content={seoTitle} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:description" content="Stand out on social media with custom posts that give the feel of being verified. Create and share your posts now!" />
+                <meta name="twitter:image" content={seoOgImage} />
 
 
                 {/* Facebook Domain Verification Meta Tag */}
-                <meta name="facebook-domain-verification" content="0dw4w932imlkc1e4o0nn2plr4ovxzx" />
+                {/* <meta name="facebook-domain-verification" content="0dw4w932imlkc1e4o0nn2plr4ovxzx" /> */}
 
                 {/* FontAwesome CDN */}
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
