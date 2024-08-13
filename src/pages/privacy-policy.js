@@ -22,18 +22,56 @@ const PrivacyPolicy = () => {
                         <div className="col-lg-8 col-md-12">
                             <div className="privacy-policy-content">
 
+                                <p>At BlueTickPost, we value your privacy and are committed to protecting any information we collect while operating our website. This privacy policy explains how we collect, use, disclose, and protect your personal information, including when we use advertising services.</p>
 
-                                <p>It is BlueTickPost policy to respect your privacy regarding any information we may collect while operating our website. Accordingly, we have developed this privacy policy in order for you to understand how we collect, use, communicate, disclose and otherwise make use of personal information. We have outlined our privacy policy below.</p>
-                                <ul class="">
-                                    <li>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</li>
-                                    <li>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</li>
-                                    <li>We will collect and use personal information solely for fulfilling those purposes specified by us and for other ancillary purposes, unless we obtain the consent of the individual concerned or as required by law.</li>
-                                    <li>Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.</li>
-                                    <li>We will protect personal information by using reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.</li>
-                                    <li>We will make readily available to customers information about our policies and practices relating to the management of personal information.</li>
-                                    <li>We will only retain personal information for as long as necessary for the fulfilment of those purposes.</li>
+                                <h5>1. Information Collection</h5>
+                                <ul>
+                                    <li>We collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</li>
+                                    <li>We may collect personal information such as your name, username, content, profile photo, and hashtags to provide and improve our services.</li>
                                 </ul>
-                                <p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. BlueTickPost may change this privacy policy from time to time at BlueTickPost’s sole discretion.</p>
+
+                                <h5>2. Purpose of Collection</h5>
+                                <ul>
+                                    <li>We will identify the purposes for which your information is being collected before or at the time of collection.</li>
+                                    <li>Your personal information will be used solely for fulfilling these purposes and for other related purposes with your consent or as required by law.</li>
+                                </ul>
+
+                                <h5>3. Use of Information</h5>
+                                <ul>
+                                    <li>We use your personal information to provide, maintain, and improve our services, and to communicate with you.</li>
+                                    <li>We may use personal data to customize your experience and to analyze how our services are used.</li>
+                                </ul>
+
+                                <h5>4. Third-Party Services</h5>
+                                <ul>
+                                    <li>We may use third-party advertising services, such as Google AdSense, to display ads on our website. These services may collect information about your visits to our website and other websites to provide targeted advertising.</li>
+                                    <li>These third-party services have their own privacy policies, and we encourage you to review them.</li>
+                                </ul>
+
+                                <h5>5. Data Security</h5>
+                                <ul>
+                                    <li>We protect your personal information by using reasonable security measures against loss, theft, unauthorized access, disclosure, copying, use, or modification.</li>
+                                </ul>
+
+                                <h5>6. Data Retention</h5>
+                                <ul>
+                                    <li>We will retain your personal information only for as long as necessary to fulfill the purposes for which it was collected and to comply with legal obligations.</li>
+                                </ul>
+
+                                <h5>7. User Rights</h5>
+                                <ul>
+                                    <li>You have the right to access, correct, or delete your personal information. Please contact us if you wish to exercise these rights.</li>
+                                </ul>
+
+                                <h5>8. Policy Changes</h5>
+                                <ul>
+                                    <li>BlueTickPost may update this privacy policy from time to time. We will notify you of any significant changes by posting the new policy on our website.</li>
+                                </ul>
+
+                                <h5>9. Contact Us</h5>
+                                <ul>
+                                    <li>If you have any questions or concerns about our privacy policy or the handling of your personal information, please contact us at <a href="mailto:contact@bluetickpost.com">contact@bluetickpost.com</a>.</li>
+                                </ul>
 
                             </div>
                         </div>
