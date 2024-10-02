@@ -8,6 +8,8 @@ import {
 } from 'react-accessible-accordion'
 // import { Link, } from 'gatsby'
 
+import ColorThief from "colorthief";
+
 // import starIcon from '../../assets/images/star-icon.png'
 import displayPhoto from '../../assets/images/dp.jpg'
 
@@ -15,7 +17,7 @@ import { useToasts } from 'react-toast-notifications'
 
 import { Element, scroller } from 'react-scroll'
 
-const initialValues = {
+let initialValues = {
     name: '',
     username: '',
     content: '',
@@ -26,6 +28,15 @@ const initialValues = {
     createdAt: '',
 }
 
+const savedInitialValues = JSON.parse( localStorage.getItem('initialFormValues') ) || null;
+if( savedInitialValues ) {
+
+    initialValues = {
+        ...initialValues,
+        ...savedInitialValues
+    }
+}
+
 const PostForm = ({ onGenerate }) => {
 
     const { addToast } = useToasts()
@@ -33,8 +44,12 @@ const PostForm = ({ onGenerate }) => {
 
     const [generatedPost, setGeneratedPost] = useState(null);
 
+    const [postTypeToCreate, setPostTypeToCreate] = useState('text');
+
     const [profileImage, setProfileImage] = useState(displayPhoto);
     const [backgroundImage, setBackgroundImage] = useState(null);
+    const [postImage, setPostImage] = useState(null);
+    const [postImageColor, setPostImageColor] = useState('#ffffff');
     const [useCustomBackground, setUseCustomBackground] = useState(false);
     const [hideVerifiedTick, setHideVerifiedTick] = useState(false);
     const [hideWatermark, setHideWatermark] = useState(false);
@@ -90,11 +105,24 @@ const PostForm = ({ onGenerate }) => {
             notify('Please enter your name correctly', 'error')
             return;
         }
-
-        if (content.length < 3) {
-            notify('Please enter at least 3 characters in content field', 'error')
+        
+        if(postTypeToCreate === 'image' && !postImage) {
+            notify('Please select an image to create an image post', 'error')
             return;
         }
+
+        // if (content.length < 3) {
+        //     notify('Please enter at least 3 characters in content field', 'error')
+        //     return;
+        // }
+
+        localStorage.setItem('initialFormValues', JSON.stringify({
+            name,
+            username,
+            theme,
+            fontSize,
+            fontFamily,
+        }));
 
 
         const postData = {
@@ -103,6 +131,8 @@ const PostForm = ({ onGenerate }) => {
             content,
             profileImage,
             backgroundImage,
+            postImage,
+            postImageColor,
             createdAt: createdAt || new Date().toISOString(),
             hashTags,
             theme,
@@ -141,8 +171,8 @@ const PostForm = ({ onGenerate }) => {
             postFormData.append('hideVerifiedTick', postData.hideVerifiedTick);
             postFormData.append('hideWatermark', postData.hideWatermark);
 
+            postFormData.append('postType', postTypeToCreate);
             postFormData.append('responseType', responseType);
-
 
 
             if (postData.createdAt) {
@@ -154,14 +184,21 @@ const PostForm = ({ onGenerate }) => {
                 postFormData.append('profileImage', blob, 'profile-image.png');
             }
 
-            if (postData.backgroundImage) {
+            if (useCustomBackground && postData.backgroundImage) {
                 const response = await fetch(postData.backgroundImage);
                 const blob = await response.blob();
                 postFormData.append('backgroundImage', blob, 'background-image.png');
             }
 
-            const response = await fetch('https://api.bluetickpost.com/blue-tick/generate-post', {
-                // const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
+            if (postTypeToCreate === 'image' && postData.postImage) {
+                const response = await fetch(postData.postImage);
+                const blob = await response.blob();
+                postFormData.append('postImage', blob, 'post-image.png');
+                postFormData.append('postImageColor', postData.postImageColor);
+            }
+
+            // const response = await fetch('https://api.bluetickpost.com/blue-tick/generate-post', {
+            const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
                 method: 'POST',
                 body: postFormData
             });
@@ -170,18 +207,18 @@ const PostForm = ({ onGenerate }) => {
             if (responseType === 'blob') {
                 const blob = await response.blob();
                 const imageUrl = window.URL.createObjectURL(blob);
-                setGeneratedPost({ 
+                setGeneratedPost({
                     imageUrl: imageUrl,
                     filename: 'blob-image-post.png'
                 });
 
             } else {
                 const jsonResponse = await response.json();
-                setGeneratedPost({ 
+                setGeneratedPost({
                     imageUrl: jsonResponse.imageUrl,
                     filename: jsonResponse.filename
                 });
-        
+
             }
 
             setIsLoading(false)
@@ -267,12 +304,12 @@ const PostForm = ({ onGenerate }) => {
     // };
 
     /**
- * Processes an image file by resizing, compressing, and logging details.
- * @param {File} file - The image file to be processed.
- * @param {number} maxDimension - The maximum width or height for resizing the image.
- * @param {number} quality - The quality of the compressed image (0 to 1).
- * @param {function} callback - Function to call with the processed image URL.
- */
+     * Processes an image file by resizing, compressing, and logging details.
+     * @param {File} file - The image file to be processed.
+     * @param {number} maxDimension - The maximum width or height for resizing the image.
+     * @param {number} quality - The quality of the compressed image (0 to 1).
+     * @param {function} callback - Function to call with the processed image URL.
+     */
     const processImageFile = (file, maxDimension, quality, callback) => {
         const fileType = file.type;
         const validImageTypes = ["image/jpeg", "image/jpg", "image/png"];
@@ -310,6 +347,12 @@ const PostForm = ({ onGenerate }) => {
                 // Draw the resized image on the canvas
                 ctx.drawImage(img, 0, 0, width, height);
 
+                // Use ColorThief to extract the dominant color from the canvas
+                const colorThief = new ColorThief();
+                const dominantColor = colorThief.getColor(img); // Extract dominant color from canvas
+
+                console.log(`Dominant Color: rgb(${dominantColor.join(", ")})`);
+
                 // Convert canvas content to a compressed image blob
                 canvas.toBlob(
                     (blob) => {
@@ -319,7 +362,9 @@ const PostForm = ({ onGenerate }) => {
 
                         // Create a URL for the image blob and call the callback with it
                         const imageURL = window.URL.createObjectURL(blob);
-                        callback(imageURL);
+
+                        // Call the callback with both the image URL and the dominant color
+                        callback(imageURL, dominantColor);
                     },
                     fileType, // Image MIME type
                     quality // Compression quality (0 to 1)
@@ -339,7 +384,7 @@ const PostForm = ({ onGenerate }) => {
 
         if (file) {
             // Process the image file with max dimension 512px and quality 90%
-            processImageFile(file, 256, 0.9, (imageURL) => {
+            processImageFile(file, 256, 0.9, (imageURL, dominantColor) => {
                 // Update state with the URL of the processed profile image
                 setProfileImage(imageURL);
             });
@@ -351,9 +396,24 @@ const PostForm = ({ onGenerate }) => {
 
         if (file) {
             // Process the image file with max dimension 1368px and quality 80%
-            processImageFile(file, 1368, 0.8, (imageURL) => {
+            processImageFile(file, 1368, 0.8, (imageURL, dominantColor) => {
                 // Update state with the URL of the processed background image
                 setBackgroundImage(imageURL);
+                // setPostImage(imageURL);
+                // setPostImageColor(`rgb(${dominantColor.join(", ")})`);
+            });
+        }
+    };
+
+    const handlePostImageChange = (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            // Process the image file with max dimension 1368px and quality 80%
+            processImageFile(file, 1368, 0.8, (imageURL, dominantColor) => {
+                // Update state with the URL of the processed background image
+                setPostImage(imageURL);
+                setPostImageColor(`rgb(${dominantColor.join(", ")})`);
             });
         }
     };
@@ -364,6 +424,7 @@ const PostForm = ({ onGenerate }) => {
 
     const handleRegenerate = () => {
         setGeneratedPost(null)
+        setPostImage(null)
         setBackgroundImage(null)
         setFormData({ ...formData, content: '', hashTags: '' })
     }
@@ -381,7 +442,7 @@ const PostForm = ({ onGenerate }) => {
 
                                 <div className="generated-post p-0 text-center">
                                     <div className="bg-light border rounded p-4">
-                                        <h5 className='my-4 text-center'>Your post is ready to be shared. Click on the download button below and share it on your favorite social media platforms.</h5>
+                                        <h5 className='my-4 text-center'>Your post is ready to be shared. Click on the Download button below and share the downloaded post image on your favorite social media platforms.</h5>
 
                                         <div className="my-4">
                                             <button className="btn btn-secondary mx-2 my-2" onClick={() => { handleEdit() }}>Edit <i className="fas fa-edit"></i></button>
@@ -488,13 +549,103 @@ const PostForm = ({ onGenerate }) => {
 
                                             </div>
                                         </div>
+
+                                        <hr />
+                                        <h2 className="my-4 text-center">Which type of post would you like to create?</h2>
+                                        {/* We can give him two options below; #1: Text Post and #2: Image Post */}
+                                        <div className="row">
+                                            <div className="col">
+                                                <div className="btn-toolbar justify-content-center mb-2" role="toolbar" aria-label="Content Toolbar">
+                                                    <div className="btn-group btn-group-lg" role="group" aria-label="Content Post Type">
+                                                        {['text', 'image'].map((pType) => {
+                                                            return <button type="button" className={`btn btn-info ${pType === postTypeToCreate ? 'active' : ''}`}
+                                                                onClick={() => {
+                                                                    setPostTypeToCreate(pType)
+
+                                                                    // automatically click postImageInput after image post type is selected
+                                                                    if (pType === 'image' && postTypeToCreate !== 'image') {
+                                                                        setTimeout(() => {
+                                                                            document.getElementById("postImageInput").click();
+                                                                        }, 500)
+                                                                    }
+                                                                }}>
+
+                                                                {pType === 'text' && <i className="fas fa-align-justify"></i>}
+                                                                {pType === 'image' && <i className="fas fa-image"></i>}
+                                                                &nbsp;
+                                                                <span style={{ textTransform: 'capitalize' }}>{pType} Post</span>
+
+                                                            </button>
+                                                        })}
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        {
+                                            postTypeToCreate === 'image' && <>
+                                                {/* <p className='mt-1 mb-3'><small className='text-info'> 🛈 If you're using custom background image make sure image size is less than 1mb.  <a className='font-weight-bold' href="https://bulkresizephotos.com/en?type=filesize" rel='nofollow'>[OR] REDUCE IMAGE SIZE BY CLICKING HERE.</a> We're working on this feature to improve it. </small> </p> */}
+                                                <div className="d-flex p-3 flex-column align-items-center justify-content-center" style={{ background: "#f5f5f5", cursor: "pointer" }} onClick={() => {
+                                                    document.getElementById("postImageInput").click();
+                                                }}>
+
+                                                    <div className="previewOuter d-flex align-items-center justify-content-center flex-column cursor-pointer" style={{
+                                                        border: `2px solid #eee`,
+                                                        width: `350px`,
+                                                        maxWidth: `100%`,
+                                                        height: `250px`,
+                                                        padding: `8px`,
+                                                        boxSizing: `border-box`,
+                                                        margin: `0 auto`,
+                                                        backgroundImage: `url("${postImage}")`,
+                                                        backgroundSize: "cover",
+                                                        backgroundPosition: "center",
+                                                    }}>
+
+                                                        {
+                                                            postImage
+                                                                ? <>
+                                                                    <button type="button" className="btn btn-light btn-lg"><i className="fas fa-sync fa-lg text-dark"></i></button>
+                                                                </>
+                                                                : <>
+                                                                    <p className='mb-1'><small><span className="fas fa-image fa-lg text-grey"></span></small></p>
+                                                                    <small className="mb-1"><span className="fas fa-plus mr-2"></span>Select Image</small>
+                                                                </>
+                                                        }
+
+                                                    </div>
+
+                                                    <div className="form-group border border-1 mb-0 d-none">
+                                                        <input id="postImageInput" type="file" name="photo" accept="image/*" className="form-control pl-0" onChange={handlePostImageChange} style={{ height: `50px` }} />
+                                                    </div>
+
+                                                </div>
+                                            </>
+
+                                        }
+
+                                        <hr />
+
                                         <div className="row">
 
                                             <div className="col-md-12">
 
-                                                <h5 className='mt-3 mb-0'>Post Content</h5>
-                                                <p className='mb-2'><small className='text-dark'> 🛈 You can change the <strong>Font Size</strong> and <strong>Font Style</strong> from the toolbar buttons available on the right side.</small></p>
-                                                <div className="row">
+                                                <h5 className='mt-3 mb-0'>
+
+                                                    {postTypeToCreate === 'text' && "Post Content"}
+                                                    {postTypeToCreate === 'image' && "Post Caption"}
+
+                                                </h5>
+
+                                                <p className='mt-2 mb-0' style={{lineHeight: 1.2}}>
+                                                    <small className='text-dark'> 🛈 You can change the <strong>Font Size</strong> and <strong>Style</strong> using the toolbar buttons on the right side.</small>
+                                                    {postTypeToCreate === 'image' && <small className='text-info'> <br /> 🛈 <strong> Keep your image post caption short and sweet, around 1-2 lines, to make it look nice. If it's longer, you might need to adjust the font size to make it look good.</strong></small>}
+                                                </p>
+
+
+                                                <div className="row mt-2">
                                                     <div className="col">
                                                         <div className="btn-toolbar justify-content-end mb-2" role="toolbar" aria-label="Content Toolbar">
                                                             <div className="btn-group mr-2" role="group" aria-label="Content Align">
@@ -569,7 +720,8 @@ const PostForm = ({ onGenerate }) => {
                                                         className={`form-control font-${formData.fontFamily}`}
                                                         value={formData.content}
                                                         style={{ textAlign: `${contentAlign}`, fontSize: `${formData.fontSize}px` }}
-                                                        cols="30" rows="6" required placeholder="Write post content..."
+                                                        cols="30" rows="6" required
+                                                        placeholder={postTypeToCreate === 'image' ? 'Write post caption here...' : 'Write post content here...'}
                                                         onChange={handleFormData} />
                                                 </div>
 
@@ -634,7 +786,7 @@ const PostForm = ({ onGenerate }) => {
 
                                                                                 <div className="previewOuter d-flex align-items-center justify-content-center flex-column cursor-pointer" style={{
                                                                                     border: `2px solid #eee`,
-                                                                                    width: `250px`,
+                                                                                    width: `350px`,
                                                                                     maxWidth: `100%`,
                                                                                     height: `250px`,
                                                                                     padding: `8px`,

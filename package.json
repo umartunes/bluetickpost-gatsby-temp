@@ -20,6 +20,7 @@
     "@mdx-js/react": "^1.6.22",
     "@react-pdf/renderer": "^1.6.3",
     "@react-pdf/styled-components": "^1.4.0",
+    "colorthief": "^2.4.0",
     "firebase": "^8.3.2",
     "gatsby": "^2.24.41",
     "gatsby-plugin-facebook-pixel": "^1.0.8",
