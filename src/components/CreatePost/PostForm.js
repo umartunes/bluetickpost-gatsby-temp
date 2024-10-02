@@ -17,6 +17,11 @@ import { useToasts } from 'react-toast-notifications'
 
 import { Element, scroller } from 'react-scroll'
 
+// Check if window is defined (so if in the browser or in node.js).
+// https://www.gatsbyjs.com/docs/debugging-html-builds/
+// This hack of checking isBrowser is necessary in order to make builds in Gatsby
+const isBrowser = typeof window !== "undefined"
+
 let initialValues = {
     name: '',
     username: '',
@@ -28,12 +33,14 @@ let initialValues = {
     createdAt: '',
 }
 
-const savedInitialValues = JSON.parse( localStorage.getItem('initialFormValues') ) || null;
-if( savedInitialValues ) {
+if (isBrowser) {
+    const savedInitialValues = JSON.parse(window.localStorage.getItem('initialFormValues')) || null;
+    if (savedInitialValues) {
 
-    initialValues = {
-        ...initialValues,
-        ...savedInitialValues
+        initialValues = {
+            ...initialValues,
+            ...savedInitialValues
+        }
     }
 }
 
@@ -105,8 +112,8 @@ const PostForm = ({ onGenerate }) => {
             notify('Please enter your name correctly', 'error')
             return;
         }
-        
-        if(postTypeToCreate === 'image' && !postImage) {
+
+        if (postTypeToCreate === 'image' && !postImage) {
             notify('Please select an image to create an image post', 'error')
             return;
         }
@@ -116,13 +123,16 @@ const PostForm = ({ onGenerate }) => {
         //     return;
         // }
 
-        localStorage.setItem('initialFormValues', JSON.stringify({
-            name,
-            username,
-            theme,
-            fontSize,
-            fontFamily,
-        }));
+        // This hack of checking isBrowser is necessary in order to make builds in Gatsby
+        if(isBrowser){
+            window.localStorage.setItem('initialFormValues', JSON.stringify({
+                name,
+                username,
+                theme,
+                fontSize,
+                fontFamily,
+            }));
+        }
 
 
         const postData = {
@@ -198,7 +208,7 @@ const PostForm = ({ onGenerate }) => {
             }
 
             const response = await fetch('https://api.bluetickpost.com/blue-tick/generate-post', {
-            // const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
+                // const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
                 method: 'POST',
                 body: postFormData
             });
@@ -639,7 +649,7 @@ const PostForm = ({ onGenerate }) => {
 
                                                 </h5>
 
-                                                <p className='mt-2 mb-0' style={{lineHeight: 1.2}}>
+                                                <p className='mt-2 mb-0' style={{ lineHeight: 1.2 }}>
                                                     <small className='text-dark'> 🛈 You can change the <strong>Font Size</strong> and <strong>Style</strong> using the toolbar buttons on the right side.</small>
                                                     {postTypeToCreate === 'image' && <small className='text-info'> <br /> 🛈 <strong> Keep your image post caption short and sweet, around 1-2 lines, to make it look nice. If it's longer, you might need to adjust the font size to make it look good.</strong></small>}
                                                 </p>
