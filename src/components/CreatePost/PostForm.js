@@ -24,7 +24,7 @@ const isBrowser = typeof window !== "undefined"
 
 let initialValues = {
     name: '',
-    username: '',
+    username: '@',
     content: '',
     hashTags: '',
     theme: 'twitter',
@@ -32,7 +32,7 @@ let initialValues = {
     fontFamily: 'Roboto',
     createdAt: '',
 }
-
+let savedVerifiedTickValueInStorage = false;
 if (isBrowser) {
     const savedInitialValues = JSON.parse(window.localStorage.getItem('initialFormValues')) || null;
     if (savedInitialValues) {
@@ -42,6 +42,9 @@ if (isBrowser) {
             ...savedInitialValues
         }
     }
+
+    savedVerifiedTickValueInStorage = JSON.parse(window.localStorage.getItem('hideVerifiedTick')) || false;
+
 }
 
 const PostForm = ({ onGenerate }) => {
@@ -58,7 +61,7 @@ const PostForm = ({ onGenerate }) => {
     const [postImage, setPostImage] = useState(null);
     const [postImageColor, setPostImageColor] = useState('#ffffff');
     const [useCustomBackground, setUseCustomBackground] = useState(false);
-    const [hideVerifiedTick, setHideVerifiedTick] = useState(false);
+    const [hideVerifiedTick, setHideVerifiedTick] = useState(savedVerifiedTickValueInStorage);
     const [hideWatermark, setHideWatermark] = useState(false);
     const [contentAlign, setContentAlign] = useState('center');
     const [showFontSizeSettings, setShowFontSizeSettings] = useState(false);
@@ -132,6 +135,8 @@ const PostForm = ({ onGenerate }) => {
                 fontSize,
                 fontFamily,
             }));
+
+            window.localStorage.setItem('hideVerifiedTick', JSON.stringify(hideVerifiedTick));
         }
 
 
@@ -207,8 +212,8 @@ const PostForm = ({ onGenerate }) => {
                 postFormData.append('postImageColor', postData.postImageColor);
             }
 
-            const response = await fetch('https://api.bluetickpost.com/blue-tick/generate-post', {
-                // const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
+            // const response = await fetch('https://api.bluetickpost.com/blue-tick/generate-post', {
+                const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
                 method: 'POST',
                 body: postFormData
             });
@@ -546,13 +551,14 @@ const PostForm = ({ onGenerate }) => {
                                                     <div className="col-md-12">
                                                         <h6 className='mt-3'>Name</h6>
                                                         <div className="form-group">
-                                                            <input type="text" name="name" value={formData.name} className="form-control" required placeholder="" onChange={handleFormData} />
+                                                            <input type="text" name="name" value={formData.name} className="form-control" required placeholder="Your Name" onChange={handleFormData} />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-12">
-                                                        <h6 className='mt-3'>Username</h6>
+                                                        <h6 className='mt-3'>Username or Job Title</h6>
                                                         <div className="form-group">
-                                                            <input type="text" name="username" value={formData.username} className="form-control" required placeholder="" onChange={handleFormData} />
+                                                            <input type="text" name="username" value={formData.username} className="form-control" required placeholder="@username or Job Title" onChange={handleFormData} />
+                                                            <small className='text-dark'> 🛈 Enter your username <strong>(e.g., @John)</strong> or job title <strong>(e.g., CEO at Microsoft)</strong></small>
                                                         </div>
                                                     </div>
                                                 </div>
