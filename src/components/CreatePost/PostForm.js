@@ -271,9 +271,10 @@ const PostForm = ({ onGenerate }) => {
     };
 
     const downloadImage = (imageUrl) => {
+        const timestamp = Date.now();
         const link = document.createElement('a');
         link.href = imageUrl;
-        link.download = `${formData.theme}-post-bluetickpost.com.jpg`;
+        link.download = `${formData.theme}-post-${timestamp}.jpg`;
         link.click();
         // document.body.removeChild(link);
     };
