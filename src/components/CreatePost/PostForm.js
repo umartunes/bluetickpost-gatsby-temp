@@ -127,7 +127,7 @@ const PostForm = ({ onGenerate }) => {
         // }
 
         // This hack of checking isBrowser is necessary in order to make builds in Gatsby
-        if(isBrowser){
+        if (isBrowser) {
             window.localStorage.setItem('initialFormValues', JSON.stringify({
                 name,
                 username,
@@ -212,8 +212,15 @@ const PostForm = ({ onGenerate }) => {
                 postFormData.append('postImageColor', postData.postImageColor);
             }
 
-            // const response = await fetch('https://api.bluetickpost.com/blue-tick/generate-post', {
-                const response = await fetch('http://localhost:5000/blue-tick/generate-post', {
+            let apiURL = 'https://api.bluetickpost.com/blue-tick/generate-post';
+            if (isBrowser) {
+                if (window.location.hostname === 'localhost') {
+                    apiURL = 'http://localhost:5000/blue-tick/generate-post';
+                    // apiURL = 'https://api.bluetickpost.com/blue-tick/generate-post';
+                }
+            }
+
+            const response = await fetch(apiURL, {
                 method: 'POST',
                 body: postFormData
             });
