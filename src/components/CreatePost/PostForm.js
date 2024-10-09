@@ -32,9 +32,14 @@ let initialValues = {
     fontFamily: 'Roboto',
     createdAt: '',
 }
+
+let defaultProfileImage = displayPhoto
 let savedVerifiedTickValueInStorage = false;
+
 if (isBrowser) {
+
     const savedInitialValues = JSON.parse(window.localStorage.getItem('initialFormValues')) || null;
+
     if (savedInitialValues) {
 
         initialValues = {
@@ -42,6 +47,9 @@ if (isBrowser) {
             ...savedInitialValues
         }
     }
+
+
+    defaultProfileImage = window.localStorage.getItem('profileImageBase64') || displayPhoto
 
     savedVerifiedTickValueInStorage = JSON.parse(window.localStorage.getItem('hideVerifiedTick')) || false;
 
@@ -56,7 +64,7 @@ const PostForm = ({ onGenerate }) => {
 
     const [postTypeToCreate, setPostTypeToCreate] = useState('text');
 
-    const [profileImage, setProfileImage] = useState(displayPhoto);
+    const [profileImage, setProfileImage] = useState(defaultProfileImage);
     const [backgroundImage, setBackgroundImage] = useState(null);
     const [postImage, setPostImage] = useState(null);
     const [postImageColor, setPostImageColor] = useState('#ffffff');
@@ -216,7 +224,7 @@ const PostForm = ({ onGenerate }) => {
             if (isBrowser) {
                 if (window.location.hostname === 'localhost') {
                     apiURL = 'http://localhost:5000/blue-tick/generate-post';
-                    // apiURL = 'https://api.bluetickpost.com/blue-tick/generate-post';
+                    apiURL = 'https://api.bluetickpost.com/blue-tick/generate-post';
                 }
             }
 
@@ -326,6 +334,12 @@ const PostForm = ({ onGenerate }) => {
     //     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${encodedUrl}`, '_blank');
     // };
 
+    const blobToBase64 = (blob, callback) => {
+        const reader = new FileReader();
+        reader.onloadend = () => callback(reader.result); // Base64 string
+        reader.readAsDataURL(blob); // Read blob as data URL (Base64)
+    };
+
     /**
      * Processes an image file by resizing, compressing, and logging details.
      * @param {File} file - The image file to be processed.
@@ -387,7 +401,7 @@ const PostForm = ({ onGenerate }) => {
                         const imageURL = window.URL.createObjectURL(blob);
 
                         // Call the callback with both the image URL and the dominant color
-                        callback(imageURL, dominantColor);
+                        callback(imageURL, dominantColor, blob);
                     },
                     fileType, // Image MIME type
                     quality // Compression quality (0 to 1)
@@ -407,9 +421,15 @@ const PostForm = ({ onGenerate }) => {
 
         if (file) {
             // Process the image file with max dimension 512px and quality 90%
-            processImageFile(file, 256, 0.9, (imageURL, dominantColor) => {
+            processImageFile(file, 256, 0.9, (imageURL, dominantColor, blob) => {
                 // Update state with the URL of the processed profile image
                 setProfileImage(imageURL);
+
+                blobToBase64(blob, (base64String) => {
+                    // Now you can store base64String in localStorage or use it later
+                    localStorage.setItem('profileImageBase64', base64String);
+                });
+
             });
         }
     };
