@@ -33,13 +33,11 @@ let initialValues = {
     createdAt: '',
 }
 
-let defaultProfileImage = displayPhoto
-let savedVerifiedTickValueInStorage = false;
 
 if (isBrowser) {
 
     const savedInitialValues = JSON.parse(window.localStorage.getItem('initialFormValues')) || null;
-
+    
     if (savedInitialValues) {
 
         initialValues = {
@@ -47,11 +45,6 @@ if (isBrowser) {
             ...savedInitialValues
         }
     }
-
-
-    defaultProfileImage = window.localStorage.getItem('profileImageBase64') || displayPhoto
-
-    savedVerifiedTickValueInStorage = JSON.parse(window.localStorage.getItem('hideVerifiedTick')) || false;
 
 }
 
@@ -64,12 +57,13 @@ const PostForm = ({ onGenerate }) => {
 
     const [postTypeToCreate, setPostTypeToCreate] = useState('text');
 
-    const [profileImage, setProfileImage] = useState(defaultProfileImage);
+    // profile Image would be used from localStorage, if available, and would be set in useEffect
+    const [profileImage, setProfileImage] = useState(displayPhoto);
     const [backgroundImage, setBackgroundImage] = useState(null);
     const [postImage, setPostImage] = useState(null);
     const [postImageColor, setPostImageColor] = useState('#ffffff');
     const [useCustomBackground, setUseCustomBackground] = useState(false);
-    const [hideVerifiedTick, setHideVerifiedTick] = useState(savedVerifiedTickValueInStorage);
+    const [hideVerifiedTick, setHideVerifiedTick] = useState(false);
     const [hideWatermark, setHideWatermark] = useState(false);
     const [contentAlign, setContentAlign] = useState('center');
     const [showFontSizeSettings, setShowFontSizeSettings] = useState(false);
@@ -101,6 +95,21 @@ const PostForm = ({ onGenerate }) => {
         setTimeout(() => {
             setFormData({ ...formData, ...initValuesToSet })
         }, 1000)
+
+        // Set profile image and other settings available in localstorage
+        if(isBrowser){
+            const savedProfileImage = window.localStorage.getItem('profileImageBase64') || null;
+            const savedVerifiedTickValueInStorage = JSON.parse(window.localStorage.getItem('hideVerifiedTick')) || false;
+            
+            if (savedProfileImage) {
+                console.log('we would use saved profile image')
+                setTimeout(() => { setProfileImage(savedProfileImage) }, 500)
+            }
+
+            if (savedVerifiedTickValueInStorage) {
+                setTimeout(() => { setHideVerifiedTick(savedVerifiedTickValueInStorage) }, 500)
+            }
+        }
 
     }, [])
 
@@ -602,7 +611,7 @@ const PostForm = ({ onGenerate }) => {
                                                 <div className="btn-toolbar justify-content-center mb-2" role="toolbar" aria-label="Content Toolbar">
                                                     <div className="btn-group btn-group-lg" role="group" aria-label="Content Post Type">
                                                         {['text', 'image'].map((pType) => {
-                                                            return <button type="button" className={`btn btn-info ${pType === postTypeToCreate ? 'active' : ''}`}
+                                                            return <button key={pType} type="button" className={`btn btn-info ${pType === postTypeToCreate ? 'active' : ''}`}
                                                                 onClick={() => {
                                                                     setPostTypeToCreate(pType)
 
@@ -694,7 +703,7 @@ const PostForm = ({ onGenerate }) => {
                                                         <div className="btn-toolbar justify-content-end mb-2" role="toolbar" aria-label="Content Toolbar">
                                                             <div className="btn-group mr-2" role="group" aria-label="Content Align">
                                                                 {['left', 'center', 'right'].map((align) => {
-                                                                    return <button type="button" className={`btn btn-secondary ${align === contentAlign ? 'active' : ''}`}
+                                                                    return <button key={align} type="button" className={`btn btn-secondary ${align === contentAlign ? 'active' : ''}`}
                                                                         onClick={() => { setContentAlign(align) }}>
                                                                         <i className={`fas fa-align-${align}`}></i>
                                                                     </button>
@@ -815,7 +824,7 @@ const PostForm = ({ onGenerate }) => {
                                                                         <div className="col-2">
                                                                             <div className="custom-control custom-switch text-right">
                                                                                 <input type="checkbox" className="custom-control-input" id="useCustomBackground" checked={useCustomBackground} onChange={() => setUseCustomBackground(!useCustomBackground)} />
-                                                                                <label className="custom-control-label" for="useCustomBackground"></label>
+                                                                                <label className="custom-control-label" htmlFor="useCustomBackground"></label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -872,7 +881,7 @@ const PostForm = ({ onGenerate }) => {
                                                                         <div className="col-2">
                                                                             <div className="custom-control custom-switch text-right">
                                                                                 <input type="checkbox" className="custom-control-input" id="hideVerifiedTick" checked={hideVerifiedTick} onChange={() => setHideVerifiedTick(!hideVerifiedTick)} />
-                                                                                <label className="custom-control-label" for="hideVerifiedTick"></label>
+                                                                                <label className="custom-control-label" htmlFor="hideVerifiedTick"></label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -885,7 +894,7 @@ const PostForm = ({ onGenerate }) => {
                                                                         <div className="col-2">
                                                                             <div className="custom-control custom-switch text-right">
                                                                                 <input type="checkbox" className="custom-control-input" id="hideWatermark" checked={hideWatermark} onChange={() => setHideWatermark(!hideWatermark)} />
-                                                                                <label className="custom-control-label" for="hideWatermark"></label>
+                                                                                <label className="custom-control-label" htmlFor="hideWatermark"></label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
