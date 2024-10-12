@@ -702,7 +702,7 @@ const PostForm = ({ onGenerate }) => {
                                                 <div className="row mt-2">
                                                     <div className="col">
                                                         <div className="btn-toolbar justify-content-end mb-2" role="toolbar" aria-label="Content Toolbar">
-                                                            <div className="btn-group mr-2" role="group" aria-label="Content Align">
+                                                            <div className="btn-group btn-group-sm mr-2" role="group" aria-label="Content Align">
                                                                 {['left', 'center', 'right'].map((align) => {
                                                                     return <button key={align} type="button" className={`btn btn-secondary ${align === contentAlign ? 'active' : ''}`}
                                                                         onClick={() => { setContentAlign(align) }}>
@@ -710,7 +710,7 @@ const PostForm = ({ onGenerate }) => {
                                                                     </button>
                                                                 })}
                                                             </div>
-                                                            <div className="btn-group mr-2" role="group" aria-label="RTL Toggle">
+                                                            <div className="btn-group btn-group-sm mr-2" role="group" aria-label="RTL Toggle">
                                                                 <button type="button" className={`btn btn-secondary ${isRTL === true ? 'active' : ''}`}
                                                                     onClick={() => {
                                                                         setIsRTL(!isRTL)
@@ -720,7 +720,7 @@ const PostForm = ({ onGenerate }) => {
                                                                     <strong>RTL</strong> <i className="fas fa-arrow-left"></i>
                                                                 </button>
                                                             </div>
-                                                            <div className="btn-group mr-2" role="group" aria-label="Font Size">
+                                                            <div className="btn-group btn-group-sm mr-2" role="group" aria-label="Font Size">
                                                                 <button type="button" className={`btn btn-secondary ${showFontSizeSettings === true ? 'active' : ''}`}
                                                                     onClick={() => {
                                                                         setShowFontSizeSettings(!showFontSizeSettings)
@@ -730,7 +730,7 @@ const PostForm = ({ onGenerate }) => {
                                                                     <i className="fas fa-text-height"></i>
                                                                 </button>
                                                             </div>
-                                                            <div className="btn-group" role="group" aria-label="Font Family">
+                                                            <div className="btn-group btn-group-sm" role="group" aria-label="Font Family">
                                                                 <button type="button" className={`btn btn-secondary ${showFontFamilySettings === true ? 'active' : ''}`}
                                                                     onClick={() => {
                                                                         setShowFontFamilySettings(!showFontFamilySettings)
