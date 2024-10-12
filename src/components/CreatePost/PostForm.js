@@ -66,6 +66,7 @@ const PostForm = ({ onGenerate }) => {
     const [hideVerifiedTick, setHideVerifiedTick] = useState(false);
     const [hideWatermark, setHideWatermark] = useState(false);
     const [contentAlign, setContentAlign] = useState('center');
+    const [isRTL, setIsRTL] = useState(false);
     const [showFontSizeSettings, setShowFontSizeSettings] = useState(false);
     const [showFontFamilySettings, setShowFontFamilySettings] = useState(false);
     const [formData, setFormData] = useState({ ...initialValues })
@@ -709,6 +710,16 @@ const PostForm = ({ onGenerate }) => {
                                                                     </button>
                                                                 })}
                                                             </div>
+                                                            <div className="btn-group mr-2" role="group" aria-label="RTL Toggle">
+                                                                <button type="button" className={`btn btn-secondary ${isRTL === true ? 'active' : ''}`}
+                                                                    onClick={() => {
+                                                                        setIsRTL(!isRTL)
+    
+                                                                    }}
+                                                                >
+                                                                    <strong>RTL</strong> <i className="fas fa-arrow-left"></i>
+                                                                </button>
+                                                            </div>
                                                             <div className="btn-group mr-2" role="group" aria-label="Font Size">
                                                                 <button type="button" className={`btn btn-secondary ${showFontSizeSettings === true ? 'active' : ''}`}
                                                                     onClick={() => {
@@ -771,10 +782,11 @@ const PostForm = ({ onGenerate }) => {
                                                 <div className="form-group">
                                                     <textarea name="content"
                                                         className={`form-control font-${formData.fontFamily}`}
+                                                        dir={isRTL ? 'rtl' : 'ltr'}
                                                         value={formData.content}
                                                         style={{ textAlign: `${contentAlign}`, fontSize: `${formData.fontSize}px` }}
                                                         cols="30" rows="6" required
-                                                        placeholder={postTypeToCreate === 'image' ? 'Write post caption here...' : 'Write post content here...'}
+                                                        placeholder={postTypeToCreate === 'image' ? 'Write post caption here ...' : 'Write post content here...'}
                                                         onChange={handleFormData} />
                                                 </div>
 
