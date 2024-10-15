@@ -31,13 +31,14 @@ let initialValues = {
     fontSize: 30,
     fontFamily: 'Roboto',
     createdAt: '',
+    footerLink: 'bluetickpost.com',
 }
 
 
 if (isBrowser) {
 
     const savedInitialValues = JSON.parse(window.localStorage.getItem('initialFormValues')) || null;
-    
+
     if (savedInitialValues) {
 
         initialValues = {
@@ -65,6 +66,7 @@ const PostForm = ({ onGenerate }) => {
     const [useCustomBackground, setUseCustomBackground] = useState(false);
     const [hideVerifiedTick, setHideVerifiedTick] = useState(false);
     const [hideWatermark, setHideWatermark] = useState(false);
+    const [useCustomFooterLink, setUseCustomFooterLink] = useState(false);
     const [contentAlign, setContentAlign] = useState('center');
     const [isRTL, setIsRTL] = useState(false);
     const [showFontSizeSettings, setShowFontSizeSettings] = useState(false);
@@ -98,10 +100,11 @@ const PostForm = ({ onGenerate }) => {
         }, 1000)
 
         // Set profile image and other settings available in localstorage
-        if(isBrowser){
+        if (isBrowser) {
             const savedProfileImage = window.localStorage.getItem('profileImageBase64') || null;
             const savedVerifiedTickValueInStorage = JSON.parse(window.localStorage.getItem('hideVerifiedTick')) || false;
-            
+            const savedUseCustomFooterLinkValueInStorage = JSON.parse(window.localStorage.getItem('useCustomFooterLink')) || false;
+
             if (savedProfileImage) {
                 console.log('we would use saved profile image')
                 setTimeout(() => { setProfileImage(savedProfileImage) }, 500)
@@ -110,6 +113,11 @@ const PostForm = ({ onGenerate }) => {
             if (savedVerifiedTickValueInStorage) {
                 setTimeout(() => { setHideVerifiedTick(savedVerifiedTickValueInStorage) }, 500)
             }
+
+            if (savedUseCustomFooterLinkValueInStorage) {
+                setTimeout(() => { setUseCustomFooterLink(savedUseCustomFooterLinkValueInStorage) }, 500)
+            }
+
         }
 
     }, [])
@@ -118,7 +126,7 @@ const PostForm = ({ onGenerate }) => {
 
         e.preventDefault();
 
-        let { name, username, content, hashTags, theme, fontSize, fontFamily, createdAt } = formData
+        let { name, username, content, hashTags, theme, fontSize, fontFamily, footerLink, createdAt } = formData
 
         name = name.trim()
         username = username.trim()
@@ -152,9 +160,11 @@ const PostForm = ({ onGenerate }) => {
                 theme,
                 fontSize,
                 fontFamily,
+                footerLink
             }));
 
             window.localStorage.setItem('hideVerifiedTick', JSON.stringify(hideVerifiedTick));
+            window.localStorage.setItem('useCustomFooterLink', JSON.stringify(useCustomFooterLink));
         }
 
 
@@ -172,9 +182,12 @@ const PostForm = ({ onGenerate }) => {
             fontSize,
             fontFamily,
             contentAlign,
+            footerLink,
+            isRTL: isRTL ? "true" : "false",
             hideVerifiedTick: hideVerifiedTick ? "true" : "false", // send value as string
             hideWatermark: hideWatermark ? "true" : "false", // send value as string
             useCustomBackground: useCustomBackground ? "true" : "false", // send value as string
+            useCustomFooterLink: useCustomFooterLink ? "true" : "false", // send value as string
         };
 
         console.log(postData)
@@ -200,9 +213,12 @@ const PostForm = ({ onGenerate }) => {
             postFormData.append('fontSize', postData.fontSize);
             postFormData.append('fontFamily', postData.fontFamily);
             postFormData.append('contentAlign', postData.contentAlign);
+            postFormData.append('isRTL', postData.isRTL);
+            postFormData.append('footerLink', postData.footerLink);
             postFormData.append('useCustomBackground', postData.useCustomBackground);
             postFormData.append('hideVerifiedTick', postData.hideVerifiedTick);
             postFormData.append('hideWatermark', postData.hideWatermark);
+            postFormData.append('useCustomFooterLink', postData.useCustomFooterLink);
 
             postFormData.append('postType', postTypeToCreate);
             postFormData.append('responseType', responseType);
@@ -234,7 +250,7 @@ const PostForm = ({ onGenerate }) => {
             if (isBrowser) {
                 if (window.location.hostname === 'localhost') {
                     apiURL = 'http://localhost:5000/blue-tick/generate-post';
-                    apiURL = 'https://api.bluetickpost.com/blue-tick/generate-post';
+                    // apiURL = 'https://api.bluetickpost.com/blue-tick/generate-post';
                 }
             }
 
@@ -714,7 +730,7 @@ const PostForm = ({ onGenerate }) => {
                                                                 <button type="button" className={`btn btn-secondary ${isRTL === true ? 'active' : ''}`}
                                                                     onClick={() => {
                                                                         setIsRTL(!isRTL)
-    
+
                                                                     }}
                                                                 >
                                                                     <strong>RTL</strong> <i className="fas fa-arrow-left"></i>
@@ -899,7 +915,7 @@ const PostForm = ({ onGenerate }) => {
                                                                     </div>
 
                                                                 </div>
-                                                                <div className="col-md-12 mt-2">
+                                                                {/* <div className="col-md-12 mt-2">
 
                                                                     <div className="row">
                                                                         <div className="col-10"><h6>Hide Watermark?</h6></div>
@@ -910,6 +926,35 @@ const PostForm = ({ onGenerate }) => {
                                                                             </div>
                                                                         </div>
                                                                     </div>
+
+                                                                </div> */}
+                                                                <div className="col-md-12 mt-2">
+
+                                                                    <div className="row">
+                                                                        <div className="col-10"><h6>Use Custom Footer Link?</h6></div>
+                                                                        <div className="col-2">
+                                                                            <div className="custom-control custom-switch text-right">
+                                                                                <input type="checkbox" className="custom-control-input" id="useCustomFooterLink" checked={useCustomFooterLink} onChange={() => setUseCustomFooterLink(!useCustomFooterLink)} />
+                                                                                <label className="custom-control-label" htmlFor="useCustomFooterLink"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    {
+                                                                        useCustomFooterLink && <>
+                                                                            <div className="row">
+
+                                                                                <div className="col-md-12">
+                                                                                    {/* <h6 className='mt-3'>Footer Link</h6> */}
+                                                                                    <div className="form-group">
+                                                                                        <small className='text-dark'>Enter footer link <strong>(e.g., bluetickpost.com, facebook.com/groups/abc)</strong>  </small>
+                                                                                        <input type="text" name="footerLink" value={formData.footerLink} className="form-control" placeholder="e.g. bluetickpost.com, facebook.com/groups/abc" onChange={handleFormData} />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </>
+
+                                                                    }
 
                                                                 </div>
                                                             </div>
